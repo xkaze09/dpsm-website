@@ -1,0 +1,49 @@
+// Customized for DPSM Website
+
+// WHITE & GRAY COLORS
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+// COLORS
+$cyan:    #8ECAE6;
+$blue:    #219EBC;
+$blue-dark: #023047;
+$orange:  #FB8500;
+$yellow:  #FFB703;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$green:   #198754;
+$teal:    #20c997;
+
+// DPSM THEME COLORS
+$primary:       $blue-dark;
+$secondary:     $orange;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+// ACCORDION
+$accordion-icon-color:          $primary;
+$accordion-icon-active-color:   $primary;
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+$accordion-icon-width:          1.875rem;
+
+
+// import Bootstrap 5
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
