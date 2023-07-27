@@ -11887,6 +11887,10 @@ textarea.form-control-lg {
   opacity: 0.6;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .intro-section {
   height: 900px;
   border: 2px solid red;
