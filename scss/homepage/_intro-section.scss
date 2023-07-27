@@ -1,0 +1,7 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.intro-section {
+    height: 900px;
+    border: 2px solid red;
+}

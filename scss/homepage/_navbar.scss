@@ -1,0 +1,11 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu:hover {
+    @include highlight;
+}
+
+
+.nav-link:hover {
+    @include highlight;
+}

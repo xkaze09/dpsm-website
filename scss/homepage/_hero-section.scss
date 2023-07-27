@@ -1,0 +1,9 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.carousel-image {
+    height: 700px; /* Set a fixed height for the carousel images */
+    object-fit: cover; /* Ensure the images retain their aspect ratio while covering the entire available space */
+    opacity: 0.6;
+}
+  
