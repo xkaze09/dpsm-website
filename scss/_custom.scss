@@ -43,6 +43,11 @@ $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w
 $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
 $accordion-icon-width:          1.875rem;
 
+// NAVBAR
+$navbar-light-color:         $white;
+$navbar-light-hover-color:   $secondary;
+$navbar-light-active-color:  $secondary;
+$navbar-light-disabled-color:$gray-100;
 
 // import Bootstrap 5
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

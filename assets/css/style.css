@@ -3866,15 +3866,15 @@ textarea.form-control-lg {
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
-  --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
-  --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
-  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-color: #fff;
+  --bs-navbar-hover-color: #FB8500;
+  --bs-navbar-disabled-color: #f8f9fa;
+  --bs-navbar-active-color: #FB8500;
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-color: #FB8500;
+  --bs-navbar-brand-hover-color: #FB8500;
   --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
