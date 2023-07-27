@@ -5,7 +5,10 @@
     @include highlight;
 }
 
-
 .nav-link:hover {
+    @include highlight;
+}
+
+.card:hover {
     @include highlight;
 }
