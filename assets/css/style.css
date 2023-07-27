@@ -11891,9 +11891,9 @@ textarea.form-control-lg {
   text-align: justify;
 }
 
-.intro-section {
-  height: 900px;
-  border: 2px solid red;
+.logo-highlight {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
