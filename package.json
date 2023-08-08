@@ -1,7 +1,7 @@
 {
-  "name": "dpsm-sample-website",
+  "name": "dpsm-test-website",
   "version": "1.0.0",
-  "description": "Initial design & setup",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass --watch scss:assets/css"
@@ -9,12 +9,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.64.1"
+    "sass": "^1.64.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "autoprefixer": "^10.4.14",
-    "bootstrap": "^5.3.0",
+    "bootstrap": "^5.3.1",
+    "postcss": "^8.4.27",
     "postcss-cli": "^10.1.0"
   }
 }

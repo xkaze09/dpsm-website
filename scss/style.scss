@@ -1,18 +1,10 @@
-@use "custom";
+@use 'custom';
 
-// Importing Components
-
+// Import components
 @use 'components/animations';
 @use 'components/buttons';
 @use 'components/mixins';
 @use 'components/typography';
 
-// Importing Pages
-
-@use 'homepage/navbar';
-@use 'homepage/hero-section';
-@use 'homepage/departments';
-@use 'homepage/intro-section';
-@use 'homepage/division-highlights';
-@use 'homepage/cards-section';
-@use 'homepage/footer';
+// Import pages
+@use 'sections/home';

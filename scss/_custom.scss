@@ -34,23 +34,12 @@ $accent_two:    #FB8500;
 $background:    #FBFBFA;
 
 // ACCORDION
-$accordion-icon-color:          $primary;
-$accordion-icon-active-color:   $primary;
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
-$accordion-icon-width:          1.875rem;
+$accordion-icon-color:                    $accent_one;
+$accordion-icon-active-color:             $accent_two;
 
-// NAVBAR
-$navbar-light-color:         $white;
-$navbar-light-hover-color:   $secondary;
-$navbar-light-active-color:  $secondary;
-$navbar-light-disabled-color:$gray-100;
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/></svg>");
+$accordion-icon-width:                    1.875rem;
 
-$navbar-dark-color:          $white;
-$navbar-dark-hover-color:    $secondary;
-$navbar-dark-active-color:   $secondary;
-$navbar-dark-disabled-color: $gray-100;
-
-// import Bootstrap 5
+// Import Bootstrap 5
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
