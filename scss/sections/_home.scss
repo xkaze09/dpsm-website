@@ -1,0 +1,34 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+// Globals
+.text-justify {
+    text-align: justify;
+}
+
+.logo-highlight {
+    transition: transform 0.2s ease-in-out;
+}
+
+.logo-highlight:hover {
+    transform: scale(1.1);
+}
+
+.university-name {
+    font-family: 'Oswald', 'Times New Roman', Times, serif;
+}
+
+.division-name {
+    font-family: 'Oswald', 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+// Carousel
+.carousel-image {
+    height: 700px; /* Set a fixed height for the carousel images */
+    object-fit: cover; /* Ensure the images retain their aspect ratio while covering the entire available space */
+    opacity: 0.6;
+}
