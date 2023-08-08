@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
 /*!
  * Bootstrap  v5.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11877,6 +11879,23 @@ textarea.form-control-lg {
   height: 700px; /* Set a fixed height for the carousel images */
   object-fit: cover; /* Ensure the images retain their aspect ratio while covering the entire available space */
   opacity: 0.6;
+}
+
+.hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/comsci-hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-caption {
+  font-family: "Oswald";
+  text-align: center;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
