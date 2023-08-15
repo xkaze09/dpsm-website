@@ -31,7 +31,13 @@
   font-family: 'Open Sans';
 }
 
+.center-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 .collapse-button {
   cursor: hover;
-  
+  padding: 1.25rem 2rem;
+  font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
 }
