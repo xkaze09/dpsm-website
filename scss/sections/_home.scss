@@ -6,11 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
 // Globals
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 .text-justify {
     text-align: justify;
 }
@@ -53,4 +48,5 @@
     color: white; /* Adjust text color for better visibility */
     padding-top: 30vh; /* Adjust vertical spacing */
     flex-shrink: 0; /* Prevent footer from shrinking */
+    padding-bottom:8px;
 }
