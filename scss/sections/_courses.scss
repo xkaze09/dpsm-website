@@ -38,6 +38,21 @@
 
 .collapse-button {
   cursor: hover;
-  padding: 1.25rem 2rem;
+  font-size: 1.875rem;
+  padding: 1.875rem;
   font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.collapse-button:hover {
+  background-color: $accent_one;
+}
+div.card.card-body {
+  border-top: 5px solid $accent_one;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.course-info-active {
+  background-color: $accent_one;
 }
