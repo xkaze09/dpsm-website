@@ -53,6 +53,10 @@ div.card.card-body {
   border-bottom: none;
 }
 
+.card {
+  background-color: $white;
+}
+
 .course-info-active {
   background-color: $accent_one;
 }

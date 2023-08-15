@@ -11931,6 +11931,10 @@ div.card.card-body {
   border-bottom: none;
 }
 
+.card {
+  background-color: #fff;
+}
+
 .course-info-active {
   background-color: #FFB703;
 }
