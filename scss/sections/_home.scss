@@ -6,6 +6,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
 // Globals
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .text-justify {
     text-align: justify;
 }
@@ -32,4 +37,20 @@
     height: 700px; /* Set a fixed height for the carousel images */
     object-fit: cover; /* Ensure the images retain their aspect ratio while covering the entire available space */
     opacity: 0.6;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer-with-image {
+    background-image: url('/images/footer.png'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white; /* Adjust text color for better visibility */
+    padding-top: 30vh; /* Adjust vertical spacing */
+    flex-shrink: 0; /* Prevent footer from shrinking */
 }
