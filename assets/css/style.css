@@ -11908,4 +11908,8 @@ textarea.form-control-lg {
   font-family: "Open Sans";
 }
 
+.collapse-button {
+  cursor: hover;
+}
+
 /*# sourceMappingURL=style.css.map */
