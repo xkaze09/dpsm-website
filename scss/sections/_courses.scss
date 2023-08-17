@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200;400&display=swap');
 
-.hero-section {
+.comsci-hero-section {
     position: relative;
     height: 50vh;
     background-image: url('/images/comsci-hero.png');
@@ -15,6 +15,17 @@
     align-items: center;
     justify-content: center;
   }
+
+.stats-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url('/images/statistics-hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
   .hero-caption {
     font-family: 'Oswald';
@@ -41,6 +52,7 @@
   font-size: 1.875rem;
   padding: 1.875rem;
   font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid $accent_one;
 }
 
 .collapse-button:hover {

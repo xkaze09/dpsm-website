@@ -11899,10 +11899,21 @@ textarea.form-control-lg {
   padding-bottom: 8px;
 }
 
-.hero-section {
+.comsci-hero-section {
   position: relative;
   height: 50vh;
   background-image: url("/images/comsci-hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/statistics-hero.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -11935,6 +11946,7 @@ textarea.form-control-lg {
   font-size: 1.875rem;
   padding: 1.875rem;
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid #FFB703;
 }
 
 .collapse-button:hover {
