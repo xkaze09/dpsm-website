@@ -11967,12 +11967,11 @@ textarea.form-control-lg {
   border-right: 0.2rem solid #FFB703;
   height: 100vh;
   overflow-y: auto;
-  border: 5px solid red;
 }
 
 div.card.card-body {
-  border: 5px solid #adb5bd;
   border-radius: 0;
+  border: none;
   height: 100vh;
 }
 
