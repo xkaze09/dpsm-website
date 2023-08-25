@@ -42,44 +42,43 @@
   font-family: 'Open Sans';
 }
 
-.center-buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
 .collapse-button {
-  cursor: hover;
+  display: block;                    /* Ensure buttons take full width */
+  width: 100%;                       /* Ensure buttons take full width */
+  cursor: pointer;                   /* Use pointer cursor on hover */
   font-size: 1.875rem;
   padding: 1.875rem;
-  font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
-  border: 1px solid $accent_one;
+  font-family: 'Oswald', Verdana, Geneva, 
+                Tahoma, sans-serif;
+  text-align: left;                 /* Align text to the left */
+  border: none;                     /* Remove default button border */
+  background-color: transparent;    /* Remove background color */
+  margin-bottom: 3rem;
+  border-radius: 0%;
+  border-bottom: 0.2rem solid $accent_one;
 }
 
 .collapse-button:hover {
   background-color: $accent_one;
-}
-div.card.card-body {
-  border-top: 5px solid $accent_one;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-}
-
-.card {
-  background-color: $white;
+  color: $white;                    /* Add text color change on hover */
 }
 
 .course-info-active {
   background-color: $accent_one;
+  color: $white;
 }
 
 /* Sticky sidebar styling */
 .sidebar {
-  position: sticky;
-  top: 0;
-  background-color: #f8f9fa;
   padding: 20px;
-  border-right: 1px solid #ccc;
+  border-right: 0.2rem solid $accent_one;
   height: 100vh;
   overflow-y: auto;
+  border: 5px solid red;
+}
+
+div.card.card-body {
+  border: 5px solid $gray-500;
+  border-radius: 0;
+  height: 100vh;
 }
