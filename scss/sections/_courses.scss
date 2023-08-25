@@ -72,3 +72,14 @@ div.card.card-body {
 .course-info-active {
   background-color: $accent_one;
 }
+
+/* Sticky sidebar styling */
+.sidebar {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+  overflow-y: auto;
+}

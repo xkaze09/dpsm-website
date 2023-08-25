@@ -11968,4 +11968,15 @@ div.card.card-body {
   background-color: #FFB703;
 }
 
+/* Sticky sidebar styling */
+.sidebar {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+  overflow-y: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
