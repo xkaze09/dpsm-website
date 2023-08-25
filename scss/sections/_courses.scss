@@ -42,42 +42,162 @@
   font-family: 'Open Sans';
 }
 
+/* Default styles */
 .collapse-button {
-  display: block;                    /* Ensure buttons take full width */
-  width: 100%;                       /* Ensure buttons take full width */
-  cursor: pointer;                   /* Use pointer cursor on hover */
+  display: block;
+  width: 100%;
+  cursor: pointer;
   font-size: 1.875rem;
   padding: 1.875rem;
-  font-family: 'Oswald', Verdana, Geneva, 
-                Tahoma, sans-serif;
-  text-align: left;                 /* Align text to the left */
-  border: none;                     /* Remove default button border */
-  background-color: transparent;    /* Remove background color */
-  margin-bottom: 3rem;
-  border-radius: 0%;
+  font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: none;
+  background-color: transparent;
   border-bottom: 0.2rem solid $accent_one;
+  margin-bottom: 0;
 }
 
+/* Hover styles */
 .collapse-button:hover {
   background-color: $accent_one;
-  color: $white;                    /* Add text color change on hover */
+  color: $white;
 }
 
+/* Active styles */
 .course-info-active {
   background-color: $accent_one;
   color: $white;
 }
 
-/* Sticky sidebar styling */
+/* Default styles */
+.collapse-button {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.875rem;
+  padding: 1.875rem;
+  font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.2rem solid $accent_one;
+  margin-bottom: 0;
+}
+
+/* Hover styles */
+.collapse-button:hover {
+  background-color: $accent_one;
+  color: $white;
+}
+
+/* Active styles */
+.course-info-active {
+  background-color: $accent_one;
+  color: $white;
+}
+
+/* Default styles */
+.collapse-button {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.875rem;
+  padding: 1.875rem;
+  font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.2rem solid $accent_one;
+  margin-bottom: 0;
+}
+
+/* Hover styles */
+.collapse-button:hover {
+  background-color: $accent_one;
+  color: $white;
+}
+
+/* Active styles */
+.course-info-active {
+  background-color: $accent_one;
+  color: $white;
+}
+
+/* Default styles */
+.collapse-button {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.875rem;
+  padding: 1.875rem;
+  font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.2rem solid $accent_one;
+  margin-bottom: 0;
+}
+
+/* Hover styles */
+.collapse-button:hover {
+  background-color: $accent_one;
+  color: $white;
+}
+
+/* Active styles */
+.course-info-active {
+  background-color: $accent_one;
+  color: $white;
+}
+
+/* Sidebar styles */
 .sidebar {
   padding: 20px;
   border-right: 0.2rem solid $accent_one;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
 }
 
+/* Card body styles */
 div.card.card-body {
   border-radius: 0;
   border: none;
-  height: 100vh;
+  height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 540px) {
+  /* Adjust font size and padding for smaller screens */
+  .collapse-button {
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem; /* Adjust top/bottom padding and left/right padding */
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 541px) and (max-width: 767px) {
+  /* Adjust font size and padding for small screens */
+  .collapse-button {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem; /* Adjust top/bottom padding and left/right padding */
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust font size and padding for medium screens */
+  .collapse-button {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem; /* Adjust top/bottom padding and left/right padding */
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Default styles for larger screens */
+  .collapse-button {
+    font-size: 1.875rem;
+    padding: 1.875rem;
+    margin-bottom: 0;
+  }
 }
