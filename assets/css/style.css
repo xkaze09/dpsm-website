@@ -12101,4 +12101,13 @@ div.card.card-body {
   border: 1px solid red;
 }
 
+.footer-content {
+  border: 1px solid green;
+}
+
+.footer-heading {
+  border: 1px solid blue;
+  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /*# sourceMappingURL=style.css.map */
