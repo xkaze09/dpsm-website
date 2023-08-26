@@ -11949,87 +11949,7 @@ textarea.form-control-lg {
   background-color: transparent;
   border-bottom: 0.2rem solid #FFB703;
   margin-bottom: 0;
-}
-
-/* Hover styles */
-.collapse-button:hover {
-  background-color: #FFB703;
-  color: #fff;
-}
-
-/* Active styles */
-.course-info-active {
-  background-color: #FFB703;
-  color: #fff;
-}
-
-/* Default styles */
-.collapse-button {
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1.875rem;
-  padding: 1.875rem;
-  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  border-bottom: 0.2rem solid #FFB703;
-  margin-bottom: 0;
-}
-
-/* Hover styles */
-.collapse-button:hover {
-  background-color: #FFB703;
-  color: #fff;
-}
-
-/* Active styles */
-.course-info-active {
-  background-color: #FFB703;
-  color: #fff;
-}
-
-/* Default styles */
-.collapse-button {
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1.875rem;
-  padding: 1.875rem;
-  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  border-bottom: 0.2rem solid #FFB703;
-  margin-bottom: 0;
-}
-
-/* Hover styles */
-.collapse-button:hover {
-  background-color: #FFB703;
-  color: #fff;
-}
-
-/* Active styles */
-.course-info-active {
-  background-color: #FFB703;
-  color: #fff;
-}
-
-/* Default styles */
-.collapse-button {
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1.875rem;
-  padding: 1.875rem;
-  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  border-bottom: 0.2rem solid #FFB703;
-  margin-bottom: 0;
+  border-radius: 0%;
 }
 
 /* Hover styles */
@@ -12108,6 +12028,15 @@ div.card.card-body {
 .footer-heading {
   border: 1px solid blue;
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+}
+
+.footer-division-text {
+  font-size: 1.8rem;
+}
+
+.footer-horizontal-line {
+  border: 1px solid white;
 }
 
 /*# sourceMappingURL=style.css.map */
