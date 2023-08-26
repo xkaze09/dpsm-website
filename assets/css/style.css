@@ -12013,20 +12013,7 @@ div.card.card-body {
   }
 }
 /* Footer */
-.footer-with-image {
-  border: 2px solid red;
-}
-
-.footer-icons {
-  border: 1px solid red;
-}
-
-.footer-content {
-  border: 1px solid green;
-}
-
 .footer-heading {
-  border: 1px solid blue;
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
 }
@@ -12040,21 +12027,12 @@ div.card.card-body {
 }
 
 .footer-subtitle {
-  border: 1px solid orange;
   padding: 0;
   font-size: 0.65rem;
 }
 
-.footer-nav {
-  border: 1px solid yellow;
-}
-
 .footer-nav .navbar-nav .nav-item {
   color: white;
-}
-
-.footer-buttons {
-  border: 1px solid pink;
 }
 
 /*# sourceMappingURL=style.css.map */
