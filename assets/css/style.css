@@ -12092,5 +12092,13 @@ div.card.card-body {
     margin-bottom: 0;
   }
 }
+/* Footer */
+.footer-with-image {
+  border: 2px solid red;
+}
+
+.footer-icons {
+  border: 1px solid red;
+}
 
 /*# sourceMappingURL=style.css.map */
