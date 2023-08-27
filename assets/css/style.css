@@ -12155,4 +12155,9 @@ html {
   height: 300px; /* Set the desired height for the carousel images */
 }
 
+/* Course Organization Section */
+.course-organization-name {
+  padding-left: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
