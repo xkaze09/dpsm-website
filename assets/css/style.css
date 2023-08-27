@@ -12149,10 +12149,5 @@ html {
 }
 
 /* Carousel */
-#carousel-images img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
 
 /*# sourceMappingURL=style.css.map */
