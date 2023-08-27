@@ -12162,22 +12162,6 @@ div.card.card-body {
   }
   /* Add other adjustments for larger screens */
 }
-/* Hide scrollbar */
-html {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
-
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #FF0000;
-}
-
 /* Carousel */
 .carousel-inner img {
   object-fit: cover;
@@ -12189,5 +12173,7 @@ html {
 .section-title {
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* Course Features & Highlights */
 
 /*# sourceMappingURL=style.css.map */
