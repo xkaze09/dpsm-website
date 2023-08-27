@@ -28,10 +28,10 @@
 }
 
 // Carousel
-.carousel-image {
-    height: 700px; /* Set a fixed height for the carousel images */
+.carousel-item .carousel-image {
+    width: 100%; /* Set a fixed height for the carousel images */
+    height: 100%;
     object-fit: cover; /* Ensure the images retain their aspect ratio while covering the entire available space */
-    opacity: 0.6;
 }
 
 .wrapper {
