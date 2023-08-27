@@ -149,13 +149,13 @@
         <!-- Course Highlights Section -->
         <div class="container-fluid">
           <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
-            <div class="col-md-8 p-lg-5 my-5">
+            <div class="col-md-7 p-lg-5 my-5">
               <h1 class="display-4">Course Highlights</h1>
               <p class="lead fw-normal text-justify" id="carousel-text">
                 <!-- Placeholder text that will be dynamically updated -->
               </p>
             </div>
-            <div class="col-md-4 d-none d-md-block">
+            <div class="col-md-5 d-none d-md-block">
               <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" id="carousel-images">
                   <!-- Carousel items go here -->
@@ -296,8 +296,9 @@
 
     // Carousel
     const carouselData = [
-      { src: '/images/comsci-hero.png', alt: 'Image 1', text: 'Welcome to Computer Science' },
-      { src: '/images/statistics-hero.png', alt: 'Image 2', text: 'Welcome to Statistics' },
+      { src: '/images/comsci.png', alt: 'Image 1', text: 'Welcome to Computer Science' },
+      { src: '/images/stats.png', alt: 'Image 2', text: 'Welcome to Statistics' },
+      { src: '/images/appmath.png', alt: 'Image 3', text: 'Welcome to Applied Mathematics' },
       // Add more carousel items as needed
     ];
 
@@ -317,7 +318,7 @@
       });
 
       carouselImages.innerHTML = carouselHTML;
-
+      
       // Update the text based on the active carousel item
       const carousel = document.getElementById('carouselExample');
       carousel.addEventListener('slid.bs.carousel', function () {
@@ -325,6 +326,9 @@
         const activeIndex = Array.from(activeItem.parentNode.children).indexOf(activeItem);
         carouselText.textContent = carouselData[activeIndex].text;
       });
+
+      // Initialize the placeholder text with the content of the first carousel item
+      carouselText.textContent = carouselData[0].text;
     }
 
     // Call the function to initially populate the carousel
