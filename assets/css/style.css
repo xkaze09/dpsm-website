@@ -12031,8 +12031,106 @@ div.card.card-body {
   font-size: 0.65rem;
 }
 
+.footer-nav {
+  padding: 0;
+}
+
 .footer-nav .navbar-nav .nav-item {
   color: white;
+}
+
+/* Media Queries */
+@media (max-width: 540px) {
+  /* Adjust font size and padding for smaller screens */
+  .footer-heading {
+    padding-top: 4rem;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+  .footer-division-text {
+    font-size: 1.2rem;
+  }
+  .footer-nav .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-nav .navbar-nav .nav-item {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.2rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+  .footer-icons {
+    padding-bottom: 0.8rem;
+  }
+  /* Add other adjustments for smaller screens */
+}
+@media (min-width: 541px) and (max-width: 767px) {
+  /* Adjust font size and padding for small screens */
+  .footer-heading {
+    padding-top: 8rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .footer-division-text {
+    font-size: 1.8rem;
+  }
+  .footer-nav .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-nav .navbar-nav .nav-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .footer-icons {
+    padding-bottom: 1rem;
+  }
+  /* Add other adjustments for small screens */
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust font size and padding for medium screens */
+  .footer-heading {
+    padding-top: 8rem;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+  .footer-division-text {
+    font-size: 1.5rem;
+  }
+  .footer-icons {
+    padding-right: 2rem;
+  }
+  .footer-nav .navbar-nav .nav-item {
+    font-size: 0.875rem;
+    padding: 0;
+  }
+  .footer-buttons svg {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  /* Add other adjustments for medium screens */
+}
+@media (min-width: 992px) {
+  /* Default styles for larger screens */
+  .footer-heading {
+    padding-top: 8rem;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .footer-division-text {
+    font-size: 2.5rem;
+  }
+  .footer-icons {
+    padding-right: 2rem;
+  }
+  /* Add other adjustments for larger screens */
 }
 
 /*# sourceMappingURL=style.css.map */
