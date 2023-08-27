@@ -124,6 +124,51 @@ div.card.card-body {
 
 /* Footer */
 .footer-with-image {
+  background-image: url('/images/footer.png');
+  background-size: contain; /* Maintain aspect ratio and cover entire section */
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  color: white;
+  padding-bottom: 8px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 540px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 100px; /* Adjust vertical spacing */
+  }
+}
+
+@media (min-width: 541px) and (max-width: 767px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 150px; /* Adjust vertical spacing */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 80px; /* Adjust vertical spacing */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 50px; /* Adjust vertical spacing */
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+  }
 }
 
 .footer-icons {
@@ -264,7 +309,7 @@ div.card.card-body {
   }
   
   .footer-division-text {
-    font-size: 2.5rem;
+    font-size: 1.25rem;
   }
   
   .footer-icons {

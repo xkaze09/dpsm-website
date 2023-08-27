@@ -40,13 +40,3 @@
     min-height: 100vh;
 }
 
-.footer-with-image {
-    background-image: url('/images/footer.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: white; /* Adjust text color for better visibility */
-    padding-top: 50vh; /* Adjust vertical spacing */
-    flex-shrink: 0; /* Prevent footer from shrinking */
-    padding-bottom:8px;
-}
