@@ -11937,6 +11937,17 @@ textarea.form-control-lg {
   justify-content: center;
 }
 
+.appmath-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/homepage-hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-caption {
   font-family: "Oswald";
   text-align: center;
@@ -12199,6 +12210,57 @@ div.card.card-body {
 /* Course Organization Section */
 .section-title {
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.course-logo-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes shadow {
+  0% {
+    filter: blur(10px);
+    transform: scale(1);
+  }
+  50% {
+    filter: blur(16px);
+    transform: scale(1.5);
+  }
+  100% {
+    filter: blur(10px);
+    transform: scale(1);
+  }
+}
+.course-organization-container {
+  height: 80vh;
+}
+
+.course-logo-container {
+  display: block;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shadow {
+  width: 250px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: shadow 6s ease-in-out infinite;
 }
 
 /* Course Features & Highlights */
