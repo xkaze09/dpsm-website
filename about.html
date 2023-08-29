@@ -85,70 +85,32 @@
         </div>
       </div>
      <!-- End of Hero Section -->
-      <!-- Intro Section -->
-      <div class="px-4 pt-5 p-md-5 my-5 text-start intro-section">
-        <div class="container">
-          <div class="row pb-5">
-            <div class="col-md-3">
-              <h2 class="fs-5 course-subtitle">STUDENTS ENROLLED</h2>
-              <p class="fs-5 fw-bolder course-subvalue">200+ STUDENTS</p>
-            </div>
-            <div class="col-md-3">
-              <h2 class="fs-5 course-subtitle">LEGIT NI?</h2>
-              <p class="fs-5 fw-bolder course-subvalue">NO. DONT. Y?</p>
-            </div>
-            <div class="col-md-3">
-              <h2 class="fs-5 course-subtitle">WHAT COURSE?</h2>
-              <p class="fs-5 fw-bolder course-subvalue">COMPSCI</p>
-            </div>
-            <div class="col-md-3">
-              <h2 class="fs-5 course-subtitle">HA?</h2>
-              <p class="fs-5 fw-bolder course-subvalue">HAKDOG........</p>
+     <!-- Intro Section -->
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-light collapse-button" data-bs-toggle="collapse" data-bs-target="#missionText">Mission</button>
+              <button class="btn btn-light collapse-button" data-bs-toggle="collapse" data-bs-target="#visionText">Vision</button>
             </div>
           </div>
         </div>
-      <!-- Course Information Section -->
-      <div class="container-fluid">
-        <div class="row">
-          <!-- Sticky Sidebar -->
-          <nav class="col-12 col-md-3 sidebar text-center">
-            <div class="d-flex flex-md-column">
-              <button class="btn btn-light btn-block collapse-button text-center" data-bs-toggle="collapse" data-bs-target="#admissionText">ADMISSION</button>
-              <button class="btn btn-light btn-block collapse-button text-center" data-bs-toggle="collapse" data-bs-target="#prospectusText">PROSPECTUS</button>
-              <button class="btn btn-light btn-block collapse-button text-center" data-bs-toggle="collapse" data-bs-target="#learningOutcomesText">LEARNING OUTCOMES</button>
-              <button class="btn btn-light btn-block collapse-button text-center" data-bs-toggle="collapse" data-bs-target="#retentionPolicyText">RETENTION POLICY</button>
-            </div>
-          </nav>
-          <!-- Collapsing Content -->
-          <main class="col-12 col-md-9">
-            <div class="collapse" id="admissionText">
+        <div class="row mt-3">
+          <div class="col">
+            <div class="collapse" id="missionText">
               <div class="card card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper lobortis fringilla. Phasellus vel condimentum magna, in porta ligula. In feugiat velit augue, non faucibus orci euismod dictum. Aliquam tristique sem vitae nisi varius rutrum. Curabitur tellus felis, mattis ac aliquam non, finibus tempus magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean ante turpis, porta et augue in, consectetur ullamcorper felis. Morbi maximus semper nisl, vitae ultrices nisi facilisis at. Cras eget leo imperdiet, commodo felis quis, viverra sapien. Fusce dictum ipsum id ex blandit elementum.</p>
-                <p>Ut non ipsum non metus eleifend varius. Nam nec dolor lacus. Donec vitae imperdiet ex, eget ultrices quam. Maecenas vehicula dui maximus tellus eleifend, ac hendrerit tortor ullamcorper. Vestibulum sed leo sit amet lectus luctus dignissim sed vel nisi. Fusce nec nisi ac massa hendrerit ultrices. Vestibulum in nibh sed odio feugiat aliquam vulputate vel leo. Etiam viverra viverra augue viverra vulputate. Proin elementum non libero eu mollis. Nulla dolor libero, suscipit in convallis a, efficitur ut sem. Sed sollicitudin mattis nisl dignissim dignissim. Aliquam vel lacus erat. Nam rhoncus leo a metus dictum auctor.</p>
+                This is the Mission text.
               </div>
             </div>
-            <div class="collapse" id="prospectusText">
+            <div class="collapse" id="visionText">
               <div class="card card-body">
-                <p>Prospectus Paragraph here</p>
-                <p>Another paragraph here</p>
+                This is the Vision text.
               </div>
             </div>
-            <div class="collapse" id="learningOutcomesText">
-              <div class="card card-body">
-                <p>Learning Outcomes Paragraph here</p>
-                <p>Another paragraph here</p>
-              </div>
-            </div>
-            <div class="collapse" id="retentionPolicyText">
-              <div class="card card-body">
-                <p>Retention Policy Paragraph here</p>
-                <p>Another paragraph here</p>
-              </div>
-            </div>
-          </main>
+          </div>
         </div>
       </div>
-      <!-- End of Course Information Section-->
+      <!-- End of Intro Section -->
       <!-- Faculty Members Section -->
       <div class="container-fluid">
         <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-3">
@@ -338,10 +300,10 @@
     const collapseContents = document.querySelectorAll('.collapse');
     let timeoutId;
 
-    // Trigger click on default button on page load, in this case it is "admissions" button
-    const admissionButton = document.querySelector('[data-bs-target="#admissionText"]');
-    admissionButton.click();
-    admissionButton.classList.add('course-info-active'); // Highlight the button
+    // Trigger click on default button on page load, in this case it is "missions" button
+    const missionButton = document.querySelector('[data-bs-target="#missionText"]');
+    missionButton.click();
+    missionButton.classList.add('course-info-active'); // Highlight the button
 
     collapseButtons.forEach(button => {
       button.addEventListener('click', () => {
