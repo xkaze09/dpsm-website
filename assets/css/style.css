@@ -12189,4 +12189,12 @@ div.card.card-body {
   justify-content: center;
 }
 
+.section-subtitle {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.mission-vision-section {
+  height: 100vh;
+}
+
 /*# sourceMappingURL=style.css.map */
