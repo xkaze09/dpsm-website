@@ -19,7 +19,7 @@
 }
 
 .university-name {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Oswald', 'Times New Roman', Times, serif;
     color: white;
     text-decoration: none;
 }
@@ -33,6 +33,68 @@
 .text-link {
     text-decoration: none;
 }
+
+
+// /* Media Queries */
+// @media (max-width: 540px) {
+//     /* Adjust font size and padding for smaller screens */
+//     .dpsm-logo-highlight {
+//         width: 4rem;
+//     }
+//     .division-navbar {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//     }
+
+//     .division-name {
+//         margin-top: 5px; /* Adjust as needed for spacing */
+//     }
+//   }
+  
+//   @media (min-width: 541px) and (max-width: 767px) {
+//     /* Adjust font size and padding for small screens */
+//     .dpsm-logo-highlight {
+//         width: 4rem;
+//     }
+//     .division-navbar {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//     }
+
+//     .division-name {
+//         margin-top: 5px; /* Adjust as needed for spacing */
+//     }
+//   }
+  
+//   @media (min-width: 768px) and (max-width: 991px) {
+//     /* Adjust font size and padding for medium screens */
+//     .dpsm-logo-highlight {
+//         width: 4rem;
+//     }
+//     .division-navbar {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//     }
+
+//     .division-name {
+//         margin-top: 5px; /* Adjust as needed for spacing */
+//     }
+//   }
+  
+//   @media (min-width: 992px) {
+//     /* Default styles for larger screens */
+//     .dpsm-logo-highlight {
+//         width: 5rem;
+//     }
+//     .division-navbar {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//     }
+//   }
 
 // Carousel
 .carousel-item .carousel-image {
