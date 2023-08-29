@@ -11879,6 +11879,10 @@ textarea.form-control-lg {
   font-weight: lighter;
 }
 
+.text-link {
+  text-decoration: none;
+}
+
 .carousel-item .carousel-image {
   width: 100%; /* Set a fixed height for the carousel images */
   height: 100%;
