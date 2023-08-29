@@ -11875,11 +11875,13 @@ textarea.form-control-lg {
 .university-name {
   font-family: "Oswald", "Times New Roman", Times, serif;
   color: white;
+  text-decoration: none;
 }
 
 .division-name {
   font-family: "Oswald", "Times New Roman", Times, serif;
-  font-weight: lighter;
+  text-decoration: none;
+  color: #FB8500;
 }
 
 .text-link {

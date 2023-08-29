@@ -21,11 +21,13 @@
 .university-name {
     font-family: 'Oswald', 'Times New Roman', Times, serif;
     color: white;
+    text-decoration: none;
 }
 
 .division-name {
     font-family: 'Oswald', 'Times New Roman', Times, serif;
-    font-weight: lighter;
+    text-decoration: none;
+    color: $accent_two;
 }
 
 .text-link {
