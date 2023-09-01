@@ -47,6 +47,14 @@
     visibility: visible;
 }
 
+.course-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.course-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 // /* Media Queries */
 // @media (max-width: 540px) {
