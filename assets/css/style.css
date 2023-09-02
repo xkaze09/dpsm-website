@@ -12254,10 +12254,6 @@ div.card.card-body {
     transform: scale(1);
   }
 }
-.course-organization-container {
-  height: 80vh;
-}
-
 .course-logo-container {
   display: block;
   animation: float 6s ease-in-out infinite;
@@ -12270,6 +12266,7 @@ div.card.card-body {
   border-radius: 50%;
   filter: blur(10px);
   animation: shadow 6s ease-in-out infinite;
+  text-align: center;
 }
 
 /* Course Features & Highlights */
