@@ -11912,10 +11912,10 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 
-.carousel-item .carousel-image {
+.carousel-inner .carousel-item {
   width: 100%; /* Set a fixed height for the carousel images */
   height: 100%;
-  object-fit: cover; /* Ensure the images retain their aspect ratio while covering the entire available space */
+  object-fit: contain; /* Ensure the images retain their aspect ratio while covering the entire available space */
 }
 
 .wrapper {

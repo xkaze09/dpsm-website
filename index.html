@@ -84,49 +84,40 @@
       </div>
     </nav>
     <!-- End of Division Navbar -->
-        <!-- Hero Section -->
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!-- Hero Section -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/homepage-hero-test.jpg" class="d-block w-100 h-auto" alt="Slide 1">
+          <div class="carousel-caption">
+            <!-- <h1>Hero 1</h1> -->
           </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="images\homepage-hero.png" class="d-block w-100 carousel-image" alt="Slide 1">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Homepage Hero 1</h1>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images\homepage-hero.png" class="d-block w-100 carousel-image" alt="Slide 2">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Homepage Hero 2</h1>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images\homepage-hero.png" class="d-block w-100 carousel-image" alt="Slide 3">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Homepage Hero 3</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-        <!-- End of Hero Section -->
+        <div class="carousel-item">
+          <img src="./images/homepage-hero.png" class="d-block w-100 h-auto" alt="Slide 2">
+          <div class="carousel-caption">
+            <!-- <h1>Hero 2</h1> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/homepage-hero.png" class="d-block w-100 h-auto" alt="Slide 3">
+          <div class="carousel-caption">
+            <!-- <h1>Hero 3</h1> -->
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End of Hero Section -->
+
+
           <!-- Intro Section -->
           <div class="px-4 pt-5 p-md-5 my-5 text-start intro-section">
             <div class="container">
@@ -157,33 +148,34 @@
             </div>
           </div>
           <!-- End of Intro Section -->
-          <!-- Division Highlights -->
-          <div class="container-fluid">
-            <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-secondary-subtle">
-              <div class="col-md-7 p-lg-5 my-5">
-                <h1 class="section-title lead mb-4 display-5 fw-bold">—Division Highlights</h1>
-                <p class="lead fw-normal text-justify" id="carousel-text">
-                  <!-- Placeholder text that will be dynamically updated -->
-                </p>
-              </div>
-              <div class="col-md-5">
-                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner" id="carousel-images">
-                    <!-- Carousel items go here -->
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of Division Highlights -->
+<!-- Division Highlights -->
+<div class="container-fluid">
+  <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-secondary-subtle">
+    <div class="col-md-7 p-lg-5 my-5">
+      <h1 class="section-title lead mb-4 display-5 fw-bold">—Division Highlights</h1>
+      <p class="lead fw-normal text-justify" id="division-carousel-text">
+        <!-- Placeholder text that will be dynamically updated -->
+        This Text should change!
+      </p>
+    </div>
+    <div class="col-md-5">
+      <div id="divisionCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="division-carousel-images">
+          <!-- Carousel items for Division Highlights go here -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#divisionCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#divisionCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Division Highlights -->
           <!-- Course Showcase -->
           <div class="container px-4 py-5" id="custom-cards">
               <h2 class="display-2 pb-2 border-bottom text-center fw-bold section-title">Courses Offered</h2>
@@ -318,45 +310,42 @@
         window.addEventListener("scroll", toggleNavbarVisibility);
     });
 
-      // Carousel
-      const carouselData = [
-        { src: './images/homepage-hero.png', alt: 'Image 1', text: "Insert details here." },
-        { src: './images/homepage-hero.png', alt: 'Image 2', text: 'Insert another detail here.' },
-        { src: './images/homepage-hero.png', alt: 'Image 3', text: 'You can insert another info here.' },
-        // Add more carousel items as needed
-      ];
-         
-      // Function to update carousel content and text
-      function updateCarousel() {
-        const carouselImages = document.getElementById('carousel-images');
-        const carouselText = document.getElementById('carousel-text');
-       
-        let carouselHTML = '';
-        carouselData.forEach((item, index) => {
-          const activeClass = index === 0 ? 'active' : '';
-          carouselHTML += `
-            <div class="carousel-item ${activeClass}">
-              <img src="${item.src}" class="d-block w-100" alt="${item.alt}">
-            </div>
-          `;
-        });
-      
-        carouselImages.innerHTML = carouselHTML;
-        
-        // Update the text based on the active carousel item
-        const carousel = document.getElementById('carouselExample');
-        carousel.addEventListener('slid.bs.carousel', function () {
-          const activeItem = document.querySelector('.carousel-item.active');
-          const activeIndex = Array.from(activeItem.parentNode.children).indexOf(activeItem);
-          carouselText.textContent = carouselData[activeIndex].text;
-        });
-      
-        // Initialize the placeholder text with the content of the first carousel item
-        carouselText.textContent = carouselData[0].text;
-      }
-     
-      // Call the function to initially populate the carousel
-      updateCarousel();
+        // Division Highlights Carousel Data
+        const divisionCarouselData = [
+          { src: './images/card1.png', alt: 'Image A', text: 'Division News A' },
+          { src: './images/card2.png', alt: 'Image B', text: 'Division News B' },
+          { src: './images/card3.png', alt: 'Image C', text: 'Division News C' },
+        ];
+
+        // Function to update "Division Highlights" carousel
+        function updateDivisionCarousel() {
+          const divisionCarouselImages = document.getElementById('division-carousel-images');
+          const divisionCarouselText = document.getElementById('division-carousel-text');
+
+          let carouselHTML = '';
+          divisionCarouselData.forEach((item, index) => {
+            const activeClass = index === 0 ? 'active' : '';
+            carouselHTML += `
+              <div class="carousel-item ${activeClass}">
+                <img src="${item.src}" class="d-block w-100" alt="${item.alt}">
+              </div>
+            `;
+          });
+
+          divisionCarouselImages.innerHTML = carouselHTML;
+
+          const divisionCarousel = document.getElementById('divisionCarousel');
+          divisionCarousel.addEventListener('slid.bs.carousel', function () {
+            const activeItem = document.querySelector('#divisionCarousel .carousel-item.active');
+            const activeIndex = Array.from(divisionCarouselImages.children).indexOf(activeItem);
+            divisionCarouselText.textContent = divisionCarouselData[activeIndex].text;
+          });
+
+          divisionCarouselText.textContent = divisionCarouselData[0].text;
+        }
+
+        // Call the function to initially populate the "Division Highlights" carousel
+        updateDivisionCarousel();
 
       </script>
     </body>
