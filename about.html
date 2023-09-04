@@ -142,39 +142,38 @@
       </div>
      <!-- End of DPSM Introduction -->
      <!-- Mission & Vision Section -->
-     <div class="mission-vision-section container-fluid">
-       <div class="container mt-5">
-         <div class="row">
-           <div class="col">
-             <div class="d-flex justify-content-between">
-               <button class="btn btn-light collapse-button" data-bs-toggle="collapse" data-bs-target="#missionText">Mission</button>
-               <button class="btn btn-light collapse-button" data-bs-toggle="collapse" data-bs-target="#visionText">Vision</button>
-             </div>
-           </div>
-         </div>
-         <div class="row mt-3">
-           <div class="col">
-             <div class="collapse" id="missionText">
-               <div class="card card-body section-subtitle display-5 text-center">
-                 A center of excellence in mathematical and computational sciences in the Visayas.
-               </div>
-             </div>
-             <div class="collapse" id="visionText">
-               <div class="card card-body section-subtitle display-7">
-                 <ul class="">
-                   <li>Offer graduate and undergraduate degree programs responsive and contributing to the regional, national and global needs.</li>
-                   <li>Conduct theoretical and applied researches with concentration in the fields of mathematical and computational sciences.</li>
-                   <li>Organize specialized training activities that will improve competencies and skills of stakeholders.</li>
-                   <li>Produce globally competitive stakeholders.</li>
-                 </ul>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-
-     </div>
-     <!-- End of Mission & Vision -->
+      <div class="mission-vision-section container-fluid">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-light collapse-button" data-bs-target="#missionText">Mission</button>
+                <button class="btn btn-light collapse-button" data-bs-target="#visionText">Vision</button>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <div class="collapse" id="missionText">
+                <div class="card card-body section-subtitle display-7 text-center">
+                  A center of excellence in mathematical and computational sciences in the Visayas.
+                </div>
+              </div>
+              <div class="collapse" id="visionText">
+                <div class="card card-body section-subtitle display-7 text-center">
+                  <ul class="">
+                    <li>Offer graduate and undergraduate degree programs responsive and contributing to the regional, national and global needs.</li>
+                    <li>Conduct theoretical and applied researches with concentration in the fields of mathematical and computational sciences.</li>
+                    <li>Organize specialized training activities that will improve competencies and skills of stakeholders.</li>
+                    <li>Produce globally competitive stakeholders.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Mission & Vision -->
       <!-- Faculty Members Section -->
       <div class="container-fluid">
         <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-secondary-subtle">
@@ -376,41 +375,34 @@
     window.addEventListener("scroll", toggleNavbarVisibility);
     });
 
+    // Mission & Vision Collapse
     const collapseButtons = document.querySelectorAll('.collapse-button');
     const collapseContents = document.querySelectorAll('.collapse');
-    let timeoutId;
-
-    // Trigger click on default button on page load, in this case it is "missions" button
-    const missionButton = document.querySelector('[data-bs-target="#missionText"]');
-    missionButton.click();
-    missionButton.classList.add('course-info-active'); // Highlight the button
+    let activeButton = null;
 
     collapseButtons.forEach(button => {
       button.addEventListener('click', () => {
-        clearTimeout(timeoutId); // Clear any pending timeouts
-        timeoutId = setTimeout(() => { // Set a new timeout
-          collapseButtons.forEach(otherButton => {
-            otherButton.classList.remove('course-info-active');
-          });
-          button.classList.add('course-info-active');
-
+        if (activeButton !== button) {
+          // Toggle the 'show' class for the clicked button's target
           const targetId = button.getAttribute('data-bs-target');
           const targetCollapse = document.querySelector(targetId);
 
-          collapseContents.forEach(collapse => {
-            if (collapse !== targetCollapse) {
+          if (targetCollapse.classList.contains('show')) {
+            targetCollapse.classList.remove('show');
+          } else {
+            collapseContents.forEach(collapse => {
               collapse.classList.remove('show');
-            }
-          });
-        }, 300); // Adjust delay
-      });
-    });
+            });
+            targetCollapse.classList.add('show');
+          }
 
-    collapseContents.forEach(collapse => {
-      collapse.addEventListener('hidden.bs.collapse', () => {
-        collapseButtons.forEach(button => {
-          button.classList.remove('course-info-active');
-        });
+          // Update the active button
+          if (activeButton) {
+            activeButton.classList.remove('course-info-active');
+          }
+          button.classList.add('course-info-active');
+          activeButton = button;
+        }
       });
     });
 
