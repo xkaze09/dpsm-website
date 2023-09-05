@@ -133,6 +133,14 @@
     }
   }
 
+// Dropdown
+  .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none;
+  }
+
 // Carousel
 .carousel-inner .carousel-item {
     width: 100%; /* Set a fixed height for the carousel images */
