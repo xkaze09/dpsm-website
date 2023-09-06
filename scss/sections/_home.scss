@@ -18,7 +18,7 @@
     transform: scale(1.1);
 }
 
-.university-name {
+.upper-division-name {
     font-family: 'Oswald', 'Times New Roman', Times, serif;
     color: white;
     text-decoration: none;
@@ -56,66 +56,90 @@
     cursor: pointer;
 }
 
-// /* Media Queries */
-// @media (max-width: 540px) {
-//     /* Adjust font size and padding for smaller screens */
-//     .dpsm-logo-highlight {
-//         width: 4rem;
-//     }
-//     .division-navbar {
-//         display: flex;
-//         flex-direction: column;
-//         text-align: center;
-//     }
+// Dropdown
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none;
+  }
 
-//     .division-name {
-//         margin-top: 5px; /* Adjust as needed for spacing */
-//     }
-//   }
-  
-//   @media (min-width: 541px) and (max-width: 767px) {
-//     /* Adjust font size and padding for small screens */
-//     .dpsm-logo-highlight {
-//         width: 4rem;
-//     }
-//     .division-navbar {
-//         display: flex;
-//         flex-direction: column;
-//         text-align: center;
-//     }
+/* Media Queries */
+@media (min-width: 200px) and (max-width: 400px) {
+    /* Adjust font size and padding for smaller screens */
+    .dpsm-logo-highlight {
+        width: 2rem;
+    }
 
-//     .division-name {
-//         margin-top: 5px; /* Adjust as needed for spacing */
-//     }
-//   }
-  
-//   @media (min-width: 768px) and (max-width: 991px) {
-//     /* Adjust font size and padding for medium screens */
-//     .dpsm-logo-highlight {
-//         width: 4rem;
-//     }
-//     .division-navbar {
-//         display: flex;
-//         flex-direction: column;
-//         text-align: center;
-//     }
+    .upper-division-name {
+        font-size: 0.6rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
 
-//     .division-name {
-//         margin-top: 5px; /* Adjust as needed for spacing */
-//     }
-//   }
+    .division-name {
+        font-size: 0.8rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+  }
+
+@media (min-width: 401px) and (max-width: 570px) {
+    /* Adjust font size and padding for smaller screens */
+    .dpsm-logo-highlight {
+        width: 2rem;
+    }
+
+    .division-name {
+        font-size: 0.8rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+
+  }
   
-//   @media (min-width: 992px) {
-//     /* Default styles for larger screens */
-//     .dpsm-logo-highlight {
-//         width: 5rem;
-//     }
-//     .division-navbar {
-//         display: flex;
-//         flex-direction: column;
-//         text-align: center;
-//     }
-//   }
+  @media (min-width: 571px) and (max-width: 767px) {
+    /* Adjust font size and padding for small screens */
+    .dpsm-logo-highlight {
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Adjust font size and padding for medium screens */
+    .dpsm-logo-highlight {
+    }
+    .division-navbar {
+
+    }
+
+    .division-name {
+    }
+  }
+  
+  @media (min-width: 992px) {
+    /* Default styles for larger screens */
+    .dpsm-logo-highlight {
+    }
+    .division-navbar {
+
+    }
+  }
 
 // Carousel
 .carousel-inner .carousel-item {

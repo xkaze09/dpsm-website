@@ -5,6 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
+.support-hero-section {
+    position: relative;
+    height: 50vh;
+    background-image: url('/images/homepage-hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 /* Hide scrollbar of sticky sidebar */
 html {
     overflow: scroll;

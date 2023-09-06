@@ -11874,7 +11874,7 @@ textarea.form-control-lg {
   transform: scale(1.1);
 }
 
-.university-name {
+.upper-division-name {
   font-family: "Oswald", "Times New Roman", Times, serif;
   color: white;
   text-decoration: none;
@@ -11912,6 +11912,64 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  display: none;
+}
+
+/* Media Queries */
+@media (min-width: 200px) and (max-width: 400px) {
+  /* Adjust font size and padding for smaller screens */
+  .dpsm-logo-highlight {
+    width: 2rem;
+  }
+  .upper-division-name {
+    font-size: 0.6rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .division-name {
+    font-size: 0.8rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}
+@media (min-width: 401px) and (max-width: 570px) {
+  /* Adjust font size and padding for smaller screens */
+  .dpsm-logo-highlight {
+    width: 2rem;
+  }
+  .division-name {
+    font-size: 0.8rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}
+@media (min-width: 571px) and (max-width: 767px) {
+  /* Adjust font size and padding for small screens */
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust font size and padding for medium screens */
+}
+@media (min-width: 992px) {
+  /* Default styles for larger screens */
+}
 .carousel-inner .carousel-item {
   width: 100%; /* Set a fixed height for the carousel images */
   height: 100%;
@@ -12212,7 +12270,7 @@ div.card.card-body {
 .carousel-inner img {
   object-fit: cover;
   max-width: 100%;
-  height: 300px; /* Set the desired height for the carousel images */
+  height: 400px; /* Set the desired height for the carousel images */
 }
 
 /* Course Organization Section */
@@ -12272,7 +12330,7 @@ div.card.card-body {
 .about-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/homepage-hero.png");
+  background-image: url("/images/about-hero.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12304,6 +12362,17 @@ div.card.card-body {
 }
 
 .research-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/homepage-hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-hero-section {
   position: relative;
   height: 50vh;
   background-image: url("/images/homepage-hero.png");
