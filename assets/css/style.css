@@ -11924,7 +11924,7 @@ textarea.form-control-lg {
 @media (min-width: 200px) and (max-width: 400px) {
   /* Adjust font size and padding for smaller screens */
   .dpsm-logo-highlight {
-    width: 1.5rem;
+    width: 2rem;
   }
   .upper-division-name {
     font-size: 0.6rem;
