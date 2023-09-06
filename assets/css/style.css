@@ -11912,6 +11912,14 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  display: none;
+}
+
 /* Media Queries */
 @media (min-width: 200px) and (max-width: 400px) {
   /* Adjust font size and padding for smaller screens */
@@ -11962,14 +11970,6 @@ textarea.form-control-lg {
 @media (min-width: 992px) {
   /* Default styles for larger screens */
 }
-.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.navbar-nav .nav-item.dropdown .dropdown-menu {
-  display: none;
-}
-
 .carousel-inner .carousel-item {
   width: 100%; /* Set a fixed height for the carousel images */
   height: 100%;

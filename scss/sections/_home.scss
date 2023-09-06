@@ -56,6 +56,14 @@
     cursor: pointer;
 }
 
+// Dropdown
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none;
+  }
+
 /* Media Queries */
 @media (min-width: 200px) and (max-width: 400px) {
     /* Adjust font size and padding for smaller screens */
@@ -131,14 +139,6 @@
     .division-navbar {
 
     }
-  }
-
-// Dropdown
-.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  .navbar-nav .nav-item.dropdown .dropdown-menu {
-    display: none;
   }
 
 // Carousel
