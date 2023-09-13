@@ -97,6 +97,11 @@ div.card.card-body {
   height: auto;
 }
 
+// Course Organization Name Styling
+.course-org-name {
+  font-family: "Consolas";
+}
+
 /* Media Queries */
 @media (max-width: 540px) {
   /* Adjust font size and padding for smaller screens */
