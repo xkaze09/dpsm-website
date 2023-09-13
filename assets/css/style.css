@@ -11903,6 +11903,12 @@ textarea.form-control-lg {
   visibility: visible;
 }
 
+.custom-background {
+  background-image: linear-gradient(rgba(25, 42, 84, 0.8), rgba(255, 133, 0, 0.5)), url("./images/appmath-card.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .course-card {
   transition: transform 0.2s ease-in-out;
 }
@@ -12071,6 +12077,10 @@ div.card.card-body {
   border-radius: 0;
   border: none;
   height: auto;
+}
+
+.course-org-name {
+  font-family: "Courier New";
 }
 
 /* Media Queries */
