@@ -97,7 +97,7 @@
           </div>
         </div>
       </div>
-     <!-- End of Hero Section -->
+      <!-- End of Hero Section -->
       <!-- Intro Section -->
       <div class="px-4 pt-5 p-md-5 my-5 text-center intro-section">
         <div class="container">
@@ -360,48 +360,6 @@
             ];
             updateCarousel(computerScienceCarouselData);
         </script>
-    <script>
-
-    const collapseButtons = document.querySelectorAll('.collapse-button');
-    const collapseContents = document.querySelectorAll('.collapse');
-    let timeoutId;
-
-    // Trigger click on default button on page load, in this case it is "admissions" button
-    const admissionButton = document.querySelector('[data-bs-target="#admissionText"]');
-    admissionButton.click();
-    admissionButton.classList.add('course-info-active'); // Highlight the button
-
-    collapseButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        clearTimeout(timeoutId); // Clear any pending timeouts
-        timeoutId = setTimeout(() => { // Set a new timeout
-          collapseButtons.forEach(otherButton => {
-            otherButton.classList.remove('course-info-active');
-          });
-          button.classList.add('course-info-active');
-
-          const targetId = button.getAttribute('data-bs-target');
-          const targetCollapse = document.querySelector(targetId);
-
-          collapseContents.forEach(collapse => {
-            if (collapse !== targetCollapse) {
-              collapse.classList.remove('show');
-            }
-          });
-        }, 300); // Adjust delay
-      });
-    });
-
-    collapseContents.forEach(collapse => {
-      collapse.addEventListener('hidden.bs.collapse', () => {
-        collapseButtons.forEach(button => {
-          button.classList.remove('course-info-active');
-        });
-      });
-    });
-
-    // Cards
-
-    </script>
+        <script src="javascript/collapse.js"></script>
   </body>
 </html>

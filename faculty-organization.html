@@ -610,62 +610,6 @@
           ];
           updateCarousel(facultyOrganizationCarouselData);
         </script>
-    <script>
-
-    const collapseButtons = document.querySelectorAll('.collapse-button');
-    const collapseContents = document.querySelectorAll('.collapse');
-    let timeoutId;
-
-    // Function to scroll back to the target element
-    function scrollToTarget(target) {
-    const targetRect = target.getBoundingClientRect();
-    window.scrollTo({
-        top: window.scrollY + targetRect.top - 20, // You can adjust the offset as needed
-        behavior: 'smooth'
-    });
-    }
-
-    // Trigger click on default button on page load, in this case it is "administrative" button
-    const administrativeButton = document.querySelector('[data-bs-target="#administrativeText"]');
-    administrativeButton.click();
-    administrativeButton.classList.add('course-info-active'); // Highlight the button
-
-    collapseButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        clearTimeout(timeoutId); // Clear any pending timeouts
-        timeoutId = setTimeout(() => { // Set a new timeout
-        collapseButtons.forEach(otherButton => {
-            otherButton.classList.remove('course-info-active');
-        });
-        button.classList.add('course-info-active');
-
-        const targetId = button.getAttribute('data-bs-target');
-        const targetCollapse = document.querySelector(targetId);
-
-        // Add event listener to handle scrolling after collapse animation
-        targetCollapse.addEventListener('transitionend', () => {
-            scrollToTarget(targetCollapse);
-        }, { once: true });
-
-        collapseContents.forEach(collapse => {
-            if (collapse !== targetCollapse) {
-            collapse.classList.remove('show');
-            }
-        });
-        }, 300); // Adjust delay
-    });
-    });
-
-    collapseContents.forEach(collapse => {
-      collapse.addEventListener('hidden.bs.collapse', () => {
-          collapseButtons.forEach(button => {
-          button.classList.remove('course-info-active');
-          });
-      });
-    });
-
-    // Cards
-
-    </script>
+        <script src="javascript/collapse.js"></script>
   </body>
 </html>

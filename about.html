@@ -357,41 +357,6 @@
           ];
           updateCarousel(aboutCarouselData);
         </script>
-  <script>
-
-    // Mission & Vision Collapse
-    const collapseButtons = document.querySelectorAll('.collapse-button');
-    const collapseContents = document.querySelectorAll('.collapse');
-    let activeButton = null;
-
-    collapseButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        if (activeButton !== button) {
-          // Toggle the 'show' class for the clicked button's target
-          const targetId = button.getAttribute('data-bs-target');
-          const targetCollapse = document.querySelector(targetId);
-
-          if (targetCollapse.classList.contains('show')) {
-            targetCollapse.classList.remove('show');
-          } else {
-            collapseContents.forEach(collapse => {
-              collapse.classList.remove('show');
-            });
-            targetCollapse.classList.add('show');
-          }
-
-          // Update the active button
-          if (activeButton) {
-            activeButton.classList.remove('course-info-active');
-          }
-          button.classList.add('course-info-active');
-          activeButton = button;
-        }
-      });
-    });
-
-    // Cards
-
-    </script>
+        <script src="javascript/collapse.js"></script>
   </body>
 </html>
