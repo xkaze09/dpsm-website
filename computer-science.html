@@ -347,9 +347,19 @@
             </div>
           </div>
         </footer>
-          <!-- End of Footer -->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-          <script src="javascript/navbar.js"></script>
+        <!-- End of Footer -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="javascript/navbar.js"></script>
+        <!-- Include the carousel.js script -->
+        <script src="javascript/carousel.js"></script>
+        <script>
+            const computerScienceCarouselData = [
+                { src: './images/card1.png', alt: 'Image 1', text: "Sir Meow Cats" },
+                { src: './images/card3.png', alt: 'Image 2', text: 'Madame Scratch Cookies' },
+                // Add more carousel items as needed
+            ];
+            updateCarousel(computerScienceCarouselData);
+        </script>
     <script>
 
     const collapseButtons = document.querySelectorAll('.collapse-button');
@@ -389,45 +399,6 @@
         });
       });
     });
-
-    // Carousel
-    const carouselData = [
-      { src: '/images/card1.png', alt: 'Image 1', text: "Sir Meow Cats" },
-      { src: '/images/card3.png', alt: 'Image 2', text: 'Madame Scratch Cookies' },
-      // Add more carousel items as needed
-    ];
-
-    // Function to update carousel content and text
-    function updateCarousel() {
-      const carouselImages = document.getElementById('carousel-images');
-      const carouselText = document.getElementById('carousel-text');
-
-      let carouselHTML = '';
-      carouselData.forEach((item, index) => {
-        const activeClass = index === 0 ? 'active' : '';
-        carouselHTML += `
-          <div class="carousel-item ${activeClass}">
-            <img src="${item.src}" class="d-block w-100" alt="${item.alt}">
-          </div>
-        `;
-      });
-
-      carouselImages.innerHTML = carouselHTML;
-      
-      // Update the text based on the active carousel item
-      const carousel = document.getElementById('carouselExample');
-      carousel.addEventListener('slid.bs.carousel', function () {
-        const activeItem = document.querySelector('.carousel-item.active');
-        const activeIndex = Array.from(activeItem.parentNode.children).indexOf(activeItem);
-        carouselText.textContent = carouselData[activeIndex].text;
-      });
-
-      // Initialize the placeholder text with the content of the first carousel item
-      carouselText.textContent = carouselData[0].text;
-    }
-
-    // Call the function to initially populate the carousel
-    updateCarousel();
 
     // Cards
 
