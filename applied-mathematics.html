@@ -345,109 +345,19 @@
             </div>
           </div>
         </footer>
-          <!-- End of Footer -->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script>
-
-    // Navbar
-    document.addEventListener("DOMContentLoaded", function() {
-    const divisionNavbar = document.querySelector(".division-navbar");
-
-    function toggleNavbarVisibility() {
-        if (window.scrollY > 0) {
-            divisionNavbar.classList.add("show");
-        } else {
-            divisionNavbar.classList.remove("show");
-        }
-    }
-
-    // Initial check on page load
-    toggleNavbarVisibility();
-
-    // Add scroll event listener
-    window.addEventListener("scroll", toggleNavbarVisibility);
-    });
-
-    const collapseButtons = document.querySelectorAll('.collapse-button');
-    const collapseContents = document.querySelectorAll('.collapse');
-    let timeoutId;
-
-    // Trigger click on default button on page load, in this case it is "admissions" button
-    const admissionButton = document.querySelector('[data-bs-target="#admissionText"]');
-    admissionButton.click();
-    admissionButton.classList.add('course-info-active'); // Highlight the button
-
-    collapseButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        clearTimeout(timeoutId); // Clear any pending timeouts
-        timeoutId = setTimeout(() => { // Set a new timeout
-          collapseButtons.forEach(otherButton => {
-            otherButton.classList.remove('course-info-active');
-          });
-          button.classList.add('course-info-active');
-
-          const targetId = button.getAttribute('data-bs-target');
-          const targetCollapse = document.querySelector(targetId);
-
-          collapseContents.forEach(collapse => {
-            if (collapse !== targetCollapse) {
-              collapse.classList.remove('show');
-            }
-          });
-        }, 300); // Adjust delay
-      });
-    });
-
-    collapseContents.forEach(collapse => {
-      collapse.addEventListener('hidden.bs.collapse', () => {
-        collapseButtons.forEach(button => {
-          button.classList.remove('course-info-active');
-        });
-      });
-    });
-
-    // Carousel
-    const carouselData = [
-      { src: './images/homepage-hero.png', alt: 'Image 1', text: "Insert details here." },
-      { src: './images/homepage-hero.png', alt: 'Image 2', text: 'Insert another detail here.' },
-      { src: './images/homepage-hero.png', alt: 'Image 3', text: 'You can insert another info here.' },
-      // Add more carousel items as needed
-    ];
-
-    // Function to update carousel content and text
-    function updateCarousel() {
-      const carouselImages = document.getElementById('carousel-images');
-      const carouselText = document.getElementById('carousel-text');
-
-      let carouselHTML = '';
-      carouselData.forEach((item, index) => {
-        const activeClass = index === 0 ? 'active' : '';
-        carouselHTML += `
-          <div class="carousel-item ${activeClass}">
-            <img src="${item.src}" class="d-block w-100" alt="${item.alt}">
-          </div>
-        `;
-      });
-
-      carouselImages.innerHTML = carouselHTML;
-      
-      // Update the text based on the active carousel item
-      const carousel = document.getElementById('carouselExample');
-      carousel.addEventListener('slid.bs.carousel', function () {
-        const activeItem = document.querySelector('.carousel-item.active');
-        const activeIndex = Array.from(activeItem.parentNode.children).indexOf(activeItem);
-        carouselText.textContent = carouselData[activeIndex].text;
-      });
-
-      // Initialize the placeholder text with the content of the first carousel item
-      carouselText.textContent = carouselData[0].text;
-    }
-
-    // Call the function to initially populate the carousel
-    updateCarousel();
-
-    // Cards
-
-    </script>
+        <!-- End of Footer -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="javascript/navbar.js"></script>
+        <script src="javascript/carousel.js"></script>
+        <script>
+          const appliedMathCarouselData = [
+            { src: './images/homepage-hero.png', alt: 'Image 1', text: "Insert details here." },
+            { src: './images/homepage-hero.png', alt: 'Image 2', text: 'Insert another detail here.' },
+            { src: './images/homepage-hero.png', alt: 'Image 3', text: 'You can insert another info here.' },
+              // Add more carousel items as needed
+          ];
+          updateCarousel(appliedMathCarouselData);
+        </script>
+        <script src="javascript/collapse.js"></script>
   </body>
 </html>
