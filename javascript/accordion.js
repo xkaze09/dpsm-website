@@ -13,7 +13,7 @@ function initializeAccordion(sections) {
         }
     });
 }
-  
+
 
 // Creating the accordion item HTML
 
