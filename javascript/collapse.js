@@ -31,7 +31,7 @@ missionVisionCollapseButtons.forEach(button => {
 
 // Trigger click event on "Mission" button to highlight it on page load
 const missionButton = document.querySelector('[data-bs-target="#missionText"]');
-missionButton.click();
+// missionButton.click();
 
 
 // Courses Collapse
