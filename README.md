@@ -82,6 +82,20 @@ Follow these steps to create a new branch in your Git repository:
 
 Now that you have cloned the repository, you can start making changes and committing them to your local Git history.
 
+#### Important: Make sure to run the script "npm run compile:sass" in the background while making changes.
+You can do this by:
+1. Open Git Bash and navigate to the repository.
+2. In the repository, execute:
+  ```
+  npm run compile:sass
+  ```
+3. It should look like this:
+   
+   ![image](https://github.com/xkaze09/dpsm-website/assets/47445339/ca83dfbe-1a07-4496-81e0-a2bb6651afc2)
+
+4. Now, you are ready to make changes.
+
+#### Steps:
 1. Create or edit files within the cloned repository according to your project's requirements. To see the status of your changes and files that have been modified, run:
    ```
    git status bash
