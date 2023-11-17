@@ -93,7 +93,7 @@ You can do this by:
    
    ![image](https://github.com/xkaze09/dpsm-website/assets/47445339/ca83dfbe-1a07-4496-81e0-a2bb6651afc2)
 
-4. Now, you are ready to make changes.
+4. Now, you are ready to make changes. You can use Bootstrap5-ThemeKit.html to test if you loaded the repository properly.
 
 #### Steps:
 1. Create or edit files within the cloned repository according to your project's requirements. To see the status of your changes and files that have been modified, run:
