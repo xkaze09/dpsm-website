@@ -1,605 +1,755 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Faculty & Organization | DPSM</title>
     <!-- Favicon -->
-    <link rel="icon" href="/images/dpsmlogo.png" type="image/png">
+    <link rel="icon" href="/images/dpsmlogo.png" type="image/png" />
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
   </head>
   <body>
     <div class="wrapper">
-    <!-- University Navbar Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container justify-content-between">
-        <div class="university-navbar navbar-brand menu">
-          <a href="https://up.edu.ph/" target="_blank" class="text-link">
-            <img class="logo-highlight" src="images\upsystemlogo.png" width="48">
-          </a>
-          <a href="https://upv.edu.ph/" target="_blank" class="text-link">
-            <img class="logo-highlight" src="images\upvlogo.png" width="51">
-          </a>
-          <a href="/index.html" target="_self" class="text-link">
-            <img class="logo-highlight" src="images\dpsmlogo.png" width="48">
-          </a>
-          <a href="/index.html" target="_self" class="text-link">
-            <span class="upper-division-name text-white">DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span>
-          </a>
-        </div>
-          <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-              <ul class="navbar-nav text-center">
-                  <li>
-                      <a class="nav-link" href="./index.html">Home</a>
-                  </li>
-                  <li>
-                      <a class="nav-link" href="./support.html">Resources & Support</a>
-                  </li>
-              </ul>
-        </div>
-      </div>
-    </nav>
-  <!-- End of University Navbar -->
-  <!-- Division Navbar Section -->
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-    <div class="container">
-      <div class="division-navbar navbar-brand menu" href="#">
-        <a href="./index.html" target="_self" class="text-link">
-          <img class="dpsm-logo-highlight rounded-circle" src="./images/dpsmlogo.png" width="48">
-        </a>
-        <a href="./index.html" target="_self" class="text-link">
-          <span class="division-name">DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span>
-        </a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-        <ul class="navbar-nav text-center">
-          <li>
-            <a class="nav-link text-dark" href="./about.html">About</a>
-          </li>
-          <li class="nav-item dropdown"> <!-- Add dropdown class to the list item -->
-            <a class="nav-link dropdown-toggle text-dark" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Courses <!-- Dropdown toggle button -->
+      <!-- University Navbar Section -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container justify-content-between">
+          <div class="university-navbar navbar-brand menu">
+            <a href="https://up.edu.ph/" target="_blank" class="text-link">
+              <img class="logo-highlight" src="images\upsystemlogo.png" width="48" />
             </a>
-            <div class="dropdown-menu" aria-labelledby="coursesDropdown"> <!-- Dropdown menu -->
-              <a class="dropdown-item" href="./applied-mathematics.html">B.S. in Applied Mathematics</a>
-              <a class="dropdown-item" href="./computer-science.html">B.S. in Computer Science</a>
-              <a class="dropdown-item" href="./statistics.html">B.S. in Statistics</a>
+            <a href="https://upv.edu.ph/" target="_blank" class="text-link">
+              <img class="logo-highlight" src="images\upvlogo.png" width="51" />
+            </a>
+            <a href="/index.html" target="_self" class="text-link">
+              <img class="logo-highlight" src="images\dpsmlogo.png" width="48" />
+            </a>
+            <a href="/index.html" target="_self" class="text-link">
+              <span class="upper-division-name text-white"
+                >DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span
+              >
+            </a>
+          </div>
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
+            <ul class="navbar-nav text-center">
+              <li>
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-link" href="./support.html">Resources & Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End of University Navbar -->
+      <!-- Division Navbar Section -->
+      <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+          <div class="division-navbar navbar-brand menu" href="#">
+            <a href="./index.html" target="_self" class="text-link">
+              <img
+                class="dpsm-logo-highlight rounded-circle"
+                src="./images/dpsmlogo.png"
+                width="48"
+              />
+            </a>
+            <a href="./index.html" target="_self" class="text-link">
+              <span class="division-name">DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span>
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
+            <ul class="navbar-nav text-center">
+              <li>
+                <a class="nav-link text-dark" href="./about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <!-- Add dropdown class to the list item -->
+                <a
+                  class="nav-link dropdown-toggle text-dark"
+                  href="#"
+                  id="coursesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Courses
+                  <!-- Dropdown toggle button -->
+                </a>
+                <div class="dropdown-menu" aria-labelledby="coursesDropdown">
+                  <!-- Dropdown menu -->
+                  <a class="dropdown-item" href="./applied-mathematics.html"
+                    >B.S. in Applied Mathematics</a
+                  >
+                  <a class="dropdown-item" href="./computer-science.html"
+                    >B.S. in Computer Science</a
+                  >
+                  <a class="dropdown-item" href="./statistics.html">B.S. in Statistics</a>
+                </div>
+              </li>
+              <li>
+                <a class="nav-link text-dark" aria-current="page" href="./faculty-organization.html"
+                  >Faculty & Organization</a
+                >
+              </li>
+              <li>
+                <a class="nav-link text-dark" href="./research.html"
+                  >Research & Public Service Activities</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End of Division Navbar -->
+      <!-- Hero Section -->
+      <div class="faculty-hero-section">
+        <div class="hero-overlay"></div>
+        <!-- Overlay Element Added -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <div class="hero-caption">
+                <h1 class="display-1 fw-medium">FACULTY & STAFF MEMBERS</h1>
+              </div>
             </div>
-          </li>
-          <li>
-            <a class="nav-link text-dark" aria-current="page" href="./faculty-organization.html">Faculty & Organization</a>
-          </li>
-          <li>
-            <a class="nav-link text-dark" href="./research.html">Research & Public Service Activities</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- End of Division Navbar -->
-<!-- Hero Section -->
-<div class="faculty-hero-section">
-  <div class="hero-overlay"></div> <!-- Overlay Element Added -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 mx-auto">
-        <div class="hero-caption">
-          <h1 class="display-1 fw-medium">FACULTY & STAFF MEMBERS</h1>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<!-- End of Hero Section -->
-    <!-- Faculty Members Section -->
-    <div class="container-fluid p-5">
+      <!-- End of Hero Section -->
+      <!-- Faculty Members Section -->
+      <div class="container-fluid p-5">
         <div class="row">
-        <!-- Sticky Sidebar -->
-        <nav class="col-12 col-md-3 sidebar text-center sticky-sidebar">
+          <!-- Sticky Sidebar -->
+          <nav class="col-12 col-md-3 sidebar text-center sticky-sidebar">
             <div class="d-flex flex-md-column">
-            <button class="btn btn-light btn-block collapse-button text-center mb-md-3" data-bs-toggle="collapse" data-bs-target="#administrativeText">ADMINISTRATIVE</button>
-            <button class="btn btn-light btn-block collapse-button text-center mb-md-3" data-bs-toggle="collapse" data-bs-target="#appliedMathematicsText">APPLIED MATHEMATICS</button>
-            <button class="btn btn-light btn-block collapse-button text-center mb-md-3" data-bs-toggle="collapse" data-bs-target="#computerScienceText">COMPUTER SCIENCE</button>
-            <button class="btn btn-light btn-block collapse-button text-center mb-md-3" data-bs-toggle="collapse" data-bs-target="#statisticsText">STATISTICS</button>
-            <button class="btn btn-light btn-block collapse-button text-center mb-md-3" data-bs-toggle="collapse" data-bs-target="#statisticsText">PHYSICS</button>
+              <button
+                class="btn btn-light btn-block collapse-button text-center mb-md-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#administrativeText"
+              >
+                ADMINISTRATIVE
+              </button>
+              <button
+                class="btn btn-light btn-block collapse-button text-center mb-md-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#appliedMathematicsText"
+              >
+                APPLIED MATHEMATICS
+              </button>
+              <button
+                class="btn btn-light btn-block collapse-button text-center mb-md-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#computerScienceText"
+              >
+                COMPUTER SCIENCE
+              </button>
+              <button
+                class="btn btn-light btn-block collapse-button text-center mb-md-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#statisticsText"
+              >
+                STATISTICS
+              </button>
+              <button
+                class="btn btn-light btn-block collapse-button text-center mb-md-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#statisticsText"
+              >
+                PHYSICS
+              </button>
             </div>
-        </nav>
-        <!-- Collapsing Content -->
-        <main class="col-12 col-md-9">
+          </nav>
+          <!-- Collapsing Content -->
+          <main class="col-12 col-md-9">
             <div class="collapse" id="administrativeText">
-            <div class="card card-body">
-                     <!-- Administrative Members Introduction -->
-                        <div class="px-4 pt-5 p-md-5 text-start">
-                            <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                <div class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
-                                    <p class="section-title lead mb-4 display-6 fw-bold">
-                                    Administrative Faculty Members
-                                    </p>
+              <div class="card card-body">
+                <!-- Administrative Members Introduction -->
+                <div class="px-4 pt-5 p-md-5 text-start">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div
+                          class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start"
+                        >
+                          <p class="section-title lead mb-4 display-6 fw-bold">
+                            Administrative Faculty Members
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <p class="lead mb-4 fw-normal text-justify">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus
+                          orci. Suspendisse ullamcorper purus ligula.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="pt-5 pb-5 shadow-sm">
+                              <div class="container">
+                                <div class="row justify-content-center">
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <!-- Card for head of hierarchy -->
+                                    <div class="card">
+                                      <img
+                                        src="/images/dpsm-chair.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Super DPSM</h5>
+                                        <p class="card-text mb-4">Head DPSM</p>
+                                      </div>
+                                    </div>
+                                    <!-- End -->
+                                  </div>
                                 </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                <p class="lead mb-4 fw-normal text-justify">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus orci. Suspendisse ullamcorper purus ligula.
-                                </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="container">
-                                    <div class="row">
-                                      <div class="col-12">
-                                        <div class="pt-5 pb-5 shadow-sm">
-                                          <div class="container">
-                                            <div class="row justify-content-center">
-                                              <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                                  <!-- Card for head of hierarchy -->
-                                                  <div class="card">
-                                                    <img src="/images/dpsm-chair.png" class="card-img-top" alt="Card Image">
-                                                    <div class="card-body d-flex flex-column">
-                                                      <h5 class="card-title">Mr. Super DPSM</h5>
-                                                      <p class="card-text mb-4">
-                                                          Head DPSM
-                                                      </p>
-                                                    </div>
-                                                  </div>
-                                                  <!-- End -->
-                                              </div>
-                                          </div>
-                                            <div class="row">
-                                              <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                                <div class="card">
-                                                  <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                  <div class="card-body d-flex flex-column">
-                                                    <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                    <p class="card-text mb-4">
-                                                        Head Administrator
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                                <div class="card">
-                                                  <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                  <div class="card-body d-flex flex-column">
-                                                    <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                    <p class="card-text mb-4">
-                                                        Head Administrator
-                                                    </p>                          
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                                <div class="card">
-                                                  <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                  <div class="card-body d-flex flex-column">
-                                                    <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                    <p class="card-text mb-4">
-                                                        Head Administrator
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                                <div class="card">
-                                                  <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                  <div class="card-body d-flex flex-column">
-                                                    <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                    <p class="card-text mb-4">
-                                                        Head Administrator
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                                <div class="card">
-                                                  <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                  <div class="card-body d-flex flex-column">
-                                                    <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                    <p class="card-text mb-4">
-                                                        Head Administrator
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                                <div class="card">
-                                                  <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                  <div class="card-body d-flex flex-column">
-                                                    <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                    <p class="card-text mb-4">
-                                                        Head Administrator
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                                <div class="card">
-                                                  <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                  <div class="card-body d-flex flex-column">
-                                                    <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                    <p class="card-text mb-4">
-                                                        Head Administrator
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
+                                <div class="row">
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
                                       </div>
                                     </div>
                                   </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            </div>
+                          </div>
                         </div>
-                        <!-- End of Administrative Members Introduction -->
-            </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Administrative Members Introduction -->
+              </div>
             </div>
             <div class="collapse" id="appliedMathematicsText">
-            <div class="card card-body">
-                     <!-- Applied Mathematics Faculty Members Introduction -->
-                     <div class="px-4 pt-5 p-md-5 text-start">
-                        <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                            <div class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
-                                <p class="section-title lead mb-4 display-6 fw-bold">
-                                Applied Mathematics Faculty Members
-                                </p>
-                            </div>
-                            </div>
+              <div class="card card-body">
+                <!-- Applied Mathematics Faculty Members Introduction -->
+                <div class="px-4 pt-5 p-md-5 text-start">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div
+                          class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start"
+                        >
+                          <p class="section-title lead mb-4 display-6 fw-bold">
+                            Applied Mathematics Faculty Members
+                          </p>
                         </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <p class="lead mb-4 fw-normal text-justify">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus
+                          orci. Suspendisse ullamcorper purus ligula.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="container">
                         <div class="row">
-                            <div class="col-lg-12">
-                            <p class="lead mb-4 fw-normal text-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus orci. Suspendisse ullamcorper purus ligula.
-                            </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="container">
-                                <div class="row">
-                                  <div class="col-12">
-                                    <div class="pt-5 pb-5 shadow-sm">
-                                      <div class="container">
-                                        <div class="row justify-content-center">
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                              <!-- Card for head of Applied Mathematics -->
-                                              <div class="card">
-                                                <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                <div class="card-body d-flex flex-column">
-                                                  <h5 class="card-title">Mr. Super Math</h5>
-                                                  <p class="card-text mb-4">
-                                                      Head Applied Mathematics
-                                                  </p>
-                                                </div>
-                                              </div>
-                                              <!-- End -->
-                                          </div>
+                          <div class="col-12">
+                            <div class="pt-5 pb-5 shadow-sm">
+                              <div class="container">
+                                <div class="row justify-content-center">
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <!-- Card for head of Applied Mathematics -->
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Super Math</h5>
+                                        <p class="card-text mb-4">Head Applied Mathematics</p>
                                       </div>
-                                        <div class="row">
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>                          
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
+                                    </div>
+                                    <!-- End -->
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
+                            </div>
+                          </div>
                         </div>
-                        </div>
+                      </div>
                     </div>
-                    <!-- End of Appled Mathematics Faculty Members Introduction -->
-            </div>
+                  </div>
+                </div>
+                <!-- End of Appled Mathematics Faculty Members Introduction -->
+              </div>
             </div>
             <div class="collapse" id="computerScienceText">
-            <div class="card card-body">
-                     <!-- Computer Science Faculty Members Introduction -->
-                     <div class="px-4 pt-5 p-md-5 text-start">
-                        <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                            <div class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
-                                <p class="section-title lead mb-4 display-6 fw-bold">
-                                Computer Science Faculty Members
-                                </p>
-                            </div>
-                            </div>
+              <div class="card card-body">
+                <!-- Computer Science Faculty Members Introduction -->
+                <div class="px-4 pt-5 p-md-5 text-start">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div
+                          class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start"
+                        >
+                          <p class="section-title lead mb-4 display-6 fw-bold">
+                            Computer Science Faculty Members
+                          </p>
                         </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <p class="lead mb-4 fw-normal text-justify">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus
+                          orci. Suspendisse ullamcorper purus ligula.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="container">
                         <div class="row">
-                            <div class="col-lg-12">
-                            <p class="lead mb-4 fw-normal text-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus orci. Suspendisse ullamcorper purus ligula.
-                            </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="container">
-                                <div class="row">
-                                  <div class="col-12">
-                                    <div class="pt-5 pb-5 shadow-sm">
-                                      <div class="container">
-                                        <div class="row justify-content-center">
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                              <!-- Card for head of Computer Science -->
-                                              <div class="card">
-                                                <img src="/images/cs-faculty/DIMZON.jpg" class="card-img-top" alt="Card Image">
-                                                <div class="card-body d-flex flex-column">
-                                                  <h5 class="card-title">Mr. Dimzy</h5>
-                                                  <p class="card-text mb-4">
-                                                      Head of Computer Science
-                                                  </p>
-                                                </div>
-                                              </div>
-                                              <!-- End -->
-                                          </div>
+                          <div class="col-12">
+                            <div class="pt-5 pb-5 shadow-sm">
+                              <div class="container">
+                                <div class="row justify-content-center">
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <!-- Card for head of Computer Science -->
+                                    <div class="card">
+                                      <img
+                                        src="/images/cs-faculty/DIMZON.jpg"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Dimzy</h5>
+                                        <p class="card-text mb-4">Head of Computer Science</p>
                                       </div>
-                                        <div class="row">
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/cs-faculty/AMBITA.jpg" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Nang Ara Abigail Ambita</h5>
-                                                <p class="card-text">
-                                                    <i>Computer Science Faculty Member </i><br> Teaches the subject CMSC 11, and the programming language, C.
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/cs-faculty/APOYON.jpg" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Franz Angelo U. Apoyon</h5>
-                                                <p class="card-text mb-4">
-                                                  <i>Computer Science Faculty Member </i><br> YOU KNOW WHO IT IS
-                                                </p>                          
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/cs-faculty/SUPERATUM.jpg" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Rhyan L. Superatum</h5>
-                                                <p class="card-text mb-4">
-                                                  <i>Computer Science Faculty Member </i><br> Teaches CMSC 142, CMSC 124, and lots of algorithms.
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/cs-faculty/CASTANEDA.jpg" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Jayvee Castaneda</h5>
-                                                <p class="card-text mb-4">
-                                                  <i>Computer Science Faculty Member </i><br> Teaches CMSC 126, CMSC 128.
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/cs-faculty/SANZ.jpg" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Ms. Sanz</h5>
-                                                <p class="card-text mb-4">
-                                                  <i>Computer Science Faculty Member </i>
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/cs-faculty/CALA-OR.jpg" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mrs. Christi Florence C. Cala-or</h5>
-                                                <p class="card-text mb-4">
-                                                  <i>Computer Science Faculty Member </i><br> Teaches CMSC 126, CMSC 128.
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Ms. Na Kita</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
+                                    </div>
+                                    <!-- End -->
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/cs-faculty/AMBITA.jpg"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Nang Ara Abigail Ambita</h5>
+                                        <p class="card-text">
+                                          <i>Computer Science Faculty Member </i><br />
+                                          Teaches the subject CMSC 11, and the programming language,
+                                          C.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/cs-faculty/APOYON.jpg"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Franz Angelo U. Apoyon</h5>
+                                        <p class="card-text mb-4">
+                                          <i>Computer Science Faculty Member </i><br />
+                                          YOU KNOW WHO IT IS
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/cs-faculty/SUPERATUM.jpg"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Rhyan L. Superatum</h5>
+                                        <p class="card-text mb-4">
+                                          <i>Computer Science Faculty Member </i><br />
+                                          Teaches CMSC 142, CMSC 124, and lots of algorithms.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/cs-faculty/CASTANEDA.jpg"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Jayvee Castaneda</h5>
+                                        <p class="card-text mb-4">
+                                          <i>Computer Science Faculty Member </i><br />
+                                          Teaches CMSC 126, CMSC 128.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/cs-faculty/SANZ.jpg"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Ms. Sanz</h5>
+                                        <p class="card-text mb-4">
+                                          <i>Computer Science Faculty Member </i>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/cs-faculty/CALA-OR.jpg"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mrs. Christi Florence C. Cala-or</h5>
+                                        <p class="card-text mb-4">
+                                          <i>Computer Science Faculty Member </i><br />
+                                          Teaches CMSC 126, CMSC 128.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Ms. Na Kita</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
+                            </div>
+                          </div>
                         </div>
-                        </div>
+                      </div>
                     </div>
-                    <!-- End of Computer Science Faculty Members Introduction -->
-            </div>
+                  </div>
+                </div>
+                <!-- End of Computer Science Faculty Members Introduction -->
+              </div>
             </div>
             <div class="collapse" id="statisticsText">
-            <div class="card card-body">
-                     <!-- Statistics Faculty Members Introduction -->
-                     <div class="px-4 pt-5 p-md-5 text-start">
-                        <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                            <div class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
-                                <p class="section-title lead mb-4 display-6 fw-bold">
-                                Statistics Faculty Members
-                                </p>
-                            </div>
-                            </div>
+              <div class="card card-body">
+                <!-- Statistics Faculty Members Introduction -->
+                <div class="px-4 pt-5 p-md-5 text-start">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div
+                          class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start"
+                        >
+                          <p class="section-title lead mb-4 display-6 fw-bold">
+                            Statistics Faculty Members
+                          </p>
                         </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <p class="lead mb-4 fw-normal text-justify">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus
+                          orci. Suspendisse ullamcorper purus ligula.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="container">
                         <div class="row">
-                            <div class="col-lg-12">
-                            <p class="lead mb-4 fw-normal text-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus orci. Suspendisse ullamcorper purus ligula.
-                            </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="container">
-                                <div class="row">
-                                  <div class="col-12">
-                                    <div class="pt-5 pb-5 shadow-sm">
-                                      <div class="container">
-                                        <div class="row justify-content-center">
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                              <!-- Card for head of Statistics -->
-                                              <div class="card">
-                                                <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                                <div class="card-body d-flex flex-column">
-                                                  <h5 class="card-title">Mr. Super Random Variable</h5>
-                                                  <p class="card-text mb-4">
-                                                      Head of Statistics
-                                                  </p>
-                                                </div>
-                                              </div>
-                                              <!-- End -->
-                                          </div>
+                          <div class="col-12">
+                            <div class="pt-5 pb-5 shadow-sm">
+                              <div class="container">
+                                <div class="row justify-content-center">
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <!-- Card for head of Statistics -->
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Super Random Variable</h5>
+                                        <p class="card-text mb-4">Head of Statistics</p>
                                       </div>
-                                        <div class="row">
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>                          
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                                            <div class="card">
-                                              <img src="/images/card1.png" class="card-img-top" alt="Card Image">
-                                              <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">Mr. Juan Carlos</h5>
-                                                <p class="card-text mb-4">
-                                                    Head Administrator
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
+                                    </div>
+                                    <!-- End -->
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                      <img
+                                        src="/images/card1.png"
+                                        class="card-img-top"
+                                        alt="Card Image"
+                                      />
+                                      <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Mr. Juan Carlos</h5>
+                                        <p class="card-text mb-4">Head Administrator</p>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
+                            </div>
+                          </div>
                         </div>
-                        </div>
+                      </div>
                     </div>
-                    <!-- End of Statistics Faculty Members Introduction -->
+                  </div>
+                </div>
+                <!-- End of Statistics Faculty Members Introduction -->
+              </div>
             </div>
-            </div>
-        </main>
+          </main>
         </div>
-    </div>
-    <!-- End of Faculty Members Section-->
+      </div>
+      <!-- End of Faculty Members Section-->
       <!-- Faculty Members Carousel Section -->
       <div class="container-fluid">
         <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-secondary-subtle">
@@ -614,11 +764,21 @@
               <div class="carousel-inner" id="carousel-images">
                 <!-- Carousel items go here -->
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -628,133 +788,210 @@
       </div>
       <!-- End of Faculty Members Carousel Section -->
       <!-- Footer -->
-<footer class="footer-with-image pt-md-5" style="background-image: url('./images/footer.png');">
-  <div class="container mb-5">
-    <div class="row">
-      <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
-          <!-- Content for the left column (col-2) -->
-        </div>
-        <div class="footer-content col-md-10">
-          <!-- Content for the right column (col-10) -->
-          <div class="footer-heading container-fluid">
-              <!-- First container (100% width of the outer container) -->
-              <span class="footer-division-text text-light">UPV Division of Physical Sciences and Mathematics</span>
-            </div>
-          <div class="container-fluid mt-3">
-              <!-- Second container (100% width of the outer container with margin top) -->
-          </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="footer-icons col-md-2 d-flex justify-content-around align-items-center">
-        <!-- Content for the left column (col-2) -->
-        <img src="./images/upvlogo.png" alt="UPV Logo" width="75px">
-        <img src="./images/dpsmlogo.png" alt="DPSM Logo" width="72px">
-      </div>
-      <div class="footer-content col-md-10">
-        <!-- Content for the right column (col-10) -->
-        <div class="footer-horizontal-line container-fluid">
-          <!-- First container (100% width of the outer container) -->
-        </div>
-        <div class="container-fluid mt-3">
-          <!-- Second container (100% width of the outer container with margin top) -->
+      <footer
+        class="footer-with-image pt-5"
+        style="background-image: url(&quot;./images/footer.png&quot;)"
+      >
+        <div class="container mb-5">
           <div class="row">
-            <div class="footer-subtitle col-md-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit risus lectus, sit amet aliquet sapien lobortis fermentum. Integer in lorem nec orci aliquet vehicula vel quis nunc.                    </div>
-              <div class="footer-subtitle col-md-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit risus lectus, sit amet aliquet sapien lobortis fermentum. Integer in                     </div>
-                <nav class="footer-nav navbar navbar-expand-lg justify-content-center col-md-3">
-                  <div class="" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                      <a class="nav-item nav-link" href="#">FAQs</a>
-                      <a class="nav-item nav-link" href="./about.html">About Us</a>
-                      <a class="nav-item nav-link" href="./support.html">Support</a>
-                    </div>
+            <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
+              <!-- Content for the left column (col-2) -->
+            </div>
+            <div class="footer-content col-md-10">
+              <!-- Content for the right column (col-10) -->
+              <div class="footer-heading container-fluid">
+                <!-- First container (100% width of the outer container) -->
+                <span class="footer-division-text text-light"
+                  >UPV Division of Physical Sciences and Mathematics</span
+                >
+              </div>
+              <div class="container-fluid mt-3">
+                <!-- Second container (100% width of the outer container with margin top) -->
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
+              <!-- Content for the left column (col-2) -->
+              <img src="./images/upvlogo.png" alt="UPV Logo" width="72px" />
+              <img
+                class="rounded-circle"
+                src="./images/dpsmlogo.png"
+                alt="DPSM Logo"
+                width="72px"
+              />
+            </div>
+            <div class="footer-content col-md-10">
+              <!-- Content for the right column (col-10) -->
+              <div class="footer-horizontal-line container-fluid">
+                <!-- First container (100% width of the outer container) -->
+              </div>
+              <div class="container-fluid mt-3">
+                <!-- Second container (100% width of the outer container with margin top) -->
+                <div class="row">
+                  <div class="footer-subtitle col-md-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit
+                    risus lectus, sit amet aliquet sapien lobortis fermentum. Integer in lorem nec
+                    orci aliquet vehicula vel quis nunc.
                   </div>
-                </nav>
-                <div class="footer-buttons d-flex justify-content-around align-items-center col-md-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#f5f5fa}</style><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#f5f5fa}</style><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#f5f5fa}</style><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>                    
+                  <div class="footer-subtitle col-md-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit
+                    risus lectus, sit amet aliquet sapien lobortis fermentum. Integer in
+                  </div>
+                  <nav class="footer-nav navbar navbar-expand-lg justify-content-center col-md-3">
+                    <div class="" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="#">FAQs</a>
+                        <a class="nav-item nav-link" href="./about.html">About Us</a>
+                        <a class="nav-item nav-link" href="./support.html">Support</a>
+                      </div>
+                    </div>
+                  </nav>
+                  <div
+                    class="footer-buttons d-flex justify-content-around align-items-center col-md-2"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                      <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                      <style>
+                        svg {
+                          fill: #f5f5fa;
+                        }
+                      </style>
+                      <path
+                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                      />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                      <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                      <style>
+                        svg {
+                          fill: #f5f5fa;
+                        }
+                      </style>
+                      <path
+                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                      />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+                      <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                      <style>
+                        svg {
+                          fill: #f5f5fa;
+                        }
+                      </style>
+                      <path
+                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </footer>
-        <!-- End of Footer -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <script src="javascript/navbar.js"></script>
-        <script src="javascript/carousel.js"></script>
-        <script>
-          const facultyOrganizationCarouselData = [
-            { src: './images/group_applied-mathematics_faculty.jpg', alt: 'Applied Mathematics Faculty Members', text: 'Applied Mathematics Faculty Members' },
-            { src: './images/group_computer-science_faculty.jpg', alt: 'Computer Science Faculty Members', text: "Computer Science Faculty Members" },
-            { src: './images/group_statistics_faculty.jpg', alt: 'Statistics Faculty Members', text: 'Statistics Faculty Members' },
-            { src: './images/group_physics_faculty.jpg', alt: 'Physics Faculty Members', text: 'Physics Faculty Members' },
-            { src: './images/group_dpsm_staff.jpg', alt: 'Physics Faculty Members', text: 'Physics Faculty Members' },
-              // Add more carousel items as needed
-          ];
-          updateCarousel(facultyOrganizationCarouselData);
-        </script>
-        <script>
-        // Initialize
-        const collapseButtons = document.querySelectorAll('.collapse-button');
-        const collapseContents = document.querySelectorAll('.collapse');
-        let timeoutId;
+        </div>
+      </footer>
+      <!-- End of Footer -->
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/carousel.js"></script>
+    <script>
+      const facultyOrganizationCarouselData = [
+        {
+          src: "./images/group_applied-mathematics_faculty.jpg",
+          alt: "Applied Mathematics Faculty Members",
+          text: "Applied Mathematics Faculty Members",
+        },
+        {
+          src: "./images/group_computer-science_faculty.jpg",
+          alt: "Computer Science Faculty Members",
+          text: "Computer Science Faculty Members",
+        },
+        {
+          src: "./images/group_statistics_faculty.jpg",
+          alt: "Statistics Faculty Members",
+          text: "Statistics Faculty Members",
+        },
+        {
+          src: "./images/group_physics_faculty.jpg",
+          alt: "Physics Faculty Members",
+          text: "Physics Faculty Members",
+        },
+        {
+          src: "./images/group_dpsm_staff.jpg",
+          alt: "Physics Faculty Members",
+          text: "Physics Faculty Members",
+        },
+        // Add more carousel items as needed
+      ];
+      updateCarousel(facultyOrganizationCarouselData);
+    </script>
+    <script>
+      // Initialize
+      const collapseButtons = document.querySelectorAll(".collapse-button");
+      const collapseContents = document.querySelectorAll(".collapse");
+      let timeoutId;
 
-        // Function to scroll back to the target element on click of button in sidebar
-        function scrollToTarget(target) {
-            const targetRect = target.getBoundingClientRect();
-            window.scrollTo({
-                top: window.scrollY + targetRect.top - 20, // You can adjust the offset as needed
-                behavior: 'smooth'
-            });
-        }
-
-        // Function to handle the click event of collapse buttons
-        function handleCollapseButtonClick(button) {
-            clearTimeout(timeoutId); // Clear any pending timeouts
-            timeoutId = setTimeout(() => {
-                collapseButtons.forEach(otherButton => {
-                    otherButton.classList.remove('course-info-active');
-                });
-                button.classList.add('course-info-active');
-
-                const targetId = button.getAttribute('data-bs-target');
-                const targetCollapse = document.querySelector(targetId);
-
-                // Ensure to add 'transitionend' event listener only once
-                targetCollapse.addEventListener('transitionend', () => {
-                    scrollToTarget(targetCollapse);
-                }, { once: true });
-
-                collapseContents.forEach(collapse => {
-                    if (collapse !== targetCollapse) {
-                        collapse.classList.remove('show');
-                    }
-                });
-            }, 300); // Adjust delay
-        }
-
-        // Set up event listeners for all collapse buttons
-        collapseButtons.forEach(button => {
-            button.addEventListener('click', () => handleCollapseButtonClick(button));
+      // Function to scroll back to the target element on click of button in sidebar
+      function scrollToTarget(target) {
+        const targetRect = target.getBoundingClientRect();
+        window.scrollTo({
+          top: window.scrollY + targetRect.top - 20, // You can adjust the offset as needed
+          behavior: "smooth",
         });
+      }
 
-        // Trigger click on default button on page load
-        const administrativeButton = document.querySelector('[data-bs-target="#administrativeText"]');
-        administrativeButton.click();
-        administrativeButton.classList.add('course-info-active'); // Highlight the button
+      // Function to handle the click event of collapse buttons
+      function handleCollapseButtonClick(button) {
+        clearTimeout(timeoutId); // Clear any pending timeouts
+        timeoutId = setTimeout(() => {
+          collapseButtons.forEach((otherButton) => {
+            otherButton.classList.remove("course-info-active");
+          });
+          button.classList.add("course-info-active");
 
-        // Set up 'hidden.bs.collapse' event listeners
-        collapseContents.forEach(collapse => {
-            collapse.addEventListener('hidden.bs.collapse', () => {
-                collapseButtons.forEach(button => {
-                    button.classList.remove('course-info-active');
-                });
-            });
+          const targetId = button.getAttribute("data-bs-target");
+          const targetCollapse = document.querySelector(targetId);
+
+          // Ensure to add 'transitionend' event listener only once
+          targetCollapse.addEventListener(
+            "transitionend",
+            () => {
+              scrollToTarget(targetCollapse);
+            },
+            { once: true },
+          );
+
+          collapseContents.forEach((collapse) => {
+            if (collapse !== targetCollapse) {
+              collapse.classList.remove("show");
+            }
+          });
+        }, 300); // Adjust delay
+      }
+
+      // Set up event listeners for all collapse buttons
+      collapseButtons.forEach((button) => {
+        button.addEventListener("click", () => handleCollapseButtonClick(button));
+      });
+
+      // Trigger click on default button on page load
+      const administrativeButton = document.querySelector('[data-bs-target="#administrativeText"]');
+      administrativeButton.click();
+      administrativeButton.classList.add("course-info-active"); // Highlight the button
+
+      // Set up 'hidden.bs.collapse' event listeners
+      collapseContents.forEach((collapse) => {
+        collapse.addEventListener("hidden.bs.collapse", () => {
+          collapseButtons.forEach((button) => {
+            button.classList.remove("course-info-active");
+          });
         });
-
-        </script>
+      });
+    </script>
   </body>
 </html>
