@@ -136,3 +136,4 @@ npm run compile:sass
 2. Click the `Compare & Pull` button
 3. Add your request message and comment to document changes.
 4. Once done, just click the `Create pull request` button.
+5. If PR is approved or closed make sure to delete the branch.
