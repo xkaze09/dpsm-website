@@ -1,4 +1,4 @@
-# UPV Division of Physical Sciences and Mathematics Website 
+# UPV Division of Physical Sciences and Mathematics Website
 
 ## Introduction
 
@@ -7,6 +7,7 @@
 **Target Audience:** Prospective and current students, faculty members, and other stakeholders interested in the department's offerings.
 
 **Goals:**
+
 - Showcase the range of courses offered by the department.
 - Highlight faculty profiles and their areas of expertise.
 - Provide information about the department's facilities and resources.
@@ -24,14 +25,18 @@ The DPSM website will be developed adhering to the following guidelines:
 ## Pages and Navigation
 
 **Home Page:**
+
 - Overview of the DPSM department, highlighting its mission and vision.
 - Featured courses or news announcements.
 
 ## Project Setup
 
 ### Prerequisites
+
 - Git installed on your computer. You can download and install Git from [git-scm.com](https://git-scm.com/downloads).
-  
+- Node. You can download from [nodejs.org](https://nodejs.org/en).
+- Prettier Extension. Download from VSCode extensions.
+
 ## Clone a Repository
 
 1. Open your terminal or command prompt.
@@ -42,7 +47,11 @@ The DPSM website will be developed adhering to the following guidelines:
    ```
    git clone https://github.com/xkaze09/dpsm-website.git
    ```
-   
+
+## Install dependencies
+
+- `npm ci`. Run this command when you have a fresh copy of the repo in your local machine. This installs the necessary dependencies to run the project.
+
 ## Creating a New Branch
 
 Follow these steps to create a new branch in your Git repository:
@@ -60,16 +69,19 @@ Follow these steps to create a new branch in your Git repository:
    git branch <new-branch-name>
    ```
 
-### Note this naming convention 
+### Note this naming convention
+
 - feature/feature-name
 - bugfix/issue-number
 - enhancement/code-area
 - release/version-number
-  
+
 #### For example:
-   ```
-   git feature/resource-and-support
-   ```
+
+```
+git feature/resource-and-support
+```
+
 5. Start working on the newly created branch, use the git checkout command:
    ```
    git checkout <new-branch-name>
@@ -78,24 +90,30 @@ Follow these steps to create a new branch in your Git repository:
    ```
    git checkout -b <new-branch-name>
    ```
+
 ## Committing and Pushing Changes
 
 Now that you have cloned the repository, you can start making changes and committing them to your local Git history.
 
 #### Important: Make sure to run the script "npm run compile:sass" in the background while making changes.
+
 You can do this by:
+
 1. Open Git Bash and navigate to the repository.
 2. In the repository, execute:
-  ```
-  npm run compile:sass
-  ```
+
+```
+npm run compile:sass
+```
+
 3. It should look like this:
-   
+
    ![image](https://github.com/xkaze09/dpsm-website/assets/47445339/ca83dfbe-1a07-4496-81e0-a2bb6651afc2)
 
 4. Now, you are ready to make changes. You can use Bootstrap5-ThemeKit.html to test if you loaded the repository properly.
 
 #### Steps:
+
 1. Create or edit files within the cloned repository according to your project's requirements. To see the status of your changes and files that have been modified, run:
    ```
    git status bash
@@ -114,7 +132,9 @@ You can do this by:
    ```
 
 ## Creating a Pull Request
+
 1. Open your web browser and navigate to the repository's page on Github
 2. Click the `Compare & Pull` button
 3. Add your request message and comment to document changes.
 4. Once done, just click the `Create pull request` button.
+5. If PR is merged or closed, delete the branch.
