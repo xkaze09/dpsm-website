@@ -35,10 +35,7 @@ The DPSM website will be developed adhering to the following guidelines:
 
 - Git installed on your computer. You can download and install Git from [git-scm.com](https://git-scm.com/downloads).
 - Node. You can download from [nodejs.org](https://nodejs.org/en).
-
-### Install dependencies
-
-- `npm ci`. This installs the necessary dependencies in your local copy.
+- Prettier Extension. Download from VSCode extensions.
 
 ## Clone a Repository
 
@@ -50,6 +47,10 @@ The DPSM website will be developed adhering to the following guidelines:
    ```
    git clone https://github.com/xkaze09/dpsm-website.git
    ```
+
+## Install dependencies
+
+- `npm ci`. Run this command when you have a fresh copy of the repo in your local machine. This installs the necessary dependencies to run the project.
 
 ## Creating a New Branch
 
