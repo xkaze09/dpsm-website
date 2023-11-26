@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "3.1.0",
     "sass": "^1.64.2"
   },
   "dependencies": {
