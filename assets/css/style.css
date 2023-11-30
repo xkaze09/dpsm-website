@@ -12362,7 +12362,11 @@ div.card.card-body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.mission-vision-section {
+.mission-section {
+  height: 80vh;
+}
+
+.vision-section {
   height: 80vh;
 }
 
