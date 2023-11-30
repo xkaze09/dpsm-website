@@ -12334,20 +12334,98 @@ div.card.card-body {
 .about-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/about-hero.png");
+  background-image: url("/images/group_computer-science_faculty.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1; /* Lower z-index */
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
+}
+
+.hero-caption {
+  position: relative; /* Add position relative */
+  z-index: 2; /* Higher z-index */
+}
+
+.mission-vision-title {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0;
+  color: rgb(255, 183, 3);
 }
 
 .section-subtitle {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.mission-vision-section {
+.mission-section {
+  position: relative; /* Add position relative */
   height: 80vh;
+  background-image: url("/images/mission.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Lower z-index */
+}
+
+.mission-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
+}
+
+.mission-content {
+  position: relative; /* Add position relative */
+  z-index: 2; /* Higher z-index */
+  text-align: center; /* Center the content */
+  color: white; /* Change text color to contrast with the background */
+}
+
+.vision-section {
+  position: relative; /* Add position relative */
+  height: 80vh;
+  background-image: url("/images/vision.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Lower z-index */
+}
+
+.vision-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
+}
+
+.vision-content {
+  position: relative; /* Add position relative */
+  z-index: 2; /* Higher z-index */
+  text-align: center; /* Center the content */
+  color: white; /* Change text color to contrast with the background */
 }
 
 .faculty-hero-section {
