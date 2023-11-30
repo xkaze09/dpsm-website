@@ -226,9 +226,41 @@
                 </div>
               </div>
               <div class="collapse" id="prospectusText">
-                <div class="card card-body">
-                  <p>Prospectus Paragraph here</p>
-                  <p>Another paragraph here</p>
+                <div class="card card-body text-start prospectus-table-container">
+                  <table class="table table-bordered prospectus-table">
+                    <col style="width: 5%" />
+                    <col style="width: 10%" />
+                    <col style="width: 15%" />
+                    <col style="width: 40%" />
+                    <col style="width: 15%" />
+                    <col style="width: 15%" />
+                    <thead>
+                      <tr class="text-center">
+                        <td class="prospectus-title" colspan="6">Prospectus</td>
+                      </tr>
+                      <tr class="text-center">
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col">Courses</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Credits</th>
+                        <th scope="col">Pre-requisites</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="6">First Year</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>First Sem</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
               <div class="collapse" id="learningOutcomesText">
@@ -433,10 +465,7 @@
       </div>
       <!-- End of Course Organization Section -->
       <!-- Footer -->
-      <footer
-        class="footer-with-image pt-5"
-        style="background-image: url(&quot;./images/footer.png&quot;)"
-      >
+      <footer class="footer-with-image pt-5" style="background-image: url('./images/footer.png')">
         <div class="container mb-5">
           <div class="row">
             <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
@@ -548,38 +577,38 @@
     <script src="javascript/carousel.js"></script>
     <script>
       const computerScienceCarouselData = [
-        { src: "./images/card1.png", alt: "Image 1", text: "Sir Meow Cats" },
-        { src: "./images/card3.png", alt: "Image 2", text: "Madame Scratch Cookies" },
+        { src: './images/card1.png', alt: 'Image 1', text: 'Sir Meow Cats' },
+        { src: './images/card3.png', alt: 'Image 2', text: 'Madame Scratch Cookies' },
         // Add more carousel items as needed
       ];
       updateCarousel(computerScienceCarouselData);
     </script>
     <script>
-      const collapseButtons = document.querySelectorAll(".collapse-button");
-      const collapseContents = document.querySelectorAll(".collapse");
+      const collapseButtons = document.querySelectorAll('.collapse-button');
+      const collapseContents = document.querySelectorAll('.collapse');
       let timeoutId;
 
       // Trigger click on default button on page load, in this case it is "admissions" button
       const admissionButton = document.querySelector('[data-bs-target="#admissionText"]');
       admissionButton.click();
-      admissionButton.classList.add("course-info-active"); // Highlight the button
+      admissionButton.classList.add('course-info-active'); // Highlight the button
 
       collapseButtons.forEach((button) => {
-        button.addEventListener("click", () => {
+        button.addEventListener('click', () => {
           clearTimeout(timeoutId); // Clear any pending timeouts
           timeoutId = setTimeout(() => {
             // Set a new timeout
             collapseButtons.forEach((otherButton) => {
-              otherButton.classList.remove("course-info-active");
+              otherButton.classList.remove('course-info-active');
             });
-            button.classList.add("course-info-active");
+            button.classList.add('course-info-active');
 
-            const targetId = button.getAttribute("data-bs-target");
+            const targetId = button.getAttribute('data-bs-target');
             const targetCollapse = document.querySelector(targetId);
 
             collapseContents.forEach((collapse) => {
               if (collapse !== targetCollapse) {
-                collapse.classList.remove("show");
+                collapse.classList.remove('show');
               }
             });
           }, 300); // Adjust delay
@@ -587,9 +616,9 @@
       });
 
       collapseContents.forEach((collapse) => {
-        collapse.addEventListener("hidden.bs.collapse", () => {
+        collapse.addEventListener('hidden.bs.collapse', () => {
           collapseButtons.forEach((button) => {
-            button.classList.remove("course-info-active");
+            button.classList.remove('course-info-active');
           });
         });
       });
