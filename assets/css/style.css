@@ -12600,7 +12600,7 @@ html {
   grid-template-columns: repeat(var(--num-cols), 1fr);
   grid-auto-rows: repeat(var(--row-height), 1fr);
   gap: var(--gap);
-  max-width: 90%;
+  max-width: 100%;
   margin-left: 15%;
   margin-top: 3%;
   margin-bottom: 3%;
@@ -12626,6 +12626,80 @@ html {
 
 .item-4 {
   grid-area: 2/4/3/5;
+}
+
+.article-header {
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+}
+.article-header .position-title {
+  font-size: 15px;
+  padding-right: 25px;
+}
+.article-header .feature-article {
+  padding-left: 25px;
+}
+@media only screen and (max-width: 800px) {
+  .article-header {
+    font-size: 15px;
+  }
+  .article-header .position-title {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .article-header {
+    font-size: 9px;
+  }
+  .article-header .position-title {
+    font-size: 8px;
+  }
+}
+
+.solid-line {
+  border-top: 2px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.references-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Open Sans", sans-serif;
+}
+
+.references {
+  font-style: italic;
+  flex: 1;
+}
+@media only screen and (max-width: 550px) {
+  .references {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .references {
+    font-size: 15px;
+  }
+}
+
+.image-source {
+  font-style: italic;
+  flex: 1;
+  margin-left: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+@media only screen and (max-width: 550px) {
+  .image-source {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .image-source {
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
