@@ -11933,6 +11933,42 @@ textarea.form-control-lg {
 }
 
 /* Media Queries */
+@media (min-width: 577px) and (max-width: 768px) {
+  .dpsm-logo-highlight {
+    width: 3rem;
+  }
+  .upper-division-name {
+    font-size: 0.8rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .division-name {
+    font-size: 0.8rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .dpsm-logo-highlight {
+    width: 2.5rem;
+  }
+  .upper-division-name {
+    font-size: 1rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .division-name {
+    font-size: 1rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}
 .comsci-hero-section {
   position: relative;
   height: 50vh;

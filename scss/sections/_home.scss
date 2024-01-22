@@ -78,6 +78,53 @@
 }
 
 /* Media Queries */
+// Medium devices (tablets, 768px and below)
+@media (min-width: 577px) and (max-width: 768px) { 
+    .dpsm-logo-highlight {
+        width: 3rem;
+    }
+
+    .upper-division-name {
+        font-size: 0.8rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .division-name {
+        font-size: 0.8rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+}
+
+// Media Queries
+// Large devices (desktops, 992px and below)
+@media (max-width: 992px) {
+    .dpsm-logo-highlight {
+        width: 2.5rem;
+    }
+
+    .upper-division-name {
+        font-size: 1rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .division-name {
+        font-size: 1rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+}
+
 // @media (min-width: 200px) and (max-width: 400px) {
 //     /* Adjust font size and padding for smaller screens */
 //     .dpsm-logo-highlight {
