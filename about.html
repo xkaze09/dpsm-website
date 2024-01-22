@@ -128,8 +128,8 @@
       </div>
     </div>
     <!-- End of Hero Section -->
-    <!-- Division Outro Section -->
-    <div class="px-4 pt-5 p-md-5 my-5 text-start intro-section">
+    <!-- DPSM Introduction -->
+    <<div class="px-4 pt-5 p-md-5 my-5 text-start intro-section">
       <div class="d-flex flex-column align-items-center h-100 pb-5">
         <div class="d-flex flex-column justify-content-start">
           <img src="./images/dpsmlogo.png" width="256px" />
@@ -139,6 +139,7 @@
         <h1 class="division-name text-uppercase display-3 fw-normal text-center pb-5">
           DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS
         </h1>
+        
         <div class="row">
           <div class="col-lg-6">
             <p class="lead mb-4 text-justify">
@@ -173,7 +174,7 @@
         </div>
       </div>
     </div>
-    <!-- End of Division Outro Section -->
+    <!-- End of DPSM Introduction -->
     <!-- Mission Section -->
     <div class="mission-section">
       <div class="mission-overlay"></div>
@@ -188,7 +189,7 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-              <p class="section-subtitle lead mb-4 text-start display-4">
+              <p class="section-subtitle lead mb-4 text-start display-6">
                 A center of excellence in mathematical and computational sciences in the Visayas.
               </p>
             </div>
@@ -212,7 +213,7 @@
         <div class="row">
           <div class="col-lg-12">
               <p class="section-subtitle lead mb-4 text-start">
-                <ul class="display-7 fw-normal text-start">
+                <ul class="display-7 fw-normal text-start lead">
                   <li>
                     Offer graduate and undergraduate degree programs responsive and contributing to the regional, national and global needs.
                   </li>
@@ -270,74 +271,7 @@
       </div>
     </div>
     <!-- End of Faculty Members Section -->
-    <!-- Division Features & Highlights -->
-    <!-- <div class="px-4 pt-5 p-md-5 my-5 text-start bg-secondary-subtle">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <p class="section-title lead mb-4 display-5 fw-bold">
-                Division Features & Highlights
-              </p>            
-            </div>
-            <div class="col-lg-6">
-              <div class="course-organization-name d-flex flex-column align-items-center h-100 justify-content-start">
-                <p class="mb-4 text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus orci. Suspendisse ullamcorper purus ligula, id rutrum lorem congue vel. Curabitur malesuada ipsum sagittis velit vehicula dignissim. Donec sagittis ligula at tempor pellentesque.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="pt-5 pb-5 shadow-sm">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                      <div class="card">
-                        <img src="./images/card1.png" class="card-img-top" alt="Card Image">
-                        <div class="card-body d-flex flex-column">
-                          <h5 class="card-title">Highlight 1</h5>
-                          <p class="card-text mb-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic aperiam voluptatibus quod ducimus cupiditate earum quos tempora in culpa? Corporis amet deserunt eius qui ab. Ad atque ratione facere.
-                          </p>
-                          <a href="#" class="btn btn-primary mt-auto align-self-start">View</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                      <div class="card">
-                        <img src="./images/card2.png" class="card-img-top" alt="Card Image">
-                        <div class="card-body d-flex flex-column">
-                          <h5 class="card-title">Highlight 2</h5>
-                          <p class="card-text mb-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic aperiam voluptatibus quod ducimus cupiditate earum quos tempora in culpa? Corporis amet deserunt eius qui ab. Ad atque ratione facere.
-                          </p>                          
-                          <a href="#" class="btn btn-primary mt-auto align-self-start">View</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                      <div class="card">
-                        <img src="./images/card3.png" class="card-img-top" alt="Card Image">
-                        <div class="card-body d-flex flex-column">
-                          <h5 class="card-title">Highlight 3</h5>
-                          <p class="card-text mb-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic aperiam voluptatibus quod ducimus cupiditate earum quos tempora in culpa? Corporis amet deserunt eius qui ab. Ad atque ratione facere.
-                          </p>
-                          <a href="#" class="btn btn-primary mt-auto align-self-start">View</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    <!-- End of Course Features & Highlights -->
+    
     <!-- DPSM Introduction -->
     <div class="px-4 pt-5 p-md-5 my-5 text-start">
       <div class="container">
@@ -509,42 +443,6 @@
         // Add more carousel items as needed
       ];
       updateCarousel(aboutCarouselData);
-    </script>
-    <script>
-      // Mission & Vision Collapse
-      const missionVisionCollapseButtons = document.querySelectorAll(".collapse-button");
-      const missionVisionCollapseContents = document.querySelectorAll(".collapse");
-      let activeMissionVisionButton = null;
-
-      missionVisionCollapseButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          if (activeMissionVisionButton !== button) {
-            // Toggle the 'show' class for the clicked button's target
-            const targetId = button.getAttribute("data-bs-target");
-            const targetCollapse = document.querySelector(targetId);
-
-            if (targetCollapse.classList.contains("show")) {
-              targetCollapse.classList.remove("show");
-            } else {
-              missionVisionCollapseContents.forEach((collapse) => {
-                collapse.classList.remove("show");
-              });
-              targetCollapse.classList.add("show");
-            }
-
-            // Update the active button
-            if (activeMissionVisionButton) {
-              activeMissionVisionButton.classList.remove("course-info-active");
-            }
-            button.classList.add("course-info-active");
-            activeMissionVisionButton = button;
-          }
-        });
-      });
-
-      // Trigger click event on "Mission" button to highlight it on page load
-      const missionButton = document.querySelector('[data-bs-target="#missionText"]');
-      missionButton.click();
     </script>
   </body>
 </html>
