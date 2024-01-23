@@ -11885,6 +11885,7 @@ textarea.form-control-lg {
   font-family: "Oswald", "Times New Roman", Times, serif;
   text-decoration: none;
   color: rgb(251, 133, 0);
+  text-wrap: balance;
 }
 
 .text-link {
