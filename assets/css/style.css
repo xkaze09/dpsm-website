@@ -12406,7 +12406,7 @@ div.card.card-body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)); /* Gradient */
   z-index: 0; /* Lower z-index, behind the content */
 }
 
