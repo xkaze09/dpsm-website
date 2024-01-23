@@ -104,4 +104,90 @@
   text-align: center; /* Center the content */
   color: white; /* Change text color to contrast with the background */
 }
+/* Style for division title */
 
+.division-title {
+  font-family: 'Oswald', 'Times New Roman', Times, serif;
+  text-decoration: none;
+  color: $accent_two;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 200px) {
+  /* Adjust division title font size and image-width for smallest screens */
+
+  .division-title {
+      font-size: 0.2rem;
+  }
+
+  .dpsm-logo-about {
+    width: 30px;
+  }  
+}
+
+@media (min-width: 200px) and (max-width: 400px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  
+  .division-title {
+    font-size: 0.9rem;
+  }
+  
+  .dpsm-logo-about {
+    width: 80px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 571px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  
+  .division-title {
+    font-size: 1.2rem;
+  }
+  
+  .dpsm-logo-about {
+    width: 80px;
+  }
+}
+
+@media (min-width: 571px) and (max-width: 768px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  .division-title {
+    font-size: 1.5rem;
+  }
+  
+  .dpsm-logo-about {
+    width: 120px; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  
+  .division-title {
+    font-size: 2rem;
+  }
+
+  .dpsm-logo-about {
+    width: 160px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  /* Default styles for larger screens */
+  .division-title {
+    font-size: 3rem;
+    
+  }
+  
+  .dpsm-logo-about {
+    width: 210px;
+  }
+}
+
+/* Container for division title */
+.division-title-container {
+  width: 60%;
+  
+}
