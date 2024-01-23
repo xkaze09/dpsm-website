@@ -22,12 +22,14 @@
     font-family: 'Oswald', 'Times New Roman', Times, serif;
     color: white;
     text-decoration: none;
+    text-wrap: balance;
 }
 
 .division-name {
     font-family: 'Oswald', 'Times New Roman', Times, serif;
     text-decoration: none;
     color: $accent_two;
+    text-wrap: balance;
 }
 
 .text-link {
@@ -64,15 +66,28 @@
     display: none;
   }
 
+// Carousel
+.carousel-inner .carousel-item {
+    width: 100%; /* Set a fixed height for the carousel images */
+    height: 100%;
+    object-fit: contain; /* Ensure the images retain their aspect ratio while covering the entire available space */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Media Queries */
-@media (min-width: 200px) and (max-width: 400px) {
-    /* Adjust font size and padding for smaller screens */
+// Medium devices (tablets, 768px and below)
+@media (min-width: 577px) and (max-width: 768px) { 
     .dpsm-logo-highlight {
-        width: 2rem;
+        width: 3rem;
     }
 
     .upper-division-name {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
 
@@ -86,16 +101,22 @@
         align-items: center;
         column-gap: 0.5rem;
     }
-  }
+}
 
-@media (min-width: 401px) and (max-width: 570px) {
-    /* Adjust font size and padding for smaller screens */
+// Media Queries
+// Large devices (desktops, 992px and below)
+@media (max-width: 992px) {
     .dpsm-logo-highlight {
-        width: 2rem;
+        width: 2.5rem;
+    }
+
+    .upper-division-name {
+        font-size: 1rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
 
     .division-name {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .division-navbar {
@@ -104,53 +125,81 @@
         align-items: center;
         column-gap: 0.5rem;
     }
-
-  }
-  
-  @media (min-width: 571px) and (max-width: 767px) {
-    /* Adjust font size and padding for small screens */
-    .dpsm-logo-highlight {
-    }
-
-    .division-navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 0.5rem;
-    }
-  }
-  
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Adjust font size and padding for medium screens */
-    .dpsm-logo-highlight {
-    }
-    .division-navbar {
-
-    }
-
-    .division-name {
-    }
-  }
-  
-  @media (min-width: 992px) {
-    /* Default styles for larger screens */
-    .dpsm-logo-highlight {
-    }
-    .division-navbar {
-
-    }
-  }
-
-// Carousel
-.carousel-inner .carousel-item {
-    width: 100%; /* Set a fixed height for the carousel images */
-    height: 100%;
-    object-fit: contain; /* Ensure the images retain their aspect ratio while covering the entire available space */
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+// @media (min-width: 200px) and (max-width: 400px) {
+//     /* Adjust font size and padding for smaller screens */
+//     .dpsm-logo-highlight {
+//         width: 2rem;
+//     }
+
+//     .upper-division-name {
+//         font-size: 0.6rem;
+//         font-family: 'Oswald', 'Times New Roman', Times, serif;
+//     }
+
+//     .division-name {
+//         font-size: 0.8rem;
+//     }
+
+//     .division-navbar {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         column-gap: 0.5rem;
+//     }
+//   }
+
+// @media (min-width: 401px) and (max-width: 570px) {
+//     /* Adjust font size and padding for smaller screens */
+//     .dpsm-logo-highlight {
+//         width: 2rem;
+//     }
+
+//     .division-name {
+//         font-size: 0.8rem;
+//     }
+
+//     .division-navbar {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         column-gap: 0.5rem;
+//     }
+
+//   }
+  
+//   @media (min-width: 571px) and (max-width: 767px) {
+//     /* Adjust font size and padding for small screens */
+//     .dpsm-logo-highlight {
+//     }
+
+//     .division-navbar {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         column-gap: 0.5rem;
+//     }
+//   }
+  
+//   @media (min-width: 768px) and (max-width: 991px) {
+//     /* Adjust font size and padding for medium screens */
+//     .dpsm-logo-highlight {
+//     }
+//     .division-navbar {
+
+//     }
+
+//     .division-name {
+//     }
+//   }
+  
+//   @media (min-width: 992px) {
+//     /* Default styles for larger screens */
+//     .dpsm-logo-highlight {
+//     }
+//     .division-navbar {
+
+//     }
+//   }
 
