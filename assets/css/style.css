@@ -11878,6 +11878,7 @@ textarea.form-control-lg {
   font-family: "Oswald", "Times New Roman", Times, serif;
   color: white;
   text-decoration: none;
+  text-wrap: balance;
 }
 
 .division-name {
