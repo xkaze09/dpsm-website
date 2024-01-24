@@ -11,6 +11,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
 /*!
  * Bootstrap  v5.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -12914,6 +12916,96 @@ html {
 .card-overlay:hover .course-news-card-text {
   opacity: 1;
   transition: opacity 2s ease;
+}
+
+.contact-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/vision.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Lower z-index */
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
+}
+
+.hero-caption {
+  position: relative; /* Add position relative */
+  z-index: 2; /* Higher z-index */
+}
+
+.section-subtitle {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Hide scrollbar of sticky sidebar */
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.support-sticky-sidebar::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+.support-sticky-sidebar {
+  position: sticky;
+  top: 20vh; /* Adjust as needed */
+  height: calc(100vh - 40px); /* Account for padding */
+  overflow-y: auto;
+}
+
+/* Main content styles */
+.support-main-content {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.form-title {
+  color: rgb(25, 42, 84);
+  font-weight: bold;
+  font-size: large;
+}
+
+.dbox {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #192A56;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  margin-bottom: 20px;
+}
+
+.contact-us-container {
+  background-color: #e9ecef;
+}
+
+.custom-input {
+  height: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
