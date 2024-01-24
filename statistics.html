@@ -682,8 +682,9 @@
         });
       });
     </script>
-    <script src="javascript/course.js"></script>
-    <script>
+    <script type="module">
+      import { initializeProspectus } from './javascript/course/course.js';
+
       initializeProspectus('stat');
     </script>
   </body>
