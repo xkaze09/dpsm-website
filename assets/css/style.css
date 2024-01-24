@@ -11935,9 +11935,47 @@ textarea.form-control-lg {
 }
 
 /* Media Queries */
+/* smallest screens */
+@media (min-width: 200px) and (max-width: 400px) {
+  .logo-highlight {
+    width: 2rem;
+  }
+  .upper-division-name {
+    font-size: 0.6rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .division-name {
+    font-size: 0.8rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.3rem;
+  }
+}
+/* small screens */
+@media (min-width: 401px) and (max-width: 577px) {
+  .logo-highlight {
+    width: 2.2rem;
+  }
+  .upper-division-name {
+    font-size: 0.7rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .division-name {
+    font-size: 1rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.3rem;
+  }
+}
 @media (min-width: 577px) and (max-width: 768px) {
-  .dpsm-logo-highlight {
-    width: 3rem;
+  .logo-highlight {
+    width: 2.5rem;
   }
   .upper-division-name {
     font-size: 0.8rem;
@@ -11953,8 +11991,8 @@ textarea.form-control-lg {
     column-gap: 0.5rem;
   }
 }
-@media (max-width: 992px) {
-  .dpsm-logo-highlight {
+@media (min-width: 768px) and (max-width: 992px) {
+  .logo-highlight {
     width: 2.5rem;
   }
   .upper-division-name {
