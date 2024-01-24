@@ -6,15 +6,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200;400&display=swap');
 
 .comsci-hero-section {
-    position: relative;
-    height: 50vh;
-    background-image: url('/images/comsci-hero.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  position: relative;
+  height: 50vh;
+  background-image: url('/images/comsci-hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .stats-hero-section {
   position: relative;
@@ -37,7 +37,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .hero-caption {
   font-family: 'Oswald';
@@ -98,7 +97,7 @@ div.card.card-body {
 }
 
 .computer-science-org-name {
-  font-family: "Consolas";
+  font-family: 'Consolas';
 }
 
 /* Media Queries */
@@ -231,7 +230,7 @@ div.card.card-body {
     font-size: 1rem;
     margin-top: 0.8rem;
   }
-  
+
   .footer-division-text {
     font-size: 1.2rem;
   }
@@ -251,7 +250,7 @@ div.card.card-body {
   .footer-icons {
     padding-bottom: 0.8rem;
   }
-  
+
   /* Add other adjustments for smaller screens */
 }
 
@@ -263,7 +262,7 @@ div.card.card-body {
     font-size: 1.5rem;
     margin-top: 1.5rem;
   }
-  
+
   .footer-division-text {
     font-size: 1.8rem;
   }
@@ -283,7 +282,7 @@ div.card.card-body {
   .footer-icons {
     padding-bottom: 1rem;
   }
-  
+
   /* Add other adjustments for small screens */
 }
 
@@ -294,7 +293,7 @@ div.card.card-body {
     font-size: 1.8rem;
     margin-top: 2rem;
   }
-  
+
   .footer-division-text {
     font-size: 1.5rem;
   }
@@ -312,7 +311,7 @@ div.card.card-body {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
-  
+
   /* Add other adjustments for medium screens */
 }
 
@@ -323,7 +322,7 @@ div.card.card-body {
     font-size: 2rem;
     margin-top: 0;
   }
-  
+
   .footer-division-text {
     font-size: 1.25rem;
   }
@@ -347,9 +346,9 @@ div.card.card-body {
 
 /* Carousel */
 .carousel-inner img {
-    object-fit: cover;
-    max-width: 100%;
-    height: 400px; /* Set the desired height for the carousel images */
+  object-fit: cover;
+  max-width: 100%;
+  height: 400px; /* Set the desired height for the carousel images */
 }
 
 /* Course Organization Section */
@@ -412,3 +411,23 @@ div.card.card-body {
 }
 
 /* Course Features & Highlights */
+
+/* Prospectus Section */
+.prospectus-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.prospectus-table-container {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.prospectus-table {
+  min-width: 600px;
+
+  td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
