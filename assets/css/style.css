@@ -11897,12 +11897,14 @@ textarea.form-control-lg {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
+  text-align: center;
 }
 
 /* Show the division-navbar when needed */
 .division-navbar.show {
   opacity: 1;
   visibility: visible;
+  text-align: center;
 }
 
 .course-card {
@@ -11953,7 +11955,7 @@ textarea.form-control-lg {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 0.3rem;
+    column-gap: 0.2rem;
   }
 }
 /* smallest screens */
@@ -11975,7 +11977,7 @@ textarea.form-control-lg {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 0.3rem;
+    column-gap: 0.2rem;
   }
 }
 /* small screens */
