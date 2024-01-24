@@ -11935,16 +11935,11 @@ textarea.form-control-lg {
 }
 
 /* Media Queries */
+/* smallest screens */
+/* small screens */
 @media (min-width: 577px) and (max-width: 768px) {
   .dpsm-logo-highlight {
     width: 3rem;
-  }
-  .upper-division-name {
-    font-size: 0.8rem;
-    font-family: "Oswald", "Times New Roman", Times, serif;
-  }
-  .division-name {
-    font-size: 0.8rem;
   }
   .division-navbar {
     display: flex;
@@ -11956,13 +11951,6 @@ textarea.form-control-lg {
 @media (max-width: 992px) {
   .dpsm-logo-highlight {
     width: 2.5rem;
-  }
-  .upper-division-name {
-    font-size: 1rem;
-    font-family: "Oswald", "Times New Roman", Times, serif;
-  }
-  .division-name {
-    font-size: 1rem;
   }
   .division-navbar {
     display: flex;

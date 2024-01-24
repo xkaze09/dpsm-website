@@ -80,20 +80,37 @@
 }
 
 /* Media Queries */
+
+@media (max-width: 200px) {
+
+}
+
+/* smallest screens */
+@media (min-width: 200px) and (max-width: 400px) {
+
+}
+
+
+/* small screens */
+@media (min-width: 401px) and (max-width: 571px) {
+    .upper-division-name {
+        
+    }
+}
 // Medium devices (tablets, 768px and below)
 @media (min-width: 577px) and (max-width: 768px) { 
     .dpsm-logo-highlight {
         width: 3rem;
     }
 
-    .upper-division-name {
-        font-size: 0.8rem;
-        font-family: 'Oswald', 'Times New Roman', Times, serif;
-    }
+    // .upper-division-name {
+    //     font-size: 0.5rem;
+    //     font-family: 'Oswald', 'Times New Roman', Times, serif;
+    // }
 
-    .division-name {
-        font-size: 0.8rem;
-    }
+    // .division-name {
+    //     font-size: 0.5rem;
+    // }
 
     .division-navbar {
         display: flex;
@@ -110,14 +127,14 @@
         width: 2.5rem;
     }
 
-    .upper-division-name {
-        font-size: 1rem;
-        font-family: 'Oswald', 'Times New Roman', Times, serif;
-    }
+    // .upper-division-name {
+    //     font-size: 1rem;
+    //     font-family: 'Oswald', 'Times New Roman', Times, serif;
+    // }
 
-    .division-name {
-        font-size: 1rem;
-    }
+    // .division-name {
+    //     font-size: 1rem;
+    // }
 
     .division-navbar {
         display: flex;
