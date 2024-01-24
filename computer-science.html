@@ -247,19 +247,7 @@
                         <th scope="col">Pre-requisites</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td colspan="6">First Year</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"></th>
-                        <td>First Sem</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                      </tr>
-                    </tbody>
+                    <tbody id="prospectusTableBody"></tbody>
                   </table>
                 </div>
               </div>
@@ -622,6 +610,10 @@
           });
         });
       });
+    </script>
+    <script src="javascript/course.js"></script>
+    <script>
+      initializeProspectus('comsci');
     </script>
   </body>
 </html>
