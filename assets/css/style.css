@@ -11878,12 +11878,14 @@ textarea.form-control-lg {
   font-family: "Oswald", "Times New Roman", Times, serif;
   color: white;
   text-decoration: none;
+  text-wrap: balance;
 }
 
 .division-name {
   font-family: "Oswald", "Times New Roman", Times, serif;
   text-decoration: none;
   color: rgb(251, 133, 0);
+  text-wrap: balance;
 }
 
 .text-link {
@@ -11895,12 +11897,14 @@ textarea.form-control-lg {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
+  text-align: center;
 }
 
 /* Show the division-navbar when needed */
 .division-navbar.show {
   opacity: 1;
   visibility: visible;
+  text-align: center;
 }
 
 .course-card {
@@ -11920,56 +11924,6 @@ textarea.form-control-lg {
   display: none;
 }
 
-/* Media Queries */
-@media (min-width: 200px) and (max-width: 400px) {
-  /* Adjust font size and padding for smaller screens */
-  .dpsm-logo-highlight {
-    width: 2rem;
-  }
-  .upper-division-name {
-    font-size: 0.6rem;
-    font-family: "Oswald", "Times New Roman", Times, serif;
-  }
-  .division-name {
-    font-size: 0.8rem;
-  }
-  .division-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.5rem;
-  }
-}
-@media (min-width: 401px) and (max-width: 570px) {
-  /* Adjust font size and padding for smaller screens */
-  .dpsm-logo-highlight {
-    width: 2rem;
-  }
-  .division-name {
-    font-size: 0.8rem;
-  }
-  .division-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.5rem;
-  }
-}
-@media (min-width: 571px) and (max-width: 767px) {
-  /* Adjust font size and padding for small screens */
-  .division-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.5rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Adjust font size and padding for medium screens */
-}
-@media (min-width: 992px) {
-  /* Default styles for larger screens */
-}
 .carousel-inner .carousel-item {
   width: 100%; /* Set a fixed height for the carousel images */
   height: 100%;
@@ -11982,6 +11936,114 @@ textarea.form-control-lg {
   min-height: 100vh;
 }
 
+/* Media Queries */
+@media (max-width: 200px) {
+  .logo-highlight {
+    width: 1.8rem;
+  }
+  .upper-division-name {
+    font-size: 0.4rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 1.8rem;
+  }
+  .division-name {
+    font-size: 0.4rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.2rem;
+  }
+}
+/* smallest screens */
+@media (min-width: 200px) and (max-width: 400px) {
+  .logo-highlight {
+    width: 2rem;
+  }
+  .upper-division-name {
+    font-size: 0.6rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 2rem;
+  }
+  .division-name {
+    font-size: 0.6rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.2rem;
+  }
+}
+/* small screens */
+@media (min-width: 401px) and (max-width: 577px) {
+  .logo-highlight {
+    width: 2.2rem;
+  }
+  .upper-division-name {
+    font-size: 0.7rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 2.2rem;
+  }
+  .division-name {
+    font-size: 0.7rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.3rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .logo-highlight {
+    width: 2.5rem;
+  }
+  .upper-division-name {
+    font-size: 0.8rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 2.5rem;
+  }
+  .division-name {
+    font-size: 0.8rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .logo-highlight {
+    width: 2.5rem;
+  }
+  .upper-division-name {
+    font-size: 1rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 2.5rem;
+  }
+  .division-name {
+    font-size: 1rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}
 .comsci-hero-section {
   position: relative;
   height: 50vh;
@@ -12417,7 +12479,7 @@ div.card.card-body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)); /* Gradient */
   z-index: 0; /* Lower z-index, behind the content */
 }
 
@@ -12426,6 +12488,73 @@ div.card.card-body {
   z-index: 2; /* Higher z-index */
   text-align: center; /* Center the content */
   color: white; /* Change text color to contrast with the background */
+}
+
+/* Style for division title */
+.division-title {
+  font-family: "Oswald", "Times New Roman", Times, serif;
+  text-decoration: none;
+  color: rgb(251, 133, 0);
+}
+
+/* Media Queries */
+@media (max-width: 200px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  .division-title {
+    font-size: 0.2rem;
+  }
+  .dpsm-logo-about {
+    width: 30px;
+  }
+}
+@media (min-width: 200px) and (max-width: 400px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  .division-title {
+    font-size: 0.9rem;
+  }
+  .dpsm-logo-about {
+    width: 80px;
+  }
+}
+@media (min-width: 401px) and (max-width: 571px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  .division-title {
+    font-size: 1.2rem;
+  }
+  .dpsm-logo-about {
+    width: 80px;
+  }
+}
+@media (min-width: 571px) and (max-width: 768px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  .division-title {
+    font-size: 1.5rem;
+  }
+  .dpsm-logo-about {
+    width: 120px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Adjust division title font size and image-width for smallest screens */
+  .division-title {
+    font-size: 2rem;
+  }
+  .dpsm-logo-about {
+    width: 160px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  /* Default styles for larger screens */
+  .division-title {
+    font-size: 3rem;
+  }
+  .dpsm-logo-about {
+    width: 210px;
+  }
+}
+/* Container for division title */
+.division-title-container {
+  width: 60%;
 }
 
 .faculty-hero-section {
@@ -12596,7 +12725,7 @@ html {
   grid-template-columns: repeat(var(--num-cols), 1fr);
   grid-auto-rows: repeat(var(--row-height), 1fr);
   gap: var(--gap);
-  max-width: 90%;
+  max-width: 100%;
   margin-left: 15%;
   margin-top: 3%;
   margin-bottom: 3%;
@@ -12622,6 +12751,231 @@ html {
 
 .item-4 {
   grid-area: 2/4/3/5;
+}
+
+.article-header {
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+}
+.article-header .position-title {
+  font-size: 15px;
+  padding-right: 25px;
+}
+.article-header .feature-article {
+  padding-left: 25px;
+}
+@media only screen and (max-width: 800px) {
+  .article-header {
+    font-size: 15px;
+  }
+  .article-header .position-title {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .article-header {
+    font-size: 9px;
+  }
+  .article-header .position-title {
+    font-size: 8px;
+  }
+}
+
+.solid-line {
+  border-top: 2px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.references-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Open Sans", sans-serif;
+}
+
+.references {
+  font-style: italic;
+  flex: 1;
+}
+@media only screen and (max-width: 550px) {
+  .references {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .references {
+    font-size: 15px;
+  }
+}
+
+.image-source {
+  font-style: italic;
+  flex: 1;
+  margin-left: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+@media only screen and (max-width: 550px) {
+  .image-source {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .image-source {
+    font-size: 15px;
+  }
+}
+
+.news-master-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/vision.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.smaller-image {
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title-main {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-date-main {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.desc-main {
+  margin-bottom: 1rem;
+}
+
+.main-news-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.main-news-card-title {
+  margin-bottom: var(--bs-card-title-spacer-y);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: #fff;
+  opacity: 1;
+}
+
+.main-news-card-text {
+  position: absolute;
+  margin-bottom: var(--bs-card-title-spacer-y);
+  bottom: 1rem;
+  left: 0;
+  padding: 1rem;
+  color: #fff;
+  opacity: 0;
+}
+
+.card-overlay .main-news-card-title {
+  opacity: 1;
+}
+
+.card-overlay:hover .main-news-card-text {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.main-news-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.main-news-card:hover .main-news-card-title {
+  bottom: 3rem;
+  opacity: 1;
+  transition: bottom 0.5s ease, opacity 0.3s ease;
+}
+
+.main-news-card:hover .main-news-card-text {
+  opacity: 1;
+}
+
+.random-description {
+  margin-top: 0.5rem;
+}
+
+.course-news-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-news-card-title {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  padding: 1rem;
+  color: #fff;
+  opacity: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.course-news-card-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  padding: 1rem;
+  color: #fff;
+  opacity: 0;
+  overflow: hidden;
+  max-height: 5em;
+  line-height: 1.25em;
+  text-overflow: ellipsis;
+}
+
+.course-news-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.course-news-card:hover .course-news-card-title,
+.card-overlay:hover .course-news-card-title {
+  opacity: 1;
+  bottom: 5rem;
+  transition: bottom 0.5s ease, opacity 0.3s ease;
+}
+
+.card-overlay:hover .course-news-card-text {
+  opacity: 1;
+  transition: opacity 2s ease;
 }
 
 /*# sourceMappingURL=style.css.map */
