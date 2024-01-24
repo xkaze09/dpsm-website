@@ -11935,6 +11935,27 @@ textarea.form-control-lg {
 }
 
 /* Media Queries */
+@media (max-width: 200px) {
+  .logo-highlight {
+    width: 1.8rem;
+  }
+  .upper-division-name {
+    font-size: 0.4rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 1.8rem;
+  }
+  .division-name {
+    font-size: 0.4rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.3rem;
+  }
+}
 /* smallest screens */
 @media (min-width: 200px) and (max-width: 400px) {
   .logo-highlight {
@@ -11944,8 +11965,11 @@ textarea.form-control-lg {
     font-size: 0.6rem;
     font-family: "Oswald", "Times New Roman", Times, serif;
   }
+  .dpsm-logo-highlight {
+    width: 2rem;
+  }
   .division-name {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .division-navbar {
     display: flex;
@@ -11963,8 +11987,11 @@ textarea.form-control-lg {
     font-size: 0.7rem;
     font-family: "Oswald", "Times New Roman", Times, serif;
   }
+  .dpsm-logo-highlight {
+    width: 2.2rem;
+  }
   .division-name {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
   .division-navbar {
     display: flex;
@@ -11980,6 +12007,9 @@ textarea.form-control-lg {
   .upper-division-name {
     font-size: 0.8rem;
     font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 2.5rem;
   }
   .division-name {
     font-size: 0.8rem;
@@ -11998,6 +12028,9 @@ textarea.form-control-lg {
   .upper-division-name {
     font-size: 1rem;
     font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 2.5rem;
   }
   .division-name {
     font-size: 1rem;
