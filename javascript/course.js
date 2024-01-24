@@ -171,6 +171,212 @@ const comsciProspectus = [
   },
 ];
 
+const appMathProspectus = [
+  {
+    title: 'FIRST YEAR',
+    semesters: [
+      {
+        title: 'First Sem',
+        courses: [
+          {
+            name: 'MATH 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'CMSC 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+        ],
+      },
+      {
+        title: 'Second Sem',
+        courses: [
+          {
+            name: 'MATH 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'CMSC 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'MATH 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'CMSC 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'SECOND YEAR',
+    semesters: [
+      {
+        title: 'First Sem',
+        courses: [
+          {
+            name: 'MATH 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'CMSC 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+        ],
+      },
+      {
+        title: 'Second Sem',
+        courses: [
+          {
+            name: 'MATH 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'CMSC 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+        ],
+      },
+    ],
+  },
+];
+
+const statProspectus = [
+  {
+    title: 'FIRST YEAR',
+    semesters: [
+      {
+        title: 'First Sem',
+        courses: [
+          {
+            name: 'STAT 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'STAT 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+        ],
+      },
+      {
+        title: 'Second Sem',
+        courses: [
+          {
+            name: 'STAT 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'STAT 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'STAT 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'STAT 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'SECOND YEAR',
+    semesters: [
+      {
+        title: 'First Sem',
+        courses: [
+          {
+            name: 'STAT 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'STAT 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+        ],
+      },
+      {
+        title: 'Second Sem',
+        courses: [
+          {
+            name: 'STAT 104',
+            title: 'Kasaysayan ng Pilipinas',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+          {
+            name: 'STAT 11',
+            title: 'Ethics and Moral Reasoning in Everyday Life',
+            link: '',
+            credits: 3,
+            preRequisites: '',
+          },
+        ],
+      },
+    ],
+  },
+];
+
 function generateProspectusTable(prospectus) {
   const table = document.getElementById('prospectusTableBody');
 
@@ -226,6 +432,14 @@ function initializeProspectus(course) {
   switch (course) {
     case 'comsci':
       generateProspectusTable(comsciProspectus);
+      break;
+
+    case 'appmath':
+      generateProspectusTable(appMathProspectus);
+      break;
+
+    case 'stat':
+      generateProspectusTable(statProspectus);
       break;
 
     default:
