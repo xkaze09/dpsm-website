@@ -12395,6 +12395,25 @@ div.card.card-body {
 }
 
 /* Course Features & Highlights */
+/* Prospectus Section */
+.prospectus-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.prospectus-table-container {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.prospectus-table {
+  min-width: 600px;
+}
+.prospectus-table td {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .about-hero-section {
   position: relative;
   height: 50vh;

@@ -1,0 +1,378 @@
+{
+  "COMSCI": [
+    {
+      "title": "FIRST YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "CMSC 10",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "CMSC 123",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "CMSC 11"
+            },
+            {
+              "name": "CMSC 22",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 123",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "CMSC 11"
+            },
+            {
+              "name": "CMSC 22",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 123",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "CMSC 11"
+            },
+            {
+              "name": "CMSC 22",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 123",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "CMSC 11"
+            },
+            {
+              "name": "CMSC 22",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 123",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "CMSC 11"
+            },
+            {
+              "name": "CMSC 22",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 123",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "CMSC 11"
+            },
+            {
+              "name": "CMSC 22",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 123",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "CMSC 11"
+            },
+            {
+              "name": "CMSC 22",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SECOND YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "CMSC 200",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC -23",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "Kas 1"
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "CMSC 55",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": "CMSC 57"
+            },
+            {
+              "name": "CMSC 257",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "APPMATH": [
+    {
+      "title": "FIRST YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "MATH 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "MATH 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SECOND YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "MATH 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "MATH 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "STAT": [
+    {
+      "title": "FIRST YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "STAT 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "STAT 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SECOND YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "STAT 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "STAT 104",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 11",
+              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "link": "",
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
