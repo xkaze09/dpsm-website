@@ -13052,4 +13052,50 @@ html {
   height: 3rem;
 }
 
+.individual-courses-container {
+  display: flex;
+  height: 100%;
+  gap: 30px;
+  padding: 30px 250px;
+}
+.individual-courses-container h1,
+.individual-courses-container h3,
+.individual-courses-container p,
+.individual-courses-container b {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .individual-courses-container {
+    flex-direction: column;
+    padding: 30px 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .individual-courses-container {
+    padding: 30px 30px;
+  }
+}
+
+.credits-prerequisites {
+  min-width: 250px;
+  height: fit-content;
+}
+.credits-prerequisites p,
+.credits-prerequisites b {
+  margin-bottom: 0px;
+}
+.credits-prerequisites :nth-child(2) {
+  margin-bottom: 30px;
+}
+.credits-prerequisites hr {
+  color: #000;
+  background-color: #000;
+  border: none;
+  height: 2px;
+}
+
+.course-outline p:has(+ ol) {
+  margin-bottom: 0px;
+}
+
 /*# sourceMappingURL=style.css.map */

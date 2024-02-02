@@ -1,0 +1,52 @@
+@use '../custom' as *;
+
+.individual-courses-container {
+  display: flex;
+  height: 100%;
+  gap: 30px;
+  padding: 30px 250px;
+
+  h1,
+  h3,
+  p,
+  b {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    padding: 30px 100px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 30px 30px;
+  }
+}
+
+.credits-prerequisites {
+  min-width: 250px;
+  height: fit-content;
+
+  p,
+  b {
+    margin-bottom: 0px;
+  }
+
+  :nth-child(2) {
+    margin-bottom: 30px;
+  }
+
+  hr {
+    color: $black;
+    background-color: $black;
+    border: none;
+    height: 2px;
+  }
+}
+
+.course-outline {
+  // Select p elements that are titles to ordered lists (get p elements before an ordered list)
+  p:has(+ ol) {
+    margin-bottom: 0px;
+  }
+}
