@@ -1,163 +1,153 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-
 .article-hero-section {
-    position: relative;
-    height: 50vh;
-    background-image: url("/images/article-hero.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 50vh;
+  background-image: url('/images/article-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .article-image-section {
-    position: relative;
-    height: 30vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    margin: 0 auto;
+  position: relative;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .article-title {
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    border: none;
-    background-color: transparent;
-    margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 1rem;
 }
 
-.center-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-image {
+  display: grid;
+  height: 500px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'pic1 pic2 pic2'
+    'pic1 pic3 pic4';
+  grid-gap: 3px;
 }
 
-.image-grid {
-    --gap: 3px;
-    --num-cols: 5;
-    --row-height: 25px;
-
-    box-sizing: border-box;
-    padding: var(--gap);
-    display: grid;
-    grid-template-columns: repeat(var(--num-cols), 1fr);
-    grid-auto-rows: repeat(var(--row-height), 1fr);
-    gap: var(--gap);
-    max-width: 100%;
-    margin-left: 15%;
-    margin-top: 3%;
-    margin-bottom:3%;
+#pic1 {
+  grid-area: pic1;
+  background-size: cover;
+  background-position: center;
 }
 
-.image-grid>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#pic2 {
+  grid-area: pic2;
+  background-size: cover;
+  background-position: center;
 }
 
-.item-1 {
-    grid-area: 1 / 1 / 3 / 3;
+#pic3 {
+  grid-area: pic3;
+  background-size: cover;
+  background-position: center;
 }
 
-.item-2 {
-    grid-area: 1 / 3 / 2 / 5;
+#pic4 {
+  grid-area: pic4;
+  background-size: cover;
+  background-position: center;
 }
 
-.item-3 {
-    grid-area: 2 / 3 / 3 / 4;
-}
-
-.item-4 {
-    grid-area: 2 / 4 / 3 / 5;
+@media only screen and (max-width: 600px) {
+  .container-image {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+      'pic1'
+      'pic2'
+      'pic3'
+      'pic4';
+  }
 }
 
 .article-header {
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
-    .position-title{
-        font-size: 15px;
-        padding-right: 25px;
-    }
-    .feature-article{
-        padding-left: 25px;
-    }
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  .position-title {
+    font-size: 15px;
+    padding-right: 25px;
+  }
+  .feature-article {
+    padding-left: 25px;
+  }
 
+  @media only screen and (max-width: 800px) {
+    font-size: 15px;
 
-    @media only screen and (max-width: 800px) {
-        font-size: 15px;
-    
-        .position-title {
-          font-size: 12px;
-        }
+    .position-title {
+      font-size: 12px;
     }
+  }
 
-    @media only screen and (max-width: 550px) {
-        font-size: 9px;
-    
-        .position-title {
-          font-size: 8px;
-        }
-    }    
-  
+  @media only screen and (max-width: 550px) {
+    font-size: 9px;
+
+    .position-title {
+      font-size: 8px;
+    }
+  }
 }
 
 .solid-line {
-    border-top: 2px solid #000;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  border-top: 2px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .references-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-family: 'Open Sans', sans-serif;
-
-
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .references {
-    font-style: italic;
-    flex: 1;
+  font-style: italic;
+  flex: 1;
 
-    @media only screen and (max-width: 550px) {
-        font-size: 15px;
+  @media only screen and (max-width: 550px) {
+    font-size: 15px;
+  }
 
-    }       
-
-    @media only screen and (max-width: 800px) {
-        font-size: 15px;
-    }
-
+  @media only screen and (max-width: 800px) {
+    font-size: 15px;
+  }
 }
 
 .image-source {
-    font-style: italic;
-    flex: 1;
-    margin-left: 20px;
-    font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  flex: 1;
+  margin-left: 20px;
+  font-family: 'Open Sans', sans-serif;
 
-    @media only screen and (max-width: 550px) {
-        font-size: 15px;
-    }      
+  @media only screen and (max-width: 550px) {
+    font-size: 15px;
+  }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 15px;
-    }    
+  @media only screen and (max-width: 800px) {
+    font-size: 15px;
+  }
 }
-
-
-
-
-
