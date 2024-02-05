@@ -429,5 +429,14 @@ div.card.card-body {
   td {
     padding-left: 1rem;
     padding-right: 1rem;
+
+    a {
+      color: $accent_one;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

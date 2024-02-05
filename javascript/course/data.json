@@ -8,15 +8,65 @@
           "courses": [
             {
               "name": "CMSC 10",
-              "title": "Kasaysayan ng Pilipinas",
-              "link": "",
-              "credits": 3,
+              "title": "Introduction to Computing",
+              "link": "computer-science/cmsc-10.html",
+              "isCredited": true,
+              "credits": 1,
               "preRequisites": ""
             },
             {
               "name": "CMSC 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "title": "Introduction to Computer Science",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 56",
+              "title": "Discrete Mathematical Structures in Computer Science 1",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Math 18",
+              "title": "Pre Calculus Mathematics",
+              "link": "",
+              "isCredited": true,
+              "credits": 5,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Core 1",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Core 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PE 1",
+              "title": "Foundation of Physical Fitness",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
+              "preRequisites": ""
+            },
+            {
+              "name": "NSTP",
+              "title": "",
+              "link": "",
+              "isCredited": false,
               "credits": 3,
               "preRequisites": ""
             }
@@ -26,100 +76,66 @@
           "title": "Second Sem",
           "courses": [
             {
-              "name": "CMSC 123",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "CMSC 21",
+              "title": "Fundamentals of Programming",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 11"
             },
             {
-              "name": "CMSC 22",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "CMSC 57",
+              "title": "Discrete Mathematical Structures in Computer Science 2",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 56"
+            },
+            {
+              "name": "Math 53",
+              "title": "Calculus I",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 18"
+            },
+            {
+              "name": "GE Core 3",
+              "title": "",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "CMSC 123",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "GE Core 4",
+              "title": "",
               "link": "",
-              "credits": 3,
-              "preRequisites": "CMSC 11"
-            },
-            {
-              "name": "CMSC 22",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
-              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "CMSC 123",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "GE Core 5",
+              "title": "",
               "link": "",
-              "credits": 3,
-              "preRequisites": "CMSC 11"
-            },
-            {
-              "name": "CMSC 22",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
-              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "CMSC 123",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "PE",
+              "title": "",
               "link": "",
-              "credits": 3,
-              "preRequisites": "CMSC 11"
-            },
-            {
-              "name": "CMSC 22",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
-              "link": "",
-              "credits": 3,
+              "isCredited": false,
+              "credits": 2,
               "preRequisites": ""
             },
             {
-              "name": "CMSC 123",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "NSTP",
+              "title": "",
               "link": "",
-              "credits": 3,
-              "preRequisites": "CMSC 11"
-            },
-            {
-              "name": "CMSC 22",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
-              "link": "",
-              "credits": 3,
-              "preRequisites": ""
-            },
-            {
-              "name": "CMSC 123",
-              "title": "Kasaysayan ng Pilipinas",
-              "link": "",
-              "credits": 3,
-              "preRequisites": "CMSC 11"
-            },
-            {
-              "name": "CMSC 22",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
-              "link": "",
-              "credits": 3,
-              "preRequisites": ""
-            },
-            {
-              "name": "CMSC 123",
-              "title": "Kasaysayan ng Pilipinas",
-              "link": "",
-              "credits": 3,
-              "preRequisites": "CMSC 11"
-            },
-            {
-              "name": "CMSC 22",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
-              "link": "",
+              "isCredited": false,
               "credits": 3,
               "preRequisites": ""
             }
@@ -134,18 +150,60 @@
           "title": "First Sem",
           "courses": [
             {
-              "name": "CMSC 200",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "CMSC 22",
+              "title": "Fundamentals of Object-oriented Programming",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 21"
+            },
+            {
+              "name": "CMSC 123",
+              "title": "Data Structures",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 21, CMSC 57"
+            },
+            {
+              "name": "Math 54",
+              "title": "Calculus II",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 53"
+            },
+            {
+              "name": "Physics 71",
+              "title": "Elementary Physics I",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 18 & Co-req: Math 53"
+            },
+            {
+              "name": "Physics 71.1",
+              "title": "Elementary Physics Laboratory I",
+              "link": "",
+              "isCredited": true,
+              "credits": 1,
+              "preRequisites": "Co-req: Physics 71"
+            },
+            {
+              "name": "GE Core 6",
+              "title": "",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "CMSC -23",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "PE",
+              "title": "",
               "link": "",
-              "credits": 3,
-              "preRequisites": "Kas 1"
+              "isCredited": false,
+              "credits": 2,
+              "preRequisites": ""
             }
           ]
         },
@@ -153,17 +211,512 @@
           "title": "Second Sem",
           "courses": [
             {
-              "name": "CMSC 55",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "CMSC 127",
+              "title": "Database Systems",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 130",
+              "title": "Logic Design and Digital Computer Circuits",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "CMSC 11, Physics 71"
+            },
+            {
+              "name": "CMSC 126",
+              "title": "Web Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 22"
+            },
+            {
+              "name": "CMSC 142",
+              "title": "Design and Analysis of Algorithms",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "GE Core 7",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Elective 1",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PE",
+              "title": "",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "THIRD YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "CMSC 124",
+              "title": "Design and Implementation of Programming Languages",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 131",
+              "title": "Introduction to Computer Organization and Machine Level Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 21, CMSC 130"
+            },
+            {
+              "name": "CMSC 141",
+              "title": "Automata and Language Theory",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 57"
             },
             {
-              "name": "CMSC 257",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "CMSC 128",
+              "title": "Software Engineering 1",
               "link": "",
+              "isCredited": true,
               "credits": 3,
+              "preRequisites": "CMSC 126, CMSC 127"
+            },
+            {
+              "name": "CMSC 134",
+              "title": "Human Computer Interaction",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 126"
+            },
+            {
+              "name": "Stat 105",
+              "title": "Introduction to Statistical Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 18"
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "CMSC 125",
+              "title": "Operating Systems",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 123, CMSC 131"
+            },
+            {
+              "name": "CMSC 129",
+              "title": "Software Engineering 2",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 128"
+            },
+            {
+              "name": "CMSC 132",
+              "title": "Computer Architecture",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 131"
+            },
+            {
+              "name": "Comm 12",
+              "title": "Technical Communication",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "COMM 10"
+            },
+            {
+              "name": "Stat 106",
+              "title": "Advanced Statistical Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 105"
+            },
+            {
+              "name": "CMSC Elective 1 ",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Midterm",
+          "courses": [
+            {
+              "name": "CMSC 195",
+              "title": "Practicum",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 129"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FOURTH YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "CMSC 137",
+              "title": "Data Communications and Networking",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "CMSC 125, CMSC 132"
+            },
+            {
+              "name": "CMSC 192",
+              "title": "Ethical and Professional Issues in Computing",
+              "link": "",
+              "isCredited": true,
+              "credits": 1,
+              "preRequisites": "Senior Standing"
+            },
+            {
+              "name": "CMSC 198.1",
+              "title": "Special Problem I",
+              "link": "",
+              "isCredited": true,
+              "credits": 2,
+              "preRequisites": "CMSC 195, Comm 12"
+            },
+            {
+              "name": "CMSC Elective 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC Elective 3",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Elective 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Elective 3",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "PI 100",
+              "title": "The Life and Works of Jose Rizal",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Senior Standing"
+            },
+            {
+              "name": "CMSC 198.2",
+              "title": "Special Problem II",
+              "link": "",
+              "isCredited": true,
+              "credits": 2,
+              "preRequisites": "CMSC 198.1"
+            },
+            {
+              "name": "CMSC Elective 4",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC Elective 5",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Elective 4",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Elective 5",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ELECTIVES",
+      "semesters": [
+        {
+          "title": "",
+          "courses": [
+            {
+              "name": "CMSC 138",
+              "title": "Computer Security",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 125, CMSC 132"
+            },
+            {
+              "name": "CMSC 140",
+              "title": "Advanced Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 21, CMSC 57"
+            },
+            {
+              "name": "CMSC 143",
+              "title": "Advanced Algorithms",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 142"
+            },
+            {
+              "name": "CMSC 151",
+              "title": "Systems Analysis and Design",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 128"
+            },
+            {
+              "name": "CMSC 152",
+              "title": "Management Information Systems",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 128"
+            },
+            {
+              "name": "CMSC 153",
+              "title": "Accounting and Information Systems",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 21"
+            },
+            {
+              "name": "CMSC 154",
+              "title": "Object-oriented Analysis and Design",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 128"
+            },
+            {
+              "name": "CMSC 155",
+              "title": "Technopreneurship",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Senior Standing"
+            },
+            {
+              "name": "CMSC 156",
+              "title": "Mobile Development",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 128"
+            },
+            {
+              "name": "CMSC 161",
+              "title": "Interactive Computer Graphics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123, CMSC 57"
+            },
+            {
+              "name": "CMSC 162",
+              "title": "3D Computer Graphics and Animation",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 170",
+              "title": "Introduction to Artificial Intelligence",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 171",
+              "title": "Expert Systems and Knowledge Engineering",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 172",
+              "title": "Computing with Symbolic Expressions",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 173",
+              "title": "Data Mining",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123, Stat 106 or COI (for non-majors)"
+            },
+            {
+              "name": "CMSC 174",
+              "title": "Computer Vision",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 22"
+            },
+            {
+              "name": "CMSC 180",
+              "title": "Computer Simulation and Modeling",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 181",
+              "title": "Introduction to Parallel Computing",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 182",
+              "title": "Scientific Computing",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 11, CMSC 57, and Math 53 (COI for non-majors)"
+            },
+            {
+              "name": "CMSC 197",
+              "title": "Special Topics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Consent of the Instructor"
+            },
+            {
+              "name": "Math 55",
+              "title": "Calculus III",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 54"
+            },
+            {
+              "name": "Math 114",
+              "title": "Linear Algebra",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 107"
+            },
+            {
+              "name": "Math 140",
+              "title": "Graph Theory and Its Applications",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 107"
+            },
+            {
+              "name": "Math 190",
+              "title": "Special Topics in Mathematics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Consent of the Instructor"
+            },
+            {
+              "name": "Stat 102",
+              "title": "Statistical Methods in Research",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
               "preRequisites": ""
             }
           ]
@@ -179,17 +732,59 @@
           "title": "First Sem",
           "courses": [
             {
-              "name": "MATH 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "GE Core 1",
+              "title": "",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "CMSC 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "GE Core 2",
+              "title": "",
               "link": "",
+              "isCredited": true,
               "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Econ 11",
+              "title": "Introductory Economics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Math 18",
+              "title": "Precalculus Mathematics",
+              "link": "",
+              "isCredited": true,
+              "credits": 5,
+              "preRequisites": ""
+            },
+            {
+              "name": "Math 153",
+              "title": "Computer Programming I",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PE 1",
+              "title": "Foundation of Physical Fitness",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
+              "preRequisites": ""
+            },
+            {
+              "name": "NSTP",
+              "title": "",
+              "link": "",
+              "isCredited": false,
+              "credits": 5,
               "preRequisites": ""
             }
           ]
@@ -198,30 +793,66 @@
           "title": "Second Sem",
           "courses": [
             {
-              "name": "MATH 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "GE Core 3",
+              "title": "",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "CMSC 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "Math 53",
+              "title": "Calculus I",
               "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 18"
+            },
+            {
+              "name": "Math 107",
+              "title": "Logic and Set Theory",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
+              "preRequisites": "Math 18"
+            },
+            {
+              "name": "Math 154",
+              "title": "Computer Programming II",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 153"
+            },
+            {
+              "name": "Physics 71",
+              "title": "Elementary Physics I",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 18 & Co-req: Math 53"
+            },
+            {
+              "name": "Physics 71.1",
+              "title": "Elementary Physics Laboratory I",
+              "link": "",
+              "isCredited": true,
+              "credits": 1,
+              "preRequisites": "Co-req: Physics 71"
+            },
+            {
+              "name": "PE",
+              "title": "",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
               "preRequisites": ""
             },
             {
-              "name": "MATH 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "NSTP",
+              "title": "",
               "link": "",
-              "credits": 3,
-              "preRequisites": ""
-            },
-            {
-              "name": "CMSC 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
-              "link": "",
+              "isCredited": false,
               "credits": 3,
               "preRequisites": ""
             }
@@ -236,16 +867,50 @@
           "title": "First Sem",
           "courses": [
             {
-              "name": "MATH 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "GE Core 4",
+              "title": "",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "CMSC 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "Math 54",
+              "title": "Calculus II",
               "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 53"
+            },
+            {
+              "name": "Math 110",
+              "title": "Abstract Algebra",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 107"
+            },
+            {
+              "name": "Math 114",
+              "title": "Linear Algebra",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 107"
+            },
+            {
+              "name": "Math 135",
+              "title": "Combinatorial Mathematics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 107"
+            },
+            {
+              "name": "PE",
+              "title": "",
+              "link": "",
+              "isCredited": false,
               "credits": 3,
               "preRequisites": ""
             }
@@ -255,18 +920,689 @@
           "title": "Second Sem",
           "courses": [
             {
-              "name": "MATH 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "GE Core 5",
+              "title": "",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "CMSC 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "GE Elective 1",
+              "title": "",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
+            },
+            {
+              "name": "Math 55",
+              "title": "Calculus III",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 54"
+            },
+            {
+              "name": "Math 121",
+              "title": "Elementary Differential Equations",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Coreq: Math 55"
+            },
+            {
+              "name": "Math 162",
+              "title": "Theory of Interest",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 54"
+            },
+            {
+              "name": "Math 173",
+              "title": "Numerical Methods I",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 54, Math 114, Math 154"
+            },
+            {
+              "name": "PE",
+              "title": "",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "THIRD YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "GE Core 6",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Elective 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Math 174",
+              "title": "Numerical Methods II",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 55, Math 121, Math 173"
+            },
+            {
+              "name": "Math 183",
+              "title": "Linear and Integer Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 114"
+            },
+            {
+              "name": "Stat 110",
+              "title": "Non-Bayesian Probability",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 54 or equivalent"
+            },
+            {
+              "name": "Math Elective 1",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "GE Core 7",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Comm 12",
+              "title": "Technical Communication",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Comm 10"
+            },
+            {
+              "name": "Math 175",
+              "title": "Mathematical Modeling",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 174"
+            },
+            {
+              "name": "Stat 111",
+              "title": "Statistical Methods & Inference",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Stat 110"
+            },
+            {
+              "name": "Math Elective 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Midyear",
+          "courses": [
+            {
+              "name": "Math 195",
+              "title": "Practicum",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Must have taken at least 30 units of upper division courses"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FOURTH YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "GE Elective 3",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Elective 4",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Math 123",
+              "title": "Advanced Calculus I",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 55 or equivalent"
+            },
+            {
+              "name": "Math 198.1",
+              "title": "Special Problem I",
+              "link": "",
+              "isCredited": true,
+              "credits": 1,
+              "preRequisites": "Math 135, Math 162, Math 175, Math 183, Comm 12"
+            },
+            {
+              "name": "Qualified Elective 1",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Elective",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "GE Elective 5",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PI 100",
+              "title": "The Life and Works of Jose Rizal",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Senior Standing"
+            },
+            {
+              "name": "Math 128",
+              "title": "Complex Analysis I",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 55 or equivalent"
+            },
+            {
+              "name": "Math 198.2",
+              "title": "Special Problem II",
+              "link": "",
+              "isCredited": true,
+              "credits": 2,
+              "preRequisites": "Math 198.2"
+            },
+            {
+              "name": "Qualified Elective 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Elective",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ELECTIVES",
+      "semesters": [
+        {
+          "title": "",
+          "courses": [
+            {
+              "name": "Math 116",
+              "title": "Number Theory",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 107, Junior Standing"
+            },
+            {
+              "name": "Math 122",
+              "title": "Dynamical Systems",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 121"
+            },
+            {
+              "name": "Math 125",
+              "title": "Introduction to Mathematical Biology",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 114, Math 121"
+            },
+            {
+              "name": "Math 140",
+              "title": "Graph Theory and Its Applications",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 107"
+            },
+            {
+              "name": "Math 143",
+              "title": "Modern Geometries and Their Applications",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 110, Math 114"
+            },
+            {
+              "name": "Math 146",
+              "title": "Introduction to Topology",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 55, Math 107"
+            },
+            {
+              "name": "Math 165",
+              "title": "Financial Derivatives Markets",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 162"
+            },
+            {
+              "name": "Math 178",
+              "title": "Mathematical Methods in Economics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 55, Math 114"
+            },
+            {
+              "name": "Math 184",
+              "title": "Network Analysis and Dynamic Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 121, Econ 11, Math 183"
+            },
+            {
+              "name": "Math 185",
+              "title": "Planar Location and Facility Theory",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 183"
+            },
+            {
+              "name": "Math 186",
+              "title": "Nonlinear Optimization",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 183"
+            },
+            {
+              "name": "Math 195",
+              "title": "Practicum",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Must have taken at least 30 units of upper division courses, Consent of Instructor"
+            },
+            {
+              "name": "Math 197",
+              "title": "Special Topics in Mathematics (Possible topics: multi-objective optimization, stochastic optimization, convex optimization, calculus of variations, partial differential equations, game theory, coding theory, mathematical crystallography, differential geometry, spectral methods, mathematics of life contingencies, stochastic calculus for finance, and other topics from the emerging areas of applied mathematics.)",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": ""
+            },
+            {
+              "name": "Stat 104",
+              "title": "Descriptive Statistics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "None"
+            },
+            {
+              "name": "Stat 129",
+              "title": "Regression and Correlation Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Math 114, Stat 123"
+            },
+            {
+              "name": "Stat 130",
+              "title": "Introduction to Experimental Designs",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "Stat 133",
+              "title": "Introduction to Exploratory Data Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "Stat 138",
+              "title": "Use of Statistical Software Packages",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 104, Math 153"
+            },
+            {
+              "name": "Stat 140",
+              "title": "Introduction to Sample Surveys",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "Stat 145",
+              "title": "Introduction to Time Series Analysis and Forecasting",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "Stat 149",
+              "title": "Introduction to Categorical Data Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "Stat 150",
+              "title": "Survey Operations",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 140, Stat 138"
+            },
+            {
+              "name": "Stat 171",
+              "title": "Elementary Economic Statistics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Coreq: Stat 129"
+            },
+            {
+              "name": "Stat 172",
+              "title": "Statistical Methods in Fisheries and Agriculture",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "Stat 173",
+              "title": "Elementary Actuarial Statistics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Consent of Instructor"
+            },
+            {
+              "name": "Stat 174",
+              "title": "Elementary Statistical Quality Control",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "Stat 175",
+              "title": "Introduction to Biostatics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "Stat 176",
+              "title": "Statistical Procedures in Market Research",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "Stat 179",
+              "title": "Introduction to Survival Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "Stat 180",
+              "title": "Introduction to Stochastic Processes",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Stat 122, Math 121"
+            },
+            {
+              "name": "Stat 197",
+              "title": "Special Topics in Statistics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Consent of Instructor"
+            },
+            {
+              "name": "CMSC 56",
+              "title": "Discrete Mathematical Structures in Computer Science 1",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "None"
+            },
+            {
+              "name": "CMSC 57",
+              "title": "Discrete Mathematical Structures in Computer Science 2",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 56"
+            },
+            {
+              "name": "CMSC 123",
+              "title": "Data Structures",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 21, CMSC 57"
+            },
+            {
+              "name": "CMSC 140",
+              "title": "Advanced Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 21, CMSC 57"
+            },
+            {
+              "name": "CMSC 141",
+              "title": "Automata and Language Theory",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 57"
+            },
+            {
+              "name": "CMSC 142",
+              "title": "Design and Analysis of Algorithms",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 143",
+              "title": "Advanced Algorithms",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 142"
+            },
+            {
+              "name": "CMSC 153",
+              "title": "Accounting and Information Systems",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 21"
+            },
+            {
+              "name": "CMSC 161",
+              "title": "Interactive Computer Graphics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 57, CMSC 123"
+            },
+            {
+              "name": "CMSC 162",
+              "title": "3D Computer Graphics and Animation",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 170",
+              "title": "Introduction to Artificial Intelligence",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 173",
+              "title": "Data Mining",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123, Stat 106 or COI (for non-majors)"
+            },
+            {
+              "name": "CMSC 180",
+              "title": "Computer Simulation and Modeling",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 181",
+              "title": "Introduction to Parallel Computing",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 123"
+            },
+            {
+              "name": "CMSC 182",
+              "title": "Scientific Computing",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "CMSC 11, CMSC 57, and Math 53"
+            },
+            {
+              "name": "CMSC 197",
+              "title": "Special Topics",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Consent of Instructor"
+            },
+            {
+              "name": "Physics 72",
+              "title": "Elementary Physics II",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Prereq: Physics 71, Coreq: Math 54"
+            },
+            {
+              "name": "Physics 72.1",
+              "title": "Elementary Physics Laboratory II",
+              "link": "",
+              "isCredited": true,
+              "credits": null,
+              "preRequisites": "Prereq: Physics 71.1, Coreq: Physics 72"
             }
           ]
         }
@@ -282,16 +1618,58 @@
           "courses": [
             {
               "name": "STAT 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "title": "Descriptive Statistics",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "STAT 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "MATH 18",
+              "title": "Precalculus Mathematics",
               "link": "",
+              "isCredited": true,
+              "credits": 5,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 153",
+              "title": "Computer Programming I",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Core 1",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Core 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "NSTP",
+              "title": "",
+              "link": "",
+              "isCredited": false,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PE 1",
+              "title": "Foundations of Physical Fitness",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
               "preRequisites": ""
             }
           ]
@@ -300,31 +1678,59 @@
           "title": "Second Sem",
           "courses": [
             {
-              "name": "STAT 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "STAT 117",
+              "title": "Mathematics for Statistics",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 18"
+            },
+            {
+              "name": "MATH 53",
+              "title": "Calculus I",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 18"
+            },
+            {
+              "name": "Free Elective 1",
+              "title": "",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "STAT 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "GE Elective 1",
+              "title": "",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "STAT 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "GE Core 3",
+              "title": "",
               "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "STAT 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "NSTP",
+              "title": "",
               "link": "",
+              "isCredited": false,
               "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PE",
+              "title": "",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
               "preRequisites": ""
             }
           ]
@@ -338,16 +1744,169 @@
           "title": "First Sem",
           "courses": [
             {
-              "name": "STAT 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "STAT 121",
+              "title": "Probability Theory I",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 53, Stat 117"
+            },
+            {
+              "name": "MATH 54",
+              "title": "Calculus II",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 53"
+            },
+            {
+              "name": "Free Elective 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "STAT 11",
-              "title": "Ethics and Moral Reasoning in Everyday Life",
+              "name": "GE Elective 2",
+              "title": "",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Core 4",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PE",
+              "title": "",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "STAT 122",
+              "title": "Probability Theory II",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 121"
+            },
+            {
+              "name": "STAT 138",
+              "title": "Use of Statistical Software Packages",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 153, Stat 104"
+            },
+            {
+              "name": "MATH 55",
+              "title": "Calculus III",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Math 54"
+            },
+            {
+              "name": "GE Elective 3",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Core 5",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Core 6",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PE",
+              "title": "",
+              "link": "",
+              "isCredited": false,
+              "credits": 2,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "THIRD YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "STAT 123",
+              "title": "Parametric Statistical Inference",
+              "link": "",
+              "isCredited": true,
+              "credits": 4,
+              "preRequisites": "Stat 122"
+            },
+            {
+              "name": "MATH 114",
+              "title": "Linear Algebra",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 107"
+            },
+            {
+              "name": "COMM 12",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Comm 10"
+            },
+            {
+              "name": "GE Elective 4",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "GE Elective 5",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CS/Math Elective 1",
+              "title": "",
+              "link": "",
+              "isCredited": false,
               "credits": 3,
               "preRequisites": ""
             }
@@ -357,16 +1916,667 @@
           "title": "Second Sem",
           "courses": [
             {
-              "name": "STAT 104",
-              "title": "Kasaysayan ng Pilipinas",
+              "name": "STAT 129",
+              "title": "Regression and Correlation Analysis",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Math 114, Stat 123"
+            },
+            {
+              "name": "STAT 133",
+              "title": "Introduction to Exploratory Data Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "STAT 134",
+              "title": "Introduction to Bayesian Statistical Inference",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "STAT 140",
+              "title": "Introduction to Sample Surveys",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "GE Core 7",
+              "title": "",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             },
             {
-              "name": "STAT 11",
+              "name": "Statistics Elective 1",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FOURTH YEAR",
+      "semesters": [
+        {
+          "title": "First Sem",
+          "courses": [
+            {
+              "name": "STAT 130",
+              "title": "Introduction to Experimental Designs",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "STAT 132",
+              "title": "Nonparametric Statistical Inference",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 123"
+            },
+            {
+              "name": "STAT 141",
+              "title": "Multivariate Theory",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "STAT 145",
+              "title": "Introduction to Time Series Analysis and Forecasting",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "Statistics Elective 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Statistics Elective 3",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        },
+        {
+          "title": "Second Sem",
+          "courses": [
+            {
+              "name": "STAT 142",
+              "title": "Applied Multivariate Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 141"
+            },
+            {
+              "name": "STAT 149",
+              "title": "Introduction to Categorical Data Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 129"
+            },
+            {
+              "name": "STAT 150",
+              "title": "Survey Operations",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Comm 12, Stat 138, Stat 140"
+            },
+            {
+              "name": "PI 100",
+              "title": "The Life and Works of Jose Rizal",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": "Stat 141"
+            },
+            {
+              "name": "Statistics Elective 4",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CS/Math Elective 2",
+              "title": "",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FREE ELECTIVE COURSES",
+      "semesters": [
+        {
+          "title": "",
+          "courses": [
+            {
+              "name": "CMS 101",
+              "title": "Introduction to Media Communication",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 22",
+              "title": "Fundamentals of Object-oriented Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Econ 101",
+              "title": "Macroeconomics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Econ 102",
+              "title": "Microeconomics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Econ 11",
+              "title": "Introductory Economics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Fish 100",
+              "title": "Introduction to Fisheries Science",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Math 197",
+              "title": "Special Topics in Mathematics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Socio 101",
+              "title": "General Sociology",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Span I",
+              "title": "Elementary Course",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STATISTICS ELECTIVE COURSES",
+      "semesters": [
+        {
+          "title": "",
+          "courses": [
+            {
+              "name": "STAT 170",
+              "title": "Introduction to Idustrial Labor Statistics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 171",
+              "title": "Elementary Economic Statistics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 172",
+              "title": "Statistical Methods in Fisheries and Agriculture",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 173",
+              "title": "Elementary Actuarial Statistics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 174",
+              "title": "Elementary Statistical Quality Control",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 175",
+              "title": "Introduction to Biostatics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 176",
+              "title": "Statistical Methods in Market Research",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 177",
+              "title": "Introduction to Hierarchical Linear Models",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 179",
+              "title": "Introduction to Survival Analysis",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 180",
+              "title": "Introduction to Stochastic Processes",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 197",
+              "title": "Special Topics in Statistics (Biostatistics and Epidemiology)",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STAT 197",
+              "title": "Special Topics in Statistics (Introduction to Exploratory Data Analysis)",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CS/MATH ELECTIVE COURSES",
+      "semesters": [
+        {
+          "title": "",
+          "courses": [
+            {
+              "name": "CMSC 11",
+              "title": "Introduction to Computer Science",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 140",
+              "title": "Advanced Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 173",
+              "title": "Data Mining",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 197",
+              "title": "Special Topics(Intro to Data Science)",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 56",
+              "title": "Discrete Mathematical Structures in Computer Science 1",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "CMSC 57",
+              "title": "Discrete Mathematical Structures in Computer Science 2",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 116",
+              "title": "Number Theory",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 121",
+              "title": "Elementary Differential Equations",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 122",
+              "title": "Dynamical Systems",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 125",
+              "title": "Introduction to Mathematical Biology",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 135",
+              "title": "Combinatorial Mathematics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 140",
+              "title": "Graph Theory and Its Applications",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 154",
+              "title": "Computer Programming II",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 162",
+              "title": "Theory of Interest",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 165",
+              "title": "Financial Derivatives Markets",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 173",
+              "title": "Numerical Methods I",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 178",
+              "title": "Mathematical Methods in Economics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 183",
+              "title": "Linear and Integer Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 184",
+              "title": "Network Analysis and Dynamic Programming",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 185",
+              "title": "Planar Location and Facility Theory",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 186",
+              "title": "Non-linear Optimization",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "MATH 190",
+              "title": "Special Topics in Mathematics(Geometric Crystallography)",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "GE ELECTIVE COURSES",
+      "semesters": [
+        {
+          "title": "",
+          "courses": [
+            {
+              "name": "AQUA SCI 1",
+              "title": "People and the Aquatic World",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "PHILARTS I",
+              "title": "Philippine Arts and Culture",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "SAS 1",
+              "title": "Self and Society",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Science 10",
+              "title": "Probing the Physical World",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Science 11",
+              "title": "Living Systems, Concepts and Dynamics",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Soc Sci 5",
+              "title": "Understanding Gender",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "GE CORE COURSES",
+      "semesters": [
+        {
+          "title": "",
+          "courses": [
+            {
+              "name": "ARTS I",
+              "title": "Critical Perspective in the Arts",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "COMM 10",
+              "title": "Critical Perspective in Communications",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "ETHICS 1",
               "title": "Ethics and Moral Reasoning in Everyday Life",
               "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Hist 1",
+              "title": "Philippine History",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "KAS 1",
+              "title": "Kasaysayan ng Pilipinas",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "Math 10",
+              "title": "Mathematics, Culture, and Society",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "STS 1",
+              "title": "Science, Technology and Society",
+              "link": "",
+              "isCredited": true,
+              "credits": 3,
+              "preRequisites": ""
+            },
+            {
+              "name": "WIKA 1",
+              "title": "Wika, Kultura, at Lipunan",
+              "link": "",
+              "isCredited": true,
               "credits": 3,
               "preRequisites": ""
             }

@@ -12413,6 +12413,13 @@ div.card.card-body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.prospectus-table td a {
+  color: rgb(255, 183, 3);
+  text-decoration: none;
+}
+.prospectus-table td a:hover {
+  text-decoration: underline;
+}
 
 .about-hero-section {
   position: relative;
@@ -12730,50 +12737,46 @@ html {
   margin-bottom: 1rem;
 }
 
-.center-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-grid {
-  --gap: 3px;
-  --num-cols: 5;
-  --row-height: 25px;
-  box-sizing: border-box;
-  padding: var(--gap);
+.container-image {
   display: grid;
-  grid-template-columns: repeat(var(--num-cols), 1fr);
-  grid-auto-rows: repeat(var(--row-height), 1fr);
-  gap: var(--gap);
-  max-width: 100%;
-  margin-left: 15%;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  height: 500px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "pic1 pic2 pic2" "pic1 pic3 pic4";
+  grid-gap: 3px;
 }
 
-.image-grid > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#pic1 {
+  grid-area: pic1;
+  background-size: cover;
+  background-position: center;
 }
 
-.item-1 {
-  grid-area: 1/1/3/3;
+#pic2 {
+  grid-area: pic2;
+  background-size: cover;
+  background-position: center;
 }
 
-.item-2 {
-  grid-area: 1/3/2/5;
+#pic3 {
+  grid-area: pic3;
+  background-size: cover;
+  background-position: center;
 }
 
-.item-3 {
-  grid-area: 2/3/3/4;
+#pic4 {
+  grid-area: pic4;
+  background-size: cover;
+  background-position: center;
 }
 
-.item-4 {
-  grid-area: 2/4/3/5;
+@media only screen and (max-width: 600px) {
+  .container-image {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr;
+    grid-template-areas: "pic1" "pic2" "pic3" "pic4";
+  }
 }
-
 .article-header {
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
