@@ -21,20 +21,22 @@ function generateProspectusTable(prospectus) {
 
         // Adds the title of the semester in the first row only
         // Otherwise add blank space
-        let credits = course.isCredited ? course.credits : '(' + course.credits + ')'
+        let credits = course.isCredited ? course.credits : '(' + course.credits + ')';
+        const link = course.link ? `/courses/${course.link}` : '';
+
         rows += `
                 <tr>
                   <th scope="row"></th>
                   <td>${k == 0 ? semester.title : ''}</td>
-                  <td>${course.name}</td>
+                  <td><a href=${link}>${course.name}<a/></td>
                   <td>${course.title}</td>
-                  <td>${credits ?? ""}</td>
+                  <td>${credits ?? ''}</td>
                   <td>${course.preRequisites}</td>
                 </tr>`;
-                
+
         if (course.isCredited) {
           totalUnits += course.credits;
-        } 
+        }
       }
 
       // Add total units row

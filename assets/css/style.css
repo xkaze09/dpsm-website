@@ -12413,6 +12413,13 @@ div.card.card-body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.prospectus-table td a {
+  color: rgb(255, 183, 3);
+  text-decoration: none;
+}
+.prospectus-table td a:hover {
+  text-decoration: underline;
+}
 
 .about-hero-section {
   position: relative;
