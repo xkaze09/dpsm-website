@@ -29,20 +29,27 @@
   z-index: 2; /* Higher z-index */
 }
 
-
-
 /* Sticky Sidebar styles */
 .sticky-sidebar {
     position: sticky;
     top: 20vh; /* Adjust as needed */
     height: calc(100vh - 40px); /* Account for padding */
     overflow-y: auto;
-  }
+}
   
-  /* Main content styles */
-  .main-content {
-    padding: 20px;
-    height: 100%;
-    overflow-y: auto;
-  }
+/* Main content styles */
+.main-content {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
   
+.faculty-sidebar {
+  padding: 20px;
+  position: sticky;
+  border-right: 0.2rem solid rgb(255, 183, 3);
+  background-color: white;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1020;
+}
