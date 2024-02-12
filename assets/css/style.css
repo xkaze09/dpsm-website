@@ -12059,36 +12059,6 @@ textarea.form-control-lg {
   height: auto;
 }
 
-/* Media Queries */
-@media (max-width: 540px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-    padding-top: 100px; /* Adjust vertical spacing */
-  }
-}
-@media (min-width: 541px) and (max-width: 767px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-    padding-top: 150px; /* Adjust vertical spacing */
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-    padding-top: 80px; /* Adjust vertical spacing */
-  }
-}
-@media (min-width: 992px) and (max-width: 1024px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-    padding-top: 50px; /* Adjust vertical spacing */
-  }
-}
-@media (min-width: 1025px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-  }
-}
 .footer-heading {
   font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
@@ -12118,9 +12088,13 @@ textarea.form-control-lg {
 
 /* Media Queries */
 @media (max-width: 540px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 100px; /* Adjust vertical spacing */
+  }
   /* Adjust font size and padding for smaller screens */
   .footer-heading {
-    padding-top: 4rem;
+    padding-top: 8rem;
     text-align: center;
     font-size: 1rem;
     margin-top: 0.8rem;
@@ -12142,9 +12116,12 @@ textarea.form-control-lg {
   .footer-icons {
     padding-bottom: 0.8rem;
   }
-  /* Add other adjustments for smaller screens */
 }
 @media (min-width: 541px) and (max-width: 767px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 150px; /* Adjust vertical spacing */
+  }
   /* Adjust font size and padding for small screens */
   .footer-heading {
     padding-top: 8rem;
@@ -12169,9 +12146,12 @@ textarea.form-control-lg {
   .footer-icons {
     padding-bottom: 1rem;
   }
-  /* Add other adjustments for small screens */
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 80px; /* Adjust vertical spacing */
+  }
   /* Adjust font size and padding for medium screens */
   .footer-heading {
     padding-top: 8rem;
@@ -12192,9 +12172,12 @@ textarea.form-control-lg {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
-  /* Add other adjustments for medium screens */
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1024px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 50px; /* Adjust vertical spacing */
+  }
   /* Default styles for larger screens */
   .footer-heading {
     padding-top: 8rem;
@@ -12204,7 +12187,11 @@ textarea.form-control-lg {
   .footer-division-text {
     font-size: 1.25rem;
   }
-  /* Add other adjustments for larger screens */
+}
+@media (min-width: 1025px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+  }
 }
 .comsci-hero-section {
   position: relative;
