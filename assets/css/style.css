@@ -12046,134 +12046,6 @@ textarea.form-control-lg {
     column-gap: 0.5rem;
   }
 }
-.comsci-hero-section {
-  position: relative;
-  height: 50vh;
-  background-image: url("/images/comsci-hero.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.stats-hero-section {
-  position: relative;
-  height: 50vh;
-  background-image: url("/images/homepage-hero.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.appmath-hero-section {
-  position: relative;
-  height: 50vh;
-  background-image: url("/images/homepage-hero.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-caption {
-  font-family: "Oswald";
-  text-align: center;
-  color: white;
-}
-
-.course-subtitle {
-  font-family: "Oswald";
-  color: rgb(255, 183, 3);
-}
-
-.course-subvalue {
-  font-family: "Open Sans";
-}
-
-/* Default styles */
-.collapse-button {
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1.875rem;
-  padding: 1.875rem;
-  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  border-bottom: 0.2rem solid rgb(255, 183, 3);
-  margin-bottom: 0;
-  border-radius: 0%;
-}
-
-/* Hover styles */
-.collapse-button:hover {
-  background-color: rgb(255, 183, 3);
-  color: #fff;
-}
-
-/* Active styles */
-.course-info-active {
-  background-color: rgb(255, 183, 3);
-  color: #fff;
-}
-
-/* Sidebar styles */
-.sidebar {
-  padding: 20px;
-  border-right: 0.2rem solid rgb(255, 183, 3);
-  height: 100%;
-  overflow-y: auto;
-}
-
-/* Card body styles */
-div.card.card-body {
-  border-radius: 0;
-  border: none;
-  height: auto;
-}
-
-.computer-science-org-name {
-  font-family: "Consolas";
-}
-
-/* Media Queries */
-@media (max-width: 540px) {
-  /* Adjust font size and padding for smaller screens */
-  .collapse-button {
-    font-size: 0.5rem;
-    padding: 0.5rem 1rem; /* Adjust top/bottom padding and left/right padding */
-    margin-bottom: 1rem;
-  }
-}
-@media (min-width: 541px) and (max-width: 767px) {
-  /* Adjust font size and padding for small screens */
-  .collapse-button {
-    font-size: 0.9rem;
-    padding: 0.75rem 1rem; /* Adjust top/bottom padding and left/right padding */
-    margin-bottom: 1rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Adjust font size and padding for medium screens */
-  .collapse-button {
-    font-size: 1.5rem;
-    padding: 1rem 1.5rem; /* Adjust top/bottom padding and left/right padding */
-    margin-bottom: 1.5rem;
-  }
-}
-@media (min-width: 992px) {
-  /* Default styles for larger screens */
-  .collapse-button {
-    font-size: 1.875rem;
-    padding: 1.875rem;
-    margin-bottom: 0;
-  }
-}
 /* Footer */
 .footer-with-image {
   background-size: contain; /* Maintain aspect ratio and cover entire section */
@@ -12333,6 +12205,134 @@ div.card.card-body {
     font-size: 1.25rem;
   }
   /* Add other adjustments for larger screens */
+}
+.comsci-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/comsci-hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/homepage-hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appmath-hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url("/images/homepage-hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-caption {
+  font-family: "Oswald";
+  text-align: center;
+  color: white;
+}
+
+.course-subtitle {
+  font-family: "Oswald";
+  color: rgb(255, 183, 3);
+}
+
+.course-subvalue {
+  font-family: "Open Sans";
+}
+
+/* Default styles */
+.collapse-button {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.875rem;
+  padding: 1.875rem;
+  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.2rem solid rgb(255, 183, 3);
+  margin-bottom: 0;
+  border-radius: 0%;
+}
+
+/* Hover styles */
+.collapse-button:hover {
+  background-color: rgb(255, 183, 3);
+  color: #fff;
+}
+
+/* Active styles */
+.course-info-active {
+  background-color: rgb(255, 183, 3);
+  color: #fff;
+}
+
+/* Sidebar styles */
+.sidebar {
+  padding: 20px;
+  border-right: 0.2rem solid rgb(255, 183, 3);
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Card body styles */
+div.card.card-body {
+  border-radius: 0;
+  border: none;
+  height: auto;
+}
+
+.computer-science-org-name {
+  font-family: "Consolas";
+}
+
+/* Media Queries */
+@media (max-width: 540px) {
+  /* Adjust font size and padding for smaller screens */
+  .collapse-button {
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem; /* Adjust top/bottom padding and left/right padding */
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 541px) and (max-width: 767px) {
+  /* Adjust font size and padding for small screens */
+  .collapse-button {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem; /* Adjust top/bottom padding and left/right padding */
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust font size and padding for medium screens */
+  .collapse-button {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem; /* Adjust top/bottom padding and left/right padding */
+    margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  /* Default styles for larger screens */
+  .collapse-button {
+    font-size: 1.875rem;
+    padding: 1.875rem;
+    margin-bottom: 0;
+  }
 }
 /* Carousel */
 .carousel-inner img {
