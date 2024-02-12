@@ -12173,7 +12173,7 @@ textarea.form-control-lg {
     padding-right: 0.25rem;
   }
 }
-@media (min-width: 992px) and (max-width: 1024px) {
+@media (min-width: 992px) {
   .footer-with-image {
     background-size: cover; /* Maintain aspect ratio and cover entire section */
     padding-top: 50px; /* Adjust vertical spacing */

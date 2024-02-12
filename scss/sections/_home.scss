@@ -361,7 +361,7 @@
       }
   }
   
-  @media (min-width: 992px) and (max-width: 1024px) {
+  @media (min-width: 992px) {
     .footer-with-image {
       background-size: cover; /* Maintain aspect ratio and cover entire section */
       padding-top: 50px; /* Adjust vertical spacing */
@@ -383,7 +383,7 @@
     .footer-with-image {
       background-size: cover; /* Maintain aspect ratio and cover entire section */
     }
-  }
+  } 
 
 // @media (min-width: 200px) and (max-width: 400px) {
 //     /* Adjust font size and padding for smaller screens */
