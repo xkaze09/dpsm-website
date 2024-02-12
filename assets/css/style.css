@@ -12334,7 +12334,6 @@ div.card.card-body {
 }
 
 .course-logo-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12381,7 +12380,6 @@ div.card.card-body {
   text-align: center;
 }
 
-/* Course Features & Highlights */
 /* Prospectus Section */
 .prospectus-title {
   font-size: 1.2rem;
