@@ -246,3 +246,31 @@ div.card.card-body {
     }
   }
 }
+
+/* Apply sticky positioning of the header columns */
+.prospectus-table-container {
+  overflow-y: auto;
+  /* Adjust max-height as needed to ensure scrolling is enabled */
+  max-height: 500px;
+}
+
+/* Reset margins and padding that could affect the header positioning */
+.table {
+  margin-bottom: 0; /* Remove default margin from .table class if it exists */
+}
+
+.prospectus-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 2; /* Ensure it's above other content */
+  margin: 0; /* Reset margin */
+  padding: 0.75rem; /* Adjust padding as needed, but ensure it's uniform */
+}
+
+/* Additional reset for potential inherited styles */
+.prospectus-table-container{
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse; /* Ensure table elements are tightly packed */
+}
