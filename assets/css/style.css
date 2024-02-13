@@ -11910,7 +11910,7 @@ textarea.form-control-lg {
 }
 
 .course-card {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .course-card:hover {
@@ -11918,6 +11918,42 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 
+.sm-course-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+.shadow {
+  width: 250px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: shadow 6s ease-in-out infinite;
+  text-align: center;
+}
+
+@keyframes shadow {
+  0%, 100% {
+    filter: blur(10px);
+    transform: scale(1);
+  }
+  50% {
+    filter: blur(16px);
+    transform: scale(1.5);
+  }
+}
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -12044,6 +12080,153 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
     column-gap: 0.5rem;
+  }
+}
+/* Footer */
+.footer-with-image {
+  background-size: contain; /* Maintain aspect ratio and cover entire section */
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  color: white;
+  padding-bottom: 8px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.footer-heading {
+  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+}
+
+.footer-division-text {
+  font-size: 1.8rem;
+}
+
+.footer-horizontal-line {
+  border: 1px solid white;
+}
+
+.footer-subtitle {
+  padding: 0;
+  font-size: 0.65rem;
+}
+
+.footer-nav {
+  padding: 0;
+}
+
+.footer-nav .navbar-nav .nav-item {
+  color: white;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 540px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 100px; /* Adjust vertical spacing */
+  }
+  /* Adjust font size and padding for smaller screens */
+  .footer-heading {
+    padding-top: 8rem;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+  .footer-division-text {
+    font-size: 1.2rem;
+  }
+  .footer-nav .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-nav .navbar-nav .nav-item {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.2rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+  .footer-icons {
+    padding-bottom: 0.8rem;
+  }
+}
+@media (min-width: 541px) and (max-width: 767px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 150px; /* Adjust vertical spacing */
+  }
+  /* Adjust font size and padding for small screens */
+  .footer-heading {
+    padding-top: 8rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .footer-division-text {
+    font-size: 1.8rem;
+  }
+  .footer-nav .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-nav .navbar-nav .nav-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .footer-icons {
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 80px; /* Adjust vertical spacing */
+  }
+  /* Adjust font size and padding for medium screens */
+  .footer-heading {
+    padding-top: 8rem;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+  .footer-division-text {
+    font-size: 1.5rem;
+  }
+  .footer-icons {
+    padding-right: 2rem;
+  }
+  .footer-nav .navbar-nav .nav-item {
+    font-size: 0.875rem;
+    padding: 0;
+  }
+  .footer-buttons svg {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+@media (min-width: 992px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
+    padding-top: 50px; /* Adjust vertical spacing */
+  }
+  /* Default styles for larger screens */
+  .footer-heading {
+    padding-top: 8rem;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .footer-division-text {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1025px) {
+  .footer-with-image {
+    background-size: cover; /* Maintain aspect ratio and cover entire section */
   }
 }
 .comsci-hero-section {
@@ -12174,166 +12357,6 @@ div.card.card-body {
     margin-bottom: 0;
   }
 }
-/* Footer */
-.footer-with-image {
-  background-size: contain; /* Maintain aspect ratio and cover entire section */
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  color: white;
-  padding-bottom: 8px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-}
-
-/* Media Queries */
-@media (max-width: 540px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-    padding-top: 100px; /* Adjust vertical spacing */
-  }
-}
-@media (min-width: 541px) and (max-width: 767px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-    padding-top: 150px; /* Adjust vertical spacing */
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-    padding-top: 80px; /* Adjust vertical spacing */
-  }
-}
-@media (min-width: 992px) and (max-width: 1024px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-    padding-top: 50px; /* Adjust vertical spacing */
-  }
-}
-@media (min-width: 1025px) {
-  .footer-with-image {
-    background-size: cover; /* Maintain aspect ratio and cover entire section */
-  }
-}
-.footer-heading {
-  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-  padding: 0;
-}
-
-.footer-division-text {
-  font-size: 1.8rem;
-}
-
-.footer-horizontal-line {
-  border: 1px solid white;
-}
-
-.footer-subtitle {
-  padding: 0;
-  font-size: 0.65rem;
-}
-
-.footer-nav {
-  padding: 0;
-}
-
-.footer-nav .navbar-nav .nav-item {
-  color: white;
-  text-align: center;
-}
-
-/* Media Queries */
-@media (max-width: 540px) {
-  /* Adjust font size and padding for smaller screens */
-  .footer-heading {
-    padding-top: 4rem;
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 0.8rem;
-  }
-  .footer-division-text {
-    font-size: 1.2rem;
-  }
-  .footer-nav .navbar-nav {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer-nav .navbar-nav .nav-item {
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
-    font-size: 1.2rem;
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
-  }
-  .footer-icons {
-    padding-bottom: 0.8rem;
-  }
-  /* Add other adjustments for smaller screens */
-}
-@media (min-width: 541px) and (max-width: 767px) {
-  /* Adjust font size and padding for small screens */
-  .footer-heading {
-    padding-top: 8rem;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-  }
-  .footer-division-text {
-    font-size: 1.8rem;
-  }
-  .footer-nav .navbar-nav {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer-nav .navbar-nav .nav-item {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  .footer-icons {
-    padding-bottom: 1rem;
-  }
-  /* Add other adjustments for small screens */
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Adjust font size and padding for medium screens */
-  .footer-heading {
-    padding-top: 8rem;
-    font-size: 1.8rem;
-    margin-top: 2rem;
-  }
-  .footer-division-text {
-    font-size: 1.5rem;
-  }
-  .footer-icons {
-    padding-right: 2rem;
-  }
-  .footer-nav .navbar-nav .nav-item {
-    font-size: 0.875rem;
-    padding: 0;
-  }
-  .footer-buttons svg {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-  /* Add other adjustments for medium screens */
-}
-@media (min-width: 992px) {
-  /* Default styles for larger screens */
-  .footer-heading {
-    padding-top: 8rem;
-    font-size: 2rem;
-    margin-top: 0;
-  }
-  .footer-division-text {
-    font-size: 1.25rem;
-  }
-  /* Add other adjustments for larger screens */
-}
 /* Carousel */
 .carousel-inner img {
   object-fit: cover;
@@ -12347,7 +12370,6 @@ div.card.card-body {
 }
 
 .course-logo-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12394,7 +12416,6 @@ div.card.card-body {
   text-align: center;
 }
 
-/* Course Features & Highlights */
 /* Prospectus Section */
 .prospectus-title {
   font-size: 1.2rem;
@@ -12419,6 +12440,34 @@ div.card.card-body {
 }
 .prospectus-table td a:hover {
   text-decoration: underline;
+}
+
+/* Apply sticky positioning of the header columns */
+.prospectus-table-container {
+  overflow-y: auto;
+  /* Adjust max-height as needed to ensure scrolling is enabled */
+  max-height: 500px;
+}
+
+/* Reset margins and padding that could affect the header positioning */
+.table {
+  margin-bottom: 0; /* Remove default margin from .table class if it exists */
+}
+
+.prospectus-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 2; /* Ensure it's above other content */
+  margin: 0; /* Reset margin */
+  padding: 0.75rem; /* Adjust padding as needed, but ensure it's uniform */
+}
+
+/* Additional reset for potential inherited styles */
+.prospectus-table-container {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse; /* Ensure table elements are tightly packed */
 }
 
 .about-hero-section {
