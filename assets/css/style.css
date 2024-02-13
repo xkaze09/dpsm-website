@@ -11910,7 +11910,7 @@ textarea.form-control-lg {
 }
 
 .course-card {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .course-card:hover {
@@ -11918,6 +11918,42 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 
+.sm-course-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+.shadow {
+  width: 250px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: shadow 6s ease-in-out infinite;
+  text-align: center;
+}
+
+@keyframes shadow {
+  0%, 100% {
+    filter: blur(10px);
+    transform: scale(1);
+  }
+  50% {
+    filter: blur(16px);
+    transform: scale(1.5);
+  }
+}
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }
