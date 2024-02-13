@@ -12682,10 +12682,17 @@ div.card.card-body {
   border-right: 0.2rem solid rgb(255, 183, 3);
   background-color: white;
   height: 100%;
-  overflow-y: auto;
-  z-index: 1020;
+  overflow-y: visible;
+  z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .faculty-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
 .research-hero-section {
   position: relative;
   height: 50vh;

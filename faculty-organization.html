@@ -148,17 +148,34 @@
         <div class="row">
           <!-- Sticky Sidebar -->
           <nav class="col-12 col-md-3 faculty-sidebar text-center sticky-sidebar">
-            <div class="d-flex flex-md-column flex-wrap">
-              <div class="mb-md-3">
+            <div class="d-md-flex flex-md-column flex-wrap">
+
+              <!-- Dropdown for smaller screen size-->
+              <div class="dropdown d-md-none mb-md-3 dropdown-menu-end">
+                <button class="btn btn-light collapse-button text-center dropdown-toggle" type="button" id="sidebarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  ADMINISTRATIVE <!-- Default -->
+                </button>
+                <div class="dropdown-menu" aria-labelledby="sidebarDropdown">
+                  <button class="dropdown-item dropdown-option" data-bs-target="#administrativeText">ADMINISTRATIVE</button>
+                  <button class="dropdown-item dropdown-option" data-bs-target="#appliedMathematicsText">APPLIED MATHEMATICS</button>
+                  <button class="dropdown-item dropdown-option" data-bs-target="#computerScienceText">COMPUTER SCIENCE</button>
+                  <button class="dropdown-item dropdown-option" data-bs-target="#statisticsText">STATISTICS</button>
+                  <button class="dropdown-item dropdown-option" data-bs-target="#physicsText">PHYSICS</button>
+                </div>
+              </div>
+
+              <!-- Buttons for large screen -->
+              <div class="d-none d-md-block mb-md-3">
                 <button
                   class="btn btn-light btn-block collapse-button text-center"
                   data-bs-toggle="collapse"
                   data-bs-target="#administrativeText"
+                  
                 >
                   ADMINISTRATIVE
                 </button>
               </div>
-              <div class="mb-md-3">
+              <div class="d-none d-md-block mb-md-3">
                 <button
                   class="btn btn-light btn-block collapse-button text-center"
                   data-bs-toggle="collapse"
@@ -167,7 +184,7 @@
                   APPLIED MATHEMATICS
                 </button>
               </div>
-              <div class="mb-md-3">
+              <div class="d-none d-md-block mb-md-3">
                 <button
                   class="btn btn-light btn-block collapse-button text-center"
                   data-bs-toggle="collapse"
@@ -176,7 +193,7 @@
                   COMPUTER SCIENCE
                 </button>
               </div>
-              <div class="mb-md-3">
+              <div class="d-none d-md-block mb-md-3">
                 <button
                   class="btn btn-light btn-block collapse-button text-center"
                   data-bs-toggle="collapse"
@@ -185,7 +202,7 @@
                   STATISTICS
                 </button>
               </div>
-              <div class="mb-md-3">
+              <div class="d-none d-md-block mb-md-3">
                 <button
                   class="btn btn-light btn-block collapse-button text-center"
                   data-bs-toggle="collapse"
@@ -1388,6 +1405,40 @@
             button.classList.remove("course-info-active");
           });
         });
+      });
+    </script>
+
+    <!-- Script for Faculty Navbar -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+
+        // Updating default dropdown text and content
+        const dropdownToggle = document.getElementById("sidebarDropdown");
+        const defaultOption = document.querySelector(".dropdown-option[data-bs-target='#administrativeText']");
+        dropdownToggle.innerHTML = defaultOption.textContent;
+        
+        const defaultSection = document.getElementById("administrativeText");
+        defaultSection.classList.add("show");
+
+        // Click event listeners for the dropdown
+        const dropdownOptions = document.querySelectorAll(".dropdown-option");
+        dropdownOptions.forEach(option => {
+          option.addEventListener("click", function() {
+            dropdownToggle.innerHTML = option.textContent;
+
+            // Hide all content sections
+            const contentSections = document.querySelectorAll(".collapse");
+            contentSections.forEach(section => {
+              section.classList.remove("show");
+            });
+
+            // To show the corresponding content section
+            const targetId = option.getAttribute("data-bs-target").substring(1);
+            const targetSection = document.getElementById(targetId);
+            targetSection.classList.add("show");
+          });
+        });
+
       });
     </script>
   </body>
