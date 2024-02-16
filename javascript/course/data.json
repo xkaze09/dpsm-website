@@ -1619,7 +1619,7 @@
             {
               "name": "STAT 104",
               "title": "Descriptive Statistics",
-              "link": "",
+              "link": "statistics/stat-104.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -1627,7 +1627,7 @@
             {
               "name": "MATH 18",
               "title": "Precalculus Mathematics",
-              "link": "",
+              "link": "statistics/math-18.html",
               "isCredited": true,
               "credits": 5,
               "preRequisites": ""
@@ -1635,7 +1635,7 @@
             {
               "name": "MATH 153",
               "title": "Computer Programming I",
-              "link": "",
+              "link": "statistics/math-153.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -1680,7 +1680,7 @@
             {
               "name": "STAT 117",
               "title": "Mathematics for Statistics",
-              "link": "",
+              "link": "statistics/stat-117.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 18"
@@ -1688,7 +1688,7 @@
             {
               "name": "MATH 53",
               "title": "Calculus I",
-              "link": "",
+              "link": "statistics/math-53.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 18"
@@ -1746,7 +1746,7 @@
             {
               "name": "STAT 121",
               "title": "Probability Theory I",
-              "link": "",
+              "link": "statistics/stat-121.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 53, Stat 117"
@@ -1754,7 +1754,7 @@
             {
               "name": "MATH 54",
               "title": "Calculus II",
-              "link": "",
+              "link": "statistics/math-54.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 53"
@@ -1799,7 +1799,7 @@
             {
               "name": "STAT 122",
               "title": "Probability Theory II",
-              "link": "",
+              "link": "statistics/stat-122.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 121"
@@ -1807,7 +1807,7 @@
             {
               "name": "STAT 138",
               "title": "Use of Statistical Software Packages",
-              "link": "",
+              "link": "statistics/stat-138.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 153, Stat 104"
@@ -1815,7 +1815,7 @@
             {
               "name": "MATH 55",
               "title": "Calculus III",
-              "link": "",
+              "link": "statistics/math-55.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 54"
@@ -2193,7 +2193,7 @@
             {
               "name": "STAT 173",
               "title": "Elementary Actuarial Statistics",
-              "link": "",
+              "link": "statistics/stat-173.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2209,7 +2209,7 @@
             {
               "name": "STAT 175",
               "title": "Introduction to Biostatics",
-              "link": "",
+              "link": "statistics/stat-175.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2275,7 +2275,7 @@
             {
               "name": "CMSC 11",
               "title": "Introduction to Computer Science",
-              "link": "",
+              "link": "statistics/cmsc-11.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
