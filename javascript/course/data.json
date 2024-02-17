@@ -819,7 +819,7 @@
             {
               "name": "Math 154",
               "title": "Computer Programming II",
-              "link": "",
+              "link": "applied-mathematics/math-154.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 153"
@@ -954,7 +954,7 @@
             {
               "name": "Math 162",
               "title": "Theory of Interest",
-              "link": "",
+              "link": "applied-mathematics/math-162.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 54"
@@ -962,7 +962,7 @@
             {
               "name": "Math 173",
               "title": "Numerical Methods I",
-              "link": "",
+              "link": "applied-mathematics/math-173.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 54, Math 114, Math 154"
@@ -1004,7 +1004,7 @@
             {
               "name": "Math 174",
               "title": "Numerical Methods II",
-              "link": "",
+              "link": "applied-mathematics/math-174.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 55, Math 121, Math 173"
@@ -1012,7 +1012,7 @@
             {
               "name": "Math 183",
               "title": "Linear and Integer Programming",
-              "link": "",
+              "link": "applied-mathematics/math-183.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 114"
@@ -1020,7 +1020,7 @@
             {
               "name": "Stat 110",
               "title": "Non-Bayesian Probability",
-              "link": "",
+              "link": "applied-mathematics/stat-110.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 54 or equivalent"
@@ -1065,7 +1065,7 @@
             {
               "name": "Stat 111",
               "title": "Statistical Methods & Inference",
-              "link": "",
+              "link": "applied-mathematics/stat-111.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Stat 110"
@@ -1181,7 +1181,7 @@
             {
               "name": "Math 198.2",
               "title": "Special Problem II",
-              "link": "",
+              "link": "applied-mathematics/math-198.2.html",
               "isCredited": true,
               "credits": 2,
               "preRequisites": "Math 198.2"
@@ -1247,7 +1247,7 @@
             {
               "name": "Math 143",
               "title": "Modern Geometries and Their Applications",
-              "link": "",
+              "link": "applied-mathematics/math-143.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Math 110, Math 114"
@@ -1263,7 +1263,7 @@
             {
               "name": "Math 165",
               "title": "Financial Derivatives Markets",
-              "link": "",
+              "link": "applied-mathematics/math-165.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Math 162"
@@ -1635,7 +1635,7 @@
             {
               "name": "MATH 153",
               "title": "Computer Programming I",
-              "link": "",
+              "link": "applied-mathematics/math-153.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2395,7 +2395,7 @@
             {
               "name": "MATH 173",
               "title": "Numerical Methods I",
-              "link": "",
+              "link": "applied-mathematics/math-173.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2411,7 +2411,7 @@
             {
               "name": "MATH 183",
               "title": "Linear and Integer Programming",
-              "link": "",
+              "link": "applied-mathematics/math-183.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
