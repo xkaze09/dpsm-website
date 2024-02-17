@@ -17,7 +17,7 @@
             {
               "name": "CMSC 11",
               "title": "Introduction to Computer Science",
-              "link": "",
+              "link": "computer-science/cmsc-11.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -25,7 +25,7 @@
             {
               "name": "CMSC 56",
               "title": "Discrete Mathematical Structures in Computer Science 1",
-              "link": "",
+              "link": "computer-science/cmsc-56.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -33,7 +33,7 @@
             {
               "name": "Math 18",
               "title": "Pre Calculus Mathematics",
-              "link": "",
+              "link": "computer-science/math-18.html",
               "isCredited": true,
               "credits": 5,
               "preRequisites": ""
@@ -78,7 +78,7 @@
             {
               "name": "CMSC 21",
               "title": "Fundamentals of Programming",
-              "link": "",
+              "link": "computer-science/cmsc-21.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 11"
@@ -86,7 +86,7 @@
             {
               "name": "CMSC 57",
               "title": "Discrete Mathematical Structures in Computer Science 2",
-              "link": "",
+              "link": "computer-science/cmsc-57.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 56"
@@ -94,7 +94,7 @@
             {
               "name": "Math 53",
               "title": "Calculus I",
-              "link": "",
+              "link": "computer-science/math-53.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 18"
@@ -152,7 +152,7 @@
             {
               "name": "CMSC 22",
               "title": "Fundamentals of Object-oriented Programming",
-              "link": "",
+              "link": "computer-science/cmsc-22.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 21"
@@ -160,7 +160,7 @@
             {
               "name": "CMSC 123",
               "title": "Data Structures",
-              "link": "",
+              "link": "computer-science/cmsc-123.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 21, CMSC 57"
@@ -168,7 +168,7 @@
             {
               "name": "Math 54",
               "title": "Calculus II",
-              "link": "",
+              "link": "computer-science/math-54.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 53"
@@ -213,7 +213,7 @@
             {
               "name": "CMSC 127",
               "title": "Database Systems",
-              "link": "",
+              "link": "computer-science/cmsc-127.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 123"
@@ -221,7 +221,7 @@
             {
               "name": "CMSC 130",
               "title": "Logic Design and Digital Computer Circuits",
-              "link": "",
+              "link": "computer-science/cmsc-130.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "CMSC 11, Physics 71"
@@ -229,7 +229,7 @@
             {
               "name": "CMSC 126",
               "title": "Web Programming",
-              "link": "",
+              "link": "computer-science/cmsc-126.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 22"
@@ -237,7 +237,7 @@
             {
               "name": "CMSC 142",
               "title": "Design and Analysis of Algorithms",
-              "link": "",
+              "link": "computer-science/cmsc-142.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 123"
@@ -279,7 +279,7 @@
             {
               "name": "CMSC 124",
               "title": "Design and Implementation of Programming Languages",
-              "link": "",
+              "link": "computer-science/cmsc-124.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 123"
@@ -287,7 +287,7 @@
             {
               "name": "CMSC 131",
               "title": "Introduction to Computer Organization and Machine Level Programming",
-              "link": "",
+              "link": "computer-science/cmsc-131.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 21, CMSC 130"
@@ -295,7 +295,7 @@
             {
               "name": "CMSC 141",
               "title": "Automata and Language Theory",
-              "link": "",
+              "link": "computer-science/cmsc-141.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 57"
@@ -303,7 +303,7 @@
             {
               "name": "CMSC 128",
               "title": "Software Engineering 1",
-              "link": "",
+              "link": "computer-science/cmsc-128.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 126, CMSC 127"
@@ -311,7 +311,7 @@
             {
               "name": "CMSC 134",
               "title": "Human Computer Interaction",
-              "link": "",
+              "link": "computer-science/cmsc-134.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 126"
@@ -319,7 +319,7 @@
             {
               "name": "Stat 105",
               "title": "Introduction to Statistical Analysis",
-              "link": "",
+              "link": "computer-science/stat-105.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 18"
@@ -332,7 +332,7 @@
             {
               "name": "CMSC 125",
               "title": "Operating Systems",
-              "link": "",
+              "link": "computer-science/cmsc-125.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 123, CMSC 131"
@@ -340,7 +340,7 @@
             {
               "name": "CMSC 129",
               "title": "Software Engineering 2",
-              "link": "",
+              "link": "computer-science/cmsc-129.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 128"
@@ -348,7 +348,7 @@
             {
               "name": "CMSC 132",
               "title": "Computer Architecture",
-              "link": "",
+              "link": "computer-science/cmsc-132.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 131"
@@ -364,7 +364,7 @@
             {
               "name": "Stat 106",
               "title": "Advanced Statistical Analysis",
-              "link": "",
+              "link": "computer-science/stat-106.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 105"
@@ -403,7 +403,7 @@
             {
               "name": "CMSC 137",
               "title": "Data Communications and Networking",
-              "link": "",
+              "link": "computer-science/cmsc-137.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 125, CMSC 132"
@@ -546,7 +546,7 @@
             {
               "name": "CMSC 151",
               "title": "Systems Analysis and Design",
-              "link": "",
+              "link": "computer-science/cmsc-151.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "CMSC 128"
@@ -578,7 +578,7 @@
             {
               "name": "CMSC 155",
               "title": "Technopreneurship",
-              "link": "",
+              "link": "computer-science/cmsc-155.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Senior Standing"
@@ -634,7 +634,7 @@
             {
               "name": "CMSC 173",
               "title": "Data Mining",
-              "link": "",
+              "link": "computer-science/cmsc-173.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "CMSC 123, Stat 106 or COI (for non-majors)"
@@ -674,7 +674,7 @@
             {
               "name": "CMSC 197",
               "title": "Special Topics",
-              "link": "",
+              "link": "computer-science/cmsc-197.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Consent of the Instructor"
@@ -682,7 +682,7 @@
             {
               "name": "Math 55",
               "title": "Calculus III",
-              "link": "",
+              "link": "computer-science/math-55.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Math 54"
@@ -690,7 +690,7 @@
             {
               "name": "Math 114",
               "title": "Linear Algebra",
-              "link": "",
+              "link": "computer-science/math-114.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Math 107"
