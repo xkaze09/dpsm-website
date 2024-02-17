@@ -758,7 +758,7 @@
             {
               "name": "Math 18",
               "title": "Precalculus Mathematics",
-              "link": "",
+              "link": "applied-mathematics/math-18.html",
               "isCredited": true,
               "credits": 5,
               "preRequisites": ""
@@ -766,7 +766,7 @@
             {
               "name": "Math 153",
               "title": "Computer Programming I",
-              "link": "",
+              "link": "applied-mathematics/math-153.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -803,7 +803,7 @@
             {
               "name": "Math 53",
               "title": "Calculus I",
-              "link": "",
+              "link": "applied-mathematics/math-53.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 18"
@@ -811,7 +811,7 @@
             {
               "name": "Math 107",
               "title": "Logic and Set Theory",
-              "link": "",
+              "link": "applied-mathematics/math-107.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 18"
@@ -877,7 +877,7 @@
             {
               "name": "Math 54",
               "title": "Calculus II",
-              "link": "",
+              "link": "applied-mathematics/math-54.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 53"
@@ -893,7 +893,7 @@
             {
               "name": "Math 114",
               "title": "Linear Algebra",
-              "link": "",
+              "link": "applied-mathematics/math-114.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 107"
@@ -901,7 +901,7 @@
             {
               "name": "Math 135",
               "title": "Combinatorial Mathematics",
-              "link": "",
+              "link": "applied-mathematics/math-135.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 107"
@@ -938,7 +938,7 @@
             {
               "name": "Math 55",
               "title": "Calculus III",
-              "link": "",
+              "link": "applied-mathematics/math-55.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 54"
@@ -946,7 +946,7 @@
             {
               "name": "Math 121",
               "title": "Elementary Differential Equations",
-              "link": "",
+              "link": "applied-mathematics/math-121.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Coreq: Math 55"
