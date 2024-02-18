@@ -1,0 +1,27 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+.news-hero-section {
+    position: relative;
+    height: 50vh;
+    background-image: url('/images/news-hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.news-title {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.2rem solid $accent_one;
+    margin-bottom: 1rem;
+    border-radius: 0%;
+  }
