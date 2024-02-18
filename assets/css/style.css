@@ -12229,6 +12229,11 @@ textarea.form-control-lg {
     background-size: cover; /* Maintain aspect ratio and cover entire section */
   }
 }
+@media (max-width: 768px) {
+  .dpsm-logo {
+    padding-bottom: 2rem;
+  }
+}
 .comsci-hero-section {
   position: relative;
   height: 50vh;
