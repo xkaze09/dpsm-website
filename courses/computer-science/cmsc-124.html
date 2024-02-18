@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CMSC 10 - Introduction to Computer Science</title>
+    <title>CMSC 124 - Design and Implementation of Programming Languages</title>
     <!-- Favicon -->
     <link rel="icon" href="../../images/dpsmlogo.png" type="image/png" />
     <!-- CSS -->
@@ -150,15 +150,19 @@
       <div class="individual-courses-container">
         <div class="credits-prerequisites">
           <hr />
-          <p><b>Course Credits: </b>1 Unit</p>
-          <p><b>Prerequisites: </b>None</p>
+          <p><b>Course Credits: </b>3 Units</p>
+          <p><b>Prerequisites: </b>CMSC 123</p>
         </div>
         <div>
-          <h1>CMSC 10 - Introduction to Computing</h1>
+          <h1>CMSC 124: Design and Implementation of Programming Languages</h1>
+
 
           <h5>Course Description</h5>
           <p>
-            This course covers the history of Computer Science; fundamental concepts and big ideas in Computer Science; social, ethical, and practical issues in computing.
+            This course covers the fundamental concepts in the design and implementation of
+            current high-level programming languages; syntax and translation; language definition
+            structures; elementary and structured data types; abstraction mechanisms; sequence
+            and data control; and run time considerations.
           </p>
 
           <h5>Course Learning Outcomes</h5>
@@ -166,74 +170,101 @@
             After completion of the course, the student should be able to:
           </p>
           <ol>
-            <li>Explain how a computer works</li>
-            <li>Explain computer programs and how they work</li>
-            <li>Explain how computers store digital information</li>
-            <li>Explain how the Internet works</li>
-            <li>Create a web application</li>
-            <li>Identify risks brought by computers</li>
-            <li>Explain the limits of what a computer can and cannot do</li>
+            <li> Compare the run time behavior of programs written in different languages.</li>
+            <li> Evaluate the structure of programming language specification, analysis, and implementation.</li>
+            <li> Analyze and solve programs related to lexical analysis, parsing and translation problems.</li>
+            <li> Develop the skills necessary to learn new programming languages quickly.</li>
+            <li> Attain reasonable proficiency in the Git, GitHub, CLISP, Prolog, and R languages.</li>
           </ol>
 
           <section class="course-outline">
             <h5>Course Outline</h5>
-            <p>UNIT 1. History of Computing</p>
+            <p>UNIT 1. Introduction to Programming Languages</p>
             <ol type="A">
-              <li>Early Period</li>
-              <li>Birth of Computers</li>
-              <li>Modern Era</li>
+              <li>Preliminaries</li>
+              <li>Evolution of the Major Programming Languages</li>
             </ol>
 
-            <p>UNIT 2. Components of a Computer</p>
+            <p>UNIT 2. Describing Syntax and Semantics</p>
             <ol type="A">
-              <li>Input Devices</li>
-              <li>Output Devices</li>
-              <li>System Unit</li>
-              <li>Storage Devices</li>
-              <li>Communication Devices</li>
+              <li>The General Problem of Describing Syntax</li>
+              <li>Formal Methods of Describing Syntax</li>
+              <li>Attribute Grammars</li>
+              <li>Describing the Meanings of Programs: Dynamic Semantics</li>
             </ol>
 
-            <p>UNIT 3. Storing Information Inside a Computer (Binary System)</p>
+            <p>UNIT 3. The Structure of a Compiler</p>
             <ol type="A">
-              <li>Representing Information as Bit Patterns</li>
-              <li>Binary Numbering System</li>
-              <li>Boolean Logic and Gates</li>
+              <li>Lexical Analysis</li>
+              <li>Syntax Analysis</li>
+              <li>Semantic Analysis</li>
+              <li>Intermediate Code Generation</li>
+              <li>Code Optimization</li>
+              <li>Code Generation</li>
+              <li>Symbol-Table Management</li>
             </ol>
 
-            <p>UNIT 4. Computer Programs</p>
+            <p>UNIT 4. Names, Bindings, and Scope</p>
             <ol type="A">
-              <li>System Software</li>
-              <li>Application Software</li>
+              <li>Names</li>
+              <li>Variables</li>
+              <li>The Concept of Binding</li>
+              <li>Scope and Lifetime</li>
+              <li>Referencing Environment</li>
+              <li>Named Constant</li>
             </ol>
 
-            <p>UNIT 5. The Internet</p>
+            <p>UNIT 5. Data Types</p>
             <ol type="A">
-              <li>Network Fundamentals</li>
-              <li>The Internet</li>
+              <li>Primitive Data Types</li>
+              <li>Character String Types</li>
+              <li>Enumeration Types</li>
+              <li>Array Types</li>
+              <li>Associative Arrays</li>
+              <li>Record Types</li>
+              <li>Tuple Types</li>
+              <li>List Types</li>
+              <li>Union Types</li>
+              <li>Pointer and Reference Types</li>
             </ol>
 
-            <p>UNIT 6. Web Applications</p>
+            <p>UNIT 6. Expressions and Assignment Statements</p>
             <ol type="A">
-              <li>Web Implementation</li>
-              <li>HTML</li>
-              <li>XML</li>
-              <li>Client-Side and Server-Side Activities</li>
+              <li>Arithmetic Expressions</li>
+              <li>Overload Operators</li>
+              <li>Type Conversions</li>
+              <li>Relational and Boolean Expressions</li>
+              <li>Short-Circuit Evaluation</li>
+              <li>Assignment Statements</li>
+              <li>Mix-mode Assignment</li>
             </ol>
 
-            <p>UNIT 7. Computer Security</p>
+            <p>UNIT 7. Statement-Level Control Structures</p>
             <ol type="A">
-              <li>Internet and Network Attacks</li>
-              <li>Unauthorized Access and Use</li>
+              <li>Selection Statements</li>
+              <li>Iterative Statements</li>
+              <li>Unconditional Branching</li>
             </ol>
 
-            <p>UNIT 8. The Limits of Computers</p>
+            <p>UNIT 8. Subprograms</p>
             <ol type="A">
-              <li>Computation Limitations</li>
-              <li>Memory Limitations</li>
-              <li>Graphical Limitations</li>
-              <li>Network Capacity</li>
-              <li>Non-computable Functions</li>
+              <li>Fundamentals of Subprograms</li>
+              <li>Design Issues for Subprograms</li>
+              <li>Local Referencing Environments</li>
+              <li>Parameter-Passing Methods</li>
+              <li>Overloaded Subprograms</li>
+              <li>Generic Subprograms</li>
+
+            <p>UNIT 9. Implementing Subprograms</p>
+            <ol type="A">
+              <li>The General Semantics of Calls and Returns</li>
+              <li>Implementing “Simple” Subprograms</li>
+              <li>Implementing Subprograms with Stack-Dynamic Local Variables</li>
+              <li>Nested Subprograms</li>
+              <li>Blocks</li>
+              <li>Implementing Dynamic Scoping</li>
             </ol>
+
           </section>
         </div>
       </div>
