@@ -148,44 +148,46 @@
       <div class="row justify-content-center">
         <!-- CONTACT FORM -->
         <div class="col-md-6">
-          <form>
+          <form action="https://formsubmit.co/chrjstnsalinas@gmail.com" method="POST">
             <!-- Name -->
             <div class="p-2 pb-md-3">
-              <label for="name" class="form-label form-title">Name:</label>
+              <label for="name" class="form-label form-title">Name</label>
               <input
                 type="text"
                 class="form-control custom-input"
+                name="name"
                 id="name"
-                placeholder="Enter your name"
+                required
               />
             </div>
 
             <!-- Email -->
             <div class="p-2 pb-md-3">
-              <label for="email" class="form-label form-title">Email:</label>
+              <label for="email" class="form-label form-title">Email</label>
               <input
                 type="email"
                 class="form-control custom-input"
+                name="email"
                 id="email"
-                placeholder="Enter your email"
+                required
               />
             </div>
 
             <!-- Subject -->
             <div class="p-2 pb-md-3">
-              <label for="subject" class="form-label form-title">Subject:</label>
+              <label for="subject" class="form-label form-title">Subject</label>
               <input
                 type="text"
                 class="form-control custom-input"
+                name="subject"
                 id="subject"
-                placeholder="Enter the subject"
               />
             </div>
 
             <!-- Message -->
             <div class="p-2 pb-md-3">
-              <label for="message" class="form-label form-title">Message:</label>
-              <textarea class="form-control" id="message" rows="9" placeholder="Message"></textarea>
+              <label for="message" class="form-label form-title">Message</label>
+              <textarea class="form-control" name="message" id="message" rows="9"></textarea>
             </div>
 
             <!-- Submit Button -->
