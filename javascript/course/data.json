@@ -1873,7 +1873,7 @@
             {
               "name": "MATH 114",
               "title": "Linear Algebra",
-              "link": "",
+              "link": "statistics/math-114.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 107"
@@ -1918,7 +1918,7 @@
             {
               "name": "STAT 129",
               "title": "Regression and Correlation Analysis",
-              "link": "",
+              "link": "statistics/stat-129.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 114, Stat 123"
@@ -1926,7 +1926,7 @@
             {
               "name": "STAT 133",
               "title": "Introduction to Exploratory Data Analysis",
-              "link": "",
+              "link": "statistics/stat-133.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 123"
@@ -1934,7 +1934,7 @@
             {
               "name": "STAT 134",
               "title": "Introduction to Bayesian Statistical Inference",
-              "link": "",
+              "link": "statistics/stat-134.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 123"
@@ -1942,7 +1942,7 @@
             {
               "name": "STAT 140",
               "title": "Introduction to Sample Surveys",
-              "link": "",
+              "link": "statistics/stat-140.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 123"
@@ -1984,7 +1984,7 @@
             {
               "name": "STAT 132",
               "title": "Nonparametric Statistical Inference",
-              "link": "",
+              "link": "statistics/stat-132.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 123"
@@ -1992,7 +1992,7 @@
             {
               "name": "STAT 141",
               "title": "Multivariate Theory",
-              "link": "",
+              "link": "statistics/stat-141.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 129"
@@ -2000,7 +2000,7 @@
             {
               "name": "STAT 145",
               "title": "Introduction to Time Series Analysis and Forecasting",
-              "link": "",
+              "link": "statistics/stat-145.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 129"
@@ -2029,7 +2029,7 @@
             {
               "name": "STAT 142",
               "title": "Applied Multivariate Analysis",
-              "link": "",
+              "link": "statistics/stat-142.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 141"
@@ -2037,7 +2037,7 @@
             {
               "name": "STAT 149",
               "title": "Introduction to Categorical Data Analysis",
-              "link": "",
+              "link": "statistics/stat-149.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 129"
@@ -2045,7 +2045,7 @@
             {
               "name": "STAT 150",
               "title": "Survey Operations",
-              "link": "",
+              "link": "statistics/stat-150.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Comm 12, Stat 138, Stat 140"
@@ -2095,7 +2095,7 @@
             {
               "name": "CMSC 22",
               "title": "Fundamentals of Object-oriented Programming",
-              "link": "",
+              "link": "statistics/cmsc-22.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2217,7 +2217,7 @@
             {
               "name": "STAT 176",
               "title": "Statistical Methods in Market Research",
-              "link": "",
+              "link": "statistics/stat-176.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2233,7 +2233,7 @@
             {
               "name": "STAT 179",
               "title": "Introduction to Survival Analysis",
-              "link": "",
+              "link": "statistics/stat-179.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2291,7 +2291,7 @@
             {
               "name": "CMSC 173",
               "title": "Data Mining",
-              "link": "",
+              "link": "statistics/cmsc-173.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2299,7 +2299,7 @@
             {
               "name": "CMSC 197",
               "title": "Special Topics(Intro to Data Science)",
-              "link": "",
+              "link": "statistics/cmsc-197.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2307,7 +2307,7 @@
             {
               "name": "CMSC 56",
               "title": "Discrete Mathematical Structures in Computer Science 1",
-              "link": "",
+              "link": "statistics/cmsc-56.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2315,7 +2315,7 @@
             {
               "name": "CMSC 57",
               "title": "Discrete Mathematical Structures in Computer Science 2",
-              "link": "",
+              "link": "statistics/cmsc-57.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2331,7 +2331,7 @@
             {
               "name": "MATH 121",
               "title": "Elementary Differential Equations",
-              "link": "",
+              "link": "statistics/math-121.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2355,7 +2355,7 @@
             {
               "name": "MATH 135",
               "title": "Combinatorial Mathematics",
-              "link": "",
+              "link": "statistics/math-135.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2371,7 +2371,7 @@
             {
               "name": "MATH 154",
               "title": "Computer Programming II",
-              "link": "",
+              "link": "statistics/math-154.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2379,7 +2379,7 @@
             {
               "name": "MATH 162",
               "title": "Theory of Interest",
-              "link": "",
+              "link": "statistics/math-162.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2387,7 +2387,7 @@
             {
               "name": "MATH 165",
               "title": "Financial Derivatives Markets",
-              "link": "",
+              "link": "statistics/math-165.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
