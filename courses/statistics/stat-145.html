@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>STAT 129 - Regression and Correlation Analysis</title>
+    <title>STAT 145 - Introduction to Time Series Analysis and Forecasting</title>
     <!-- Favicon -->
     <link rel="icon" href="../../images/dpsmlogo.png" type="image/png" />
     <!-- CSS -->
@@ -151,27 +151,36 @@
         <div class="credits-prerequisites">
           <hr />
           <p><b>Course Credits: </b>3 Units</p>
-          <p><b>Prerequisites: </b>Math 114 and Stat 123</p>
+          <p><b>Prerequisites: </b>Stat 129</p>
         </div>
         <div>
-          <h1>STAT 129 - Regression and Correlation Analysis</h1>
+          <h1>STAT 145 - Introduction to Time Series Analysis and Forecasting</h1>
 
           <h5>Course Description</h5>
           <p>
-            Linear regression model; model selection; regression diagnostics; use of dummy variables; remedial measures.
+            A time series is a sequence of data points that is often recorded through equally
+            spaced time intervals. Some examples are stock prices, foreign exchange rates,
+            daily infections, and monthly sales. In this course, we will deal with statistical
+            models specifically used for time series datasets. These methods aim to
+            understand the underlying mechanisms causing trend or systemic patterns in
+            the data over time, and ultimately, to provide forecasts of future observations.
+            These forecasts provide a key role in the decision making process of various
+            disciplines such as financial markets, weather patterns, and epidemiolocal
+            studies.
           </p>
 
           <h5>Course Learning Outcomes</h5>
           <p>
-            After completion of the course, the student should be able to:
+            By the end of this course, the student must be able to:
           </p>
           <ol>
-            <li>Develop linear regression models</li>
-            <li>Perform inferences in regression analysis</li>
-            <li>Assess the aptness of the models</li>
-            <li>Check and test model assumptions</li>
-            <li>Perform remedial measures to improve model fit</li>
-            <li>Explain and interpret final models appropriately</li>
+            <li>Demonstrate awareness of the different concepts of time series
+            analysis and forecasting.</li>
+            <li>Differentiate the various time series models.</li>
+            <li>Perform time series analysis with diagnostic checking and proper
+            model selection technique using statistical software.</li>
+            <li>Communicate results of time series models to stakeholders to explain
+            various conceptual and real-world datasets.</li>
           </ol>
 
           <section class="course-outline">
@@ -179,89 +188,76 @@
 
             <p>UNIT 1. Introduction</p>
             <ol type="A">
-              <li>Regression Models</li>
-              <li>Uses of Regression Analysis</li>
-              <li>Applications of Regression Analysis</li>
-              <li>Data for Regression Analysis</li>
-              <li>Steps in Regression Analysis</li>
+              <li>Introduction to Time Series</li>
+              <li>Objectives of Time Analysis</li>
+              <li>Simple Time Series Models</li>
             </ol>
 
-            <p>UNIT 2. Simple Linear Regression</p>
+            <p>UNIT 2. Fundamental Concepts</p>
             <ol type="A">
-              <li>Simple Linear Regression Model with Distribution of Error Terms Unspecified</li>
-              <li>Estimation of Regression Function</li>
-              <li>Estimation of Error Terms Variance <i>σ&sup2</i></li>
-              <li>Normal Error Regression Model</li>
+              <li>Stochastic Process</li>
+              <li>Autocovariance and Autocorrelation</li>
+              <li>Partial Autocorrelation Function</li>
+              <li>Estimating the Mean and
+              Autocovariance</li>
+              <li>Sample Autocorrelation Function</li>
+              <li>Sample Partial Autocorrelation</li>
+              <li>Moving Average Representation of
+              Time Series</li>
+              <li>Autoregressive Representation of
+              Time Series</li>
             </ol>
 
-            <p>UNIT 3. Inferences in Regression Analysis</p>
+            <p>UNIT 3. Stationary Processes</p>
             <ol type="A">
-              <li>Inferences Concerning <i>β<sub>0</sub></i> and <i>β<sub>1</sub></i></li>
-              <li>Interval Estimation of <i>E(Y<sub>h</sub>)</i></li>
-              <li>Prediction of New Observation</li>
-              <li>Confidence Band for Regression Line</li>
-              <li>ANOVA Approach to Regression Analysis</li>
-              <li>Coefficient of Determination and Correlation</li>
+              <li>First-Order Autoregressive Process</li>
+              <li>Second-Order Autoregressive
+              Process</li>
+              <li>The General AR(p) Process</li>
+              <li>First-Order Moving Average Process</li>
+              <li>Second-Order Moving Average
+              Process</li>
+              <li>The General MA(q) Process</li>
+              <li>Autoregressive Moving Average
+              ARMA(p, q) Process</li>
+              <li>The ARMA(1,1) Process</li>
             </ol>
 
-            <p>UNIT 4. Regression Diagnostics and Remedial Measures</p>
+            <p>UNIT 4. Nonstationary and Seasonal Time Series Models</p>
             <ol type="A">
-              <li>Diagnostics for Predictor Variable</li>
-              <li>Residuals and Residual Analysis</li>
-              <li>F Test for Lack of Fit</li>
-              <li>Remedial Measures and Transformations</li>
-              <li>Exploration of Shapes of Regression Function</li>
+              <li>Nonstationarity in the Mean</li>
+              <li>Stochastic Trend Models and
+              Differencing</li>
+              <li>Autoregressive Integrated Moving
+              Average ARIMA(p, d, q) Model</li>
+              <li>Nonstationarity in the Variance and
+              Autocovariance</li>
+              <li>Seasonal ARIMA Models</li>
             </ol>
 
-            <p>UNIT 5. Simultaneous Inferences and Other Topics</p>
+            <p>UNIT 5. Forecasting</p>
             <ol type="A">
-              <li>Joint Estimation of β0 and β1</li>
-              <li>Simultaneous Estimation of Mean Responses</li>
-              <li>Simultaneous Prediction Intervals for New Observations</li>
-              <li>Other Topics</li>
-              <ul>
-                <li>Regression through the Origin</li>
-                <li>Effects of Measurement Errors</li>
-                <li>Inverse Predictions</li>
-                <li>Choice of X Levels</li>
-              </ul>
+              <li>Minimum Mean Square Error Forecast</li>
+              <li>ARIMA Forecast as Weighted Average of Past Observations</li>
+              <li>Computation of Forecasts</li>
             </ol>
 
-            <p>Unit 6. Matrix Approach to Simple Linear Regression Analysis</p>
+            <p>UNIT 6. Building ARIMA Models</p>
             <ol type="A">
-              <li>Matrices and their Properties</li>
-              <li>Simple Linear Regression Model in Matrix Terms</li>
-              <li>Least Squares Estimation of Regression Parameters</li>
-              <li>ANOVA Results and Inferences in Regression Analysis</li>
-              <li>Estimation of Mean Response and Prediction of New Observations</li>
+              <li>Steps in Model Building</li>
+              <li>Unit Root Tests</li>
+              <li>Information Criterion</li>
+              <li>Validation Techniques</li>
+              <li>Example: Air Passengers Data</li>
             </ol>
 
-            <p>Unit 7. Multiple Linear Regression</p>
+            <p>UNIT 7. Advance Methods in Time Series Analysis</p>
             <ol type="A">
-              <li>General Linear Regression Model in Matrix Terms</li>
-              <li>Inferences about Regression Parameters</li>
-              <li>Extra Sum of Squares and Its Uses</li>
-              <li>Diagnostics and Remedial Measures</li>
-              <li>Multicollinearity and Its Effects</li>
+              <li>Transfer Function Model</li>
+              <li>Bootstrapping and Bagging</li>
+              <li>Random Forest for Time Series</li>
             </ol>
 
-            <p>Unit 8. Regression Models for Quantitative and Qualitative Predictors</p>
-            <ol type="A">
-              <li>Polynomial Regression Models</li>
-              <li>Interaction Regression Models</li>
-              <li>Qualitative Predictors</li>
-              <li>Modelling Interactions between Quantitative and Qualitative Predictors</li>
-              <li>Comparison of Two or More Regression Functions</li>
-            </ol>
-
-            <p>Unit 9. Model Building, Diagnostics, and Remedial Measures for MLR Models</p>
-            <ol type="A">
-              <li>The Model-Building Strategy</li>
-              <li>Selection of Independent Variables</li>
-              <li>Automatic Search Procedures for Model Selection</li>
-              <li>Model Validation</li>
-            </ol>
-            
           </section>
         </div>
       </div>

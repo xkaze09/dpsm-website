@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>STAT 129 - Regression and Correlation Analysis</title>
+    <title>MATH 173 - Numerical Methods I</title>
     <!-- Favicon -->
     <link rel="icon" href="../../images/dpsmlogo.png" type="image/png" />
     <!-- CSS -->
@@ -151,14 +151,18 @@
         <div class="credits-prerequisites">
           <hr />
           <p><b>Course Credits: </b>3 Units</p>
-          <p><b>Prerequisites: </b>Math 114 and Stat 123</p>
+          <p><b>Prerequisites: </b>Math 54, Math 114, Math 154</p>
         </div>
         <div>
-          <h1>STAT 129 - Regression and Correlation Analysis</h1>
+          <h1>MATH 173 - Numerical Methods I</h1>
 
           <h5>Course Description</h5>
           <p>
-            Linear regression model; model selection; regression diagnostics; use of dummy variables; remedial measures.
+            This course is about numerical methods with emphasis on algorithms and convergence,
+            error analysis and computer arithmetic. Other topics that will be discussed are
+            solutions of nonlinear equations of the form f(x) = 0, polynomial interpolation,
+            approximation; direct and iterative methods for solving linear systems; numerical
+            differentiation and integration.
           </p>
 
           <h5>Course Learning Outcomes</h5>
@@ -166,102 +170,60 @@
             After completion of the course, the student should be able to:
           </p>
           <ol>
-            <li>Develop linear regression models</li>
-            <li>Perform inferences in regression analysis</li>
-            <li>Assess the aptness of the models</li>
-            <li>Check and test model assumptions</li>
-            <li>Perform remedial measures to improve model fit</li>
-            <li>Explain and interpret final models appropriately</li>
+            <li>Discuss the basic syntax of the programming language and make a program implementing different
+                problems using the programming language.</li>
+            <li>Discuss the different methods in solving solutions of nonlinear equations of the form f(x) = 0, polynomial
+                interpolation and approximation, direct and iterative methods for solving linear systems, and numerical
+                differentiation and integration.</li>
+            <li>Use appropriate numerical methods in solving complicated mathematical problems numerically.</li>
           </ol>
 
           <section class="course-outline">
             <h5>Course Outline</h5>
 
-            <p>UNIT 1. Introduction</p>
-            <ol type="A">
-              <li>Regression Models</li>
-              <li>Uses of Regression Analysis</li>
-              <li>Applications of Regression Analysis</li>
-              <li>Data for Regression Analysis</li>
-              <li>Steps in Regression Analysis</li>
+            <p>UNIT 1. Introduction to SciLab</p>
+
+            <p>UNIT 2. Error Analysis</p>
+
+            <p>UNIT 3. Solution of Nonlinear Equations f(x) = 0</p>
+            <ol type="1">
+                <li>Bisection Method</li>
+                <li>Fixed Point Method</li>
+                <li>Regula Falsi (False Position) Method</li>
+                <li>Secant Method (Modified Regula Falsi)</li>
+                <li>Newton Method</li>
             </ol>
 
-            <p>UNIT 2. Simple Linear Regression</p>
-            <ol type="A">
-              <li>Simple Linear Regression Model with Distribution of Error Terms Unspecified</li>
-              <li>Estimation of Regression Function</li>
-              <li>Estimation of Error Terms Variance <i>σ&sup2</i></li>
-              <li>Normal Error Regression Model</li>
+            <p>UNIT 4. Solutions of Linear Systems AX = B</p>
+            <ol type="1">
+              <li>Introduction to Vectors and Matrices</li>
+              <li>Upper triangular systems and Back Substitution</li>
+              <li>Gaussian elimination</li>
+              <li>Triangular Factorization</li>
+              <li>Iterative Methods for linear systems</li>
+              <li>Iterative Methods for nonlinear systems</li>
             </ol>
 
-            <p>UNIT 3. Inferences in Regression Analysis</p>
-            <ol type="A">
-              <li>Inferences Concerning <i>β<sub>0</sub></i> and <i>β<sub>1</sub></i></li>
-              <li>Interval Estimation of <i>E(Y<sub>h</sub>)</i></li>
-              <li>Prediction of New Observation</li>
-              <li>Confidence Band for Regression Line</li>
-              <li>ANOVA Approach to Regression Analysis</li>
-              <li>Coefficient of Determination and Correlation</li>
+            <p>UNIT 5. Polynomial Interpolation and Approximation</p>
+            <ol type="1">
+              <li>Taylor Series</li>
+              <li>Lagrange Approximation</li>
+              <li>Newton Polynomials</li>
+              <li>Chebyshev Polynomials</li>
+              <li>Padé Approximations</li>
             </ol>
 
-            <p>UNIT 4. Regression Diagnostics and Remedial Measures</p>
-            <ol type="A">
-              <li>Diagnostics for Predictor Variable</li>
-              <li>Residuals and Residual Analysis</li>
-              <li>F Test for Lack of Fit</li>
-              <li>Remedial Measures and Transformations</li>
-              <li>Exploration of Shapes of Regression Function</li>
+            <p>UNIT 6. Numerical Differentiation and Integration</p>
+            <ol type="1">
+              <li>Approximating the Derivative</li>
+              <li>Numerical Differentiation Formulas</li>
+              <li>Richardson’s Extrapolation</li>
+              <li>Trapezoidal Rule</li>
+              <li>Simpson's Rule 1/3 Rule</li>
+              <li>Simpson's 3/8 Rule</li>
+              <li>Boole's Rule</li>
+              <li>Composite Trapezoidal and Simpson Rule</li>
             </ol>
-
-            <p>UNIT 5. Simultaneous Inferences and Other Topics</p>
-            <ol type="A">
-              <li>Joint Estimation of β0 and β1</li>
-              <li>Simultaneous Estimation of Mean Responses</li>
-              <li>Simultaneous Prediction Intervals for New Observations</li>
-              <li>Other Topics</li>
-              <ul>
-                <li>Regression through the Origin</li>
-                <li>Effects of Measurement Errors</li>
-                <li>Inverse Predictions</li>
-                <li>Choice of X Levels</li>
-              </ul>
-            </ol>
-
-            <p>Unit 6. Matrix Approach to Simple Linear Regression Analysis</p>
-            <ol type="A">
-              <li>Matrices and their Properties</li>
-              <li>Simple Linear Regression Model in Matrix Terms</li>
-              <li>Least Squares Estimation of Regression Parameters</li>
-              <li>ANOVA Results and Inferences in Regression Analysis</li>
-              <li>Estimation of Mean Response and Prediction of New Observations</li>
-            </ol>
-
-            <p>Unit 7. Multiple Linear Regression</p>
-            <ol type="A">
-              <li>General Linear Regression Model in Matrix Terms</li>
-              <li>Inferences about Regression Parameters</li>
-              <li>Extra Sum of Squares and Its Uses</li>
-              <li>Diagnostics and Remedial Measures</li>
-              <li>Multicollinearity and Its Effects</li>
-            </ol>
-
-            <p>Unit 8. Regression Models for Quantitative and Qualitative Predictors</p>
-            <ol type="A">
-              <li>Polynomial Regression Models</li>
-              <li>Interaction Regression Models</li>
-              <li>Qualitative Predictors</li>
-              <li>Modelling Interactions between Quantitative and Qualitative Predictors</li>
-              <li>Comparison of Two or More Regression Functions</li>
-            </ol>
-
-            <p>Unit 9. Model Building, Diagnostics, and Remedial Measures for MLR Models</p>
-            <ol type="A">
-              <li>The Model-Building Strategy</li>
-              <li>Selection of Independent Variables</li>
-              <li>Automatic Search Procedures for Model Selection</li>
-              <li>Model Validation</li>
-            </ol>
-            
           </section>
         </div>
       </div>
