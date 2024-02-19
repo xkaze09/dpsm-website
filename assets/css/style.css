@@ -12683,9 +12683,16 @@ div.card.card-body {
   background-color: white;
   height: 100%;
   overflow-y: visible;
-  z-index: 1020;
+  z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .faculty-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
 .research-hero-section {
   position: relative;
   height: 50vh;

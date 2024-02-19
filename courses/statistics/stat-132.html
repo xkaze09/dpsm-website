@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CMSC 10 - Introduction to Computer Science</title>
+    <title>STAT 132 - Nonparametric Statistical Inference</title>
     <!-- Favicon -->
     <link rel="icon" href="../../images/dpsmlogo.png" type="image/png" />
     <!-- CSS -->
@@ -134,12 +134,12 @@
       </nav>
       <!-- End of Division Navbar -->
       <!-- Hero Section -->
-      <div class="comsci-hero-section">
+      <div class="comsci-hero-section">     <!--CHANGE THIS-->
         <div class="container">
           <div class="row">
             <div class="col-md-8 mx-auto">
               <div class="hero-caption">
-                <h1 class="display-1 fw-medium">COMPUTER SCIENCE</h1>
+                <h1 class="display-1 fw-medium">STATISTICS</h1>
               </div>
             </div>
           </div>
@@ -150,90 +150,99 @@
       <div class="individual-courses-container">
         <div class="credits-prerequisites">
           <hr />
-          <p><b>Course Credits: </b>1 Unit</p>
-          <p><b>Prerequisites: </b>None</p>
+          <p><b>Course Credits: </b>3 Units</p>
+          <p><b>Prerequisites: </b>Stat 123</p>
         </div>
         <div>
-          <h1>CMSC 10 - Introduction to Computing</h1>
+          <h1>STAT 132 - Nonparametric Statistical Inference</h1>
 
           <h5>Course Description</h5>
           <p>
-            This course covers the history of Computer Science; fundamental concepts and big ideas in Computer Science; social, ethical, and practical issues in computing.
+            Levels of measurement; goodness-of-fit tests; sign and signed ranks tests; distribution tests; association test; tests for independence.
           </p>
 
           <h5>Course Learning Outcomes</h5>
           <p>
-            After completion of the course, the student should be able to:
+            By the end of this course, the student must be able to:
           </p>
           <ol>
-            <li>Explain how a computer works</li>
-            <li>Explain computer programs and how they work</li>
-            <li>Explain how computers store digital information</li>
-            <li>Explain how the Internet works</li>
-            <li>Create a web application</li>
-            <li>Identify risks brought by computers</li>
-            <li>Explain the limits of what a computer can and cannot do</li>
+            <li>Distinguish when to use nonparametric procedures;</li>
+            <li>Determine the nonparametric techniques that are appropriate under
+            various research problems and designs;</li>
+            <li>Perform the nonparametric procedures (both manually and with the
+            use of computer) and correctly interpret the results;</li>
+            <li>Apply appropriate statistical concepts, tools, and technologies in the
+            solution to various conceptual and real-world problems.</li>
           </ol>
 
           <section class="course-outline">
             <h5>Course Outline</h5>
-            <p>UNIT 1. History of Computing</p>
+
+            <p>UNIT 1. Introduction</p>
             <ol type="A">
-              <li>Early Period</li>
-              <li>Birth of Computers</li>
-              <li>Modern Era</li>
+              <li>Review of Terms in Statistical Inference</li>
+              <li>The Statistical Model</li>
+              <li>Efficiency</li>
+              <li>Levels of Measurement</li>
+              <li>Parametric versus Nonparametric Tests</li>
+              <li>Monte Carlo Simulation</li>
             </ol>
 
-            <p>UNIT 2. Components of a Computer</p>
+            <p>UNIT 2. Single Sample Tests</p>
             <ol type="A">
-              <li>Input Devices</li>
-              <li>Output Devices</li>
-              <li>System Unit</li>
-              <li>Storage Devices</li>
-              <li>Communication Devices</li>
+              <li>Inferences About a Location Parameter</li>
+              <li>Inferences about a Population Proportion</li>
+              <li>Runs Test for Randomness</li>
+              <li>Cox-Stuart Test for Trend.</li>
             </ol>
 
-            <p>UNIT 3. Storing Information Inside a Computer (Binary System)</p>
+            <p>UNIT 3. Two Independent Samples</p>
             <ol type="A">
-              <li>Representing Information as Bit Patterns</li>
-              <li>Binary Numbering System</li>
-              <li>Boolean Logic and Gates</li>
+              <li>Inferences about Two Location Parameters</li>
+              <li>Inferences about Two Dispersion Parameters</li>
+              <li>The Wald-Wolfowitz Runs Test</li>
+              <li>Hollander Test of Extreme Reactions</li>
+              <li>Fisher’s Exact Test</li>
+            </ol>
+            
+            <p>UNIT 4. Two Related Samples Test</p>
+            <ol type="A">
+              <li>Inferences about Location Parameters</li>
+              <li>Confidence Interval for the Median Difference</li>
+              <li>McNemar Test for Related Proportions</li>
             </ol>
 
-            <p>UNIT 4. Computer Programs</p>
+            <p>UNIT 5. Chi-Square Tests of Independence and Homogeneity</p>
             <ol type="A">
-              <li>System Software</li>
-              <li>Application Software</li>
+              <li>Properties of Chi-Square Distribution</li>
+              <li>Chi-Square Test of Independence</li>
+              <li>Chi-Square Test of Homogeneity</li>
             </ol>
 
-            <p>UNIT 5. The Internet</p>
+            <p>UNIT 6. Three or More Independent Samples Test</p>
             <ol type="A">
-              <li>Network Fundamentals</li>
-              <li>The Internet</li>
+              <li>Extension of the Median Test</li>
+              <li>Kruskal-Wallis ANOVA by Ranks</li>
+              <li>Jonckheere-Terpstra Test for Ordered Alternatives</li>
+              <li>Multiple Comparisons</li>
             </ol>
 
-            <p>UNIT 6. Web Applications</p>
+            <p>UNIT 7. Three or More Related Samples Test</p>
             <ol type="A">
-              <li>Web Implementation</li>
-              <li>HTML</li>
-              <li>XML</li>
-              <li>Client-Side and Server-Side Activities</li>
+              <li>Friedman Two-Way ANOVA by Ranks</li>
+              <li>Multiple-comparison Procedure for Friedman Test</li>
+              <li>Page’s Test for Ordered Alternatives</li>
+              <li>Cochran’s Test for Related Observations</li>
             </ol>
 
-            <p>UNIT 7. Computer Security</p>
+            <p>UNIT 8. Goodness-of-Fit Tests</p>
             <ol type="A">
-              <li>Internet and Network Attacks</li>
-              <li>Unauthorized Access and Use</li>
+              <li>Chi-square Goodness-of-fit Test</li>
+              <li>Kolmogorov-Smirnov One-sample Test</li>
+              <li>Kolmogorov-Smirnov Two-sample Test</li>
+              <li>Shapiro-Wilks Test</li>
             </ol>
 
-            <p>UNIT 8. The Limits of Computers</p>
-            <ol type="A">
-              <li>Computation Limitations</li>
-              <li>Memory Limitations</li>
-              <li>Graphical Limitations</li>
-              <li>Network Capacity</li>
-              <li>Non-computable Functions</li>
-            </ol>
           </section>
         </div>
       </div>

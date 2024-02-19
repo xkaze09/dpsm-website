@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CMSC 10 - Introduction to Computer Science</title>
+    <title>STAT 179 - Introduction to Survival Analysis</title>
     <!-- Favicon -->
     <link rel="icon" href="../../images/dpsmlogo.png" type="image/png" />
     <!-- CSS -->
@@ -134,12 +134,12 @@
       </nav>
       <!-- End of Division Navbar -->
       <!-- Hero Section -->
-      <div class="comsci-hero-section">
+      <div class="comsci-hero-section">     <!--CHANGE THIS-->
         <div class="container">
           <div class="row">
             <div class="col-md-8 mx-auto">
               <div class="hero-caption">
-                <h1 class="display-1 fw-medium">COMPUTER SCIENCE</h1>
+                <h1 class="display-1 fw-medium">STATISTICS</h1>
               </div>
             </div>
           </div>
@@ -150,15 +150,17 @@
       <div class="individual-courses-container">
         <div class="credits-prerequisites">
           <hr />
-          <p><b>Course Credits: </b>1 Unit</p>
-          <p><b>Prerequisites: </b>None</p>
+          <p><b>Course Credits: </b>3 Units</p>
+          <p><b>Prerequisites: </b>Stat 129</p>
         </div>
         <div>
-          <h1>CMSC 10 - Introduction to Computing</h1>
+          <h1>STAT 179 - Introduction to Survival Analysis</h1>
 
           <h5>Course Description</h5>
           <p>
-            This course covers the history of Computer Science; fundamental concepts and big ideas in Computer Science; social, ethical, and practical issues in computing.
+            Topics to be discussed in this course include: basic quantities for survival
+            data, nonparametric inferences for basic survival quantities, semiparametric
+            proportional hazards model, inferences for parametric regression models.
           </p>
 
           <h5>Course Learning Outcomes</h5>
@@ -166,74 +168,72 @@
             After completion of the course, the student should be able to:
           </p>
           <ol>
-            <li>Explain how a computer works</li>
-            <li>Explain computer programs and how they work</li>
-            <li>Explain how computers store digital information</li>
-            <li>Explain how the Internet works</li>
-            <li>Create a web application</li>
-            <li>Identify risks brought by computers</li>
-            <li>Explain the limits of what a computer can and cannot do</li>
+            <li>Demonstrate understanding of the basic concepts of survival data;</li>
+            <li>Utilize the different statistical inferences useful only for time - to - event data;</li>
+            <li>Apply statistical techniques appropriate only for survival data using statistical software ;</li>
+            <li>Perform survival analysis on time – to – event data that occur in different fields</li>
           </ol>
 
           <section class="course-outline">
             <h5>Course Outline</h5>
-            <p>UNIT 1. History of Computing</p>
+
+            <p>UNIT 1. INTRODUCTION</p>
             <ol type="A">
-              <li>Early Period</li>
-              <li>Birth of Computers</li>
-              <li>Modern Era</li>
+              <li>Why Study Survival Analysis?</li>
+              <li>Examples of survival data</li>
             </ol>
 
-            <p>UNIT 2. Components of a Computer</p>
+            <p>UNIT 2. BASIC QUANTITIES AND MODELS</p>
             <ol type="A">
-              <li>Input Devices</li>
-              <li>Output Devices</li>
-              <li>System Unit</li>
-              <li>Storage Devices</li>
-              <li>Communication Devices</li>
+              <li>The Survival Function</li>
+              <li>The Hazard Function</li>
+              <li>The Mean Residual Life Function and Median Life</li>
+              <li>Common Parametric Models for Survival Data</li>
             </ol>
 
-            <p>UNIT 3. Storing Information Inside a Computer (Binary System)</p>
+            <p>UNIT 3. CENSORING AND TRUNCATION</p>
             <ol type="A">
-              <li>Representing Information as Bit Patterns</li>
-              <li>Binary Numbering System</li>
-              <li>Boolean Logic and Gates</li>
+              <li>Right Censoring</li>
+              <li>Left Censoring</li>
+              <li>Interval Censoring</li>
+              <li>Likelihood Construction for Censored Data</li>
             </ol>
 
-            <p>UNIT 4. Computer Programs</p>
+            <p>UNIT 4. NONPARAMETRIC ESTIMATION OF BASIC QUANTITIES</p>
             <ol type="A">
-              <li>System Software</li>
-              <li>Application Software</li>
+              <li>Estimators of Survival and Cumulative Hazards Functions for Right Censored Data</li>
+              <li>Pointwise Confidence for Survival Function</li>
+              <li>Confidence Bands for the Survival</li>
             </ol>
 
-            <p>UNIT 5. The Internet</p>
+            <p>UNIT 5. HYPOTHESIS TESTING</p>
             <ol type="A">
-              <li>Network Fundamentals</li>
-              <li>The Internet</li>
+              <li>One Sample Test with Right Censored Data</li>
+              <li>Tests for Two or More Sample</li>
+              <li>Stratified Tests</li>
+              <li>Renyi Type Tests</li>
             </ol>
 
-            <p>UNIT 6. Web Applications</p>
+            <p>UNIT 6. SEMIPARAMETRIC PROPORTIONAL HAZARDS</p>
             <ol type="A">
-              <li>Web Implementation</li>
-              <li>HTML</li>
-              <li>XML</li>
-              <li>Client-Side and Server-Side Activities</li>
+              <li>Partial Likelihoods for Distinct – Event Time Date</li>
+              <li>Local Tests</li>
+              <li>Model Building Using the Proportional Hazards Model</li>
             </ol>
 
-            <p>UNIT 7. Computer Security</p>
+            <p>UNIT 7. REGRESSION DIAGNOSTICS</p>
             <ol type="A">
-              <li>Internet and Network Attacks</li>
-              <li>Unauthorized Access and Use</li>
+              <li>Cox – Snell Residuals for Assessing the Fit of a Cox Model</li>
+              <li>Graphical Checks of the Proportional Hazards Assumption</li>
             </ol>
 
-            <p>UNIT 8. The Limits of Computers</p>
+            <p>UNIT 8. INFERENCE FOR PARAMETRIC REGRESSION MODELS</p>
             <ol type="A">
-              <li>Computation Limitations</li>
-              <li>Memory Limitations</li>
-              <li>Graphical Limitations</li>
-              <li>Network Capacity</li>
-              <li>Non-computable Functions</li>
+              <li>Weibull Distribution</li>
+              <li>Log Logistic Distribution</li>
             </ol>
+
+            
           </section>
         </div>
       </div>

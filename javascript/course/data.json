@@ -17,7 +17,7 @@
             {
               "name": "CMSC 11",
               "title": "Introduction to Computer Science",
-              "link": "",
+              "link": "computer-science/cmsc-11.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -25,7 +25,7 @@
             {
               "name": "CMSC 56",
               "title": "Discrete Mathematical Structures in Computer Science 1",
-              "link": "",
+              "link": "computer-science/cmsc-56.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -33,7 +33,7 @@
             {
               "name": "Math 18",
               "title": "Pre Calculus Mathematics",
-              "link": "",
+              "link": "computer-science/math-18.html",
               "isCredited": true,
               "credits": 5,
               "preRequisites": ""
@@ -78,7 +78,7 @@
             {
               "name": "CMSC 21",
               "title": "Fundamentals of Programming",
-              "link": "",
+              "link": "computer-science/cmsc-21.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 11"
@@ -86,7 +86,7 @@
             {
               "name": "CMSC 57",
               "title": "Discrete Mathematical Structures in Computer Science 2",
-              "link": "",
+              "link": "computer-science/cmsc-57.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 56"
@@ -94,7 +94,7 @@
             {
               "name": "Math 53",
               "title": "Calculus I",
-              "link": "",
+              "link": "computer-science/math-53.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 18"
@@ -152,7 +152,7 @@
             {
               "name": "CMSC 22",
               "title": "Fundamentals of Object-oriented Programming",
-              "link": "",
+              "link": "computer-science/cmsc-22.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 21"
@@ -160,7 +160,7 @@
             {
               "name": "CMSC 123",
               "title": "Data Structures",
-              "link": "",
+              "link": "computer-science/cmsc-123.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 21, CMSC 57"
@@ -168,7 +168,7 @@
             {
               "name": "Math 54",
               "title": "Calculus II",
-              "link": "",
+              "link": "computer-science/math-54.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 53"
@@ -213,7 +213,7 @@
             {
               "name": "CMSC 127",
               "title": "Database Systems",
-              "link": "",
+              "link": "computer-science/cmsc-127.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 123"
@@ -221,7 +221,7 @@
             {
               "name": "CMSC 130",
               "title": "Logic Design and Digital Computer Circuits",
-              "link": "",
+              "link": "computer-science/cmsc-130.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "CMSC 11, Physics 71"
@@ -229,7 +229,7 @@
             {
               "name": "CMSC 126",
               "title": "Web Programming",
-              "link": "",
+              "link": "computer-science/cmsc-126.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 22"
@@ -237,7 +237,7 @@
             {
               "name": "CMSC 142",
               "title": "Design and Analysis of Algorithms",
-              "link": "",
+              "link": "computer-science/cmsc-142.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 123"
@@ -279,7 +279,7 @@
             {
               "name": "CMSC 124",
               "title": "Design and Implementation of Programming Languages",
-              "link": "",
+              "link": "computer-science/cmsc-124.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 123"
@@ -287,7 +287,7 @@
             {
               "name": "CMSC 131",
               "title": "Introduction to Computer Organization and Machine Level Programming",
-              "link": "",
+              "link": "computer-science/cmsc-131.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 21, CMSC 130"
@@ -295,7 +295,7 @@
             {
               "name": "CMSC 141",
               "title": "Automata and Language Theory",
-              "link": "",
+              "link": "computer-science/cmsc-141.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 57"
@@ -303,7 +303,7 @@
             {
               "name": "CMSC 128",
               "title": "Software Engineering 1",
-              "link": "",
+              "link": "computer-science/cmsc-128.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 126, CMSC 127"
@@ -311,7 +311,7 @@
             {
               "name": "CMSC 134",
               "title": "Human Computer Interaction",
-              "link": "",
+              "link": "computer-science/cmsc-134.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 126"
@@ -319,7 +319,7 @@
             {
               "name": "Stat 105",
               "title": "Introduction to Statistical Analysis",
-              "link": "",
+              "link": "computer-science/stat-105.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 18"
@@ -332,7 +332,7 @@
             {
               "name": "CMSC 125",
               "title": "Operating Systems",
-              "link": "",
+              "link": "computer-science/cmsc-125.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 123, CMSC 131"
@@ -340,7 +340,7 @@
             {
               "name": "CMSC 129",
               "title": "Software Engineering 2",
-              "link": "",
+              "link": "computer-science/cmsc-129.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 128"
@@ -348,7 +348,7 @@
             {
               "name": "CMSC 132",
               "title": "Computer Architecture",
-              "link": "",
+              "link": "computer-science/cmsc-132.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 131"
@@ -364,7 +364,7 @@
             {
               "name": "Stat 106",
               "title": "Advanced Statistical Analysis",
-              "link": "",
+              "link": "computer-science/stat-106.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 105"
@@ -403,7 +403,7 @@
             {
               "name": "CMSC 137",
               "title": "Data Communications and Networking",
-              "link": "",
+              "link": "computer-science/cmsc-137.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "CMSC 125, CMSC 132"
@@ -546,7 +546,7 @@
             {
               "name": "CMSC 151",
               "title": "Systems Analysis and Design",
-              "link": "",
+              "link": "computer-science/cmsc-151.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "CMSC 128"
@@ -578,7 +578,7 @@
             {
               "name": "CMSC 155",
               "title": "Technopreneurship",
-              "link": "",
+              "link": "computer-science/cmsc-155.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Senior Standing"
@@ -634,7 +634,7 @@
             {
               "name": "CMSC 173",
               "title": "Data Mining",
-              "link": "",
+              "link": "computer-science/cmsc-173.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "CMSC 123, Stat 106 or COI (for non-majors)"
@@ -674,7 +674,7 @@
             {
               "name": "CMSC 197",
               "title": "Special Topics",
-              "link": "",
+              "link": "computer-science/cmsc-197.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Consent of the Instructor"
@@ -682,7 +682,7 @@
             {
               "name": "Math 55",
               "title": "Calculus III",
-              "link": "",
+              "link": "computer-science/math-55.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Math 54"
@@ -690,7 +690,7 @@
             {
               "name": "Math 114",
               "title": "Linear Algebra",
-              "link": "",
+              "link": "computer-science/math-114.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Math 107"
@@ -758,7 +758,7 @@
             {
               "name": "Math 18",
               "title": "Precalculus Mathematics",
-              "link": "",
+              "link": "applied-mathematics/math-18.html",
               "isCredited": true,
               "credits": 5,
               "preRequisites": ""
@@ -766,7 +766,7 @@
             {
               "name": "Math 153",
               "title": "Computer Programming I",
-              "link": "",
+              "link": "applied-mathematics/math-153.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -803,7 +803,7 @@
             {
               "name": "Math 53",
               "title": "Calculus I",
-              "link": "",
+              "link": "applied-mathematics/math-53.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 18"
@@ -811,7 +811,7 @@
             {
               "name": "Math 107",
               "title": "Logic and Set Theory",
-              "link": "",
+              "link": "applied-mathematics/math-107.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 18"
@@ -819,7 +819,7 @@
             {
               "name": "Math 154",
               "title": "Computer Programming II",
-              "link": "",
+              "link": "applied-mathematics/math-154.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 153"
@@ -877,7 +877,7 @@
             {
               "name": "Math 54",
               "title": "Calculus II",
-              "link": "",
+              "link": "applied-mathematics/math-54.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 53"
@@ -893,7 +893,7 @@
             {
               "name": "Math 114",
               "title": "Linear Algebra",
-              "link": "",
+              "link": "applied-mathematics/math-114.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 107"
@@ -901,7 +901,7 @@
             {
               "name": "Math 135",
               "title": "Combinatorial Mathematics",
-              "link": "",
+              "link": "applied-mathematics/math-135.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 107"
@@ -938,7 +938,7 @@
             {
               "name": "Math 55",
               "title": "Calculus III",
-              "link": "",
+              "link": "applied-mathematics/math-55.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 54"
@@ -946,7 +946,7 @@
             {
               "name": "Math 121",
               "title": "Elementary Differential Equations",
-              "link": "",
+              "link": "applied-mathematics/math-121.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Coreq: Math 55"
@@ -954,7 +954,7 @@
             {
               "name": "Math 162",
               "title": "Theory of Interest",
-              "link": "",
+              "link": "applied-mathematics/math-162.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 54"
@@ -962,7 +962,7 @@
             {
               "name": "Math 173",
               "title": "Numerical Methods I",
-              "link": "",
+              "link": "applied-mathematics/math-173.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 54, Math 114, Math 154"
@@ -1004,7 +1004,7 @@
             {
               "name": "Math 174",
               "title": "Numerical Methods II",
-              "link": "",
+              "link": "applied-mathematics/math-174.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 55, Math 121, Math 173"
@@ -1012,7 +1012,7 @@
             {
               "name": "Math 183",
               "title": "Linear and Integer Programming",
-              "link": "",
+              "link": "applied-mathematics/math-183.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 114"
@@ -1020,7 +1020,7 @@
             {
               "name": "Stat 110",
               "title": "Non-Bayesian Probability",
-              "link": "",
+              "link": "applied-mathematics/stat-110.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 54 or equivalent"
@@ -1065,7 +1065,7 @@
             {
               "name": "Stat 111",
               "title": "Statistical Methods & Inference",
-              "link": "",
+              "link": "applied-mathematics/stat-111.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Stat 110"
@@ -1181,7 +1181,7 @@
             {
               "name": "Math 198.2",
               "title": "Special Problem II",
-              "link": "",
+              "link": "applied-mathematics/math-198.2.html",
               "isCredited": true,
               "credits": 2,
               "preRequisites": "Math 198.2"
@@ -1247,7 +1247,7 @@
             {
               "name": "Math 143",
               "title": "Modern Geometries and Their Applications",
-              "link": "",
+              "link": "applied-mathematics/math-143.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Math 110, Math 114"
@@ -1263,7 +1263,7 @@
             {
               "name": "Math 165",
               "title": "Financial Derivatives Markets",
-              "link": "",
+              "link": "applied-mathematics/math-165.html",
               "isCredited": true,
               "credits": null,
               "preRequisites": "Math 162"
@@ -1619,7 +1619,7 @@
             {
               "name": "STAT 104",
               "title": "Descriptive Statistics",
-              "link": "",
+              "link": "statistics/stat-104.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -1627,7 +1627,7 @@
             {
               "name": "MATH 18",
               "title": "Precalculus Mathematics",
-              "link": "",
+              "link": "statistics/math-18.html",
               "isCredited": true,
               "credits": 5,
               "preRequisites": ""
@@ -1635,7 +1635,7 @@
             {
               "name": "MATH 153",
               "title": "Computer Programming I",
-              "link": "",
+              "link": "statistics/math-153.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -1680,7 +1680,7 @@
             {
               "name": "STAT 117",
               "title": "Mathematics for Statistics",
-              "link": "",
+              "link": "statistics/stat-117.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 18"
@@ -1688,7 +1688,7 @@
             {
               "name": "MATH 53",
               "title": "Calculus I",
-              "link": "",
+              "link": "statistics/math-53.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 18"
@@ -1746,7 +1746,7 @@
             {
               "name": "STAT 121",
               "title": "Probability Theory I",
-              "link": "",
+              "link": "statistics/stat-121.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 53, Stat 117"
@@ -1754,7 +1754,7 @@
             {
               "name": "MATH 54",
               "title": "Calculus II",
-              "link": "",
+              "link": "statistics/math-54.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 53"
@@ -1799,7 +1799,7 @@
             {
               "name": "STAT 122",
               "title": "Probability Theory II",
-              "link": "",
+              "link": "statistics/stat-122.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 121"
@@ -1807,7 +1807,7 @@
             {
               "name": "STAT 138",
               "title": "Use of Statistical Software Packages",
-              "link": "",
+              "link": "statistics/stat-138.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 153, Stat 104"
@@ -1815,7 +1815,7 @@
             {
               "name": "MATH 55",
               "title": "Calculus III",
-              "link": "",
+              "link": "statistics/math-55.html",
               "isCredited": true,
               "credits": 4,
               "preRequisites": "Math 54"
@@ -1873,7 +1873,7 @@
             {
               "name": "MATH 114",
               "title": "Linear Algebra",
-              "link": "",
+              "link": "statistics/math-114.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 107"
@@ -1918,7 +1918,7 @@
             {
               "name": "STAT 129",
               "title": "Regression and Correlation Analysis",
-              "link": "",
+              "link": "statistics/stat-129.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Math 114, Stat 123"
@@ -1926,7 +1926,7 @@
             {
               "name": "STAT 133",
               "title": "Introduction to Exploratory Data Analysis",
-              "link": "",
+              "link": "statistics/stat-133.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 123"
@@ -1934,7 +1934,7 @@
             {
               "name": "STAT 134",
               "title": "Introduction to Bayesian Statistical Inference",
-              "link": "",
+              "link": "statistics/stat-134.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 123"
@@ -1942,7 +1942,7 @@
             {
               "name": "STAT 140",
               "title": "Introduction to Sample Surveys",
-              "link": "",
+              "link": "statistics/stat-140.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 123"
@@ -1984,7 +1984,7 @@
             {
               "name": "STAT 132",
               "title": "Nonparametric Statistical Inference",
-              "link": "",
+              "link": "statistics/stat-132.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 123"
@@ -1992,7 +1992,7 @@
             {
               "name": "STAT 141",
               "title": "Multivariate Theory",
-              "link": "",
+              "link": "statistics/stat-141.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 129"
@@ -2000,7 +2000,7 @@
             {
               "name": "STAT 145",
               "title": "Introduction to Time Series Analysis and Forecasting",
-              "link": "",
+              "link": "statistics/stat-145.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 129"
@@ -2029,7 +2029,7 @@
             {
               "name": "STAT 142",
               "title": "Applied Multivariate Analysis",
-              "link": "",
+              "link": "statistics/stat-142.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 141"
@@ -2037,7 +2037,7 @@
             {
               "name": "STAT 149",
               "title": "Introduction to Categorical Data Analysis",
-              "link": "",
+              "link": "statistics/stat-149.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Stat 129"
@@ -2045,7 +2045,7 @@
             {
               "name": "STAT 150",
               "title": "Survey Operations",
-              "link": "",
+              "link": "statistics/stat-150.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": "Comm 12, Stat 138, Stat 140"
@@ -2095,7 +2095,7 @@
             {
               "name": "CMSC 22",
               "title": "Fundamentals of Object-oriented Programming",
-              "link": "",
+              "link": "statistics/cmsc-22.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2193,7 +2193,7 @@
             {
               "name": "STAT 173",
               "title": "Elementary Actuarial Statistics",
-              "link": "",
+              "link": "statistics/stat-173.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2209,7 +2209,7 @@
             {
               "name": "STAT 175",
               "title": "Introduction to Biostatics",
-              "link": "",
+              "link": "statistics/stat-175.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2217,7 +2217,7 @@
             {
               "name": "STAT 176",
               "title": "Statistical Methods in Market Research",
-              "link": "",
+              "link": "statistics/stat-176.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2233,7 +2233,7 @@
             {
               "name": "STAT 179",
               "title": "Introduction to Survival Analysis",
-              "link": "",
+              "link": "statistics/stat-179.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2275,7 +2275,7 @@
             {
               "name": "CMSC 11",
               "title": "Introduction to Computer Science",
-              "link": "",
+              "link": "statistics/cmsc-11.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2291,7 +2291,7 @@
             {
               "name": "CMSC 173",
               "title": "Data Mining",
-              "link": "",
+              "link": "statistics/cmsc-173.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2299,7 +2299,7 @@
             {
               "name": "CMSC 197",
               "title": "Special Topics(Intro to Data Science)",
-              "link": "",
+              "link": "statistics/cmsc-197.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2307,7 +2307,7 @@
             {
               "name": "CMSC 56",
               "title": "Discrete Mathematical Structures in Computer Science 1",
-              "link": "",
+              "link": "statistics/cmsc-56.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2315,7 +2315,7 @@
             {
               "name": "CMSC 57",
               "title": "Discrete Mathematical Structures in Computer Science 2",
-              "link": "",
+              "link": "statistics/cmsc-57.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2331,7 +2331,7 @@
             {
               "name": "MATH 121",
               "title": "Elementary Differential Equations",
-              "link": "",
+              "link": "statistics/math-121.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2355,7 +2355,7 @@
             {
               "name": "MATH 135",
               "title": "Combinatorial Mathematics",
-              "link": "",
+              "link": "statistics/math-135.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2371,7 +2371,7 @@
             {
               "name": "MATH 154",
               "title": "Computer Programming II",
-              "link": "",
+              "link": "statistics/math-154.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2379,7 +2379,7 @@
             {
               "name": "MATH 162",
               "title": "Theory of Interest",
-              "link": "",
+              "link": "statistics/math-162.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2387,7 +2387,7 @@
             {
               "name": "MATH 165",
               "title": "Financial Derivatives Markets",
-              "link": "",
+              "link": "statistics/math-165.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2395,7 +2395,7 @@
             {
               "name": "MATH 173",
               "title": "Numerical Methods I",
-              "link": "",
+              "link": "applied-mathematics/math-173.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
@@ -2411,7 +2411,7 @@
             {
               "name": "MATH 183",
               "title": "Linear and Integer Programming",
-              "link": "",
+              "link": "applied-mathematics/math-183.html",
               "isCredited": true,
               "credits": 3,
               "preRequisites": ""
