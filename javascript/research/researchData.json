@@ -1,0 +1,28 @@
+
+{
+    "SECTIONS": [
+      {
+        "containerId": "researchSection1",
+        "items": [
+          {
+            "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
+            "authors": "M. Olivares",
+            "link": "https://example.com",
+            "date": { "start": "2022-11-17", "end": "2022-11-18" }
+          }
+        ]
+      },
+      {
+        "containerId": "researchSection2",
+        "items": [
+          {
+            "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
+            "authors": "M. Olivares",
+            "link": "https://example.com",
+            "date": { "start": "2022-11-17", "end": "2022-11-18" }
+          }
+        ]
+      }
+    ]
+  }
+  
