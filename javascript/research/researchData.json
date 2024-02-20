@@ -8,19 +8,65 @@
             "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
             "authors": "M. Olivares",
             "link": "https://example.com",
-            "date": { "start": "2022-11-17", "end": "2022-11-18" }
+            "dates": [
+                { "start": "2022-11-17", "end": "2022-11-18" }
+            ]
+          },
+          {
+            "title": "Stress Redistribution in a Circular Mooney-Rivlin Membrane, Composed of Two CircularRegions with a Circular Hole, Subjected to Stretching at the Boundary",
+            "authors": "M. Olivares",
+            "dates": [
+                {"start": "2022-12-02"},
+                {"start": "2022-12-09"}
+            ]
+          },
+          {
+            "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
+            "authors": "M. Olivares",
+            "link": "https://example.com",
+            "dates": [
+                { "start": "2022-11-17", "end": "2022-11-18" }
+            ]
           }
         ]
       },
       {
         "containerId": "researchSection2",
         "items": [
-          {
-            "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
-            "authors": "M. Olivares",
-            "link": "https://example.com",
-            "date": { "start": "2022-11-17", "end": "2022-11-18" }
-          }
+            {
+                "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
+                "authors": "M. Olivares",
+                "link": "https://example.com",
+                "dates": [
+                    { "start": "2022-11-17", "end": "2022-11-18" }
+                ]
+              }
+        ]
+      },
+      {
+        "containerId": "researchSection3",
+        "items": [
+            {
+                "title": "BUGANA: Fishing Community Cultural Notexts for High School Mathematics, Kasingkasing Press, Iloilo City",
+                "authors": "Sayco, G. C., Gadong, E. S., Gemaol, S. M., Sayco, G. B., Braga, E. T. , Barrios, J.",
+                "link": "https://example.com",
+                "dates": [
+                    { "start": "2022-11" }
+                ]
+              }
+        ]
+      },
+      {
+        "containerId": "researchSection4",
+        "items": [
+            {
+                "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
+                "authors": "M. Olivares",
+                "link": "https://example.com",
+                "dates": [
+                    { "start": "2022-11-17", "end": "2022-11-18" }
+                ]
+              }
         ]
       }
     ]

@@ -1,23 +1,28 @@
 // research.js
 
-import data from './researchData.json' assert {type: 'json'};
+import data from './researchData.json' assert { type: 'json' };
+
+// Function to format date or date range
+function formatDate(date) {
+  const startDate = new Date(date.start);
+  const options = { year: 'numeric', month: 'long' };
+
+  // Format date
+  if (date.end) {
+    const endDate = new Date(date.end);
+    return `${startDate.toLocaleDateString('en-US', options)} - ${endDate.toLocaleDateString('en-US', options)}`;
+  } else {
+    return startDate.toLocaleDateString('en-US', options);
+  }
+}
+
 
 // Generating the research cards
-function generateResearchCard(title, authors, link, date, sectionId) {
-  let formattedDate = '';
+function generateResearchCard(title, authors, link, dates, sectionId) {
+  let formattedDates = '';
 
-  if (date.start) {
-    const startDate = new Date(date.start);
-    const options = { month: 'long', day: 'numeric', year: 'numeric' };
-    formattedDate += startDate.toLocaleDateString('en-US', options);
-
-    if (date.end) {
-      const endDate = new Date(date.end);
-      // To Check if  end date is different from the start date
-      if (startDate.toDateString() !== endDate.toDateString()) {
-        formattedDate += ` - ${endDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
-      }
-    }
+  if (dates) {
+    formattedDates = dates.map(formatDate).join(' & ');
   }
 
   // Check if link is provided or not for the title
@@ -27,7 +32,7 @@ function generateResearchCard(title, authors, link, date, sectionId) {
        </h5>`
     : `<h5 class="card-title">${title}</h5>`;
 
-    // Create "Access here" only if link is provided
+  // Create "Access here" only if link is provided
   const accessLinkHTML = link
     ? `<a href="${link}" target="_blank" class="position-absolute bottom-0 end-0 p-3 text-primary">Access here</a>`
     : '';
@@ -38,7 +43,7 @@ function generateResearchCard(title, authors, link, date, sectionId) {
         <div class="p-4 card-body border-bottom border-3 border-warning">
             ${titleHTML}
             <p class="card-text lead mt-4 fw-medium">${authors}</p>
-            <p class="card-text">Date: ${formattedDate}</p>
+            <p class="card-text">Dates: ${formattedDates}</p>
             ${accessLinkHTML}
         </div>    
     </div>
@@ -57,15 +62,15 @@ function initializeResearchCards(sections) {
           item.title,
           item.authors,
           item.link,
-          item.date,
-          section.containerId,
+          item.dates || item.date,
+          item.containerId, // Use item.containerId instead of section.containerId
         );
         container.innerHTML += cardHTML;
 
         // Hide cards if already more than the initial number of visible cards
         if (index >= visibleCards) {
           const card = container.querySelector(
-            `[data-section="${section.containerId}"]:last-child`,
+            `[data-section="${item.containerId}"]:last-child`, // Use item.containerId
           );
           card.style.display = 'none';
         }
@@ -86,6 +91,7 @@ function initializeResearchCards(sections) {
     }
   });
 }
+
 
 // Toggle the state of the cards
 function toggleCards(container, containerId, visibleCards) {
