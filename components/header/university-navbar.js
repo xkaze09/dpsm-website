@@ -1,0 +1,38 @@
+class UniversityNavbar extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container justify-content-around">
+          <div
+            class="university-navbar navbar-brand menu d-flex justify-content-center align-items-center gap-2"
+          >
+            <a href="https://upv.edu.ph/" target="_blank" class="text-link">
+              <img class="logo-highlight" src="/images/upvlogo.png" width="53" />
+            </a>
+            <a href="/index.html" target="_self" class="text-link">
+              <img class="logo-highlight" src="/images/dpsmlogo.png" width="48" />
+            </a>
+            <a href="/index.html" target="_self" class="text-link">
+              <div class="text-center">
+                <span class="upper-division-name text-white"
+                  >DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span
+                >
+              </div>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
+            <ul class="navbar-nav text-center">
+              <li>
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-link" href="/support.html">Resources & Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>`;
+  }
+}
+
+customElements.define('university-navbar', UniversityNavbar);
