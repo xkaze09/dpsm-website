@@ -1,46 +1,46 @@
 // Customized for DPSM Website
 
 // WHITE & GRAY COLORS
-$white:         #fff;
-$gray-100:      #f8f9fa;
-$gray-200:      #e9ecef;
-$gray-300:      #dee2e6;
-$gray-400:      #ced4da;
-$gray-500:      #adb5bd;
-$gray-600:      #6c757d;
-$gray-700:      #495057;
-$gray-800:      #343a40;
-$gray-900:      #212529;
-$black:         #000;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
 
 // COLORS
-$blue:          #0d6efd;
-$indigo:        #6610f2;
-$purple:        #6f42c1;
-$pink:          #d63384;
-$red:           #dc3545;
-$orange:        #fd7e14;
-$yellow:        #ffc107;
-$green:         #198754;
-$teal:          #20c997;
-$cyan:          #0dcaf0;
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
 
 // DPSM COLORS
-$text:          #101014;
-$primary:       rgb(25, 42, 84);
-$secondary:     #D3E1E8;
-$accent_one:    rgb(255, 183, 3);
-$accent_two:    rgb(251, 133, 0);
-$background:    #FBFBFA;
-$UP_red:        rgb(123, 17, 19);
+$text: #101014;
+$primary: rgb(25, 42, 84);
+$secondary: #d3e1e8;
+$accent_one: rgb(255, 183, 3);
+$accent_two: rgb(251, 133, 0);
+$background: #fbfbfa;
+$UP_red: rgb(123, 17, 19);
 
 // ACCORDION
-$accordion-icon-color:                    $accent_one;
-$accordion-icon-active-color:             $accent_two;
+$accordion-icon-color: $accent_one;
+$accordion-icon-active-color: $accent_two;
 
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>");
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/></svg>");
-$accordion-icon-width:                    1.875rem;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/></svg>");
+$accordion-icon-width: 1.875rem;
 
 // Import Bootstrap 5
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

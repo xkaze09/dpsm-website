@@ -1,47 +1,45 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
 .support-hero-section {
-    position: relative;
-    height: 50vh;
-    background-image: url('/images/homepage-hero.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  position: relative;
+  height: 50vh;
+  background-image: url('/images/homepage-hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Hide scrollbar of sticky sidebar */
 html {
-    overflow: scroll;
-    overflow-x: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .support-sticky-sidebar::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+  background: #ff0000;
 }
 
 .support-sticky-sidebar {
-    position: sticky;
-    top: 20vh; /* Adjust as needed */
-    height: calc(100vh - 40px); /* Account for padding */
-    overflow-y: auto;
-  }
-  
-  /* Main content styles */
-  .support-main-content {
-    padding: 20px;
-    height: 100%;
-    overflow-y: auto;
-  }
-  
+  position: sticky;
+  top: 20vh; /* Adjust as needed */
+  height: calc(100vh - 40px); /* Account for padding */
+  overflow-y: auto;
+}
+
+/* Main content styles */
+.support-main-content {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
