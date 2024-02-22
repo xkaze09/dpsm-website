@@ -12473,7 +12473,7 @@ div.card.card-body {
 .about-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/mission.jpg");
+  background-image: url("/images/about/BLDNG-upscaled.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12512,7 +12512,7 @@ div.card.card-body {
 .mission-section {
   position: relative; /* Add position relative */
   height: 80vh;
-  background-image: url("/images/mission.jpg");
+  background-image: url("/images/about/CAS-upscaled.JPG");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12541,7 +12541,7 @@ div.card.card-body {
 .vision-section {
   position: relative; /* Add position relative */
   height: 80vh;
-  background-image: url("/images/vision.jpg");
+  background-image: url("/images/about/BASEMENT-upscaled.JPG");
   background-size: cover;
   background-position: center;
   display: flex;
