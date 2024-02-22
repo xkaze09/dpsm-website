@@ -1,25 +1,29 @@
 // Division Highlights Carousel Data
 const divisionCarouselData = [
   {
-    src: './images/card1.png',
-    alt: 'Image A',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Consequat mauris nunc congue nisi vitae suscipit tellus mauris a. Risus pretium quam vulputate dignissim suspendisse in est ante. Diam phasellus vestibulum lorem sed risus ultricies. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed. Convallis aenean et tortor at risus viverra. Facilisi cras fermentum odio eu feugiat pretium. At tellus at urna condimentum mattis pellentesque. Accumsan sit amet nulla facilisi morbi. In dictum non consectetur a erat nam. Lacus vel facilisis volutpat est velit. Eget arcu dictum varius duis at consectetur. Malesuada proin libero nunc consequat interdum varius sit amet mattis.',
+    src: './images/highlights/highlight1.jpg',
+    alt: 'DPSM Website Launch 2024',
+    title: 'Exploring Excellence: DPSM Debuts Dynamic Website',
+    text: 'The Division of Physical Sciences and Mathematics at the University of the Philippines Visayas proudly announces the inauguration of its latest digital endeavor: a website launched on February 24, 2024. Navigating the website is a breeze, with accessible information about division events, faculty profiles, and relevant announcements readily available at your fingertips. Stay up to date with the latest seminars, research breakthroughs, and academic achievements, all conveniently housed on one user-friendly interface. <br><br>The launch of the Division\'s website marks a significant milestone in its ongoing quest for digital innovation and academic excellence. As the Division continues to push boundaries and redefine the educational landscape, the website stands as a beacon of progress.',
   },
   {
-    src: './images/card2.png',
-    alt: 'Image B',
-    text: 'Condimentum vitae sapien pellentesque habitant morbi tristique. Mi sit amet mauris commodo quis imperdiet. Cursus metus aliquam eleifend mi. Ullamcorper morbi tincidunt ornare massa. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Nunc mi ipsum faucibus vitae aliquet. Adipiscing commodo elit at imperdiet. Congue eu consequat ac felis donec et odio. Eu sem integer vitae justo eget. Nibh tortor id aliquet lectus proin nibh nisl condimentum. Quam pellentesque nec nam aliquam sem. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Urna condimentum mattis pellentesque id nibh.',
+    src: './images/highlights/highlight2.jpg',
+    alt: '',
+    title: 'DPSM Serves Science with a Side of Silicon in CAS Open House',
+    text: 'In a delectable fusion of technology and gastronomy, the Division of Physical Sciences and Mathematics at the University of the Philippines Visayas joins the festivities of the CAS Open House during the College of Arts and Sciences week. Drawing inspiration from the IT sector, the Division serves up a feast that celebrates the inner workings of technology and its pivotal role in shaping our world. From "Memory Chips" to "Soup-ercomputer," the Division hopes to present the IT sector in a way that is both yummy and funny. <br><br>As students, staff, and faculty indulge in the Division\'s Open House, they are reminded of the ever-present relevance of technology and the boundless opportunities it presents for growth and innovation. The Division hopes to highlight the indispensable role of the IT sector in fostering unity and Panghimanwa within the university.',
   },
   {
-    src: './images/card3.png',
-    alt: 'Image C',
-    text: 'Nunc aliquet bibendum enim facilisis gravida neque. Nibh praesent tristique magna sit amet. Dignissim cras tincidunt lobortis feugiat vivamus at. In fermentum et sollicitudin ac orci. Maecenas ultricies mi eget mauris pharetra et. Pulvinar neque laoreet suspendisse interdum. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus et. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. In vitae turpis massa sed elementum tempus egestas. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Lacus viverra vitae congue eu consequat ac felis donec. Commodo elit at imperdiet dui accumsan sit amet.',
+    src: './images/highlights/highlight3.jpg',
+    alt: 'DPSM Website Launch 2024',
+    title: 'Numerical Navigators Converge in Math-O Interschool Quiz Bee',
+    text: 'The Mathematics Circle, an organization under the Division of Physical Sciences and Mathematics (DPSM) at the University of the Philippines Visayas, recently orchestrated its yearly major event - the Interschool Mathematics Quiz Bee. Drawing participation from approximately 40 schools spanning elementary to high school levels across the region, the Quiz Bee showcased the elegance and versatility of mathematics. <br><br>A distinguishing feature of the quiz bee was the exclusive involvement of DPSM\'s esteemed faculty members as judges, ensuring impartial evaluation and expert oversight throughout the competition. Over the course of two intellectually stimulating days, winners were given certificates, cash prizes, and trophies. Beyond the tangible rewards, participants departed with a heightened appreciation for the beauty of mathematics and a renewed enthusiasm for exploring its myriad applications.',
   },
 ];
 
 // Function to update "Division Highlights" carousel
 function updateDivisionCarousel() {
   const divisionCarouselImages = document.getElementById('division-carousel-images');
+  const divisionCarouselTitle = document.getElementById('division-carousel-title');
   const divisionCarouselText = document.getElementById('division-carousel-text');
 
   let carouselHTML = '';
@@ -28,20 +32,24 @@ function updateDivisionCarousel() {
     carouselHTML += `
         <div class="carousel-item ${activeClass}">
             <img src="${item.src}" class="d-block w-100" alt="${item.alt}">
+            <!-- No need to add title in HTML as it will be dynamically updated -->
         </div>
         `;
   });
 
   divisionCarouselImages.innerHTML = carouselHTML;
 
+  // Set initial title and text
+  divisionCarouselTitle.innerHTML = divisionCarouselData[0].title;
+  divisionCarouselText.innerHTML = divisionCarouselData[0].text;
+
   const divisionCarousel = document.getElementById('divisionCarousel');
   divisionCarousel.addEventListener('slid.bs.carousel', function () {
     const activeItem = document.querySelector('#divisionCarousel .carousel-item.active');
     const activeIndex = Array.from(divisionCarouselImages.children).indexOf(activeItem);
-    divisionCarouselText.textContent = divisionCarouselData[activeIndex].text;
+    divisionCarouselTitle.innerHTML = divisionCarouselData[activeIndex].title; // Update title dynamically
+    divisionCarouselText.innerHTML = divisionCarouselData[activeIndex].text; // Update text dynamically
   });
-
-  divisionCarouselText.textContent = divisionCarouselData[0].text;
 }
 
 // Call the function to initially populate the "Division Highlights" carousel
