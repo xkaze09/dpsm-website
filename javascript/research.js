@@ -2,7 +2,6 @@
 
 // Generating the research cards
 function generateResearchCard(title, authors, affiliations, link, date, sectionId) {
-    
   const formattedDate = new Date(date);
 
   // Format the date as "Month day, Year"
@@ -26,7 +25,6 @@ function generateResearchCard(title, authors, affiliations, link, date, sectionI
 
 // Initialize the research cards
 function initializeResearchCards(sections) {
-
   sections.forEach((section) => {
     const container = document.getElementById(section.containerId);
     let visibleCards = 5; // Initial number of visible cards
@@ -70,7 +68,6 @@ function initializeResearchCards(sections) {
 
 // Toggle the state of the cards
 function toggleCards(container, containerId, visibleCards) {
-
   const showMoreBtn = container.querySelector('.toggle-indicator');
   showMoreBtn.classList.toggle('show-less');
 
@@ -83,7 +80,6 @@ function toggleCards(container, containerId, visibleCards) {
 
 // SHOW MORE CARDS
 function showMoreCards(containerId, visibleCards) {
-
   const container = document.getElementById(containerId);
 
   // Show the hidden cards
@@ -99,7 +95,6 @@ function showMoreCards(containerId, visibleCards) {
 
 // SHOW LESS CARDS
 function showLessCards(container, containerId, visibleCards) {
-
   // Hiding the excess cards
   const hiddenCards = container.querySelectorAll(
     `[data-section="${containerId}"]:nth-child(n + ${visibleCards + 1})`,
