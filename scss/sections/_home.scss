@@ -121,7 +121,7 @@
 }
 
 /* Media Queries */
-
+/*
 @media (max-width: 200px) {
     .logo-highlight {
         width: 1.8rem;
@@ -147,8 +147,10 @@
         column-gap: 0.2rem;
     }
 }
+*/
 
 /* smallest screens */
+/*
 @media (min-width: 200px) and (max-width: 400px) {
     .logo-highlight {
         width: 2.0rem;
@@ -174,9 +176,10 @@
         column-gap: 0.2rem;
     }
 }
-
+*/
 
 /* small screens */
+/*
 @media (min-width: 401px) and (max-width: 577px) {
     .logo-highlight {
         width: 2.2rem;
@@ -202,7 +205,10 @@
         column-gap: 0.3rem;
     }
 }
+*/
+
 // Medium devices (tablets, 768px and below)
+/*
 @media (min-width: 577px) and (max-width: 768px) { 
     .logo-highlight {
         width: 2.5rem;
@@ -228,9 +234,11 @@
         column-gap: 0.5rem;
     }
 }
+*/
 
 // Media Queries
 // Large devices (desktops, 992px and below)
+/*
 @media (min-width: 768px) and (max-width: 992px) {
     .logo-highlight {
         width: 2.5rem;
@@ -256,6 +264,7 @@
         column-gap: 0.5rem;
     }
 }
+*/
 
 /* Footer */
 .footer-with-image {
@@ -424,79 +433,14 @@
     }
   } 
 
-// @media (min-width: 200px) and (max-width: 400px) {
-//     /* Adjust font size and padding for smaller screens */
-//     .dpsm-logo-highlight {
-//         width: 2rem;
-//     }
+// Animation
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-//     .upper-division-name {
-//         font-size: 0.6rem;
-//         font-family: 'Oswald', 'Times New Roman', Times, serif;
-//     }
-
-//     .division-name {
-//         font-size: 0.8rem;
-//     }
-
-//     .division-navbar {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         column-gap: 0.5rem;
-//     }
-//   }
-
-// @media (min-width: 401px) and (max-width: 570px) {
-//     /* Adjust font size and padding for smaller screens */
-//     .dpsm-logo-highlight {
-//         width: 2rem;
-//     }
-
-//     .division-name {
-//         font-size: 0.8rem;
-//     }
-
-//     .division-navbar {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         column-gap: 0.5rem;
-//     }
-
-//   }
-  
-//   @media (min-width: 571px) and (max-width: 767px) {
-//     /* Adjust font size and padding for small screens */
-//     .dpsm-logo-highlight {
-//     }
-
-//     .division-navbar {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         column-gap: 0.5rem;
-//     }
-//   }
-  
-//   @media (min-width: 768px) and (max-width: 991px) {
-//     /* Adjust font size and padding for medium screens */
-//     .dpsm-logo-highlight {
-//     }
-//     .division-navbar {
-
-//     }
-
-//     .division-name {
-//     }
-//   }
-  
-//   @media (min-width: 992px) {
-//     /* Default styles for larger screens */
-//     .dpsm-logo-highlight {
-//     }
-//     .division-navbar {
-
-//     }
-//   }
-
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
