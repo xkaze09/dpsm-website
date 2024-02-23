@@ -107,8 +107,8 @@
 // Navbar text and hovers
 .nav-link, .bottom-nav-link{
   color: #f5f5f5;
-  font-family: 'Oswald', 'Times New Roman', Times, serif;
-  font-size: 1.3rem;
+  font-family: 'Open Sans', 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: transform 0.2s ease-in-out;
   display: flex;
@@ -135,7 +135,7 @@
 
 .nav-item.dropdown:hover .dropdown-menu .dropdown-item {
   color: black;
-  font-family: 'Oswald', 'Times New Roman', Times, serif;
+  font-family: 'Open Sans', 'Times New Roman', Times, serif;
   text-decoration: none;
   transition: transform 0.2s ease-in-out;
 }
