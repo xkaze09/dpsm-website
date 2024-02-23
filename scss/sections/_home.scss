@@ -18,6 +18,13 @@
     transform: scale(1.1);
 }
 
+.university-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .upper-division-name {
     font-family: 'Oswald', 'Times New Roman', Times, serif;
     color: white;
@@ -41,7 +48,6 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
-    text-align: center;
 }
 
 /* Show the division-navbar when needed */
@@ -121,7 +127,6 @@
 }
 
 /* Media Queries */
-/*
 @media (max-width: 200px) {
     .logo-highlight {
         width: 1.8rem;
@@ -132,25 +137,12 @@
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
 
-    .dpsm-logo-highlight {
-        width: 1.8rem;
-    }
-
-    .division-name {
-        font-size: 0.4rem;
-    }
-
     .division-navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 0.2rem;
+
     }
 }
-*/
 
 /* smallest screens */
-/*
 @media (min-width: 200px) and (max-width: 400px) {
     .logo-highlight {
         width: 2.0rem;
@@ -161,25 +153,13 @@
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
 
-    .dpsm-logo-highlight {
-        width: 2.0rem;
-    }
-
-    .division-name {
-        font-size: 0.6rem;
-    }
-
     .division-navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 0.2rem;
+
     }
 }
-*/
+
 
 /* small screens */
-/*
 @media (min-width: 401px) and (max-width: 577px) {
     .logo-highlight {
         width: 2.2rem;
@@ -190,49 +170,27 @@
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
 
-    .dpsm-logo-highlight {
-        width: 2.2rem;
-    }
-
-    .division-name {
-        font-size: 0.7rem;
-    }
-
     .division-navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 0.3rem;
+
     }
 }
-*/
 
 // Medium devices (tablets, 768px and below)
-// @media (min-width: 577px) and (max-width: 768px) { 
-//     .logo-highlight {
-//         width: 2.5rem;
-//     }
+@media (min-width: 577px) and (max-width: 768px) { 
+    .logo-highlight {
+        width: 2.5rem;
+    }
 
-//     .upper-division-name {
-//         font-size: 0.8rem;
-//         font-family: 'Oswald', 'Times New Roman', Times, serif;
-//     }
+    .upper-division-name {
+        font-size: 0.8rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
 
-//     .dpsm-logo-highlight {
-//         width: 2.5rem;
-//     }
 
-//     .division-name {
-//         font-size: 0.8rem;
-//     }
+    .division-navbar {
 
-//     .division-navbar {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         column-gap: 0.5rem;
-//     }
-// } 
+    }
+} 
 
 // Media Queries
 // Large devices (desktops, 992px and below)
@@ -250,18 +208,6 @@
 
     .dpsm-logo-highlight {
         width: 2.5rem;
-    }
-
-    .division-name {
-        font-size: 1rem;
-        text-wrap: balance;
-    }
-
-    .division-navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 0.5rem;
     }
 }
 
