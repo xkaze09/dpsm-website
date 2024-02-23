@@ -17,6 +17,30 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', toggleNavbarVisibility);
 });
 
+  // Function to update the division name based on screen width
+  function updateDivisionName() {
+    // Select the element containing the division name
+    const divisionNameElements = document.querySelectorAll('.division-name');
+
+    // Check if the screen width is 992px or less
+    if (window.innerWidth <= 992) {
+      // Update the text to 'DPSM' for each matching element
+      divisionNameElements.forEach(element => {
+        element.textContent = 'DPSM';
+      });
+    } else {
+      // Update the text back to the full name when the screen is wider than 992px
+      divisionNameElements.forEach(element => {
+        element.textContent = 'DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS';
+      });
+    }
+  }
+
+  // Listen for window resize events
+  window.addEventListener('resize', updateDivisionName);
+
+  // Call the function on script load to check the initial screen width
+  document.addEventListener('DOMContentLoaded', updateDivisionName);
 
 // Animation
 document.addEventListener("DOMContentLoaded", function() {
@@ -35,3 +59,4 @@ document.addEventListener("DOMContentLoaded", function() {
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach((el) => observer.observe(el));
 });
+
