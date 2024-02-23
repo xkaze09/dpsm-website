@@ -12018,12 +12018,24 @@ textarea.form-control-lg {
     font-family: "Oswald", "Times New Roman", Times, serif;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .logo-highlight {
-    width: 2.5rem;
+/* Applies to screens smaller than 992px */
+@media (max-width: 992px) {
+  .university-navbar, .division-navbar {
+    justify-content: space-between !important; /* Override any existing justify-content settings */
   }
-  .upper-division-name {
-    font-family: "Oswald", "Times New Roman", Times, serif;
+  /* Additional styles to ensure the navbar collapses properly and looks good on smaller screens */
+  .navbar-brand.menu {
+    flex-grow: 1; /* Allow the brand to grow and push the navigation to the end */
+    justify-content: flex-end; /* Align brand items to the start */
+  }
+  .navbar-collapse {
+    flex-basis: 100%; /* Ensure the navbar-collapse takes the full width of its parent on small screens */
+    flex-grow: 1;
+    justify-content: flex-end; /* Align nav items to the end */
+  }
+  .navbar-nav {
+    justify-content: center; /* Center navbar items for better visual alignment */
+    width: 100%; /* Full width to better accommodate the items */
   }
 }
 /* Footer */
