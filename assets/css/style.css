@@ -11975,113 +11975,143 @@ textarea.form-control-lg {
 }
 
 /* Media Queries */
+/*
 @media (max-width: 200px) {
-  .logo-highlight {
-    width: 1.8rem;
-  }
-  .upper-division-name {
-    font-size: 0.4rem;
-    font-family: "Oswald", "Times New Roman", Times, serif;
-  }
-  .dpsm-logo-highlight {
-    width: 1.8rem;
-  }
-  .division-name {
-    font-size: 0.4rem;
-  }
-  .division-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.2rem;
-  }
+    .logo-highlight {
+        width: 1.8rem;
+    }
+
+    .upper-division-name {
+        font-size: 0.4rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .dpsm-logo-highlight {
+        width: 1.8rem;
+    }
+
+    .division-name {
+        font-size: 0.4rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.2rem;
+    }
 }
+*/
 /* smallest screens */
+/*
 @media (min-width: 200px) and (max-width: 400px) {
-  .logo-highlight {
-    width: 2rem;
-  }
-  .upper-division-name {
-    font-size: 0.6rem;
-    font-family: "Oswald", "Times New Roman", Times, serif;
-  }
-  .dpsm-logo-highlight {
-    width: 2rem;
-  }
-  .division-name {
-    font-size: 0.6rem;
-  }
-  .division-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.2rem;
-  }
+    .logo-highlight {
+        width: 2.0rem;
+    }
+
+    .upper-division-name {
+        font-size: 0.6rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .dpsm-logo-highlight {
+        width: 2.0rem;
+    }
+
+    .division-name {
+        font-size: 0.6rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.2rem;
+    }
 }
+*/
 /* small screens */
+/*
 @media (min-width: 401px) and (max-width: 577px) {
-  .logo-highlight {
-    width: 2.2rem;
-  }
-  .upper-division-name {
-    font-size: 0.7rem;
-    font-family: "Oswald", "Times New Roman", Times, serif;
-  }
-  .dpsm-logo-highlight {
-    width: 2.2rem;
-  }
-  .division-name {
-    font-size: 0.7rem;
-  }
-  .division-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.3rem;
-  }
+    .logo-highlight {
+        width: 2.2rem;
+    }
+
+    .upper-division-name {
+        font-size: 0.7rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .dpsm-logo-highlight {
+        width: 2.2rem;
+    }
+
+    .division-name {
+        font-size: 0.7rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.3rem;
+    }
 }
-@media (min-width: 577px) and (max-width: 768px) {
-  .logo-highlight {
-    width: 2.5rem;
-  }
-  .upper-division-name {
-    font-size: 0.8rem;
-    font-family: "Oswald", "Times New Roman", Times, serif;
-  }
-  .dpsm-logo-highlight {
-    width: 2.5rem;
-  }
-  .division-name {
-    font-size: 0.8rem;
-  }
-  .division-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.5rem;
-  }
+*/
+/*
+@media (min-width: 577px) and (max-width: 768px) { 
+    .logo-highlight {
+        width: 2.5rem;
+    }
+
+    .upper-division-name {
+        font-size: 0.8rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .dpsm-logo-highlight {
+        width: 2.5rem;
+    }
+
+    .division-name {
+        font-size: 0.8rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
 }
+*/
+/*
 @media (min-width: 768px) and (max-width: 992px) {
-  .logo-highlight {
-    width: 2.5rem;
-  }
-  .upper-division-name {
-    font-size: 1rem;
-    font-family: "Oswald", "Times New Roman", Times, serif;
-  }
-  .dpsm-logo-highlight {
-    width: 2.5rem;
-  }
-  .division-name {
-    font-size: 1rem;
-  }
-  .division-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.5rem;
-  }
+    .logo-highlight {
+        width: 2.5rem;
+    }
+
+    .upper-division-name {
+        font-size: 1rem;
+        font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .dpsm-logo-highlight {
+        width: 2.5rem;
+    }
+
+    .division-name {
+        font-size: 1rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
 }
+*/
 /* Footer */
 .footer-with-image {
   background-size: contain; /* Maintain aspect ratio and cover entire section */
@@ -12229,6 +12259,17 @@ textarea.form-control-lg {
     background-size: cover; /* Maintain aspect ratio and cover entire section */
   }
 }
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .comsci-hero-section {
   position: relative;
   height: 50vh;
@@ -12473,7 +12514,7 @@ div.card.card-body {
 .about-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/group_computer-science_faculty.jpg");
+  background-image: url("/images/about/BLDNG.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12512,7 +12553,7 @@ div.card.card-body {
 .mission-section {
   position: relative; /* Add position relative */
   height: 80vh;
-  background-image: url("/images/mission.jpg");
+  background-image: url("/images/about/CAS.JPG");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12541,7 +12582,7 @@ div.card.card-body {
 .vision-section {
   position: relative; /* Add position relative */
   height: 80vh;
-  background-image: url("/images/vision.jpg");
+  background-image: url("/images/about/BASEMENT.JPG");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12920,13 +12961,28 @@ html {
 .news-master-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/vision.jpg");
+  background-image: url("/images/mission.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 1; /* Lower z-index */
+}
+
+.news-master-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
+}
+
+.news-master-caption {
+  position: relative; /* Add position relative */
+  z-index: 2; /* Higher z-index */
 }
 
 .smaller-image {
