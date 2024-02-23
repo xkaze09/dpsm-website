@@ -11980,6 +11980,21 @@ textarea.form-control-lg {
   min-height: 100vh;
 }
 
+.upper-division-name {
+  font-family: "Oswald", "Times New Roman", Times, serif;
+  overflow-wrap: break-word; /* Allows long words to be broken and wrap to the next line */
+  word-break: break-word; /* Use this if you also want to ensure breakage between words */
+}
+
+/* Adjusting the navbar brand container to ensure it handles wrapping correctly */
+.university-navbar, .division-navbar {
+  display: flex;
+  flex-wrap: wrap; /* This allows the content within the navbar to wrap */
+  justify-content: center; /* Keeps items centered */
+  align-items: center; /* Aligns items vertically in the center */
+  gap: 0.5rem; /* Provides some spacing between items */
+}
+
 /* Media Queries */
 @media (max-width: 200px) {
   .logo-highlight {
@@ -11987,7 +12002,6 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: wrap;
   }
 }
 /* smallest screens */
@@ -11997,7 +12011,6 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: wrap;
   }
 }
 /* small screens */
@@ -12007,7 +12020,6 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: wrap;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
@@ -12016,7 +12028,6 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: wrap;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -12025,7 +12036,6 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: wrap;
   }
 }
 /* Footer */
