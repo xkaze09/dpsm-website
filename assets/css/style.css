@@ -12060,7 +12060,7 @@ textarea.form-control-lg {
     font-family: "Oswald", "Times New Roman", Times, serif;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
   }

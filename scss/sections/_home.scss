@@ -184,65 +184,37 @@
 
 /* Media Queries */
 @media (max-width: 200px) {
-    .logo-highlight {
-    }
-
     .upper-division-name {
         font-family: 'Oswald', 'Times New Roman', Times, serif;
-    }
-
-    .division-navbar {
-
     }
 }
 
 /* smallest screens */
 @media (min-width: 200px) and (max-width: 400px) {
-    .logo-highlight {
-    }
-
     .upper-division-name {
         font-family: 'Oswald', 'Times New Roman', Times, serif;
-    }
-
-    .division-navbar {
-
     }
 }
 
 
 /* small screens */
 @media (min-width: 401px) and (max-width: 577px) {
-    .logo-highlight {
-    }
-
     .upper-division-name {
         font-family: 'Oswald', 'Times New Roman', Times, serif;
-    }
-
-    .division-navbar {
-
     }
 }
 
 // Medium devices (tablets, 768px and below)
 @media (min-width: 577px) and (max-width: 768px) { 
-    .logo-highlight {
-    }
-
     .upper-division-name {
         font-family: 'Oswald', 'Times New Roman', Times, serif;
-    }
-
-    .division-navbar {
-
     }
 } 
 
 // Media Queries
 // Large devices (desktops, 992px and below)
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
     .upper-division-name {
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
