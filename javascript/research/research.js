@@ -10,9 +10,21 @@ function formatDate(date) {
   // Format date
   if (date.end) {
     const endDate = new Date(date.end);
-    return `${startDate.toLocaleDateString('en-US', options)} - ${endDate.toLocaleDateString('en-US', options)}`;
+    if (startDate.getMonth() === endDate.getMonth() && startDate.getFullYear() === endDate.getFullYear()) {
+      // If start and end dates are in the same month and year, format as "Month Year"
+      return `${startDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}`;
+    } else {
+      // "Start Month Year - End Month Year"
+      return `${startDate.toLocaleDateString('en-US', options)} - ${endDate.toLocaleDateString('en-US', options)}`;
+    }
   } else {
-    return startDate.toLocaleDateString('en-US', options);
+    if (startDate.getDate() !== 1) {
+      // "Month Year"
+      return `${startDate.toLocaleDateString('en-US', options)}`;
+    } else {
+      // "Year"
+      return `${startDate.toLocaleDateString('en-US', { year: 'numeric' })}`;
+    }
   }
 }
 
@@ -42,8 +54,8 @@ function generateResearchCard(title, authors, link, dates, sectionId) {
     <div class="card research-card" data-section="${sectionId}">
         <div class="p-4 card-body border-bottom border-3 border-warning">
             ${titleHTML}
-            <p class="card-text lead mt-4 fw-medium">${authors}</p>
-            <p class="card-text">Dates: ${formattedDates}</p>
+            <p class="card-text mt-4 fw-medium">${authors}</p>
+            <p class="card-text">Date: ${formattedDates}</p>
             ${accessLinkHTML}
         </div>    
     </div>
@@ -52,6 +64,7 @@ function generateResearchCard(title, authors, link, dates, sectionId) {
 
 // Initialize the research cards
 function initializeResearchCards(sections) {
+
   sections.forEach((section) => {
     const container = document.getElementById(section.containerId);
     let visibleCards = 5; // Initial number of visible cards
@@ -63,14 +76,14 @@ function initializeResearchCards(sections) {
           item.authors,
           item.link,
           item.dates || item.date,
-          item.containerId, // Use item.containerId instead of section.containerId
+          section.containerId,
         );
         container.innerHTML += cardHTML;
 
         // Hide cards if already more than the initial number of visible cards
         if (index >= visibleCards) {
           const card = container.querySelector(
-            `[data-section="${item.containerId}"]:last-child`, // Use item.containerId
+            `[data-section="${section.containerId}"]:last-child`, // Use item.containerId
           );
           card.style.display = 'none';
         }
@@ -78,10 +91,12 @@ function initializeResearchCards(sections) {
 
       // Show More Button
       if (section.items.length > visibleCards) {
+
         const showMoreBtn = document.createElement('button');
         showMoreBtn.textContent = 'Show More';
         showMoreBtn.classList.add('btn', 'btn-primary', 'mt-3', 'rounded-5', 'toggle-indicator');
         showMoreBtn.style.float = 'right';
+        
         showMoreBtn.addEventListener('click', () =>
           toggleCards(container, section.containerId, visibleCards),
         );
@@ -95,6 +110,7 @@ function initializeResearchCards(sections) {
 
 // Toggle the state of the cards
 function toggleCards(container, containerId, visibleCards) {
+
   const showMoreBtn = container.querySelector('.toggle-indicator');
   showMoreBtn.classList.toggle('show-less');
 
@@ -107,6 +123,7 @@ function toggleCards(container, containerId, visibleCards) {
 
 // SHOW MORE CARDS
 function showMoreCards(containerId, visibleCards) {
+
   const container = document.getElementById(containerId);
 
   // Show the hidden cards
@@ -122,6 +139,7 @@ function showMoreCards(containerId, visibleCards) {
 
 // SHOW LESS CARDS
 function showLessCards(container, containerId, visibleCards) {
+  
   // Hiding the excess cards
   const hiddenCards = container.querySelectorAll(
     `[data-section="${containerId}"]:nth-child(n + ${visibleCards + 1})`,

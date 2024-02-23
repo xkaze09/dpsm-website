@@ -21,11 +21,101 @@
             ]
           },
           {
-            "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
-            "authors": "M. Olivares",
-            "link": "https://example.com",
+            "title": "Stability Analysis in Covid-19 Within-Host Model With Immune Response, The 4th Academic Activity of Silkroad Mathematics Center International Conference on Dynamical Systems, Second Session (Online)",
+            "authors": "A. Almocera",
             "dates": [
-                { "start": "2022-11-17", "end": "2022-11-18" }
+                { "start": "2020-03-12", "end": "2020-03-13" }
+            ]
+          },
+          {
+            "title": "A TV^q Model for Image Segmentation, 2016 Mathematical Society of the Philippines Convention",
+            "authors": "M. Sy Piecco",
+            "dates": [
+                { "start": "2016-05-30", "end": "2016-05-31" }
+            ]
+          },
+          {
+            "title": "Learners’ Reactions Towards an Online Discussion Forum in a Web-based Learning Management System",
+            "authors": "M. Chavez",
+            "dates": [
+                { "start": "2016-10" }
+            ]
+          },
+          {
+            "title": "Parameter Estimation Using the Firefly Algorithm for Biochemical Networks Modeled in the S-system Formalism",
+            "authors": "R. Cajayon",
+            "dates": [
+                { "start": "2015-05-18", "end": "2015-05-19" }
+            ]
+          },
+          {
+            "title": "Modeling Extreme Events in Finance and Insurance, 2009 MSP 1st Regional Mathematical Convention",
+            "authors": "F.J. Catinan",
+            "dates": [
+                { "start": "2009-02-26", "end": "2009-02-27" }
+            ]
+          },
+          {
+            "title": "Estimating Quantile Risk Measures Using Extreme Value Theory in Finance and Insurance, 5th Asian Mathematical Conference",
+            "authors": "F.J. Catinan",
+            "dates": [
+                { "start": "2009-06-22", "end": "2009-06-26" }
+            ]
+          },
+          {
+            "title": "Mathematical Analysis of a Single Strain HIV Model",
+            "authors": "Faina, L.K.M.",
+            "dates": [
+                { "start": "2009-02-26", "end": "2009-02-27" }
+            ]
+          },
+          {
+            "title": "On the Gibbs Constant and Steepness of the Some Padé-Type Approximants, 2008 Annual Convention of the Mathematical Society of the Philippines, U.P. Diliman",
+            "authors": "Tampos, A.L., & Lope, J.E.C.",
+            "dates": [
+                { "start": "2008-05-23", "end": "2008-05-24" }
+            ]
+          },
+          {
+            "title": "Modeling Extreme Events in Finance and Insurance, 2008 MSP Annual Convention, UP Diliman",
+            "authors": "F.J. Catinan",
+            "dates": [
+                { "start": "2008-05-23", "end": "2008-05-24" }
+            ]
+          },
+          {
+            "title": "Reconstruction of Functions Using Padé-Chebyshev Approximation and Its Variants, 2007 Annual Convention of the Mathematical Society of the Philippines",
+            "authors": "Tampos, A.L., Bargo, M.C., & Lope, J.E.C.",
+            "dates": [
+                { "start": "2007-05-18", "end": "2007-05-19" }
+            ]
+          },
+          {
+            "title": "Bifurcation Analysis of a Three-Dimensional Single Strain HIV Model, MSP Annual Convention",
+            "authors": "Faina, L.K.M.",
+            "dates": [
+                { "start": "2007-05-18", "end": "2007-05-19" }
+            ]
+          },
+          {
+            "title": "Qualitative Analysis of a Three-Dimensional, Single-Strain HIV Model, International Conference on Spectral Analysis in Geometry and Number Theory",
+            "authors": "Faina, L.K.M.",
+            "dates": [
+                { "start": "2007-08-06", "end": "2007-08-10" }
+            ]
+          },
+          {
+            "title": "Stability Analysis of A Single HIV Strain Model, Mathematical Society of the Philippines (MSP) Annual Convention",
+            "authors": "Faina, L.K.M.",
+            "dates": [
+                { "start": "2006-05-27", "end": "2006-05-28" }
+            ]
+          },
+          {
+            "title": "CAS Lecture Series: An Application of the Poisson Summation Formula to Numerical Integration",
+            "authors": "Braga, E. T.",
+            "dates": [
+                { "start": "2003" }
             ]
           }
         ]
@@ -34,13 +124,19 @@
         "containerId": "researchSection2",
         "items": [
             {
-                "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
-                "authors": "M. Olivares",
-                "link": "https://example.com",
+                "title": "Modeling the viral infectious disease from infection to epidemic",
+                "authors": "Society for Mathematical Biology virtual Annual Meeting (eSMB2020)",
                 "dates": [
-                    { "start": "2022-11-17", "end": "2022-11-18" }
+                    { "start": "2020-08-17", "end": "2020-08-20" }
                 ]
-              }
+            },
+            {
+              "title": "A Dynamic Model of Regularly Scheduled Repayment in Microlending",
+              "authors": "M. Chavez",
+              "dates": [
+                  { "start": "2010-05" }
+              ]
+            }
         ]
       },
       {
@@ -49,11 +145,165 @@
             {
                 "title": "BUGANA: Fishing Community Cultural Notexts for High School Mathematics, Kasingkasing Press, Iloilo City",
                 "authors": "Sayco, G. C., Gadong, E. S., Gemaol, S. M., Sayco, G. B., Braga, E. T. , Barrios, J.",
-                "link": "https://example.com",
                 "dates": [
                     { "start": "2022-11" }
                 ]
-              }
+            },
+            {
+                "title": "Stability Analysis in Covid-19 Within-Host Model With Immune Response. Communications in Nonlinear Science and Numerical Simulation. Volume 95. Article 105584",
+                "authors": "Almocera A, Quiroz G, Hernandez-Vargas E.",
+                "dates": [
+                    { "start": "2021" }
+                ]
+            },
+            {
+                "title": "Stress Redistribution of a Circular Membrane With a Hole Based on the Mooney-Rivlin Material Model. Philippine Journal of Natural Sciences. 26: 1-7",
+                "authors": "Olivares M and David G",
+                "dates": [
+                    { "start": "2021" }
+                ]
+            },
+            {
+                "title": "Modelling exchange-driven fish price dynamics",
+                "authors": "Rui Xiang, Colin Jones, Rogemar Mamon and Marierose Chavez",
+                "link": "https://www.emerald.com/insight/content/doi/10.1108/JM2-04-2020-0101/full/html",
+                "dates": [
+                    { "start": "2020" }
+                ]
+            },
+            {
+                "title": "Comparison of Two Nature-inspired Algorithms for Parameter Estimation of S-system Models",
+                "authors": "Cajayon R, Lucilo J, Pilar-Arceo C, Mendoza E",
+                "dates": [
+                    { "start": "2020" }
+                ]
+            },
+            {
+              "title": "Coupling multiscale within-host dynamics and between-host transmission with recovery (SIR) dynamics",
+              "authors": "Almocera, A and Hernandez-Vargas",
+              "dates": [
+                  { "start": "2019" }
+              ]
+            },
+            {
+              "title": "A regularized nonconvex model for image segmentation. In: 18th Philippine Computing Science Congress",
+              "authors": "Sy Piecco M, Neri M.",
+              "dates": [
+                  { "start": "2018-03-15", "end":"2018-03-17" }
+              ]
+            },
+            {
+              "title": "A TV^q model for segmenting noisy images. Philippine Journal of Natural Sciences",
+              "authors": "Sy Piecco M, Neri M.",
+              "dates": [
+                  { "start": "2018" }
+              ]
+            },
+            {
+              "title": "Parameter estimation in S-System Models using Firefly Algorithm with Decoupling Method",
+              "authors": "Cajayon R, Pilar-Arceo C, Mendoza E.",
+              "dates": [
+                  { "start": "2018" }
+              ]
+            },
+            {
+              "title": "Procastination and Sense of Community: Patterns and Relationship in a Blended Learning Environment",
+              "authors": "Gadong, E.S. and Chavez, M.",
+              "dates": [
+                  { "start": "2016" }
+              ]
+            },
+            {
+              "title": "Enhanced Padé-Chebyshev Approximants for Gibbs Resolution",
+              "authors": "Tampos, A. L. & Lope, J. E. C.",
+              "dates": [
+                  { "start": "2016-04-20", "end": "2016-04-22" }
+              ]
+            },
+            {
+              "title": "On the Bifurcations and Multiple Endemic States of a single strain HIV Model, Acta Mathematicae Applicatae Sinica (English Series)",
+              "authors": "Faina, L.K.M., Sy, P.W., Almocera",
+              "dates": [
+                  { "start": "2014-10" }
+              ]
+            },
+            {
+              "title": "Accurate Reconstruction of Discontinuous Functions Using the Singular Padé-Chebyshev Method",
+              "authors": "Tampos, A. L., Lope, J. E. C., & Hesthaven, J.S.",
+              "dates": [
+                  { "start": "2012" }
+              ]
+            },
+            {
+              "title": "Singularity-Based Approach in a PadéChebyshev Resolution of the Gibbs Phenomenon",
+              "authors": "Tampos, A. L., Lope, J. E. C., & Hesthaven, J.S.",
+              "dates": [
+                  { "start": "2012" }
+              ]
+            },
+            {
+              "title": "Dynamic Models of One-time Payment and Regularly Scheduled Repayment Schemes in Microlending",
+              "authors": "Chavez, M., Sy, P. and Escaner, J.M.IV.",
+              "dates": [
+                  { "start": "2011" }
+              ]
+            },
+            {
+              "title": "Parameter Estimation in a Smart Beam Structure Using Genetic Algorithm",
+              "authors": "Libo-on, J.",
+              "dates": [
+                  { "start": "2010" }
+              ]
+            },
+            {
+              "title": "Calculating Quantile Risk Measures Using Extreme Value Theory",
+              "authors": "Catinan, F.J., & Escaner, J.M.",
+              "dates": [
+                  { "start": "2010" }
+              ]
+            },
+            {
+              "title": "Padé-Chebyshev Reconstruction of Functions with Jump Discontinuities",
+              "authors": "Tampos, A. L., & Lope, J. E. C.",
+              "dates": [
+                  { "start": "2009" }
+              ]
+            },
+            {
+              "title": "Estimating Quantile Risk Measures Using Extreme Value Theory in Finance and Insurance",
+              "authors": "Catinan, F.J., & Escaner, J.M.",
+              "dates": [
+                  { "start": "2009" }
+              ]
+            },
+            {
+              "title": "Local Stability Analysis of a Three-Dimensional, Single-Strain HIV Model",
+              "authors": "Faina, L.K.M., Sy, P.W., Almocera, L.S.",
+              "dates": [
+                  { "start": "2009" }
+              ]
+            },
+            {
+              "title": "Heuristic Methods for Parameter Estimation in a Smart Beam. Structure. Lecture Notes in Enginnering and Computer Science",
+              "authors": "Libo-on, J.",
+              "dates": [
+                  { "start": "2008" }
+              ]
+            },
+            {
+              "title": "Overcoming Gibbs Phenomenon in Padé-Chebyshev Approximation",
+              "authors": "Tampos, A. L., & Lope J. E. C.",
+              "dates": [
+                  { "start": "2007" }
+              ]
+            },
+            {
+              "title": "An Application of the Poisson Summation Formula to Numerical Integration, UPV Journal of Natural Sciences",
+              "authors": "Braga, E. T.",
+              "dates": [
+                  { "start": "2006" }
+              ]
+            }
         ]
       },
       {
