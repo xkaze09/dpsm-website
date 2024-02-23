@@ -133,8 +133,8 @@
     }
 
     .upper-division-name {
-        font-size: 0.4rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
+        text-wrap: balance;
     }
 
     .division-navbar {
@@ -149,8 +149,8 @@
     }
 
     .upper-division-name {
-        font-size: 0.6rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
+        text-wrap: balance;
     }
 
     .division-navbar {
@@ -166,8 +166,8 @@
     }
 
     .upper-division-name {
-        font-size: 0.7rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
+        text-wrap: balance;
     }
 
     .division-navbar {
@@ -182,8 +182,8 @@
     }
 
     .upper-division-name {
-        font-size: 0.8rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
+        text-wrap: balance;
     }
 
 
@@ -195,19 +195,14 @@
 // Media Queries
 // Large devices (desktops, 992px and below)
 
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
     .logo-highlight {
         width: 2.5rem;
     }
 
     .upper-division-name {
-        font-size: 1rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
         text-wrap: balance;
-    }
-
-    .dpsm-logo-highlight {
-        width: 2.5rem;
     }
 }
 
