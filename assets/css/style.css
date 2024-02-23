@@ -11887,14 +11887,14 @@ textarea.form-control-lg {
   font-family: "Oswald", "Times New Roman", Times, serif;
   color: white;
   text-decoration: none;
-  text-wrap: balance;
+  text-wrap: wrap;
 }
 
 .division-name {
   font-family: "Oswald", "Times New Roman", Times, serif;
   text-decoration: none;
   color: rgb(251, 133, 0);
-  text-wrap: balance;
+  text-wrap: wrap;
 }
 
 .text-link {
@@ -11987,7 +11987,7 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: balance;
+    text-wrap: wrap;
   }
 }
 /* smallest screens */
@@ -11997,7 +11997,7 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: balance;
+    text-wrap: wrap;
   }
 }
 /* small screens */
@@ -12007,7 +12007,7 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: balance;
+    text-wrap: wrap;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
@@ -12016,7 +12016,7 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: balance;
+    text-wrap: wrap;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -12025,7 +12025,7 @@ textarea.form-control-lg {
   }
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
-    text-wrap: balance;
+    text-wrap: wrap;
   }
 }
 /* Footer */
