@@ -11960,6 +11960,48 @@ textarea.form-control-lg {
     transform: scale(1.5);
   }
 }
+.nav-link, .bottom-nav-link {
+  color: #f5f5f5;
+  font-family: "Oswald", "Times New Roman", Times, serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-nav-link {
+  color: black !important;
+}
+
+.bottom-nav-link:hover {
+  transform: scale(1.1);
+  color: rgb(251, 133, 0) !important;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: rgb(251, 133, 0);
+}
+
+.dropdown-toggle:hover {
+  transform: scale(1.1);
+  color: rgb(251, 133, 0);
+}
+
+.nav-item.dropdown:hover .dropdown-menu .dropdown-item {
+  color: black;
+  font-family: "Oswald", "Times New Roman", Times, serif;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-item.dropdown:hover .dropdown-menu .dropdown-item:hover {
+  transform: scale(1.1);
+  color: rgb(251, 133, 0);
+}
+
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }
