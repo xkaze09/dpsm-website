@@ -145,7 +145,6 @@
 /* Media Queries */
 @media (max-width: 200px) {
     .logo-highlight {
-        width: 1.8rem;
     }
 
     .upper-division-name {
@@ -160,7 +159,6 @@
 /* smallest screens */
 @media (min-width: 200px) and (max-width: 400px) {
     .logo-highlight {
-        width: 2.0rem;
     }
 
     .upper-division-name {
@@ -176,7 +174,6 @@
 /* small screens */
 @media (min-width: 401px) and (max-width: 577px) {
     .logo-highlight {
-        width: 2.2rem;
     }
 
     .upper-division-name {
@@ -191,7 +188,6 @@
 // Medium devices (tablets, 768px and below)
 @media (min-width: 577px) and (max-width: 768px) { 
     .logo-highlight {
-        width: 2.5rem;
     }
 
     .upper-division-name {
