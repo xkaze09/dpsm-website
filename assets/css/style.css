@@ -12083,35 +12083,29 @@ textarea.form-control-lg {
         align-items: center;
         column-gap: 0.5rem;
     }
-}
+} 
 */
-/*
-@media (min-width: 768px) and (max-width: 992px) {
-    .logo-highlight {
-        width: 2.5rem;
-    }
-
-    .upper-division-name {
-        font-size: 1rem;
-        font-family: 'Oswald', 'Times New Roman', Times, serif;
-    }
-
-    .dpsm-logo-highlight {
-        width: 2.5rem;
-    }
-
-    .division-name {
-        font-size: 1rem;
-    }
-
-    .division-navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 0.5rem;
-    }
+@media (max-width: 992px) {
+  .logo-highlight {
+    width: 2.5rem;
+  }
+  .upper-division-name {
+    font-size: 1rem;
+    font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .dpsm-logo-highlight {
+    width: 2.5rem;
+  }
+  .division-name {
+    font-size: 1rem;
+  }
+  .division-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
 }
-*/
 /* Footer */
 .footer-with-image {
   background-size: contain; /* Maintain aspect ratio and cover entire section */
