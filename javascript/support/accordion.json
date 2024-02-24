@@ -1,0 +1,55 @@
+{
+    "accordionSections": [
+      {
+        "containerId": "accordionSection1",
+        "items": [
+          {
+            "title": "The Office of Student Affairs and UPV Teaching and Learning Resource Center",
+            "content": "<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "UPV Guidance and Counseling Services Unit",
+            "content": "<strong>This is the second item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "UPV Health Services Unit",
+            "content": "<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "UPV Software Subscriptions",
+            "content": "<strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "UP Visayas University Library",
+            "content": "<strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "Computerized Registration and Student Information System",
+            "content": "<strong>This is the sixth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "UPV Learning Management System III",
+            "content": "<strong>This is the seventh item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          }
+        ]
+      },
+      {
+        "containerId": "accordionSection2",
+        "items": [
+          {
+            "title": "Title 1",
+            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "Title 2",
+            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "Title ",
+            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          }
+        ]
+      }
+    ]
+  }
+  

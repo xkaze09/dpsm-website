@@ -1,5 +1,15 @@
 // accordion.js
 
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('/javascript/support/accordion.json')
+    .then(response => response.json())
+    .then(data => {
+      initializeAccordion(data.accordionSections);
+    })
+    .catch(error => console.error('Error fetching accordion data:', error));
+});
+  // Call initializeAccordion function
+  initializeAccordion(data.accordionSections);
 // Initialize the accordion sections
 function initializeAccordion(sections) {
   sections.forEach((section, sectionIndex) => {
