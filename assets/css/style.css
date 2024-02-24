@@ -11891,7 +11891,14 @@ textarea.form-control-lg {
 }
 
 .text-link {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
   text-decoration: none;
+}
+.text-link:hover {
+  transform: translateX(-5px);
+  text-decoration: none;
+  color: rgb(251, 133, 0);
 }
 
 /* Hide the division-navbar by default */
