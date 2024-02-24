@@ -446,13 +446,36 @@ a {
   font-family: 'Open Sans', 'Times New Roman', Times, serif;
   font-size: 1.5em;
   line-height: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
-.welcome-message cite {
-  font-size: 1.5em;
-  font-weight: 700;
+
+.welcome-message .cursor {
+  display: inline-block;
+  background-color: $accent_two;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite step-end; /* Define the animation with 'step-end' to simulate the cursor blink */
+}
+
+.welcome-message .typed-text {
+  display: inline;
+  font-weight: normal;
+  color: #dd7732;
+}
+
+/* Define the blinking cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cited-name {
+  font-size: 2em;
+  font-weight: 400;
   color: $accent_two;
-  float: right;
-  text-align: end;
+  font-style: italic;
 }
 .welcome-message cite:before {
   content: '\2015'' ';
@@ -471,7 +494,7 @@ a {
 .welcome-message:after {
   content: '\201d';
   position: absolute;
-  top: 2.5em;
+  top: 3em;
   right: -0.45em;
   font-size: 4em;
   font-style: italic;
