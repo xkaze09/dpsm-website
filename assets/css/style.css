@@ -12135,7 +12135,7 @@ a {
   text-decoration: none;
 }
 .footer-link:hover {
-  transform: translateY(-5px);
+  transform: translateX(5px);
   text-decoration: none;
   color: rgb(251, 133, 0);
 }

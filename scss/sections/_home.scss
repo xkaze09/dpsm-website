@@ -296,7 +296,7 @@ a {
     text-decoration: none;
   
     &:hover {
-      transform: translateY(-5px);
+      transform: translateX(5px);
       text-decoration: none;
       color: $accent_two;
     }
