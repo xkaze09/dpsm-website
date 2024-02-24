@@ -1,0 +1,55 @@
+{
+    "accordionSections": [
+      {
+        "containerId": "accordionSection1",
+        "items": [
+          {
+            "title": "The Office of Student Affairs and UPV Teaching and Learning Resource Center",
+            "content": "The Office of Student Affairs (OSA) and TLRC (UPV Teaching and Learning Resource Center Website) provides necessary student support services like summer bridge, tutorials, photocopying, printing, audio-visual room use, and borrowing of books, movies, computers, and game pieces."
+          },
+          {
+            "title": "UPV Guidance and Counseling Services Unit",
+            "content": "<strong>This is the second item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "UPV Health Services Unit",
+            "content": "<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "UPV Software Subscriptions",
+            "content": "The Office of Student Affairs (OSA) and <a href='https://tlrc.upv.edu.ph' target='_blank'>TLRC (UPV Teaching and Learning Resource Center Website)</a> provides necessary student support services like summer bridge, tutorials, photocopying, printing, audio-visual room use, and borrowing of books, movies, computers, and game pieces."
+        },
+          {
+            "title": "UP Visayas University Library",
+            "content": "<strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "Computerized Registration and Student Information System",
+            "content": "<strong>This is the sixth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "UPV Learning Management System III",
+            "content": "<strong>This is the seventh item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          }
+        ]
+      },
+      {
+        "containerId": "accordionSection2",
+        "items": [
+          {
+            "title": "Title 1",
+            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "Title 2",
+            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          },
+          {
+            "title": "Title ",
+            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+          }
+        ]
+      }
+    ]
+  }
+  

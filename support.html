@@ -130,6 +130,8 @@
     <!-- End of Division Navbar -->
       <!-- Hero Section -->
       <div class="support-hero-section">
+        <div class="support-hero-overlay"></div>
+        <!-- Overlay Element Added -->
         <div class="container">
           <div class="row">
             <div class="col-md-8 mx-auto">
@@ -149,6 +151,16 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
+                  <p class="lead mb-4 display-6 section-title fw-bold text-center">
+                    Welcome to the Division of Physical Sciences & Mathematics at UP Visayas! 
+                  </p>
+                  <p class="lead mb-4 section-subtitle fw-normal text-justify">
+                    This page is designed to assist students, faculty, alumni, and visitors by providing comprehensive access to our wide range of academic and support services. Whether you're seeking academic advice, research opportunities, or career guidance, we have curated a collection of resources to ensure your success and engagement within our community. Explore our offerings to find the support you need to excel in your academic journey and beyond.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
                   <div
                     class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start"
                   >
@@ -156,19 +168,6 @@
                       Academic and Career Advising Services
                     </p>
                   </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <p class="lead mb-4 fw-normal text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac luctus orci.
-                    Suspendisse ullamcorper purus ligula, id rutrum lorem congue vel. Curabitur
-                    malesuada ipsum sagittis velit vehicula dignissim. Donec sagittis ligula at
-                    tempor pellentesque. Donec vehicula dui at lacinia ullamcorper. Interdum et
-                    malesuada fames ac ante ipsum primis in faucibus. Etiam et commodo libero.
-                    Praesent luctus auctor justo, sit amet accumsan nunc feugiat quis. Mauris mattis
-                    nunc vel elit posuere, a auctor nunc pulvinar. Integer in eleifend ligula.
-                  </p>
                 </div>
               </div>
 
@@ -482,74 +481,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="javascript/navbar.js"></script>
-
-    <script src="javascript/accordion.js"></script>
-    <script>
-      // Accordion Section Data
-      const accordionSections = [
-        {
-          containerId: "accordionSection1",
-          items: [
-            {
-              title: "The Office of Student Affairs and UPV Teaching and Learning Resource Center",
-              content:
-                " <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-            {
-              title: "UPV Guidance and Counseling Services Unit",
-              content:
-                "<strong>This is the second item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-            {
-              title: "UPV Health Services Unit",
-              content:
-                "<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-            {
-              title: "UPV Software Subscriptions",
-              content:
-                "<strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-            {
-              title: "UP Visayas University Library",
-              content:
-                "<strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-            {
-              title: "Computerized Registration and Student Information System",
-              content:
-                "<strong>This is the sixth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-            {
-              title: "UPV Learning Management System III",
-              content:
-                "<strong>This is the seventh item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-          ],
-        },
-        {
-          containerId: "accordionSection2",
-          items: [
-            {
-              title: "Title 1",
-              content:
-                "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-            {
-              title: "Title 2",
-              content:
-                "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-            {
-              title: "Title ",
-              content:
-                "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
-            },
-          ],
-        },
-      ];
-      // Call initializeAccordion function
-      initializeAccordion(accordionSections);
-    </script>
+    <script src="javascript/support/accordion.js"></script>
   </body>
 </html>
