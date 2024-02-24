@@ -40,7 +40,15 @@
 }
 
 .text-link {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateX(-5px);
     text-decoration: none;
+    color: $accent_two;
+  }
 }
 
 /* Hide the division-navbar by default */
