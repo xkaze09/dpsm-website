@@ -11868,6 +11868,10 @@ textarea.form-control-lg {
   text-align: justify;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo-highlight {
   transition: transform 0.2s ease-in-out;
 }
