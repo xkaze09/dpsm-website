@@ -429,22 +429,32 @@
   line-height: 1.5em;
 }
 .zitat1 cite {
-  line-height: 5em;
   font-size: 1.5em;
   font-weight: 700;
   color: $accent_two;
   float: right;
+  text-align: end;
 }
 .zitat1 cite:before {
   content: '\2015'' ';
 }
 
-.zitat1:after {
+.zitat1:before {
   content: '\201d';
   position: absolute;
   top: 0.10em;
-  left: -0.60em;
-  font-size: 6em;
+  left: -0.75em;
+  font-size: 4em;
+  font-style: italic;
+  color: $accent_two;
+  z-index: -1;
+}
+.zitat1:after {
+  content: '\201d';
+  position: absolute;
+  top: 2.5em;
+  right: -0.45em;
+  font-size: 4em;
   font-style: italic;
   color: $accent_two;
   z-index: -1;

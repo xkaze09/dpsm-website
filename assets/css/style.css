@@ -12250,23 +12250,34 @@ textarea.form-control-lg {
 }
 
 .zitat1 cite {
-  line-height: 5em;
   font-size: 1.5em;
   font-weight: 700;
   color: rgb(251, 133, 0);
   float: right;
+  text-align: end;
 }
 
 .zitat1 cite:before {
   content: "―" " ";
 }
 
-.zitat1:after {
+.zitat1:before {
   content: "”";
   position: absolute;
   top: 0.1em;
-  left: -0.6em;
-  font-size: 6em;
+  left: -0.75em;
+  font-size: 4em;
+  font-style: italic;
+  color: rgb(251, 133, 0);
+  z-index: -1;
+}
+
+.zitat1:after {
+  content: "”";
+  position: absolute;
+  top: 2.5em;
+  right: -0.45em;
+  font-size: 4em;
   font-style: italic;
   color: rgb(251, 133, 0);
   z-index: -1;
