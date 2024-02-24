@@ -45,7 +45,7 @@
   text-decoration: none;
 
   &:hover {
-    transform: translateX(-5px);
+    transform: translateY(-5px);
     text-decoration: none;
     color: $accent_two;
   }
@@ -420,4 +420,32 @@
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.zitat1 {
+  position: relative;
+  font-family: 'Open Sans', 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.zitat1 cite {
+  line-height: 5em;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: $accent_two;
+  float: right;
+}
+.zitat1 cite:before {
+  content: '\2015'' ';
+}
+
+.zitat1:after {
+  content: '\201d';
+  position: absolute;
+  top: 0.10em;
+  left: -0.60em;
+  font-size: 6em;
+  font-style: italic;
+  color: $accent_two;
+  z-index: -1;
 }

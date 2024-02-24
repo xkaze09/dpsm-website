@@ -11903,7 +11903,7 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 .text-link:hover {
-  transform: translateX(-5px);
+  transform: translateY(-5px);
   text-decoration: none;
   color: rgb(251, 133, 0);
 }
@@ -12240,6 +12240,36 @@ textarea.form-control-lg {
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.zitat1 {
+  position: relative;
+  font-family: "Open Sans", "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.zitat1 cite {
+  line-height: 5em;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgb(251, 133, 0);
+  float: right;
+}
+
+.zitat1 cite:before {
+  content: "―" " ";
+}
+
+.zitat1:after {
+  content: "”";
+  position: absolute;
+  top: 0.1em;
+  left: -0.6em;
+  font-size: 6em;
+  font-style: italic;
+  color: rgb(251, 133, 0);
+  z-index: -1;
 }
 
 .comsci-hero-section {
