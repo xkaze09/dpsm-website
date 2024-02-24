@@ -5,25 +5,29 @@ import data from './researchData.json' assert { type: 'json' };
 // Function to format date or date range
 function formatDate(date) {
   const startDate = new Date(date.start);
-  const options = { year: 'numeric', month: 'long' };
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
   // Format date
   if (date.end) {
     const endDate = new Date(date.end);
-    if (startDate.getMonth() === endDate.getMonth() && startDate.getFullYear() === endDate.getFullYear()) {
-      // If start and end dates are in the same month and year, format as "Month Year"
-      return `${startDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}`;
+    if (startDate.getTime() === endDate.getTime()) {
+      // If start and end dates represent the same date, format as "Month Day, Year"
+      return `${startDate.toLocaleDateString('en-US', options)}`;
     } else {
-      // "Start Month Year - End Month Year"
+      // "Start Month Day, Year - End Month Day, Year"
       return `${startDate.toLocaleDateString('en-US', options)} - ${endDate.toLocaleDateString('en-US', options)}`;
     }
   } else {
-    if (startDate.getDate() !== 1) {
-      // "Month Year"
-      return `${startDate.toLocaleDateString('en-US', options)}`;
-    } else {
+    // Check if only the year is given
+    if (date.start.length === 4) {
       // "Year"
       return `${startDate.toLocaleDateString('en-US', { year: 'numeric' })}`;
+    } else if (date.start.length === 7) {
+      // "Month Year"
+      return `${startDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}`;
+    } else {
+      // "Month Day, Year"
+      return `${startDate.toLocaleDateString('en-US', options)}`;
     }
   }
 }
