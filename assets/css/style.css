@@ -12258,14 +12258,14 @@ a {
   transform: translateY(0);
 }
 
-.zitat1 {
+.welcome-message {
   position: relative;
   font-family: "Open Sans", "Times New Roman", Times, serif;
   font-size: 1.5em;
   line-height: 1.5em;
 }
 
-.zitat1 cite {
+.welcome-message cite {
   font-size: 1.5em;
   font-weight: 700;
   color: rgb(251, 133, 0);
@@ -12273,11 +12273,11 @@ a {
   text-align: end;
 }
 
-.zitat1 cite:before {
+.welcome-message cite:before {
   content: "―" " ";
 }
 
-.zitat1:before {
+.welcome-message:before {
   content: "”";
   position: absolute;
   top: 0.1em;
@@ -12288,7 +12288,7 @@ a {
   z-index: -1;
 }
 
-.zitat1:after {
+.welcome-message:after {
   content: "”";
   position: absolute;
   top: 2.5em;

@@ -441,24 +441,24 @@ a {
   transform: translateY(0);
 }
 
-.zitat1 {
+.welcome-message {
   position: relative;
   font-family: 'Open Sans', 'Times New Roman', Times, serif;
   font-size: 1.5em;
   line-height: 1.5em;
 }
-.zitat1 cite {
+.welcome-message cite {
   font-size: 1.5em;
   font-weight: 700;
   color: $accent_two;
   float: right;
   text-align: end;
 }
-.zitat1 cite:before {
+.welcome-message cite:before {
   content: '\2015'' ';
 }
 
-.zitat1:before {
+.welcome-message:before {
   content: '\201d';
   position: absolute;
   top: 0.10em;
@@ -468,7 +468,7 @@ a {
   color: $accent_two;
   z-index: -1;
 }
-.zitat1:after {
+.welcome-message:after {
   content: '\201d';
   position: absolute;
   top: 2.5em;
@@ -478,3 +478,5 @@ a {
   color: $accent_two;
   z-index: -1;
 }
+
+// Typing
