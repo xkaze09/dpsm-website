@@ -127,58 +127,79 @@
       </div>
     </nav>
     <!-- End of Division Navbar -->
-    <!-- Hero Section -->
-    <div id="heroCarousel" class="carousel slide pb-md-5" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./images/homepage-hero-test.jpg" class="d-block w-100 h-auto" alt="Slide 1" />
-          <div class="carousel-caption">
-            <!-- <h1>Hero 1</h1> -->
+    
+    
+    
+    <div class="header">
+      
+      <!--Content before waves-->
+      <!-- Hero Section -->
+      <div id="heroCarousel" class="carousel slide pb-md-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/carousel/carousel-1.png" class="d-block w-100 h-auto" alt="Slide 1" />
+            <div class="carousel-caption">
+              <!-- <h1>Hero 1</h1> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/carousel/carousel-2.png" class="d-block w-100 h-auto" alt="Slide 1" />
+            <div class="carousel-caption">
+              <!-- <h1>Hero 1</h1> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/carousel/carousel-3.png" class="d-block w-100 h-auto" alt="Slide 2" />
+            <div class="carousel-caption">
+              <!-- <h1>Hero 2</h1> -->
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="./images/1.jpg" class="d-block w-100 h-auto" alt="Slide 1" />
-          <div class="carousel-caption">
-            <!-- <h1>Hero 1</h1> -->
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="./images/2.jpg" class="d-block w-100 h-auto" alt="Slide 2" />
-          <div class="carousel-caption">
-            <!-- <h1>Hero 2</h1> -->
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="./images/3.jpg" class="d-block w-100 h-auto" alt="Slide 3" />
-          <div class="carousel-caption">
-            <!-- <h1>Hero 3</h1> -->
-          </div>
-        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- End of Hero Section -->
-
-   
+      <!-- End of Hero Section -->
+  <div class="inner-header flex">
+  <!--Just the logo.. Don't mind this-->
+  </div>
+  
+  <!--Waves Container-->
+  <div>
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+  </g>
+  </svg>
+  </div>
+  <!--Waves end-->
+  
+  </div>
+  <!--Header ends-->
     <!-- Intro Section -->
-    <div class="px-4 pt-5 p-md-5 my-5 text-start intro-section hidden">
+    <div class="px-4 pt-5 p-md-5 my-5 text-start intro-section">
       <div class="container">
         <h1 class="display-2 fw-bold text-center pb-5 section-title">
           WELCOME TO THE DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS!
@@ -186,7 +207,7 @@
         <div class="row">
           <div class="col-lg-12">
             <p class="lead mb-4 fw-normal text-justify">
-              <blockquote class="welcome-message text-justify d-flex justify-content-start">
+              <blockquote class="welcome-message m-sm-5 text-justify d-flex justify-content-start">
                 DPSM is home to the dedicated mathematics, statistics, computer science, and physics faculty members and students of the College of Arts and Sciences. It is an academic unit that comprises four interrelated disciplines and offers undergraduate degree programs to students interested in pursuing careers in applied mathematics, computer science, and statistics. Our faculty’s diverse expertise provides up-to-date and relevant training that can broaden as well as deepen the students’ knowledge and understanding of their chosen disciplines, sharpen their computational and analytical skills and competencies, and enrich their research capability. 
                 <div class="pt-md-5">
                   So, if any of these four disciplines is your cup of tea, join and <span class="typed-text"></span><span class="cursor">&nbsp;</span> with us!
@@ -226,7 +247,7 @@
     </div>
     <!-- End of Intro Section -->
     <!-- Division Highlights -->
-    <div class="container-fluid mt-md-5 mb-md-5 hidden">
+    <div class="container-fluid mt-md-5 mb-md-5">
       <div class="row position-relative overflow-hidden p-3 m-md-3 bg-secondary-subtle">
         <div class="col-md-7 my-auto p-lg-5">
           <h1 class="section-title lead mb-4 display-5 fw-bold">—Division Highlights</h1>
@@ -266,7 +287,7 @@
     </div>
     <!-- End of Division Highlights -->
     <!-- Course Showcase -->
-    <div class="container px-4 py-5 hidden">
+    <div class="container px-4 py-5">
       <h2 class="display-2 pb-2 border-bottom text-center fw-bold section-title">
         Courses Offered
       </h2>
