@@ -18,25 +18,18 @@
     transform: scale(1.1);
 }
 
-.university-navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .upper-division-name {
     font-family: 'Oswald', 'Times New Roman', Times, serif;
     color: white;
     text-decoration: none;
-    text-wrap: wrap;
+    text-wrap: balance;
 }
 
 .division-name {
     font-family: 'Oswald', 'Times New Roman', Times, serif;
     text-decoration: none;
     color: $accent_two;
-    text-wrap: wrap;
+    text-wrap: balance;
 }
 
 .text-link {
@@ -48,6 +41,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
+    text-align: center;
 }
 
 /* Show the division-navbar when needed */
@@ -104,46 +98,6 @@
   }
 }
 
-// Navbar text and hovers
-.nav-link, .bottom-nav-link{
-  color: #f5f5f5;
-  font-family: 'Open Sans', 'Times New Roman', Times, serif;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: transform 0.2s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottom-nav-link {
-  color: black !important;
-}
-.bottom-nav-link:hover {
-  transform: scale(1.1);
-  color: $accent_two !important;
-}
-.nav-link:hover {
-  transform: scale(1.1);
-  color: $accent_two;
-}
-
-.dropdown-toggle:hover {
-  transform: scale(1.1);
-  color: $accent_two;
-}
-
-.nav-item.dropdown:hover .dropdown-menu .dropdown-item {
-  color: black;
-  font-family: 'Open Sans', 'Times New Roman', Times, serif;
-  text-decoration: none;
-  transition: transform 0.2s ease-in-out;
-}
-
-.nav-item.dropdown:hover .dropdown-menu .dropdown-item:hover {
-  transform: scale(1.1);
-  color: $accent_two;
-}
 
 // Dropdown
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
@@ -166,74 +120,151 @@
     min-height: 100vh;
 }
 
-// Wrapping
-.upper-division-name {
-  font-family: 'Oswald', 'Times New Roman', Times, serif;
-  overflow-wrap: break-word;
-  word-break: break-word; 
-}
-
-/* Adjusting the navbar brand container to ensure it handles wrapping correctly */
-.university-navbar, .division-navbar {
-  display: flex;
-  flex-wrap: wrap; /* This allows the content within the navbar to wrap */
-  justify-content: center; /* Keeps items centered */
-  align-items: center; /* Aligns items vertically in the center */
-  gap: 0.5rem; /* Provides some spacing between items */
-}
-
 /* Media Queries */
+/*
 @media (max-width: 200px) {
+    .logo-highlight {
+        width: 1.8rem;
+    }
+
     .upper-division-name {
+        font-size: 0.4rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
+
+    .dpsm-logo-highlight {
+        width: 1.8rem;
+    }
+
+    .division-name {
+        font-size: 0.4rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.2rem;
+    }
 }
+*/
 
 /* smallest screens */
+/*
 @media (min-width: 200px) and (max-width: 400px) {
+    .logo-highlight {
+        width: 2.0rem;
+    }
+
     .upper-division-name {
+        font-size: 0.6rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
-}
 
+    .dpsm-logo-highlight {
+        width: 2.0rem;
+    }
+
+    .division-name {
+        font-size: 0.6rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.2rem;
+    }
+}
+*/
 
 /* small screens */
+/*
 @media (min-width: 401px) and (max-width: 577px) {
+    .logo-highlight {
+        width: 2.2rem;
+    }
+
     .upper-division-name {
+        font-size: 0.7rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .dpsm-logo-highlight {
+        width: 2.2rem;
+    }
+
+    .division-name {
+        font-size: 0.7rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.3rem;
     }
 }
+*/
 
 // Medium devices (tablets, 768px and below)
+/*
 @media (min-width: 577px) and (max-width: 768px) { 
+    .logo-highlight {
+        width: 2.5rem;
+    }
+
     .upper-division-name {
+        font-size: 0.8rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
-} 
+
+    .dpsm-logo-highlight {
+        width: 2.5rem;
+    }
+
+    .division-name {
+        font-size: 0.8rem;
+    }
+
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+}
+*/
 
 // Media Queries
 // Large devices (desktops, 992px and below)
+/*
+@media (min-width: 768px) and (max-width: 992px) {
+    .logo-highlight {
+        width: 2.5rem;
+    }
 
-@media (max-width: 992px) {
     .upper-division-name {
+        font-size: 1rem;
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
 
-    .container.university-navbar, .container.division-navbar {
-      justify-content: space-between !important; /* Override any previous justify-content settings */
-  }
+    .dpsm-logo-highlight {
+        width: 2.5rem;
+    }
 
-  .navbar-collapse {
-      flex-basis: 100%; /* Ensure the navbar collapse takes full width if needed */
-      flex-grow: 1;
-  }
+    .division-name {
+        font-size: 1rem;
+    }
 
-  /* Additional adjustments for navbar toggler visibility and positioning */
-  .navbar-toggler {
-      display: block; /* Ensure toggler is visible */
-      margin-left: auto; /* Align toggler to the right */
-  }
+    .division-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
 }
+*/
 
 /* Footer */
 .footer-with-image {
