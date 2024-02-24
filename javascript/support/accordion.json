@@ -5,7 +5,7 @@
         "items": [
           {
             "title": "The Office of Student Affairs and UPV Teaching and Learning Resource Center",
-            "content": "<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+            "content": "The Office of Student Affairs (OSA) and TLRC (UPV Teaching and Learning Resource Center Website) provides necessary student support services like summer bridge, tutorials, photocopying, printing, audio-visual room use, and borrowing of books, movies, computers, and game pieces."
           },
           {
             "title": "UPV Guidance and Counseling Services Unit",
@@ -17,8 +17,8 @@
           },
           {
             "title": "UPV Software Subscriptions",
-            "content": "<strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
-          },
+            "content": "The Office of Student Affairs (OSA) and <a href='https://tlrc.upv.edu.ph' target='_blank'>TLRC (UPV Teaching and Learning Resource Center Website)</a> provides necessary student support services like summer bridge, tutorials, photocopying, printing, audio-visual room use, and borrowing of books, movies, computers, and game pieces."
+        },
           {
             "title": "UP Visayas University Library",
             "content": "<strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."

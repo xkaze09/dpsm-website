@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error fetching accordion data:', error));
 });
-  // Call initializeAccordion function
-  initializeAccordion(data.accordionSections);
+
 // Initialize the accordion sections
 function initializeAccordion(sections) {
   sections.forEach((section, sectionIndex) => {
@@ -23,7 +22,7 @@ function initializeAccordion(sections) {
           index,
           item.title,
           item.content,
-          section.containerId,
+          section.containerId
         );
       });
     }
@@ -31,24 +30,25 @@ function initializeAccordion(sections) {
 }
 
 // Creating the accordion item HTML
-
 function createAccordionItem(sectionIndex, index, title, content, containerId) {
   // To assign a unique index for each accordion item
   const itemIndex = `${sectionIndex}-${index}`;
 
   // Generating the accordion item HTML
   const itemHTML = `
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading${itemIndex}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${itemIndex}" aria-expanded="false" aria-controls="flush-collapse${itemIndex}">
-                    ${title}
-                </button>
-            </h2>
-            <div id="flush-collapse${itemIndex}" class="accordion-collapse collapse" aria-labelledby="flush-heading${itemIndex}" data-bs-parent="#${containerId}">
-                <div class="accordion-body">${content}</div>
-            </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-heading${itemIndex}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${itemIndex}" aria-expanded="false" aria-controls="flush-collapse${itemIndex}">
+          ${title}
+        </button>
+      </h2>
+      <div id="flush-collapse${itemIndex}" class="accordion-collapse collapse" aria-labelledby="flush-heading${itemIndex}" data-bs-parent="#${containerId}">
+        <div class="accordion-body">
+          ${content}
         </div>
-    `;
+      </div>
+    </div>
+  `;
 
   // Return the generated HTML
   return itemHTML;
