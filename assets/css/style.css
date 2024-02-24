@@ -11969,6 +11969,7 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .bottom-nav-link {
