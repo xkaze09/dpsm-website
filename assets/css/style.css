@@ -12128,6 +12128,18 @@ a {
   text-align: center;
 }
 
+.footer-link {
+  display: inline-block;
+  color: #f5f5f5;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+.footer-link:hover {
+  transform: translateY(-5px);
+  text-decoration: none;
+  color: rgb(251, 133, 0);
+}
+
 /* Media Queries */
 @media (max-width: 540px) {
   .footer-with-image {
