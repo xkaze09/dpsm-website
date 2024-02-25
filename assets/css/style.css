@@ -12521,7 +12521,7 @@ a {
 .appmath-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/homepage-hero.png");
+  background-image: url("/images/carousel/carousel-1.png");
   background-size: cover;
   background-position: center;
   display: flex;
