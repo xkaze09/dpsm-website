@@ -1,324 +1,531 @@
 
 {
-    "SECTIONS": [
-      {
-        "containerId": "researchSection1",
-        "items": [
-          {
-            "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
-            "authors": "M. Olivares",
-            "link": "https://example.com",
-            "dates": [
-                { "start": "2022-11-17", "end": "2022-11-18" }
-            ]
-          },
-          {
-            "title": "Stress Redistribution in a Circular Mooney-Rivlin Membrane, Composed of Two CircularRegions with a Circular Hole, Subjected to Stretching at the Boundary",
-            "authors": "M. Olivares",
-            "dates": [
-                {"start": "2022-12-02"},
-                {"start": "2022-12-09"}
-            ]
-          },
-          {
-            "title": "Stability Analysis in Covid-19 Within-Host Model With Immune Response, The 4th Academic Activity of Silkroad Mathematics Center International Conference on Dynamical Systems, Second Session (Online)",
-            "authors": "A. Almocera",
-            "dates": [
-                { "start": "2020-03-12", "end": "2020-03-13" }
-            ]
-          },
-          {
-            "title": "A TV^q Model for Image Segmentation, 2016 Mathematical Society of the Philippines Convention",
-            "authors": "M. Sy Piecco",
-            "dates": [
-                { "start": "2016-05-30", "end": "2016-05-31" }
-            ]
-          },
-          {
-            "title": "Learners’ Reactions Towards an Online Discussion Forum in a Web-based Learning Management System",
-            "authors": "M. Chavez",
-            "dates": [
-                { "start": "2016-10" }
-            ]
-          },
-          {
-            "title": "Parameter Estimation Using the Firefly Algorithm for Biochemical Networks Modeled in the S-system Formalism",
-            "authors": "R. Cajayon",
-            "dates": [
-                { "start": "2015-05-18", "end": "2015-05-19" }
-            ]
-          },
-          {
-            "title": "Modeling Extreme Events in Finance and Insurance, 2009 MSP 1st Regional Mathematical Convention",
-            "authors": "F.J. Catinan",
-            "dates": [
-                { "start": "2009-02-26", "end": "2009-02-27" }
-            ]
-          },
-          {
-            "title": "Estimating Quantile Risk Measures Using Extreme Value Theory in Finance and Insurance, 5th Asian Mathematical Conference",
-            "authors": "F.J. Catinan",
-            "dates": [
-                { "start": "2009-06-22", "end": "2009-06-26" }
-            ]
-          },
-          {
-            "title": "Mathematical Analysis of a Single Strain HIV Model",
-            "authors": "Faina, L.K.M.",
-            "dates": [
-                { "start": "2009-02-26", "end": "2009-02-27" }
-            ]
-          },
-          {
-            "title": "On the Gibbs Constant and Steepness of the Some Padé-Type Approximants, 2008 Annual Convention of the Mathematical Society of the Philippines, U.P. Diliman",
-            "authors": "Tampos, A.L., & Lope, J.E.C.",
-            "dates": [
-                { "start": "2008-05-23", "end": "2008-05-24" }
-            ]
-          },
-          {
-            "title": "Modeling Extreme Events in Finance and Insurance, 2008 MSP Annual Convention, UP Diliman",
-            "authors": "F.J. Catinan",
-            "dates": [
-                { "start": "2008-05-23", "end": "2008-05-24" }
-            ]
-          },
-          {
-            "title": "Reconstruction of Functions Using Padé-Chebyshev Approximation and Its Variants, 2007 Annual Convention of the Mathematical Society of the Philippines",
-            "authors": "Tampos, A.L., Bargo, M.C., & Lope, J.E.C.",
-            "dates": [
-                { "start": "2007-05-18", "end": "2007-05-19" }
-            ]
-          },
-          {
-            "title": "Bifurcation Analysis of a Three-Dimensional Single Strain HIV Model, MSP Annual Convention",
-            "authors": "Faina, L.K.M.",
-            "dates": [
-                { "start": "2007-05-18", "end": "2007-05-19" }
-            ]
-          },
-          {
-            "title": "Qualitative Analysis of a Three-Dimensional, Single-Strain HIV Model, International Conference on Spectral Analysis in Geometry and Number Theory",
-            "authors": "Faina, L.K.M.",
-            "dates": [
-                { "start": "2007-08-06", "end": "2007-08-10" }
-            ]
-          },
-          {
-            "title": "Stability Analysis of A Single HIV Strain Model, Mathematical Society of the Philippines (MSP) Annual Convention",
-            "authors": "Faina, L.K.M.",
-            "dates": [
-                { "start": "2006-05-27", "end": "2006-05-28" }
-            ]
-          },
-          {
-            "title": "CAS Lecture Series: An Application of the Poisson Summation Formula to Numerical Integration",
-            "authors": "Braga, E. T.",
-            "dates": [
-                { "start": "2003" }
-            ]
-          }
-        ]
-      },
-      {
-        "containerId": "researchSection2",
-        "items": [
-            {
-                "title": "Modeling the viral infectious disease from infection to epidemic",
-                "authors": "Society for Mathematical Biology virtual Annual Meeting (eSMB2020)",
-                "dates": [
-                    { "start": "2020-08-17", "end": "2020-08-20" }
-                ]
-            },
-            {
-              "title": "A Dynamic Model of Regularly Scheduled Repayment in Microlending",
-              "authors": "M. Chavez",
-              "dates": [
-                  { "start": "2010-05" }
-              ]
-            }
-        ]
-      },
-      {
-        "containerId": "researchSection3",
-        "items": [
-            {
-                "title": "BUGANA: Fishing Community Cultural Notexts for High School Mathematics, Kasingkasing Press, Iloilo City",
-                "authors": "Sayco, G. C., Gadong, E. S., Gemaol, S. M., Sayco, G. B., Braga, E. T. , Barrios, J.",
-                "dates": [
-                    { "start": "2022-11" }
-                ]
-            },
-            {
-                "title": "Stability Analysis in Covid-19 Within-Host Model With Immune Response. Communications in Nonlinear Science and Numerical Simulation. Volume 95. Article 105584",
-                "authors": "Almocera A, Quiroz G, Hernandez-Vargas E.",
-                "dates": [
-                    { "start": "2021" }
-                ]
-            },
-            {
-                "title": "Stress Redistribution of a Circular Membrane With a Hole Based on the Mooney-Rivlin Material Model. Philippine Journal of Natural Sciences. 26: 1-7",
-                "authors": "Olivares M and David G",
-                "dates": [
-                    { "start": "2021" }
-                ]
-            },
-            {
-                "title": "Modelling exchange-driven fish price dynamics",
-                "authors": "Rui Xiang, Colin Jones, Rogemar Mamon and Marierose Chavez",
-                "link": "https://www.emerald.com/insight/content/doi/10.1108/JM2-04-2020-0101/full/html",
-                "dates": [
-                    { "start": "2020" }
-                ]
-            },
-            {
-                "title": "Comparison of Two Nature-inspired Algorithms for Parameter Estimation of S-system Models",
-                "authors": "Cajayon R, Lucilo J, Pilar-Arceo C, Mendoza E",
-                "dates": [
-                    { "start": "2020" }
-                ]
-            },
-            {
-              "title": "Coupling multiscale within-host dynamics and between-host transmission with recovery (SIR) dynamics",
-              "authors": "Almocera, A and Hernandez-Vargas",
-              "dates": [
-                  { "start": "2019" }
-              ]
-            },
-            {
-              "title": "A regularized nonconvex model for image segmentation. In: 18th Philippine Computing Science Congress",
-              "authors": "Sy Piecco M, Neri M.",
-              "dates": [
-                  { "start": "2018-03-15", "end":"2018-03-17" }
-              ]
-            },
-            {
-              "title": "A TV^q model for segmenting noisy images. Philippine Journal of Natural Sciences",
-              "authors": "Sy Piecco M, Neri M.",
-              "dates": [
-                  { "start": "2018" }
-              ]
-            },
-            {
-              "title": "Parameter estimation in S-System Models using Firefly Algorithm with Decoupling Method",
-              "authors": "Cajayon R, Pilar-Arceo C, Mendoza E.",
-              "dates": [
-                  { "start": "2018" }
-              ]
-            },
-            {
-              "title": "Procastination and Sense of Community: Patterns and Relationship in a Blended Learning Environment",
-              "authors": "Gadong, E.S. and Chavez, M.",
-              "dates": [
-                  { "start": "2016" }
-              ]
-            },
-            {
-              "title": "Enhanced Padé-Chebyshev Approximants for Gibbs Resolution",
-              "authors": "Tampos, A. L. & Lope, J. E. C.",
-              "dates": [
-                  { "start": "2016-04-20", "end": "2016-04-22" }
-              ]
-            },
-            {
-              "title": "On the Bifurcations and Multiple Endemic States of a single strain HIV Model, Acta Mathematicae Applicatae Sinica (English Series)",
-              "authors": "Faina, L.K.M., Sy, P.W., Almocera",
-              "dates": [
-                  { "start": "2014-10" }
-              ]
-            },
-            {
-              "title": "Accurate Reconstruction of Discontinuous Functions Using the Singular Padé-Chebyshev Method",
-              "authors": "Tampos, A. L., Lope, J. E. C., & Hesthaven, J.S.",
-              "dates": [
-                  { "start": "2012" }
-              ]
-            },
-            {
-              "title": "Singularity-Based Approach in a PadéChebyshev Resolution of the Gibbs Phenomenon",
-              "authors": "Tampos, A. L., Lope, J. E. C., & Hesthaven, J.S.",
-              "dates": [
-                  { "start": "2012" }
-              ]
-            },
-            {
-              "title": "Dynamic Models of One-time Payment and Regularly Scheduled Repayment Schemes in Microlending",
-              "authors": "Chavez, M., Sy, P. and Escaner, J.M.IV.",
-              "dates": [
-                  { "start": "2011" }
-              ]
-            },
-            {
-              "title": "Parameter Estimation in a Smart Beam Structure Using Genetic Algorithm",
-              "authors": "Libo-on, J.",
-              "dates": [
-                  { "start": "2010" }
-              ]
-            },
-            {
-              "title": "Calculating Quantile Risk Measures Using Extreme Value Theory",
-              "authors": "Catinan, F.J., & Escaner, J.M.",
-              "dates": [
-                  { "start": "2010" }
-              ]
-            },
-            {
-              "title": "Padé-Chebyshev Reconstruction of Functions with Jump Discontinuities",
-              "authors": "Tampos, A. L., & Lope, J. E. C.",
-              "dates": [
-                  { "start": "2009" }
-              ]
-            },
-            {
-              "title": "Estimating Quantile Risk Measures Using Extreme Value Theory in Finance and Insurance",
-              "authors": "Catinan, F.J., & Escaner, J.M.",
-              "dates": [
-                  { "start": "2009" }
-              ]
-            },
-            {
-              "title": "Local Stability Analysis of a Three-Dimensional, Single-Strain HIV Model",
-              "authors": "Faina, L.K.M., Sy, P.W., Almocera, L.S.",
-              "dates": [
-                  { "start": "2009" }
-              ]
-            },
-            {
-              "title": "Heuristic Methods for Parameter Estimation in a Smart Beam. Structure. Lecture Notes in Enginnering and Computer Science",
-              "authors": "Libo-on, J.",
-              "dates": [
-                  { "start": "2008" }
-              ]
-            },
-            {
-              "title": "Overcoming Gibbs Phenomenon in Padé-Chebyshev Approximation",
-              "authors": "Tampos, A. L., & Lope J. E. C.",
-              "dates": [
-                  { "start": "2007" }
-              ]
-            },
-            {
-              "title": "An Application of the Poisson Summation Formula to Numerical Integration, UPV Journal of Natural Sciences",
-              "authors": "Braga, E. T.",
-              "dates": [
-                  { "start": "2006" }
-              ]
-            }
-        ]
-      },
-      {
-        "containerId": "researchSection4",
-        "items": [
-            {
-                "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
-                "authors": "M. Olivares",
-                "link": "https://example.com",
-                "dates": [
-                    { "start": "2022-11-17", "end": "2022-11-18" }
-                ]
-              }
-        ]
-      }
-    ]
-  }
-  
+  "SECTIONS": [
+    {
+      "containerId": "researchSection1",
+      "items": [
+        {
+          "title": "Stress-Strain Distribution of a Thin Circular Mooney-Rivlin Membrane with Hole, Composed of Two Annuli, Subjected to External Radial Force, 2nd International Conference on Arts and Sciences",
+          "authors": "M. Olivares",
+          "link": "https://example.com",
+          "dates": [{ "start": "2022-11-17", "end": "2022-11-18" }]
+        },
+        {
+          "title": "Stress Redistribution in a Circular Mooney-Rivlin Membrane, Composed of Two CircularRegions with a Circular Hole, Subjected to Stretching at the Boundary",
+          "authors": "M. Olivares",
+          "dates": [{ "start": "2022-12-02", "end": "2022-12-09" }]
+        },
+        {
+          "title": "Stability Analysis in Covid-19 Within-Host Model With Immune Response, The 4th Academic Activity of Silkroad Mathematics Center International Conference on Dynamical Systems, Second Session (Online)",
+          "authors": "A. Almocera",
+          "dates": [{ "start": "2020-03-12", "end": "2020-03-13" }]
+        },
+        {
+          "title": "A TV^q Model for Image Segmentation, 2016 Mathematical Society of the Philippines Convention",
+          "authors": "M. Sy Piecco",
+          "dates": [{ "start": "2016-05-30", "end": "2016-05-31" }]
+        },
+        {
+          "title": "Learners’ Reactions Towards an Online Discussion Forum in a Web-based Learning Management System",
+          "authors": "M. Chavez",
+          "dates": [{ "start": "2016-10" }]
+        },
+        {
+          "title": "COViT-GAN: Vision Transformer ForCOVID-19 Detection in CT Scan Images with Self-Attention GAN For Data Augmentation.",
+          "authors": "Ambita, Ara Abigail E., et al.",
+          "dates": [{ "start": "2021" }],
+          "link": "https://doi.org/10.1007/978-3-030-86340-1_47"
+        },
+        {
+          "title": "Prosodic Characterisation of Children’s Filipino Read Speech for Oral Reading Fluency Assessment.",
+          "authors": "Dimzon, Francis D., and Ronald M. Pascual.",
+          "dates": [{ "start": "2023" }],
+          "link": "https://doi.org/10.1504/IJTEL.2023.127939"
+        },
+        {
+          "title": "A Hybrid TDNN-HMM Automatic Speech Recognizer for Filipino Children’s Speech.",
+          "authors": "Ing, John Andrew Y., Pascual, Ronald, Dimzon, Francis.",
+          "dates": [{ "start": "2022" }],
+          "link": "https://doi.org/10.1109/IICAIET55139.2022.9936815"
+        },
+        {
+          "title": "Computational Prosodic Features Analysis of Children's Filipino Speech for Automated Oral Reading Fluency Assessment.",
+          "authors": "Dimzon, Francis & Pascual, Ronald.",
+          "dates": [{ "start": "2020" }]
+        },
+        {
+          "title": "An Automatic Phoneme Recognizer for Children’s Filipino Read Speech.",
+          "authors": "Dimzon, Francis D., and Ronald M. Pascual.",
+          "dates": [{ "start": "2020" }],
+          "link": "https://doi.org/10.1109/TALE48869.2020.9368399"
+        },
+        {
+          "title": "An Exploratory Study on Consumer Buying Intention for Organic Farm Produce: The Case of Iloilo, Philippines",
+          "authors": "E. Abacan",
+          "dates": [{ "start": "2015-10-14", "end": "2015-10-16" }]
+        },
+        {
+          "title": "Exploring Factors that Influence Consumption of Frozen Fish Products: The Case of Consumers in Iloilo City, Philippines",
+          "authors": "E. Abacan",
+          "dates": [{ "start": "2015-10-14", "end": "2015-10-16" }]
+        },
+        {
+          "title": "Is Internet Addiction Real? - An Investigation on the Existence of Internet Addiction among the University of the Philippines High School in Iloilo Students",
+          "authors": "E. Abacan",
+          "dates": [{ "start": "2015-11-07" }]
+        },
+        {
+          "title": "Parameter Estimation Using the Firefly Algorithm for Biochemical Networks Modeled in the S-system Formalism",
+          "authors": "R. Cajayon",
+          "dates": [{ "start": "2015-05-18", "end": "2015-05-19" }]
+        },
+        {
+          "title": "Modeling Extreme Events in Finance and Insurance, 2009 MSP 1st Regional Mathematical Convention",
+          "authors": "F.J. Catinan",
+          "dates": [{ "start": "2009-02-26", "end": "2009-02-27" }]
+        },
+        {
+          "title": "Estimating Quantile Risk Measures Using Extreme Value Theory in Finance and Insurance, 5th Asian Mathematical Conference",
+          "authors": "F.J. Catinan",
+          "dates": [{ "start": "2009-06-22", "end": "2009-06-26" }]
+        },
+        {
+          "title": "Mathematical Analysis of a Single Strain HIV Model",
+          "authors": "Faina, L.K.M.",
+          "dates": [{ "start": "2009-02-26", "end": "2009-02-27" }]
+        },
+        {
+          "title": "On the Gibbs Constant and Steepness of the Some Padé-Type Approximants, 2008 Annual Convention of the Mathematical Society of the Philippines, U.P. Diliman",
+          "authors": "Tampos, A.L., & Lope, J.E.C.",
+          "dates": [{ "start": "2008-05-23", "end": "2008-05-24" }]
+        },
+        {
+          "title": "Modeling Extreme Events in Finance and Insurance, 2008 MSP Annual Convention, UP Diliman",
+          "authors": "F.J. Catinan",
+          "dates": [{ "start": "2008-05-23", "end": "2008-05-24" }]
+        },
+        {
+          "title": "Reconstruction of Functions Using Padé-Chebyshev Approximation and Its Variants, 2007 Annual Convention of the Mathematical Society of the Philippines",
+          "authors": "Tampos, A.L., Bargo, M.C., & Lope, J.E.C.",
+          "dates": [{ "start": "2007-05-18", "end": "2007-05-19" }]
+        },
+        {
+          "title": "Bifurcation Analysis of a Three-Dimensional Single Strain HIV Model, MSP Annual Convention",
+          "authors": "Faina, L.K.M.",
+          "dates": [{ "start": "2007-05-18", "end": "2007-05-19" }]
+        },
+        {
+          "title": "Qualitative Analysis of a Three-Dimensional, Single-Strain HIV Model, International Conference on Spectral Analysis in Geometry and Number Theory",
+          "authors": "Faina, L.K.M.",
+          "dates": [{ "start": "2007-08-06", "end": "2007-08-10" }]
+        },
+        {
+          "title": "Stability Analysis of A Single HIV Strain Model, Mathematical Society of the Philippines (MSP) Annual Convention",
+          "authors": "Faina, L.K.M.",
+          "dates": [{ "start": "2006-05-27", "end": "2006-05-28" }]
+        },
+        {
+          "title": "CAS Lecture Series: An Application of the Poisson Summation Formula to Numerical Integration",
+          "authors": "Braga, E. T.",
+          "dates": [{ "start": "2003" }]
+        },
+        {
+          "title": "Nutritional Status and Associated Factors Among Fishers in Batan Bay, Aklan, Philippines",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2016-08-03", "end": "2016-08-07" }]
+        },
+        {
+          "title": "High School Students' Beliefs on Mythical Creatures: An Exploratory Study on Its Impact to Students' Academic Performance",
+          "authors": "E. Abacan",
+          "dates": [{ "start": "2017" }]
+        },
+        {
+          "title": "Modelling Dengue Cases in Iloilo Using Hierarchical Generalized Linear Models",
+          "authors": "E. Abacan",
+          "dates": [{ "start": "2017-10-27" }]
+        },
+        {
+          "title": "Nonparametric Changepoint Analysis of Multiple Time Series",
+          "authors": "E. Abacan",
+          "dates": [{ "start": "2018-12-14", "end": "2018-12-16" }]
+        },
+        {
+          "title": "Nonparametric Test of Assumptions of Spatiotemporal Model with Varying Frequencies",
+          "authors": "D. Pamplona",
+          "dates": [{ "start": "2019-10-03" }]
+        },
+        {
+          "title": "Estimating COVID-19 Infections in Iloilo City, Philippines Using Adaptive Sampling Method: A Simulation Study",
+          "authors": "D. Pamplona",
+          "dates": [{ "start": "2020-10-30", "end": "2020-10-31" }]
+        },
+        {
+          "title": "Nonparametric Changepoint Analysis of Multiple Time Series",
+          "authors": "E. Abacan",
+          "dates": [{ "start": "2021-07-01", "end": "2021-07-16" }]
+        },
+        {
+          "title": "Exploring Google Play Store App Review and Data. Data Revolution: Big Data, Non-official Data, Citizen-Generated Data, Big Earth Data, Data Analytics",
+          "authors": "D. Pamplona",
+          "dates": [{ "start": "2022-10-05" }]
+        },
+        {
+          "title": "Predicting Google App Star Rating Using Sentiment Analysis of User Text Reviews",
+          "authors": "D. Pamplona",
+          "dates": [{ "start": "2022-11-25" }]
+        }
+      ]
+    },
+    {
+      "containerId": "researchSection2",
+      "items": [
+        {
+          "title": "Modeling the viral infectious disease from infection to epidemic",
+          "authors": "Society for Mathematical Biology virtual Annual Meeting (eSMB2020)",
+          "dates": [{ "start": "2020-08-17", "end": "2020-08-20" }]
+        },
+        {
+          "title": "A Dynamic Model of Regularly Scheduled Repayment in Microlending",
+          "authors": "M. Chavez",
+          "dates": [{ "start": "2010-05" }]
+        },
+        {
+          "title": "Classification of Virgin Coconut Oil Using ATR-FTIR In Conjunction with Agglomerative Hierarchical Clustering",
+          "authors": "J. Gatpatan",
+          "dates": [{ "start": "2007-12" }]
+        },
+        {
+          "title": "Benchmark Survey of the Cyanide content in the roots and leaves of cassava (Manihot esculenta Crantz) from selected sources in Iloilo",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2007-11-30", "end": "2007-12-01" }]
+        },
+        {
+          "title": "Classification of Virgin Coconut Oil Using ATR-FTIR In Conjunction with Agglomerative Hierarchical Clustering and Principal Component Analysis",
+          "authors": "J. Gatpatan",
+          "dates": [{ "start": "2008-07" }]
+        },
+        {
+          "title": "Multispectral-Based Imaging and Machine Learning for Noninvasive Blood Loss Estimation.",
+          "authors": "Ambita, Ara Abigail E., et al.",
+          "dates": [{ "start": "2023" }],
+          "link": "https://doi.org/10.1007/978-3-031-26284-5_11"
+        },
+        {
+          "title": "Sublethal Toxicity of Weathered Petroleum Residues in Sediments Collected From the MT Solar 1 Oil Spill Affected Sites in Guimaras Islands, Philippines",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2012-02-15", "end": "2012-02-17" }]
+        },
+        {
+          "title": "Polycyclic Aromatic Hydrocarbons (PAH) and Alkylated PAHs in Shellfish Collected from Taklong Island National Marine Reserve (TINMAR) Four Years After the MT Solar 1 Oil Spill in Guimaras Island Philippines",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2012-11-24" }]
+        },
+        {
+          "title": "Monitoring of Petroleum Hydrocarbons in Sediments Collected from Taklong Island National Marine Reserve (TINMAR) Four Years After the MT Solar 1 Oil Spill in Guimaras Island Philippines",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2012-11-24" }]
+        },
+        {
+          "title": "Residual Toxicity of Weathered Petroleum Oil in Sediments Collected from Oil Spill Affected Sites in Taklong Island National Marine Reserve (TINMAR) Guimaras Island, Philippines",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2012-11-24" }]
+        },
+        {
+          "title": "Interactive Game for Grade-9 Chemistry Topics and Its Effects on Summative Assessment Scores in Chemistry of Grade-9 Students",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2015-11-07", "end": "2015-11-07" }]
+        },
+        {
+          "title": "Perception of the Fisheries by the Fishers in Western Visayas, Philippines",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2016-01-26", "end": "2016-01-27" }]
+        },
+        {
+          "title": "Perception of the Fisheries by the Fishers in Western Visayas, Philippines",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2016-08-03", "end": "2016-08-07" }]
+        },
+        {
+          "title": "Estimation Using Probability Proportional to Aggregate Size Sampling in Heterogeneous Populations",
+          "authors": "D. Pamplona",
+          "dates": [{ "start": "2019-08-18", "end": "2019-08-23" }]
+        },
+        {
+          "title": "Assessing Health Behaviour during the COVID – 19 Pandemic Outbreak and Community Quarantine in the Population of Western Visayas",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2020-05" }]
+        },
+        {
+          "title": "Covid-19 Pandemic and the Teachers in Western Visayas: Experience, Coping, and the Future",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2021-04-13", "end": "2021-04-14" }]
+        },
+        {
+          "title": "Being a Student in Western Visayas During the Covid-19 Pandemic",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2021-04-13", "end": "2021-04-14" }]
+        },
+        {
+          "title": "Semiparametric model improves estimates of Vibrio species abundance in a biofluc shrimp production system",
+          "authors": "Dequito, A., Corre, V., Abacan, E.",
+          "dates": [{ "start": "2021-11-09", "end": "2021-11-11" }]
+        },
+        {
+          "title": "Effect of water parameters on the condition index revealed meat quality of slipper-shaped oysters Magallana bileanata from Visayas, Philippines",
+          "authors": "Bermeo, M., Abacan, E., Padilla, P.",
+          "dates": [{ "start": "2022-12-05", "end": "2022-12-07" }]
+        }
+      ]
+    },
+    {
+      "containerId": "researchSection3",
+      "items": [
+        {
+          "title": "BUGANA: Fishing Community Cultural Notexts for High School Mathematics, Kasingkasing Press, Iloilo City",
+          "authors": "Sayco, G. C., Gadong, E. S., Gemaol, S. M., Sayco, G. B., Braga, E. T. , Barrios, J.",
+          "dates": [{ "start": "2022-11" }]
+        },
+        {
+          "title": "Stability Analysis in Covid-19 Within-Host Model With Immune Response. Communications in Nonlinear Science and Numerical Simulation. Volume 95. Article 105584",
+          "authors": "Almocera A, Quiroz G, Hernandez-Vargas E.",
+          "dates": [{ "start": "2021" }]
+        },
+        {
+          "title": "Stress Redistribution of a Circular Membrane With a Hole Based on the Mooney-Rivlin Material Model. Philippine Journal of Natural Sciences. 26: 1-7",
+          "authors": "Olivares M and David G",
+          "dates": [{ "start": "2021" }]
+        },
+        {
+          "title": "Modelling exchange-driven fish price dynamics",
+          "authors": "Rui Xiang, Colin Jones, Rogemar Mamon and Marierose Chavez",
+          "link": "https://www.emerald.com/insight/content/doi/10.1108/JM2-04-2020-0101/full/html",
+          "dates": [{ "start": "2020" }]
+        },
+        {
+          "title": "Comparison of Two Nature-inspired Algorithms for Parameter Estimation of S-system Models",
+          "authors": "Cajayon R, Lucilo J, Pilar-Arceo C, Mendoza E",
+          "dates": [{ "start": "2020" }]
+        },
+        {
+          "title": "Multispectral-Based Imaging and Machine Learning for Noninvasive Blood Loss Estimation.” Computer Vision – ACCV 2022",
+          "authors": "Ambita, Ara Abigail E., et al.",
+          "dates": [{ "start": "2023" }],
+          "link": "https://doi.org/10.1007/978-3-031-26284-5_11"
+        },
+        {
+          "title": "COViT-GAN: Vision Transformer ForCOVID-19 Detection in CT Scan Images with Self-Attention GAN For Data Augmentation.",
+          "authors": "Ambita, Ara Abigail E., et al.",
+          "dates": [{ "start": "2021" }],
+          "link": "https://doi.org/10.1007/978-3-030-86340-1_47"
+        },
+        {
+          "title": "Locally Adaptive Regression Kernels and Support Vector Machines for the Detection of Pneumonia in Chest X-Ray Images.",
+          "authors": "Ambita, Ara Abigail E., et al.",
+          "dates": [{ "start": "2020" }],
+          "link": "https://doi.org/10.1007/978-3-030-42058-1_11"
+        },
+        {
+          "title": "Detection of Pneumonia in Chest X-Ray Images Using Deep Transfer Learning and Data Augmentation With Auxiliary Classifier Generative Adversarial Network.",
+          "authors": "Cala-or, Christi Florence, et al.",
+          "dates": [{ "start": "2021" }]
+        },
+        {
+          "title": "The Equivalence of Analysis Based on ANOVA models and Analysis Based on Regression Models with Dummy Variables",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2006" }]
+        },
+        {
+          "title": "Cyanide content of the roots and leaves of cassava (Manihot esculenta Crantz) from selected sources in Iloilo",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2008" }]
+        },
+        {
+          "title": "Backfitting Estimation of a Response Surface Model",
+          "authors": "J. Gatpatan",
+          "dates": [{ "start": "2010" }]
+        },
+        {
+          "title": "Coupling multiscale within-host dynamics and between-host transmission with recovery (SIR) dynamics",
+          "authors": "Almocera, A and Hernandez-Vargas",
+          "dates": [{ "start": "2019" }]
+        },
+        {
+          "title": "A regularized nonconvex model for image segmentation. In: 18th Philippine Computing Science Congress",
+          "authors": "Sy Piecco M, Neri M.",
+          "dates": [{ "start": "2018-03-15", "end": "2018-03-17" }]
+        },
+        {
+          "title": "A TV^q model for segmenting noisy images. Philippine Journal of Natural Sciences",
+          "authors": "Sy Piecco M, Neri M.",
+          "dates": [{ "start": "2018" }]
+        },
+        {
+          "title": "Parameter estimation in S-System Models using Firefly Algorithm with Decoupling Method",
+          "authors": "Cajayon R, Pilar-Arceo C, Mendoza E.",
+          "dates": [{ "start": "2018" }]
+        },
+        {
+          "title": "Procastination and Sense of Community: Patterns and Relationship in a Blended Learning Environment",
+          "authors": "Gadong, E.S. and Chavez, M.",
+          "dates": [{ "start": "2016" }]
+        },
+        {
+          "title": "Enhanced Padé-Chebyshev Approximants for Gibbs Resolution",
+          "authors": "Tampos, A. L. & Lope, J. E. C.",
+          "dates": [{ "start": "2016-04-20", "end": "2016-04-22" }]
+        },
+        {
+          "title": "On the Bifurcations and Multiple Endemic States of a single strain HIV Model, Acta Mathematicae Applicatae Sinica (English Series)",
+          "authors": "Faina, L.K.M., Sy, P.W., Almocera",
+          "dates": [{ "start": "2014-10" }]
+        },
+        {
+          "title": "Accurate Reconstruction of Discontinuous Functions Using the Singular Padé-Chebyshev Method",
+          "authors": "Tampos, A. L., Lope, J. E. C., & Hesthaven, J.S.",
+          "dates": [{ "start": "2012" }]
+        },
+        {
+          "title": "Singularity-Based Approach in a PadéChebyshev Resolution of the Gibbs Phenomenon",
+          "authors": "Tampos, A. L., Lope, J. E. C., & Hesthaven, J.S.",
+          "dates": [{ "start": "2012" }]
+        },
+        {
+          "title": "Dynamic Models of One-time Payment and Regularly Scheduled Repayment Schemes in Microlending",
+          "authors": "Chavez, M., Sy, P. and Escaner, J.M.IV.",
+          "dates": [{ "start": "2011" }]
+        },
+        {
+          "title": "Parameter Estimation in a Smart Beam Structure Using Genetic Algorithm",
+          "authors": "Libo-on, J.",
+          "dates": [{ "start": "2010" }]
+        },
+        {
+          "title": "Calculating Quantile Risk Measures Using Extreme Value Theory",
+          "authors": "Catinan, F.J., & Escaner, J.M.",
+          "dates": [{ "start": "2010" }]
+        },
+        {
+          "title": "Padé-Chebyshev Reconstruction of Functions with Jump Discontinuities",
+          "authors": "Tampos, A. L., & Lope, J. E. C.",
+          "dates": [{ "start": "2009" }]
+        },
+        {
+          "title": "Estimating Quantile Risk Measures Using Extreme Value Theory in Finance and Insurance",
+          "authors": "Catinan, F.J., & Escaner, J.M.",
+          "dates": [{ "start": "2009" }]
+        },
+        {
+          "title": "Local Stability Analysis of a Three-Dimensional, Single-Strain HIV Model",
+          "authors": "Faina, L.K.M., Sy, P.W., Almocera, L.S.",
+          "dates": [{ "start": "2009" }]
+        },
+        {
+          "title": "Heuristic Methods for Parameter Estimation in a Smart Beam. Structure. Lecture Notes in Enginnering and Computer Science",
+          "authors": "Libo-on, J.",
+          "dates": [{ "start": "2008" }]
+        },
+        {
+          "title": "Overcoming Gibbs Phenomenon in Padé-Chebyshev Approximation",
+          "authors": "Tampos, A. L., & Lope J. E. C.",
+          "dates": [{ "start": "2007" }]
+        },
+        {
+          "title": "An Application of the Poisson Summation Formula to Numerical Integration, UPV Journal of Natural Sciences",
+          "authors": "Braga, E. T.",
+          "dates": [{ "start": "2006" }]
+        },
+        {
+          "title": "Internet Addiction: A Challenge to the Counselling Practice",
+          "authors": "E. Abacan",
+          "dates": [{ "start": "2017-05" }]
+        },
+        {
+          "title": "Microalgal paste production of the diatom Chaetoceros calcitrans using electrolytic flocculation method at optimum culture conditions",
+          "authors": "V. Balinas",
+          "dates": [{ "start": "2018" }]
+        },
+        {
+          "title": "Sampling with Probability Proportional to Aggregate Size in Heterogeneous Populations: A Study of Design and Efficiency",
+          "authors": "D. Pamplona",
+          "dates": [{ "start": "2020" }]
+        },
+        {
+          "title": "Production, feeding and storage of diatom Chaetoceros calcitrans paste by electrolytic flocculation with reduced Pb content",
+          "authors": "V. Balinas",
+          "dates": [{ "start": "2020" }]
+        },
+        {
+          "title": "Interaction effect of light intensity and photoperiod on egg hatchability, survival and growth of polychaete Marphysa iloiloensis from larva to juvenile",
+          "authors": "Mandario, M.A., Castor, N.J., Balinas, V.T.",
+          "dates": [{ "start": "2021" }]
+        },
+        {
+          "title": "Flakes versus noodles as feed for the abalone Haliotis asinina, does form matter?",
+          "authors": "Lebata-Ramos, MJH, Bnas, J., Solis, EF, Balinas, V.",
+          "dates": [{ "start": "2021" }]
+        },
+        {
+          "title": "Influence of Physiochemical Water Parameters on the Total Weight of the Slipper-shaped Oyster Crassostrea iredalei in Visayas, Philippinesz",
+          "authors": "Besana, M., Bermeo, MRA, Padila, P.I.",
+          "dates": [{ "start": "2019-05-01", "end": "2019-05-01" }]
+        },
+        {
+          "title": "Generalised Additive Model Improves Estimates of Vibrio Species Abundance in Penaeus vannamei Boone, 1931 Biofloc Production System",
+          "authors": "Dequito, A., Corre, V., Abacan, E.",
+          "link": "https://doi.org/10.33997/j.afs.2022.35.2.002",
+          "dates": [{ "start": "2022-04" }]
+        }
+      ]
+    },
+    {
+      "containerId": "researchSection4",
+      "items": [
+        {
+          "title": "Monitoring and Rehabilitation Program of the UPV-Marine Biological Station. D. Social and Health Conditions – Health Impacts of MT Solar 1 Oil Spill. Study 1. Health Assessment and Monitoring of Residents of Barangays Lapaz and San Roque, Nueva Valencia, Guimaras exposed to M/T Solar 1 Oil-Spill (Year 2)",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2010-11-15" }]
+        },
+        {
+          "title": "Chemical and Toxicological Assessment of Sediments Collected from TINMAR Area 4 Years after the MT Solar 1 Oil Spill - PHASE 1: Study 1. Concentrations and Sources of Polycyclic Aromatic Hydrocarbons (PAHs) in Sediments and Biota; Study 2. Toxicity Identification and Evaluation of Sediment’s Interstitial and Pore Waters",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2012-09-20" }]
+        },
+        {
+          "title": "The Monitoring and Rehabilitation Program of the UPV-Marine Biological Station - Habitats and Environment - Chemical and Toxicological Assessment of Sediments Collected from TINMAR Area 4 Years after the MT Solar 1 Oil Spill - PHASE 2: Study 1. Concentrations and Sources of Polycyclic Aromatic Hydrocarbons (PAHs) in Sediments and Biota; Study 2. Toxicity Identification and Evaluation of Sediment’s Interstitial and Pore Waters",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2012-10-10" }]
+        },
+        {
+          "title": "Project completed with Dr. Alice Ferrer: “Demonstrating a Protocol in Constructing a Health Data Base for the Urban Poor in a Highly Urbanized City”, funded by Engender Health-Visayas Health",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2015-12" }]
+        },
+        {
+          "title": "Coastal Area Capability in Southern Asia:  Study 4 – Social Analysis of Coastal Communities in Panay and Guimaras",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2016-06-14" }]
+        },
+        {
+          "title": "UPV-RIHN Collaborative Research Project: \"Coastal Area Capability Enhancement in Southeast Asia\"",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2012-04", "end": "2017-03" }]
+        },
+        {
+          "title": "Cyanide Analysis and Shelf Life Studies of Selected Cassava Varieties at Different Maturity Stages (CyAnSS of Cassava, UP Visayas)",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2018-11-02", "end": "2019-11-01" }]
+        },
+        {
+          "title": "Cyanide Analysis and Shelf Life Studies of Selected Cassava Varieties at Different Maturity Stages (CyAnSS of Cassava, UP Visayas)",
+          "authors": "L. Araneta",
+          "dates": [{ "start": "2019-11-02", "end": "2020-04-30" }]
+        },
+        {
+          "title": "Project Staff, Department of Science and Technology - National Research Council of the Philippines (DOST-NRCP) funded project titled, “Telecommuting Preferences of Government Workers in the Philippines”",
+          "authors": "J. Gatpatan",
+          "dates": [{ "start": "2020-12-15", "end": "2022-06-15" }]
+        }
+      ]
+    }
+  ]
+}
