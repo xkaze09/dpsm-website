@@ -1,12 +1,18 @@
-// Navbar
 document.addEventListener('DOMContentLoaded', function () {
   const divisionNavbar = document.querySelector('.division-navbar');
+  const scrolldowns = document.querySelector('.scroll-downs');
 
   function toggleNavbarVisibility() {
     if (window.scrollY > 0) {
       divisionNavbar.classList.add('show');
+      if (!scrolldowns.classList.contains('hidden')) {
+        scrolldowns.classList.add('hidden');
+      }
     } else {
       divisionNavbar.classList.remove('show');
+      if (scrolldowns.classList.contains('hidden')) {
+        scrolldowns.classList.remove('hidden');
+      }
     }
   }
 

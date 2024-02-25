@@ -208,13 +208,25 @@ a {
     .upper-division-name {
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
+    .welcome-message {
+      margin: 3rem;
+  }
+  .cite .cited-name  {
+      font-size: 1rem;
+  }
 }
-
 
 /* small screens */
 @media (min-width: 401px) and (max-width: 577px) {
     .upper-division-name {
         font-family: 'Oswald', 'Times New Roman', Times, serif;
+    }
+
+    .welcome-message {
+        margin: 3rem;
+    }
+    .cite .cited-name  {
+        font-size: 1.2rem;
     }
 }
 
@@ -223,6 +235,15 @@ a {
     .upper-division-name {
         font-family: 'Oswald', 'Times New Roman', Times, serif;
     }
+    .welcome-message {
+      margin: 2.5rem;
+  }
+  .cite .cited-name  {
+      font-size: 1.5rem;
+  }
+  .scroll-downs {
+      display: none;
+  }
 } 
 
 // Media Queries
@@ -444,7 +465,7 @@ a {
 .welcome-message {
   position: relative;
   font-family: 'Open Sans', 'Times New Roman', Times, serif;
-  font-size: 1.5em;
+  font-size: 1.15em;
   line-height: 1.5em;
   display: flex;
   flex-wrap: wrap;
@@ -502,4 +523,142 @@ a {
   z-index: -1;
 }
 
-// Typing
+// Wave Animation
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, $primary 0%, $primary 100%);
+  color:white;
+}
+
+.inner-header {
+  height:5vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:1vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 14s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 20s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 26s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 40s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
+// Scroll
+.scroll-downs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width :34px;
+  height: 55px;
+  padding-top: 10em;
+  
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Make button transparent */
+  color: #292929; /* Text color, used for the SVG fill */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Adjust padding to fit the circular design */
+  border-radius: 50%; /* Make it circular */
+  width: 50px; /* Specify width */
+  height: 50px; /* Specify height to maintain aspect ratio */
+}
+
+#scrollTopBtn:hover {
+  color: #ffffff; /* Change text (icon) color on hover if needed */
+  transform: scale(1.5); /* Add a slight scale effect on hover */
+}
