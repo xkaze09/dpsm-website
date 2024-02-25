@@ -34,6 +34,8 @@ function createAccordionItem(sectionIndex, index, title, content, containerId) {
   // To assign a unique index for each accordion item
   const itemIndex = `${sectionIndex}-${index}`;
 
+  const contentLinks = content.replace(/<a /g, '<a style="color: blue;" ');
+
   // Generating the accordion item HTML
   const itemHTML = `
     <div class="accordion-item">
@@ -44,7 +46,7 @@ function createAccordionItem(sectionIndex, index, title, content, containerId) {
       </h2>
       <div id="flush-collapse${itemIndex}" class="accordion-collapse collapse" aria-labelledby="flush-heading${itemIndex}" data-bs-parent="#${containerId}">
         <div class="accordion-body">
-          ${content}
+          ${contentLinks}
         </div>
       </div>
     </div>
