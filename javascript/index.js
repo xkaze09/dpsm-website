@@ -54,3 +54,47 @@ function updateDivisionCarousel() {
 
 // Call the function to initially populate the "Division Highlights" carousel
 updateDivisionCarousel();
+
+function topFunction() {
+  const startPosition = window.pageYOffset;
+  const distance = -startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easeInOutQuad(timeElapsed, startPosition, distance, 500); // Duration 500ms
+    window.scrollTo(0, run);
+    if (timeElapsed < 500) requestAnimationFrame(animation); // Keep animating until 500ms
+  }
+
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (!scrollTopBtn) {
+    console.log("Scroll to top button not found.");
+    return;
+  }
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  }
+
+  window.onscroll = scrollFunction;
+  scrollTopBtn.addEventListener('click', topFunction);
+  
+  console.log("Scroll to top button setup complete.");
+});

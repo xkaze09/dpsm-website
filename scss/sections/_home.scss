@@ -639,3 +639,26 @@ a {
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
 }
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Make button transparent */
+  color: #292929; /* Text color, used for the SVG fill */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Adjust padding to fit the circular design */
+  border-radius: 50%; /* Make it circular */
+  width: 50px; /* Specify width */
+  height: 50px; /* Specify height to maintain aspect ratio */
+}
+
+#scrollTopBtn:hover {
+  color: #ffffff; /* Change text (icon) color on hover if needed */
+  transform: scale(1.5); /* Add a slight scale effect on hover */
+}
