@@ -35,119 +35,40 @@
   margin-bottom: 1rem;
 }
 
-.container-image {
+.fibonacci-image {
   display: grid;
-  height: 500px;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    'pic1 pic2 pic2'
-    'pic1 pic3 pic4';
+  width: auto; /* Remove fixed width to prevent overflow */
   grid-gap: 3px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust based on your design needs */
 }
 
-#pic1 {
-  grid-area: pic1;
+.fibonacci-image div {
+  width: 100%; /* Ensure full width within the grid */
+  padding-top: 56.25%; /* Maintain aspect ratio */
   background-size: cover;
   background-position: center;
 }
 
-#pic2 {
-  grid-area: pic2;
-  background-size: cover;
-  background-position: center;
-}
-
-#pic3 {
-  grid-area: pic3;
-  background-size: cover;
-  background-position: center;
-}
-
-#pic4 {
-  grid-area: pic4;
-  background-size: cover;
-  background-position: center;
-}
-
+/* Ensure images scale down on smaller screens */
 @media only screen and (max-width: 600px) {
-  .container-image {
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 2fr 2fr 2fr;
-    grid-template-areas:
-      'pic1'
-      'pic2'
-      'pic3'
-      'pic4';
+  .fibonacci-image {
+    grid-template-columns: 1fr; /* Stack images vertically on small screens */
   }
 }
 
-.article-header {
-  font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 17px;
-  .position-title {
-    font-size: 15px;
-    padding-right: 25px;
-  }
-  .feature-article {
-    padding-left: 25px;
-  }
 
-  @media only screen and (max-width: 800px) {
-    font-size: 15px;
-
-    .position-title {
-      font-size: 12px;
-    }
-  }
-
-  @media only screen and (max-width: 550px) {
-    font-size: 9px;
-
-    .position-title {
-      font-size: 8px;
-    }
-  }
+/* Responsive Video Embed */
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
 }
 
-.solid-line {
-  border-top: 2px solid #000;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.references-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.references {
-  font-style: italic;
-  flex: 1;
-
-  @media only screen and (max-width: 550px) {
-    font-size: 15px;
-  }
-
-  @media only screen and (max-width: 800px) {
-    font-size: 15px;
-  }
-}
-
-.image-source {
-  font-style: italic;
-  flex: 1;
-  margin-left: 20px;
-  font-family: 'Open Sans', sans-serif;
-
-  @media only screen and (max-width: 550px) {
-    font-size: 15px;
-  }
-
-  @media only screen and (max-width: 800px) {
-    font-size: 15px;
-  }
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
