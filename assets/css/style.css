@@ -12334,6 +12334,17 @@ a {
   z-index: -1;
 }
 
+.welcome-message:after {
+  content: "”";
+  position: absolute;
+  top: 3em;
+  right: -0.45em;
+  font-size: 4em;
+  font-style: italic;
+  color: rgb(251, 133, 0);
+  z-index: -1;
+}
+
 .header {
   position: relative;
   text-align: center;
