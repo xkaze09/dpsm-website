@@ -12059,16 +12059,34 @@ a {
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
   }
+  .welcome-message {
+    margin: 3rem;
+  }
+  .cite .cited-name {
+    font-size: 1rem;
+  }
 }
 /* small screens */
 @media (min-width: 401px) and (max-width: 577px) {
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
   }
+  .welcome-message {
+    margin: 3rem;
+  }
+  .cite .cited-name {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .upper-division-name {
     font-family: "Oswald", "Times New Roman", Times, serif;
+  }
+  .welcome-message {
+    margin: 2.5rem;
+  }
+  .cite .cited-name {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 992px) {
@@ -12261,7 +12279,7 @@ a {
 .welcome-message {
   position: relative;
   font-family: "Open Sans", "Times New Roman", Times, serif;
-  font-size: 1.25em;
+  font-size: 1.15em;
   line-height: 1.5em;
   display: flex;
   flex-wrap: wrap;
