@@ -5,6 +5,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
+// Countdown
+/* Countdown Timer Styling */
+#countdown {
+  text-align: center;
+  font-family: 'Oswald', 'Times New Roman', Times, serif;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#timer {
+  font-size: 2em; /* Adjust the font size as needed */
+  font-weight: bold;
+}
+
+
 // Globals
 .text-justify {
     text-align: justify;

@@ -11864,6 +11864,20 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* Countdown Timer Styling */
+#countdown {
+  text-align: center;
+  font-family: "Oswald", "Times New Roman", Times, serif;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#timer {
+  font-size: 2em; /* Adjust the font size as needed */
+  font-weight: bold;
+}
+
 .text-justify {
   text-align: justify;
 }

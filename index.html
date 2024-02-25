@@ -18,8 +18,11 @@
             </div>
             <div class="division-title-container pt-md-5">
               <h1 class="division-title text-uppercase display-1 fw-normal text-center pb-md-2">
-                LAUNCHING SOON!
+                LAUNCHING IN
               </h1>
+              <div id="countdown" class="countdown text-primary display-5 pt-md-4">
+                <h2 id="timer"></h2>
+              </div>
             </div>
             <div class="division-title display-7 fw-normal text-center">
               @ Division of Physical Sciences and Mathematics 2024
@@ -44,5 +47,33 @@
         <!-- End of DPSM Introduction -->
     <!-- End of Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set the countdown target to February 26, 2024, 1:00 PM UTC+8
+        var countDownDate = new Date('2024-02-26T13:00:00+08:00').getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
+          // Get the current time
+          var now = new Date().getTime();
+
+          // Calculate the time difference between now and the countdown target
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes, and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="timer"
+          document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+          // If the countdown is over, display a message
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "LAUNCHED!";
+          }
+        }, 1000);
+    </script>
   </body>
 </html>
