@@ -5,31 +5,31 @@
         "items": [
           {
             "title": "The Office of Student Affairs and UPV Teaching and Learning Resource Center",
-            "content": "The Office of Student Affairs (OSA) and TLRC (UPV Teaching and Learning Resource Center Website) provides necessary student support services like summer bridge, tutorials, photocopying, printing, audio-visual room use, and borrowing of books, movies, computers, and game pieces."
+            "content": "The Office of Student Affairs (OSA) and <a href='https://tlrc.upv.edu.ph' target='_blank'>TLRC (UPV Teaching and Learning Resource Center Website)</a> provides necessary student support services like summer bridge, tutorials, photocopying, printing, audio-visual room use, and borrowing of books, movies, computers, and game pieces."
           },
           {
             "title": "UPV Guidance and Counseling Services Unit",
-            "content": "<strong>This is the second item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+            "content": "The <a href='https://www.facebook.com/upvgss/' target='_blank'>guidance counselor</a> is another support service for students that offers counseling in various issues both academic and non-academic."
           },
           {
             "title": "UPV Health Services Unit",
-            "content": "<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+            "content": "<a href='https://sites.google.com/site/upvgpo/health-service' target='_blank'>UPV Health Service Unit (HSU)</a>"
           },
           {
             "title": "UPV Software Subscriptions",
-            "content": "The Office of Student Affairs (OSA) and <a href='https://tlrc.upv.edu.ph' target='_blank'>TLRC (UPV Teaching and Learning Resource Center Website)</a> provides necessary student support services like summer bridge, tutorials, photocopying, printing, audio-visual room use, and borrowing of books, movies, computers, and game pieces."
+            "content": " UP students and faculty with UP email are also eligible for access to <a href='https://itdc.up.edu.ph/faqs/up-software-subscriptions' target='_blank'>UP software subscriptions</a> such as ArcGIS for imagery and remote sensing data, adobe acrobat as a pdf collaborative tool, nvivo, SPSS for data analysis, qualtrics, slido, matlab, and zoom."
         },
           {
             "title": "UP Visayas University Library",
-            "content": "<strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+            "content": "The <a href='https://library.upv.edu.ph/' target='_blank'>UP Visayas University Library</a> allows free and digital access to articles, books, online journals, electronic book collections, and research databases via institutional access (see <a href='https://library.upv.edu.ph/index.php/library-resources/non-print-resources/electronic-resources' target='_blank'>Electronic Resources</a>).The library maintains subscriptions to databases that are needed for the curriculum."
           },
           {
             "title": "Computerized Registration and Student Information System",
-            "content": "<strong>This is the sixth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+            "content": "<a href='https://crs.upv.edu.ph/' target='_blank'>UPV CRSIS</a> is a student information system that allows students to register and enroll online, providing a convenient and efficient way to manage their academic affairs. Faculty and staff can also access student information through the system, making it easier to track progress and offer support."
           },
           {
             "title": "UPV Learning Management System III",
-            "content": "<strong>This is the seventh item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+            "content": "<a href='https://upvisayas.net/lms3/login.php' target='_blank'>LMS</a> is a moodle-based virtual learning environment that provides a range of features and tools to support online learning, including the ability to upload and share resources, facilitate discussions and collaboration, and track student progress."
           }
         ]
       },
@@ -37,16 +37,8 @@
         "containerId": "accordionSection2",
         "items": [
           {
-            "title": "Title 1",
-            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
-          },
-          {
-            "title": "Title 2",
-            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
-          },
-          {
-            "title": "Title ",
-            "content": "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element."
+            "title": "Edusuite",
+            "content": "Link not available yet. To be updated soon"
           }
         ]
       }
