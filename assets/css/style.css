@@ -12940,7 +12940,7 @@ div.card.card-body {
 .faculty-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/cs-faculty/group_computer-science-faculty_hero.jpg");
+  background-image: url("/images/about/BASEMENT.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -13509,7 +13509,7 @@ html {
 
 .individual-courses-container {
   display: flex;
-  height: 100%;
+  height: 100% auto;
   gap: 30px;
   padding: 30px 250px;
 }
