@@ -13509,7 +13509,7 @@ html {
 
 .individual-courses-container {
   display: flex;
-  height: 100%;
+  height: 100% auto;
   gap: 30px;
   padding: 30px 250px;
 }
