@@ -264,11 +264,11 @@ div.card.card-body {
 .prospectus-table-container {
   overflow: auto;
   max-height: 500px;
-  table-layout: fixed;
 }
 
 .prospectus-table {
   min-width: 600px;
+  table-layout: fixed;
 
   td {
     padding-left: 1rem;
