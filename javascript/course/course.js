@@ -1,4 +1,4 @@
-import data from './data.json' with { type: 'json' };
+import data from './data.json' with { type: 'application/json' };
 
 function generateProspectusTable(prospectus) {
   const table = document.getElementById('prospectusTableBody');
