@@ -56,7 +56,6 @@ function generateProspectusTable(prospectus) {
       table.innerHTML += rows;
     }
   }
-  console.log(data);
 }
 
 export function initializeProspectus(course) {
