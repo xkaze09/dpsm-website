@@ -1,5 +1,3 @@
-import data from './data.json' with { type: 'json' };
-
 function generateProspectusTable(prospectus) {
   const table = document.getElementById('prospectusTableBody');
 
@@ -28,7 +26,7 @@ function generateProspectusTable(prospectus) {
                 <tr>
                   <th scope="row"></th>
                   <td>${k == 0 ? semester.title : ''}</td>
-                  <td><a href=${link}>${course.name}<a/></td>
+                  <td><a href=${link}>${course.name}</a></td>
                   <td>${course.title}</td>
                   <td>${credits ?? ''}</td>
                   <td>${course.preRequisites}</td>
@@ -59,20 +57,27 @@ function generateProspectusTable(prospectus) {
 }
 
 export function initializeProspectus(course) {
-  switch (course) {
-    case 'comsci':
-      generateProspectusTable(data.COMSCI);
-      break;
-
-    case 'appmath':
-      generateProspectusTable(data.APPMATH);
-      break;
-
-    case 'stat':
-      generateProspectusTable(data.STAT);
-      break;
-
-    default:
-      return;
-  }
+  let prospectusData;
+  
+  // Fetch the data.json file asynchronously
+  fetch('../javascript/course/data.json')
+    .then(response => response.json())
+    .then(data => {
+      // Once data is fetched, call generateProspectusTable with the fetched data
+      prospectusData = data;
+      switch (course) {
+        case 'comsci':
+          generateProspectusTable(prospectusData.COMSCI);
+          break;
+        case 'appmath':
+          generateProspectusTable(prospectusData.APPMATH);
+          break;
+        case 'stat':
+          generateProspectusTable(prospectusData.STAT);
+          break;
+        default:
+          return;
+      }
+    })
+    .catch(error => console.error('Error fetching data:', error));
 }
