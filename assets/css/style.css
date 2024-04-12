@@ -12732,6 +12732,7 @@ div.card.card-body {
 
 .prospectus-table {
   min-width: 600px;
+  table-layout: fixed;
 }
 .prospectus-table td {
   padding-left: 1rem;
