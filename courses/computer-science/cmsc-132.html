@@ -10,131 +10,128 @@
     <link rel="stylesheet" href="../../assets/css/fontawesome.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <!-- University Navbar Section -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container justify-content-around">
-          <div
-            class="university-navbar navbar-brand menu d-flex justify-content-center align-items-center gap-2"
-          >
-            <a href="https://upv.edu.ph/" target="_blank" class="text-link">
-              <img class="logo-highlight" src="..\..\images\upvlogo.png" width="53" />
-            </a>
-            <a href="/index.html" target="_self" class="text-link">
-              <img class="logo-highlight" src="..\..\images\dpsmlogo.png" width="48" />
-            </a>
-            <a href="..\..\index.html" target="_self" class="text-link">
-              <div class="text-center">
-                <span class="upper-division-name text-white"
-                  >DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span
-                >
+    <!-- University Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container university-navbar">
+        <div class="navbar-brand menu d-flex justify-content-center align-items-center gap-2">
+          <a href="https://upv.edu.ph/" target="_blank" class="">
+            <img class="logo-highlight" src="../../images/upvlogo.png" width="53" />
+          </a>
+          <a href="/index.html" target="_self" class="">
+            <img class="logo-highlight" src="../../images/dpsmlogo.png" width="48" />
+          </a>
+          <a href="/index.html" target="_self" class="">
+            <div class="text-center ">
+              <span class="upper-division-name text-white text-start text-wrap"
+              >DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
+          <ul class="navbar-nav text-center">
+            <li>
+              <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+            </li>
+            <li>
+              <a class="nav-link" href="../../support.html">Resources & Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of University Navbar -->
+    <!-- Division Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+      <div class="container">
+        <div class="division-navbar navbar-brand menu d-flex justify-content-center align-items-center gap-2" href="#">
+          <a href="../../index.html" target="_self" class="">
+            <img
+              class="dpsm-logo-highlight rounded-circle"
+              src="../../images/dpsmlogo.png"
+              width="48"
+            />
+          </a>
+          <a href="../../index.html" target="_self" class="">
+            <span class="division-name text-start">DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span>
+          </a>
+        </div>
+        
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
+          <ul class="navbar-nav text-center d-flex justify-content-center align-items-center gap-2">
+            <li class="nav-item dropdown">
+              <!-- Add dropdown class to the list item -->
+              <a
+                class="bottom-nav-link dropdown-toggle"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                About
+                <!-- Dropdown toggle button -->
+              </a>
+              <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <!-- Dropdown menu -->
+                <a class="dropdown-item" href="../../about.html">About DPSM</a>
+                <a class="dropdown-item" href="../../about.html#mission-vision">Mission & Vision</a>
+                <a class="dropdown-item" href="../../faculty-organization.html">Faculty & Organization</a>
+                <a class="dropdown-item" href="../../news-master-page.html">News</a>
+                <a class="dropdown-item" href="../../research.html">Research & Public Services</a>
               </div>
-            </a>
-          </div>
-          <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-            <ul class="navbar-nav text-center">
-              <li>
-                <a class="nav-link" href="..\..\index.html">Home</a>
-              </li>
-              <li>
-                <a class="nav-link" href="..\..\support.html">Resources & Support</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- End of University Navbar -->
-      <!-- Division Navbar Section -->
-      <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-        <div class="container d-flex justify-content-around">
-          <div class="division-navbar navbar-brand menu" href="#">
-            <a href="..\..\index.html" target="_self" class="text-link">
-              <img
-                class="dpsm-logo-highlight rounded-circle"
-                src="..\..\images/dpsmlogo.png"
-                width="48"
-              />
-            </a>
-            <a href="..\..\index.html" target="_self" class="text-link">
-              <span class="division-name">DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span>
-            </a>
-          </div>
-
-          <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-            <ul class="navbar-nav text-center">
-              <li class="nav-item dropdown">
-                <!-- Add dropdown class to the list item -->
-                <a
-                  class="nav-link dropdown-toggle text-dark"
-                  href="#"
-                  id="aboutDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+            </li>
+            <li class="nav-item dropdown">
+              <!-- Add dropdown class to the list item -->
+              <a
+                class="bottom-nav-link dropdown-toggle"
+                href="#"
+                id="coursesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Courses
+                <!-- Dropdown toggle button -->
+              </a>
+              <div class="dropdown-menu" aria-labelledby="coursesDropdown">
+                <!-- Dropdown menu -->
+                <a class="dropdown-item" href="../../applied-mathematics.html"
+                  >B.S. in Applied Mathematics</a
                 >
-                  About
-                  <!-- Dropdown toggle button -->
-                </a>
-                <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                  <!-- Dropdown menu -->
-                  <a class="dropdown-item" href="..\..\about.html">About DPSM</a>
-                  <a class="dropdown-item" href="..\..\about.html#mission-vision"
-                    >Mission & Vision</a
-                  >
-                  <a class="dropdown-item" href="..\..\faculty-organization.html"
-                    >Faculty & Organization</a
-                  >
-                  <a class="dropdown-item" href="..\..\news-master-page.html">News</a>
-                  <a class="dropdown-item" href="..\..\research.html">Research & Public Services</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <!-- Add dropdown class to the list item -->
-                <a
-                  class="nav-link dropdown-toggle text-dark"
-                  href="#"
-                  id="coursesDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Courses
-                  <!-- Dropdown toggle button -->
-                </a>
-                <div class="dropdown-menu" aria-labelledby="coursesDropdown">
-                  <!-- Dropdown menu -->
-                  <a class="dropdown-item" href="..\..\applied-mathematics.html"
-                    >B.S. in Applied Mathematics</a
-                  >
-                  <a class="dropdown-item" aria-current="page" href="..\..\computer-science.html"
-                    >B.S. in Computer Science</a
-                  >
-                  <a class="dropdown-item" href="..\..\statistics.html">B.S. in Statistics</a>
-                </div>
-              </li>
-              <li>
-                <a class="nav-link text-dark" href="..\..\contact-us.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+                <a class="dropdown-item" href="../../computer-science.html">B.S. in Computer Science</a>
+                <a class="dropdown-item" href="../../statistics.html">B.S. in Statistics</a>
+              </div>
+            </li>
+            <li>
+              <a class="bottom-nav-link text-dark" href="../../contact-us.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
-      <!-- End of Division Navbar -->
-      <!-- Hero Section -->
-      <div class="comsci-hero-section">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="scroll-downs">
+    </div>
+    <!-- End of Division Navbar -->
+    <!-- Hero Section -->
+      <div class="comsci-hero-section"> <!-- CHANGE THIS -->
+        <div class="comsci-hero-overlay"></div>
+        <!-- Overlay Element Added -->
         <div class="container">
           <div class="row">
             <div class="col-md-8 mx-auto">
@@ -145,7 +142,7 @@
           </div>
         </div>
       </div>
-      <!-- End of Hero Section -->
+    <!-- End of Hero Section -->
       <!-- Start of Content -->
       <div class="individual-courses-container">
         <div class="credits-prerequisites">
@@ -154,6 +151,11 @@
           <p><b>Prerequisites: </b>CMSC 131</p>
         </div>
         <div>
+          <a href="../../computer-science.html">
+            <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7">
+              ← Go Back
+            </p>
+          </a>
           <h1>CMSC 132 - Computer Architecture</h1>
           <h5>Course Description</h5>
           <p>
@@ -210,110 +212,134 @@
         </div>
       </div>
       <!-- End of Content -->
-      <!-- Footer -->
-      <footer
-        class="footer-with-image pt-5"
-        style="background-image: url('../../images/footer.png')"
-      >
-        <div class="container mb-5">
-          <div class="row">
-            <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
-              <!-- Content for the left column (col-2) -->
+    <!-- Footer -->
+    <footer
+      class="footer-with-image pt-5"
+      style="background-image: url(&quot;../../images/footer/footer.png&quot;)"
+    >
+      <div class="container mb-5">
+        <div class="row">
+          <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
+            <!-- Content for the left column (col-2) -->
+          </div>
+          <div class="footer-content col-md-10">
+            <!-- Content for the right column (col-10) -->
+            <div class="footer-heading container-fluid">
+              <!-- First container (100% width of the outer container) -->
+              <span class="footer-division-text text-light"
+                >UPV Division of Physical Sciences and Mathematics</span
+              >
             </div>
-            <div class="footer-content col-md-10">
-              <!-- Content for the right column (col-10) -->
-              <div class="footer-heading container-fluid">
-                <!-- First container (100% width of the outer container) -->
-                <span class="footer-division-text text-light"
-                  >UPV Division of Physical Sciences and Mathematics</span
-                >
-              </div>
-              <div class="container-fluid mt-3">
-                <!-- Second container (100% width of the outer container with margin top) -->
-              </div>
+            <div class="container-fluid mt-3">
+              <!-- Second container (100% width of the outer container with margin top) -->
             </div>
           </div>
-          <div class="row">
-            <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
-              <!-- Content for the left column (col-2) -->
-              <img src="../..//images/upvlogo.png" alt="UPV Logo" width="72px" />
-              <img
-                class="rounded-circle"
-                src="../..//images/dpsmlogo.png"
-                alt="DPSM Logo"
-                width="72px"
-              />
+        </div>
+        <div class="row">
+          <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
+            <!-- Content for the left column (col-2) -->
+            <img src="../../images/upvlogo.png" alt="UPV Logo" width="72px" />
+            <img class="rounded-circle" src="../../images/dpsmlogo.png" alt="DPSM Logo" width="72px" />
+          </div>
+          <div class="footer-content col-md-10">
+            <!-- Content for the right column (col-10) -->
+            <div class="footer-horizontal-line container-fluid">
+              <!-- First container (100% width of the outer container) -->
             </div>
-            <div class="footer-content col-md-10">
-              <!-- Content for the right column (col-10) -->
-              <div class="footer-horizontal-line container-fluid">
-                <!-- First container (100% width of the outer container) -->
-              </div>
-              <div class="container-fluid mt-3">
-                <!-- Second container (100% width of the outer container with margin top) -->
-                <div class="row">
-                  <div class="footer-subtitle col-md-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit
-                    risus lectus, sit amet aliquet sapien lobortis fermentum. Integer in lorem nec
-                    orci aliquet vehicula vel quis nunc.
-                  </div>
-                  <div class="footer-subtitle col-md-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit
-                    risus lectus, sit amet aliquet sapien lobortis fermentum. Integer in
-                  </div>
-                  <nav class="footer-nav navbar navbar-expand-lg justify-content-center col-md-3">
-                    <div class="" id="navbarNavAltMarkup">
-                      <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#">FAQs</a>
-                        <a class="nav-item nav-link" href="../..//about.html">About Us</a>
-                        <a class="nav-item nav-link" href="../..//support.html">Support</a>
-                      </div>
+            <div class="container-fluid mt-3">
+              <!-- Second container (100% width of the outer container with margin top) -->
+              <div class="row">
+                <div class="footer-subtitle col-md-3 d-flex align-items-center">
+                  <p>
+                    UPV CAS Building <br>
+                    5023 Miagao, Iloilo <br>
+                    Tel. No.: (033) 315-9625 Local: 239 <br>
+                    Email: psm.upvisayas@up.edu.ph <br>
+                  </p>
+                </div>
+                <div class="footer-subtitle col-md-4">
+                  <p class="fw-normal section-subtitle d-flex flex-column">
+                    <span>Quick Links</span>
+                    <a href="https://crs.upv.edu.ph/" target="_blank" class="footer-link fw-bold">
+                      > Computerized Registration System <br>
+                    </a>
+                    <a href="https://upvisayas.net/lms3/my/" target="_blank" class="footer-link fw-bold">
+                      > UP Visayas Learning Management System <br>
+                    </a>
+                    <a href="https://www.upv.edu.ph/" target="_blank" class="footer-link fw-bold">
+                      > UP Visayas Website <br>
+                    </a>
+                  </p>
+                </div>
+                <nav class="footer-nav navbar navbar-expand-lg justify-content-center col-md-3">
+                  <div class="" id="navbarNavAltMarkup">
+                    <div class="d-flex gap-3">
+                      <a class="footer-link fw-bold" href="../../about.html">About Us</a>
+                      <a class="footer-link fw-bold" href="../../support.html">Support</a>
+                      <a class="footer-link fw-bold" href="#">FAQs</a>
                     </div>
-                  </nav>
-                  <div
-                    class="footer-buttons d-flex justify-content-around align-items-center col-md-2"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
-                      <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                      <style>
-                        svg {
-                          fill: #f5f5fa;
-                        }
-                      </style>
-                      <path
-                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
-                      />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
-                      <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                      <style>
-                        svg {
-                          fill: #f5f5fa;
-                        }
-                      </style>
-                      <path
-                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                      />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
-                      <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                      <style>
-                        svg {
-                          fill: #f5f5fa;
-                        }
-                      </style>
-                      <path
-                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
-                      />
-                    </svg>
                   </div>
+                </nav>
+                <div
+                class="footer-buttons d-flex justify-content-around align-items-center col-md-2"
+                >
+                <a href="https://www.facebook.com/dpsmcas" target="_blank"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <style>
+                      svg {
+                        fill: #faf8f5;
+                      }
+                    </style>
+                    <path
+                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                    />
+                  </svg>
+                </a>
+                <a href="../../contact-us.html" target="_blank"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <style>
+                      svg {
+                        fill: #f5f5fa;
+                      }
+                    </style>
+                    <path
+                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                    />
+                  </svg>
+                </a>
+                <button type="button" class="btn p-0" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="(033) 315-9625 Local: 239" aria-label="Phone Information">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" aria-hidden="true">
+                    <style>
+                      svg { fill: #f5f5fa; }
+                    </style>
+                    <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                  </svg>
+                </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-      <!-- End of Footer -->
+      </div>
+      <p class="footer-subtitle p-0 section-subtitle text-center">Copyright © 2024 Division of Physical Sciences and Mathematics. <br>All rights reserved.</p>
+    </footer>
+    <!-- End of Footer -->
+    <!-- Scroll to Top Button-->
+    <button id="scrollTopBtn" title="Go to top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffa200" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+  </button>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../javascript/navbar.js"></script>
+    <script src="../../javascript/carousel.js"></script>
+    <script src="../../javascript/footer.js"></script>
+    <script src="../../javascript/index.js"></script>
   </body>
 </html>

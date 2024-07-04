@@ -12499,18 +12499,34 @@ a {
 .comsci-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/comsci-hero.png");
+  background-image: url("/images/per-course-hero/computer-science-hero.png");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1; /* Lower z-index */
+}
+
+.comsci-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
+}
+
+.hero-caption {
+  position: relative; /* Add position relative */
+  z-index: 2; /* Higher z-index */
 }
 
 .stats-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/homepage-hero.png");
+  background-image: url("/images/per-course-hero/statistics-hero.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12518,15 +12534,35 @@ a {
   justify-content: center;
 }
 
+.stats-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
+}
+
 .appmath-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/homepage-hero.png");
+  background-image: url("/images/per-course-hero/applied-mathematics-hero.png");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.appmath-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
 }
 
 .hero-caption {
@@ -12696,6 +12732,7 @@ div.card.card-body {
 
 .prospectus-table {
   min-width: 600px;
+  table-layout: fixed;
 }
 .prospectus-table td {
   padding-left: 1rem;
@@ -12904,7 +12941,7 @@ div.card.card-body {
 .faculty-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/cs-faculty/group_computer-science-faculty_hero.jpg");
+  background-image: url("/images/about/BASEMENT.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12963,12 +13000,22 @@ div.card.card-body {
 .research-hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("/images/homepage-hero.png");
+  background-image: url("/images/about/BLDNG.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.research-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
 }
 
 .support-hero-section {
@@ -13039,19 +13086,46 @@ html {
   justify-content: center;
 }
 
-.news-title {
-  display: block;
+.news-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  cursor: pointer;
-  font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  border-bottom: 0.2rem solid rgb(255, 183, 3);
-  margin-bottom: 1rem;
-  border-radius: 0%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+  z-index: 0; /* Lower z-index, behind the content */
 }
 
+.card {
+  border: none;
+  gap: 2;
+}
+
+img,
+.card-img-top {
+  border-radius: 0em;
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 5;
+  }
+}
 .article-hero-section {
   position: relative;
   height: 50vh;
@@ -13086,13 +13160,24 @@ html {
   margin-bottom: 1rem;
 }
 
-.container-image {
+.fibonacci-image {
   display: grid;
-  height: 500px;
+  width: 1024px; /* Example width */
+  height: 512px; /* Example height */
+  background-size: cover;
+  background-position: center;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "pic1 pic2 pic2" "pic1 pic3 pic4";
   grid-gap: 3px;
+}
+
+.fibonacci-image div {
+  width: 100%; /* Take the full width of the parent */
+  padding-top: 56.25%; /* Aspect ratio of 16:9 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 #pic1 {
@@ -13198,6 +13283,22 @@ html {
   .image-source {
     font-size: 15px;
   }
+}
+
+/* Responsive Video Embed */
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .news-master-hero-section {
@@ -13449,7 +13550,7 @@ html {
 
 .individual-courses-container {
   display: flex;
-  height: 100%;
+  height: 100% auto;
   gap: 30px;
   padding: 30px 250px;
 }

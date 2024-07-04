@@ -1,22 +1,22 @@
 // Division Highlights Carousel Data
 const divisionCarouselData = [
   {
-    src: './images/highlights/highlight1.jpg',
-    alt: 'DPSM Website Launch 2024',
-    title: 'Exploring Excellence: DPSM Debuts Dynamic Website!',
-    text: '',
+    src: './images/article-images/dpsm/cas-open-house/cas-open-house-2.jpg',
+    alt: 'DPSM Serves Science with a Side of Silicon in CAS Open House!',
+    title: 'DPSM Serves Science with a Side of Silicon in CAS Open House!',
+    text: '<a href="../articles/cas-open-house.html"> <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7"> Read More → </p></a>',
   },
   {
-    src: './images/highlights/highlight2.jpg',
-    alt: '',
-    title: 'DPSM Serves Science with a Side of Silicon in CAS Open House!',
-    text: '',
+    src: './images/highlights/highlight1.jpg',
+    alt: 'Exploring Excellence: DPSM Debuts Dynamic Website!',
+    title: 'Exploring Excellence: DPSM Debuts Dynamic Website!',
+    text: '<a href="../articles/bulletin-board-website-launch.html"> <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7"> Read More → </p></a>',
   },
   {
     src: './images/highlights/highlight3.jpg',
-    alt: 'DPSM Website Launch 2024',
+    alt: 'Numerical Navigators Converge in Math-O Interschool Quiz Bee!',
     title: 'Numerical Navigators Converge in Math-O Interschool Quiz Bee!',
-    text: '',
+    text: '<a href="../articles/numerical-navigators-converge-in-math-o-interschool-quiz-bee.html"> <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7"> Read More → </p></a>',
   },
 ];
 

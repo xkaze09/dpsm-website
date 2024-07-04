@@ -8,10 +8,21 @@
 .research-hero-section {
     position: relative;
     height: 50vh;
-    background-image: url('/images/homepage-hero.png');
+    background-image: url('/images/about/BLDNG.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.research-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
+    z-index: 0; /* Lower z-index, behind the content */
+  }
+  
