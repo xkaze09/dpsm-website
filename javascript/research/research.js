@@ -1,6 +1,18 @@
 // research.js
 
-import data from './researchData.json' assert { type: 'json' };
+// Fetch JSON data
+async function fetchData() {
+  try {
+    const response = await fetch('/javascript/research/researchData.json');
+    if (!response.ok) {
+      throw new Error('Network response error.');
+    }
+    const data = await response.json();
+    initializeResearchCards(data.SECTIONS);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
 
 // Function to format date or date range
 function formatDate(date) {
@@ -45,7 +57,7 @@ function generateResearchCard(title, authors, link, dates, sectionId) {
   const titleHTML = link
     ? `<h5 class="card-title">
           <a href="${link}" target="_blank" class="text-decoration-underline text-primary">${title}</a>
-       </h5>`
+      </h5>`
     : `<h5 class="card-title">${title}</h5>`;
 
   // Create "Access here" only if link is provided
@@ -61,7 +73,7 @@ function generateResearchCard(title, authors, link, dates, sectionId) {
             <p class="card-text mt-4 fw-medium">${authors}</p>
             <p class="card-text">Date: ${formattedDates}</p>
             ${accessLinkHTML}
-        </div>    
+        </div>
     </div>
     `;
 }
@@ -161,5 +173,5 @@ function showLessCards(container, containerId, visibleCards) {
   showMoreBtn.textContent = 'Show More';
 }
 
-// Initialize the research cards
-initializeResearchCards(data.SECTIONS);
+// Fetch and initialize research cards
+fetchData();
