@@ -257,58 +257,91 @@ div.card.card-body {
 
 /* Prospectus Section */
 .prospectus-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  background-color: #ffb404; /* Primary color */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .prospectus-table-container {
   overflow: auto;
   max-height: 500px;
+  border: 2px solid #ffb404;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
 }
 
 .prospectus-table {
-  min-width: 600px;
-  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  td {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.prospectus-table th, .prospectus-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
 
-    a {
-      color: $accent_one;
-      text-decoration: none;
+.prospectus-table th {
+  background-color: #ffe5a3; /* Lighter shade of primary color */
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+.prospectus-table td {
+  background-color: #fff;
+  color: #333;
+}
+
+.prospectus-table td a {
+  color: #ffb404; /* Primary color for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.prospectus-table td a:hover {
+  text-decoration: underline;
 }
 
 /* Apply sticky positioning of the header columns */
 .prospectus-table-container {
   overflow-y: auto;
-  /* Adjust max-height as needed to ensure scrolling is enabled */
   max-height: 500px;
-}
-
-/* Reset margins and padding that could affect the header positioning */
-.table {
-  margin-bottom: 0; /* Remove default margin from .table class if it exists */
 }
 
 .prospectus-table thead th {
   position: sticky;
   top: 0;
+  background-color: #ffe5a3; /* Lighter shade for sticky header */
+  z-index: 2;
+}
+
+.prospectus-table tbody tr:hover {
+  background-color: #fff8e1; /* Light hover effect */
+}
+
+.prospectus-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.prospectus-table tbody tr:nth-child(odd) {
   background-color: #fff;
-  z-index: 2; /* Ensure it's above other content */
-  margin: 0; /* Reset margin */
-  padding: 0.75rem; /* Adjust padding as needed, but ensure it's uniform */
 }
 
 /* Additional reset for potential inherited styles */
-.prospectus-table-container{
+.prospectus-table-container {
   margin: 0;
   padding: 0;
-  border-collapse: collapse; /* Ensure table elements are tightly packed */
+}
+
+.prospectus-table thead th {
+  padding: 0.75rem;
 }
