@@ -12,7 +12,7 @@ class DivisionNavbar extends HTMLElement {
             />
           </a>
           <a href="./index.html" target="_self" class="">
-            <span class="division-name text-start">TEST DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span>
+            <span class="division-name text-start">DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span>
           </a>
         </div>
         
