@@ -13,7 +13,7 @@ class UniversityNavbar extends HTMLElement {
           <a href="/index.html" target="_self" class="">
             <div class="text-center ">
               <span class="upper-division-name text-white text-start text-wrap"
-              >DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS MEOW</span
+              >DIVISION OF PHYSICAL SCIENCES AND MATHEMATICS</span
               >
             </div>
           </a>
