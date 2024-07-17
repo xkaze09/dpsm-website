@@ -147,6 +147,10 @@ a {
   color: $accent_two;
 }
 
+.dropdown-menu {
+  z-index: 1050; /* Adjust the value as needed */
+}
+
 .nav-item.dropdown:hover .dropdown-menu .dropdown-item {
   color: black;
   font-family: 'Open Sans', 'Times New Roman', Times, serif;
