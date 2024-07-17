@@ -38,8 +38,7 @@ class DivisionNavbar extends HTMLElement {
             <div class="dropdown-menu" aria-labelledby="aboutDropdown">
               <!-- Dropdown menu -->
               <a class="dropdown-item" href="./about.html">About DPSM</a>
-              <a class="dropdown-item" href="./about.html#mission-vision">Mission & Vision</a>
-              <a class="dropdown-item" href="./faculty-organization.html">Faculty & Organization</a>
+              <a class="dropdown-item" href="./faculty-organization.html">Faculty & Staff Members</a>
               <a class="dropdown-item" href="./research.html">Research & Public Services</a>
             </div>
           </li>
