@@ -19,7 +19,7 @@ class UniversityNavbar extends HTMLElement {
       </a>
     </div>
     <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-      <ul class="navbar-nav text-center">
+      <ul class="navbar-nav text-center d-flex justify-content-end align-items-end gap-5">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="./index.html">Home</a>
         </li>
