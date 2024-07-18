@@ -12764,6 +12764,7 @@ td.prospectus-title {
   padding: 0;
   max-height: 40rem;
   overflow-y: auto;
+  overflow-x: auto;
 }
 
 .about-hero-section {
