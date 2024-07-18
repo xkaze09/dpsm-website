@@ -4,7 +4,7 @@
       "title": "FIRST YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "First Year - First Semester",
           "courses": [
             {
               "name": "CMSC 10",
@@ -73,7 +73,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "First Year - Second Semester",
           "courses": [
             {
               "name": "CMSC 21",
@@ -147,7 +147,7 @@
       "title": "SECOND YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Second Year - First Semester",
           "courses": [
             {
               "name": "CMSC 22",
@@ -208,7 +208,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Second Year - Second Semester",
           "courses": [
             {
               "name": "CMSC 127",
@@ -274,7 +274,7 @@
       "title": "THIRD YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Third Year - First Semester",
           "courses": [
             {
               "name": "CMSC 124",
@@ -327,7 +327,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Third Year - Second Semester",
           "courses": [
             {
               "name": "CMSC 125",
@@ -398,7 +398,7 @@
       "title": "FOURTH YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Fourth Year - First Semester",
           "courses": [
             {
               "name": "CMSC 137",
@@ -459,7 +459,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Fourth Year - Second Semester",
           "courses": [
             {
               "name": "PI 100",
@@ -517,7 +517,7 @@
       "title": "ELECTIVES",
       "semesters": [
         {
-          "title": "",
+          "title": "Electives",
           "courses": [
             {
               "name": "CMSC 138",
@@ -729,7 +729,7 @@
       "title": "FIRST YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "First Year - First Semester",
           "courses": [
             {
               "name": "GE Core 1",
@@ -790,7 +790,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "First Year - Second Semester",
           "courses": [
             {
               "name": "GE Core 3",
@@ -864,7 +864,7 @@
       "title": "SECOND YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Second Year - First Semester",
           "courses": [
             {
               "name": "GE Core 4",
@@ -917,7 +917,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Second Year - Second Semester",
           "courses": [
             {
               "name": "GE Core 5",
@@ -983,7 +983,7 @@
       "title": "THIRD YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Third Year - First Semester",
           "courses": [
             {
               "name": "GE Core 6",
@@ -1036,7 +1036,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Third Year - Second Semester",
           "courses": [
             {
               "name": "GE Core 7",
@@ -1099,7 +1099,7 @@
       "title": "FOURTH YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Fourth Year - First Semester",
           "courses": [
             {
               "name": "GE Elective 3",
@@ -1152,7 +1152,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Fourth Year - Second Semester",
           "courses": [
             {
               "name": "GE Elective 5",
@@ -1210,7 +1210,7 @@
       "title": "ELECTIVES",
       "semesters": [
         {
-          "title": "",
+          "title": "Electives",
           "courses": [
             {
               "name": "Math 116",
@@ -1614,7 +1614,7 @@
       "title": "FIRST YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "First Year - First Semester",
           "courses": [
             {
               "name": "STAT 104",
@@ -1675,7 +1675,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "First Year - Second Semester",
           "courses": [
             {
               "name": "STAT 117",
@@ -1741,7 +1741,7 @@
       "title": "SECOND YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Second Year - First Semester",
           "courses": [
             {
               "name": "STAT 121",
@@ -1794,7 +1794,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Second Year - Second Semester",
           "courses": [
             {
               "name": "STAT 122",
@@ -1860,7 +1860,7 @@
       "title": "THIRD YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Third Year - First Semester",
           "courses": [
             {
               "name": "STAT 123",
@@ -1913,7 +1913,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Third Year - Second Semester",
           "courses": [
             {
               "name": "STAT 129",
@@ -1971,7 +1971,7 @@
       "title": "FOURTH YEAR",
       "semesters": [
         {
-          "title": "First Sem",
+          "title": "Fourth Year - First Semester",
           "courses": [
             {
               "name": "STAT 130",
@@ -2024,7 +2024,7 @@
           ]
         },
         {
-          "title": "Second Sem",
+          "title": "Fourth Year - Second Semester",
           "courses": [
             {
               "name": "STAT 142",
@@ -2082,7 +2082,7 @@
       "title": "FREE ELECTIVE COURSES",
       "semesters": [
         {
-          "title": "",
+          "title": "Free Elective Courses",
           "courses": [
             {
               "name": "CMS 101",
@@ -2164,7 +2164,7 @@
       "title": "STATISTICS ELECTIVE COURSES",
       "semesters": [
         {
-          "title": "",
+          "title": "Statistics Elective Courses",
           "courses": [
             {
               "name": "STAT 170",
@@ -2270,7 +2270,7 @@
       "title": "CS/MATH ELECTIVE COURSES",
       "semesters": [
         {
-          "title": "",
+          "title": "CS/MATH Elective Courses",
           "courses": [
             {
               "name": "CMSC 11",
@@ -2456,7 +2456,7 @@
       "title": "GE ELECTIVE COURSES",
       "semesters": [
         {
-          "title": "",
+          "title": "GE Elective Courses",
           "courses": [
             {
               "name": "AQUA SCI 1",
@@ -2514,7 +2514,7 @@
       "title": "GE CORE COURSES",
       "semesters": [
         {
-          "title": "",
+          "title": "GE Core Courses",
           "courses": [
             {
               "name": "ARTS I",
