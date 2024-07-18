@@ -12717,7 +12717,7 @@ div.card.card-body {
 .prospectus-table td {
   background-color: #fff;
   color: #333;
-  padding: 1rem;
+  padding: 0.75rem;
   text-align: center;
   border: 1px solid #ddd;
 }
