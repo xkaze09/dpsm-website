@@ -257,17 +257,16 @@ div.card.card-body {
 
 /* Prospectus Section */
 .prospectus-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
   background-color: #ffb404; /* Primary color */
   color: white;
+  padding: 1rem;
   text-align: center;
+  border-radius: 0.5rem 0.5rem 0 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-  position: sticky;
-  top:0rem;
 }
-
 
 .prospectus-table-container {
   overflow: auto;
@@ -300,9 +299,6 @@ div.card.card-body {
 .prospectus-table td {
   background-color: #fff;
   color: #333;
-  padding: 0.75rem;
-  text-align: center;
-  border: 1px solid #ddd;
 }
 
 .prospectus-table td a {
@@ -311,40 +307,41 @@ div.card.card-body {
   font-weight: bold;
 }
 
-/* Apply sticky positioning of the header columns */
-.prospectus-table thead th {
-  position: sticky;
-  top:4.75rem;
-  background-color: #ffe5a3; /* Lighter shade for sticky header */
-  z-index: 2;
-  padding: 0.5rem;
-}
-.prospectus-body th{
-  text-align:left;
-  position:sticky;
-  top:3rem;
-  background-color: #ffe5a3;
-  max-height: 0.5rem;
-  padding:0.25rem 1rem;
-}
-td.prospectus-title{
-  font-size: 1.25rem;
-  font-weight: bold;
-  background-color: #ffb404; /* Primary color */
-  color: rgb(0, 0, 0);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding-bottom: 2.25rem;
-  padding-top:1rem;
+.prospectus-table td a:hover {
+  text-decoration: underline;
 }
 
+/* Apply sticky positioning of the header columns */
+.prospectus-table-container {
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.prospectus-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #ffe5a3; /* Lighter shade for sticky header */
+  z-index: 2;
+}
+
+.prospectus-table tbody tr:hover {
+  background-color: #fff8e1; /* Light hover effect */
+}
+
+.prospectus-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.prospectus-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
 
 /* Additional reset for potential inherited styles */
 .prospectus-table-container {
   margin: 0;
   padding: 0;
-  max-height: 40rem;
-  overflow-y: auto;
 }
 
+.prospectus-table thead th {
+  padding: 0.75rem;
+}
