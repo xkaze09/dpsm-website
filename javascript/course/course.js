@@ -6,9 +6,9 @@ function generateProspectusTable(prospectus) {
   }
 
   for (const section of prospectus) {
-    table.innerHTML += `<tr>
-            <td colspan="6">${section.title}</td>
-          </tr>`;
+    // table.innerHTML += `<tr>
+    //         <td colspan="5">${section.title}</td>
+    //       </tr>`;
 
     for (const semester of section.semesters) {
       let rows = '';
@@ -21,11 +21,13 @@ function generateProspectusTable(prospectus) {
         // Otherwise add blank space
         let credits = course.isCredited ? course.credits : '(' + course.credits + ')';
         const link = course.link ? `/courses/${course.link}` : '';
-
+        if(k == 0){rows+= `
+                <thead>
+                  <th colspan="5">${semester.title}</th>
+                </thead>
+                `;}
         rows += `
-                <tr>
-                  <th scope="row"></th>
-                  <td>${k == 0 ? semester.title : ''}</td>
+                <tr class="prospectus-row">
                   <td><a href=${link}>${course.name}</a></td>
                   <td>${course.title}</td>
                   <td>${credits ?? ''}</td>
@@ -41,11 +43,10 @@ function generateProspectusTable(prospectus) {
       if (totalUnits != 0) {
         rows += `
               <tr>
+  
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td>${totalUnits}</td>
+                <td>Total: ${totalUnits}</td>
                 <td></td>
               </tr>
               `;
