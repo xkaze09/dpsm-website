@@ -17,10 +17,7 @@ class DivisionNavbar extends HTMLElement {
       </div>
       
       <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-      <ul class="navbar-nav text-center d-flex justify-content-center align-items-center gap-2">
-      <li>
-        <a class="bottom-nav-link text-dark" href="./news-master-page.html">News</a>
-      </li>
+      <ul class="navbar-nav text-center d-flex justify-content-center align-items-center gap-5">
       <li class="nav-item dropdown">
             <!-- Add dropdown class to the list item -->
             <a
@@ -38,11 +35,13 @@ class DivisionNavbar extends HTMLElement {
             <div class="dropdown-menu" aria-labelledby="aboutDropdown">
               <!-- Dropdown menu -->
               <a class="dropdown-item" href="./about.html">About DPSM</a>
-              <a class="dropdown-item" href="./about.html#mission-vision">Mission & Vision</a>
-              <a class="dropdown-item" href="./faculty-organization.html">Faculty & Organization</a>
+              <a class="dropdown-item" href="./faculty-organization.html">Faculty & Staff Members</a>
               <a class="dropdown-item" href="./research.html">Research & Public Services</a>
             </div>
-          </li>
+      </li>
+      <li>
+        <a class="bottom-nav-link text-dark" href="./news-master-page.html">News</a>
+      </li>
           <li class="nav-item dropdown">
             <!-- Add dropdown class to the list item -->
             <a
