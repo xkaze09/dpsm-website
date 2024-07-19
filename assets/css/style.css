@@ -12013,6 +12013,10 @@ a {
   color: rgb(251, 133, 0);
 }
 
+.dropdown-menu {
+  z-index: 1050; /* Adjust the value as needed */
+}
+
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }

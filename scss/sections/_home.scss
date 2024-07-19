@@ -159,6 +159,10 @@ a {
   color: $accent_two;
 }
 
+.dropdown-menu {
+  z-index: 1050; /* Adjust the value as needed */
+}
+
 // Dropdown
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
     display: block;
