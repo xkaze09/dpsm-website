@@ -14,109 +14,69 @@ async function fetchData() {
   }
 }
 
-// Function to format date or date range
-function formatDate(date) {
-  const startDate = new Date(date.start);
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-
-  // Format date
-  if (date.end) {
-    const endDate = new Date(date.end);
-    if (startDate.getTime() === endDate.getTime()) {
-      // If start and end dates represent the same date, format as "Month Day, Year"
-      return `${startDate.toLocaleDateString('en-US', options)}`;
-    } else {
-      // "Start Month Day, Year - End Month Day, Year"
-      return `${startDate.toLocaleDateString('en-US', options)} - ${endDate.toLocaleDateString('en-US', options)}`;
-    }
-  } else {
-    // Check if only the year is given
-    if (date.start.length === 4) {
-      // "Year"
-      return `${startDate.toLocaleDateString('en-US', { year: 'numeric' })}`;
-    } else if (date.start.length === 7) {
-      // "Month Year"
-      return `${startDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}`;
-    } else {
-      // "Month Day, Year"
-      return `${startDate.toLocaleDateString('en-US', options)}`;
-    }
-  }
-}
-
 
 // Generating the research cards
-function generateResearchCard(title, authors, link, dates, sectionId) {
-  let formattedDates = '';
+function generateResearchCard(item, sectionId) {
+  let cardHTML = '';
 
-  if (dates) {
-    formattedDates = dates.map(formatDate).join(' & ');
+  if (sectionId === 'research-projects') {
+    const titleHTML = item.link 
+      ? `<h5 class="card-title"><em><a href="${item.link}" target="_blank" class="text-decoration-underline text-primary">${item.title}</a></em></h5>`
+      : `<h5 class="card-title"><em>${item.title}</em></h5>`;
+
+
+    cardHTML = `
+      <div class="card research-card" data-section="${sectionId}">
+          <div class="p-4 card-body border-bottom border-3 border-warning">
+              ${titleHTML}
+              <p class="card-text mt-4 fw-medium">${item.authors}</p>
+              <p class="card-text">Duration: ${item.dates}</p>
+          </div>
+      </div>
+    `;
+  } else {
+    let citation = item.citation.replace('[title]', item.link
+      ? `<a href="${item.link}" target="_blank" class="text-decoration-underline text-primary">${item.title}</a>`
+      : `${item.title}`);
+
+    const citationHTML = `<p class="card-text">${citation}</p>`;
+
+    cardHTML = `
+      <div class="card research-card" data-section="${sectionId}">
+          <div class="p-4 card-body border-bottom border-3 border-warning">
+              ${citationHTML}
+          </div>
+      </div>
+    `;
   }
 
-  // Check if link is provided or not for the title
-  const titleHTML = link
-    ? `<h5 class="card-title">
-          <a href="${link}" target="_blank" class="text-decoration-underline text-primary">${title}</a>
-      </h5>`
-    : `<h5 class="card-title">${title}</h5>`;
-
-  // Create "Access here" only if link is provided
-  const accessLinkHTML = link
-    ? `<a href="${link}" target="_blank" class="position-absolute bottom-0 end-0 p-3 text-primary">Access here</a>`
-    : '';
-
-  // HTML for the research card
-  return `
-    <div class="card research-card" data-section="${sectionId}">
-        <div class="p-4 card-body border-bottom border-3 border-warning">
-            ${titleHTML}
-            <p class="card-text mt-4 fw-medium">${authors}</p>
-            <p class="card-text">Date: ${formattedDates}</p>
-            ${accessLinkHTML}
-        </div>
-    </div>
-    `;
+  return cardHTML;
 }
 
 // Initialize the research cards
 function initializeResearchCards(sections) {
-
   sections.forEach((section) => {
     const container = document.getElementById(section.containerId);
-    let visibleCards = 5; // Initial number of visible cards
+    let visibleCards = 5;
 
     if (container) {
       section.items.forEach((item, index) => {
-        const cardHTML = generateResearchCard(
-          item.title,
-          item.authors,
-          item.link,
-          item.dates || item.date,
-          section.containerId,
-        );
+        const cardHTML = generateResearchCard(item, section.containerId);
         container.innerHTML += cardHTML;
 
-        // Hide cards if already more than the initial number of visible cards
         if (index >= visibleCards) {
-          const card = container.querySelector(
-            `[data-section="${section.containerId}"]:last-child`, // Use item.containerId
-          );
+          const card = container.querySelector(`[data-section="${section.containerId}"]:last-child`);
           card.style.display = 'none';
         }
       });
 
-      // Show More Button
       if (section.items.length > visibleCards) {
-
         const showMoreBtn = document.createElement('button');
         showMoreBtn.textContent = 'Show More';
         showMoreBtn.classList.add('btn', 'btn-primary', 'mt-3', 'rounded-5', 'toggle-indicator');
         showMoreBtn.style.float = 'right';
         
-        showMoreBtn.addEventListener('click', () =>
-          toggleCards(container, section.containerId, visibleCards),
-        );
-
+        showMoreBtn.addEventListener('click', () => toggleCards(container, section.containerId, visibleCards));
         container.appendChild(showMoreBtn);
       }
     }

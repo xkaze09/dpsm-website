@@ -24,5 +24,9 @@
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)); /* Gradient */
     z-index: 0; /* Lower z-index, behind the content */
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
-  
