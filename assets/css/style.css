@@ -12001,6 +12001,10 @@ a {
   color: rgb(251, 133, 0);
 }
 
+.dropdown-menu {
+  z-index: 1050; /* Adjust the value as needed */
+}
+
 .nav-item.dropdown:hover .dropdown-menu .dropdown-item {
   color: black;
   font-family: "Open Sans", "Times New Roman", Times, serif;
@@ -12011,6 +12015,10 @@ a {
 .nav-item.dropdown:hover .dropdown-menu .dropdown-item:hover {
   transform: scale(1.1);
   color: rgb(251, 133, 0);
+}
+
+.dropdown-menu {
+  z-index: 1050; /* Adjust the value as needed */
 }
 
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
@@ -12427,52 +12435,6 @@ a {
     font-size: 24px;
   }
 }
-.scroll-downs {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 34px;
-  height: 55px;
-  padding-top: 10em;
-}
-
-.mousey {
-  width: 3px;
-  padding: 10px 15px;
-  height: 35px;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
-}
-
-.scroller {
-  width: 3px;
-  height: 10px;
-  border-radius: 25%;
-  background-color: #fff;
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
-  animation-iteration-count: infinite;
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-}
 /* Scroll to Top Button */
 #scrollTopBtn {
   display: none; /* Hidden by default */
@@ -12721,57 +12683,96 @@ div.card.card-body {
 
 /* Prospectus Section */
 .prospectus-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
+  background-color: #ffb404; /* Primary color */
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0rem;
 }
 
 .prospectus-table-container {
   overflow: auto;
   max-height: 500px;
+  border: 2px solid #ffb404;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
 }
 
 .prospectus-table {
-  min-width: 600px;
-  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.prospectus-table th, .prospectus-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.prospectus-table th {
+  background-color: #ffe5a3; /* Lighter shade of primary color */
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .prospectus-table td {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  background-color: #fff;
+  color: #333;
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #ddd;
 }
+
 .prospectus-table td a {
-  color: rgb(255, 183, 3);
+  color: #ffb404; /* Primary color for links */
   text-decoration: none;
-}
-.prospectus-table td a:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* Apply sticky positioning of the header columns */
-.prospectus-table-container {
-  overflow-y: auto;
-  /* Adjust max-height as needed to ensure scrolling is enabled */
-  max-height: 500px;
-}
-
-/* Reset margins and padding that could affect the header positioning */
-.table {
-  margin-bottom: 0; /* Remove default margin from .table class if it exists */
-}
-
 .prospectus-table thead th {
   position: sticky;
-  top: 0;
-  background-color: #fff;
-  z-index: 2; /* Ensure it's above other content */
-  margin: 0; /* Reset margin */
-  padding: 0.75rem; /* Adjust padding as needed, but ensure it's uniform */
+  top: 4.75rem;
+  background-color: #ffe5a3; /* Lighter shade for sticky header */
+  z-index: 2;
+  padding: 0.5rem;
+}
+
+.prospectus-body th {
+  text-align: left;
+  position: sticky;
+  top: 3rem;
+  background-color: #ffe5a3;
+  max-height: 0.5rem;
+  padding: 0.25rem 1rem;
+}
+
+td.prospectus-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #ffb404; /* Primary color */
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 2.25rem;
+  padding-top: 1rem;
 }
 
 /* Additional reset for potential inherited styles */
 .prospectus-table-container {
   margin: 0;
   padding: 0;
-  border-collapse: collapse; /* Ensure table elements are tightly packed */
+  max-height: 40rem;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .about-hero-section {
