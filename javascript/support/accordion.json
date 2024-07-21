@@ -13,7 +13,7 @@
           },
           {
             "title": "UPV Health Services Unit",
-            "content": "<a href='https://sites.google.com/site/upvgpo/health-service' target='_blank'>UPV Health Service Unit (HSU)</a>"
+            "content": "Contact the UPV Health Service Unit (HSU) through their <a href='https://www.facebook.com/upv.hsu.miagao?mibextid=ZbWKwL' target='_blank'>Facebook Page</a>"
           },
           {
             "title": "UPV Software Subscriptions",
@@ -37,8 +37,6 @@
         "containerId": "accordionSection2",
         "items": [
           {
-            "title": "Edusuite",
-            "content": "Link not available yet. To be updated soon"
           }
         ]
       }
