@@ -127,10 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
       university: 'University of the Philippines Diliman',
     },
     {
-      name: 'Arnel L. Tampos',
+      name: 'Arnel L. Tampos, PhD',
       title: 'Associate Professor',
       imgSrc: '/images/admin-faculty/tampos.jpg',
-      degree: 'MS in Applied Mathematics',
+      degree: 'PhD in Mathematics',
       university: 'University of the Philippines Diliman',
     },
     {
@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Ara Abigail E. Ambita',
       imgSrc: '/images/comsci-faculty/ambita.JPG',
       title: 'Assistant Professor',
-      degree: 'BS in Computer Science',
-      university: 'University of the Philippines Visayas',
+      degree: 'MS in Computer Science',
+      university: 'University of the Philippines Diliman',
     },
     {
       name: 'Franz Angelo U. Apoyon',
@@ -179,11 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
       university: 'University of the Philippines Visayas',
     },
     {
-      name: 'Francis D. Dimzon',
+      name: 'Francis D. Dimzon, PhD',
       imgSrc: '/images/comsci-faculty/dimzon.JPG',
       title: 'Assistant Professor',
-      degree: 'MS in Computer Science',
-      university: 'University of the Philippines Los Baños',
+      degree: 'PhD in Computer Science',
+      university: 'De La Salle University',
     },
     {
       name: 'Joanah Faith J. Sanz',
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: 'Elemar E. Teje',
       imgSrc: '/images/cs-faculty/TEJE.jpg',
-      title: 'Instructor',
+      title: 'Lecturer',
       degree: 'BS in Computer Science',
       university: 'University of the Philippines Visayas',
     },
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
       university: 'University of the Philippines Visayas',
     },
     {
-      name: 'Jhoanne C. Gatpatan',
+      name: 'Jhoanne C. Gatpatan, PhD',
       imgSrc: '/images/statistics-faculty/gatpatan.jpg',
       title: 'Assistant Professor',
       degree: 'PhD in Statistics',
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Reilly V. Bautista',
       imgSrc: '/images/physics-faculty/bautista.JPG',
       title: 'Instructor',
-      degree: 'BS in Applied Mathematics',
+      degree: 'BS in Applied Physics',
       university: 'University of the Philippines Los Baños',
     },
     {
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
       university: 'De La Salle University, Manila',
     },
     {
-      name: 'Rommel A. Espinosa',
+      name: 'Rommel A. Espinosa, PhD',
       imgSrc: '/images/physics-faculty/ESPINOSA.jpg',
       title: 'Associate Professor',
       degree: 'PhD in Computational Science and Informatics',
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Jared Gregory D. Mabunay',
       imgSrc: '/images/physics-faculty/mabunay.JPG',
       title: 'Instructor',
-      degree: 'BS Applied Physics',
+      degree: 'BS in Applied Physics',
       university: 'University of the Philippines Manila',
     },
     {
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imgSrc: '/images/physics-faculty/merciales.JPG',
       title: 'Instructor',
       degree: 'BS in Physics',
-      university: 'University of the Philippines Manila',
+      university: 'University of the Philippines Baguio',
     },
     {
       name: 'Key T. Simfroso',
