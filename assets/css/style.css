@@ -12764,58 +12764,58 @@ div.card.card-body {
 @media (min-width: 541px) and (max-width: 767px) {
   /* Adjust font size and padding for small screens */
   .prospectus-table-container {
-    font-size: 1rem;
+    font-size: 0.625rem;
   }
   .prospectus-table thead tr >.prospectus-title{
-    padding-top:0.4rem;
-    padding-bottom: 1.8rem;
+    padding-top:0.25rem;
+    padding-bottom: 1.125rem;
   }
   .prospectus-body th{
-    top:2rem;
-    padding: 0.2rem;
-    padding-left:1rem;
+    top:1.25rem;
+    padding: 0.125rem;
+    padding-left:0.625rem;
   }
   .prospectus-table thead th{
-    top:3.4rem;
-    padding: 0.2rem;
+    top:2.125rem;
+    padding: 0.125rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /* Adjust font size and padding for medium screens */
   .prospectus-table-container {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
   }
   .prospectus-table thead tr >.prospectus-title{
-    padding-top:0.6rem;
-    padding-bottom: 2.7rem;
+    padding-top:0.3rem;
+    padding-bottom: 1.35rem;
   }
   .prospectus-body th{
-    top:3rem;
-    padding: 0.3rem;
-    padding-left:1.5rem;
+    top:1.5rem;
+    padding: 0.15rem;
+    padding-left:0.75rem;
   }
   .prospectus-table thead th{
-    top:5.1rem;
-    padding: 0.3rem;
+    top:2.55rem;
+    padding: 0.15rem;
   }
 }
 @media (min-width: 992px) {
   /* Default styles for larger screens */
   .prospectus-table-container {
-    font-size: 2rem;
+    font-size: 1.125rem;
   }
   .prospectus-table thead tr >.prospectus-title{
-    padding-top:0.8rem;
-    padding-bottom: 3.6rem;
+    padding-top:0.45rem;
+    padding-bottom: 2.205rem;
   }
   .prospectus-body th{
-    top:4rem;
-    padding: 0.4rem;
-    padding-left:2rem;
+    top:2.25rem;
+    padding: 0.225rem;
+    padding-left:1.125rem;
   }
   .prospectus-table thead th{
-    top:6.8rem;
-    padding: 0.4rem;
+    top:3.825rem;
+    padding: 0.225rem;
   }
 }
 
