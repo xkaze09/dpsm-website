@@ -284,7 +284,7 @@
       ]
     },
     {
-      "containerId": "conferences-oral",
+      "containerId": "conferences",
       "items": [
         {
           "title": "Characterization of porcine skin using a portable time-domain optical coherence tomography system, 10th International Electronic Conference on Sensors and Applications",
@@ -303,7 +303,7 @@
           "citation": "J. Cadondon, J.R. Lesidan, J. Bulan, E. Vallar, T. Shiina, M.C. Galvez, [title] 10th International Electronic Conference on Sensors and Applications, Oral Presentation (November 15-30, 2023)"
         }
         ,{
-          "title": "Realtime Chlorophyll-a Pigment Monitoring of Blue-green Algae Using 385-nm Pulsed LED Fluorescence LiDAR System,",
+          "title": "Realtime Chlorophyll-a Pigment Monitoring of Blue-green Algae Using 385-nm Pulsed LED Fluorescence LiDAR System",
           "citation": "J.G. Cadondon, E.A. Vallar, T. Shiina, M.C. Galvez, [title] , 12th Asia-Pacific Laser Symposium (APLS2023), Hakodate, Japan, Sep 4-7, 2023"
         } 
         ,{
@@ -313,10 +313,6 @@
         ,{
           "title": " Impact of Human Settlement to Water Quality Parameters in Manila Bay and Its tributaries, Philippines,",
           "citation": "J. Bulan, J. Cadondon, F.J. Roque, J. Jao, M.C. Galvez, E. Vallar [title] International Conference on Fisheries and Aquatic Sciences (ICFAS 7) 2023"
-        }
-        ,{
-          "title": "Health and Economic Benefits of Fisherfolk Population by Reductions in PM2.5 Emissions: A Comparative Study Between Navotas City, Bohol, and Davao Del Sur, ",
-          "citation": "J.R. Lesidan, N.G. Caido, F. J. Roque, J. Cadondon, M.C. Galvez, O. Rempillo, E. Vallar [title] ICFAS 7 2023, Oral Presentation (October 18-20, 2023)"
         }
         ,{
           "title": "Health and Economic Benefits of Fisherfolk Population by Reductions in PM2.5 Emissions: A Comparative Study Between Navotas City, Bohol, and Davao Del Sur, ",
@@ -366,12 +362,7 @@
         ,{
           "title": "Romeric Pobre, Arunas Krotkus4, Terahertz Helical Antenna from Vegetable Celery, ",
           "citation": "Carlito Jr. Salonga Ponseca, Jr., Francis Dela Cruz, Perry Neil Fernandez,  [title] European Optical Society (EOSAM) 2022 conference, 12-16 September 2022."
-        }
-      ]
-    },
-    {
-      "containerId": "conferences-poster",
-      "items": [
+        },
         {
           "title": "Two-Tired to Travel: The Implementation of Graph Theory in Creating an Efficient Bike Lane Across Iloilo City Proper",
           "citation": "Jamindang, R.J., Agregado, J. [title] during the Mathematical Society of the Philippines Annual Convention, UP Tacloban College, (31 May 2024)"
