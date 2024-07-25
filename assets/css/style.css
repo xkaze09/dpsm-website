@@ -12682,98 +12682,105 @@ div.card.card-body {
 }
 
 /* Prospectus Section */
-.prospectus-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  background-color: #ffb404; /* Primary color */
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: sticky;
-  top: 0rem;
-}
-
 .prospectus-table-container {
-  overflow: auto;
-  max-height: 500px;
-  border: 2px solid #ffb404;
-  border-radius: 0.5rem;
+  overflow-y:auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 1rem;
 }
 
 .prospectus-table {
-  width: 100%;
   border-collapse: collapse;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.prospectus-table th, .prospectus-table td {
-  padding: 1rem;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
-.prospectus-table th {
-  background-color: #ffe5a3; /* Lighter shade of primary color */
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .prospectus-table td {
   background-color: #fff;
   color: #333;
-  padding: 0.75rem;
+  padding: 0.3vw;
   text-align: center;
   border: 1px solid #ddd;
 }
-
-.prospectus-table td a {
+ 
+/* Table links */
+.prospectus-table td a { 
   color: #ffb404; /* Primary color for links */
   text-decoration: none;
   font-weight: bold;
 }
 
 /* Apply sticky positioning of the header columns */
-.prospectus-table thead th {
+.prospectus-table thead th { 
   position: sticky;
   top: 4.75rem;
   background-color: #ffe5a3; /* Lighter shade for sticky header */
   z-index: 2;
-  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #ffe5a3; /* Lighter shade of primary color */
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-
+/* section headers */
 .prospectus-body th {
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #ffe5a3; /* Lighter shade of primary color */
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   text-align: left;
   position: sticky;
   top: 3rem;
   background-color: #ffe5a3;
-  max-height: 0.5rem;
-  padding: 0.25rem 1rem;
+  max-height: 0.5vh;
+  padding: 0.25vw 1rem;
 }
 
-td.prospectus-title {
-  font-size: 1.25rem;
+.prospectus-title {
   font-weight: bold;
-  background-color: #ffb404; /* Primary color */
-  color: rgb(0, 0, 0);
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-bottom: 2.25rem;
-  padding-top: 1rem;
+  position: sticky;
+  top: 0rem;
+}
+
+td.prospectus-title { /* top header background color*/
+  background-color: #ffb404; /* Primary color */
 }
 
 /* Additional reset for potential inherited styles */
 .prospectus-table-container {
   margin: 0;
   padding: 0;
-  max-height: 40rem;
-  overflow-y: auto;
-  overflow-x: auto;
+  max-height: 50vh;
 }
+
+/* Media Queries */
+@media (max-width: 540px) {
+  /* Adjust font size and padding for smaller screens */
+  .prospectus-table-container {
+    font-size: 0.5rem;
+  }
+}
+@media (min-width: 541px) and (max-width: 767px) {
+  /* Adjust font size and padding for small screens */
+  .prospectus-table-container {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust font size and padding for medium screens */
+  .prospectus-table-container {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  /* Default styles for larger screens */
+  .prospectus-table-container {
+    font-size: 1.875rem;
+  }
+}
+
 
 .about-hero-section {
   position: relative;
