@@ -17,7 +17,7 @@ class DivisionNavbar extends HTMLElement {
       </div>
       
       <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-      <ul class="navbar-nav text-center d-flex justify-content-center align-items-center gap-5">
+      <ul class="navbar-nav text-center d-flex justify-content-center align-items-center gap-4">
       <li class="nav-item dropdown">
             <!-- Add dropdown class to the list item -->
             <a
