@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | DPSM</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./images/dpsmlogo.png" type="image/png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+<script src="/components/header/university-navbar.js" defer></script>
+                            <script src="/components/header/division-navbar.js" defer></script>
+                            <script src="/components/footer.js" defer></script>
+  </head>
+  <body>
+    <!-- University Navbar Section -->
+<university-navbar></university-navbar>
+<!-- End of University Navbar -->
+    <!-- Division Navbar Section -->
+<division-navbar></division-navbar>
+<!-- End of Division Navbar -->
+    <!-- Hero Section -->
+    <div class="about-hero-section">
+      <div class="about-hero-overlay"></div>
+      <!-- Overlay Element Added -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="hero-caption">
+              <h1 class="display-1 fw-medium">ADMISSIONS</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Hero Section -->
+    <!-- Quality Policy-->
+    <div class="px-4 pt-5 p-md-5 text-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start"
+            >
+              <p class="section-title lead mb-4 display-6 fw-bold">
+                Admission Criteria
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="lead mb-4 fw-normal text-justify">
+              The University of the Philippines commits to meeting standards of academic excellence as guided by the UP Charter and defined within the changing context of national, regional, and global developments that profoundly impact universities worldwide.<br>
+            </p>
+            <p class="lead mb-4 fw-normal text-justify">As a guide to the continuous improvement of the University’s performance in carrying out its mandate, the UP Quality Policy shall be communicated to all stakeholders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-4 text-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start"
+            >
+              <p class="section-title lead mb-4 display-6 fw-bold">
+                UP College Admission Test (UPCAT)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+<dpsm-footer></dpsm-footer>
+<!-- End of Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/footer.js"></script>
+    <script src="javascript/index.js"></script>
+    <script src="javascript/carousel.js"></script>
+    <script>
+      const aboutCarouselData = [
+        { src: "./images/homepage-hero.png", alt: "Image 1", text: "Insert details here." },
+        { src: "./images/homepage-hero.png", alt: "Image 2", text: "Insert another detail here." },
+        {
+          src: "./images/homepage-hero.png",
+          alt: "Image 3",
+          text: "You can insert another info here.",
+        },
+      ];
+      updateCarousel(aboutCarouselData);
+    </script>
+  </body>
+</html>
