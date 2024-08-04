@@ -13641,4 +13641,21 @@ html {
   margin-bottom: 0px;
 }
 
+.admission-desc {
+  text-align: justify;
+}
+
+.admissions-link {
+  text-decoration: underline;
+  color: #ffc107;
+}
+
+.admissions-block {
+  border-bottom: #ffc107 solid 2px;
+  width: auto;
+  background-color: white;
+  box-shadow: #807f7f 0px 1px 3px;
+  margin-bottom: 2vh;
+}
+
 /*# sourceMappingURL=style.css.map */
