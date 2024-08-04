@@ -22,19 +22,40 @@
 div.admissions-step{
     background-color: #ffc107;
     display: inline;
-    width: 250px;
-    height: 300px;
+    width: 200px;
+    height: 250px;
+    box-shadow: #494949 0px 2px 3px;
 
-}
 
-.admisisons-step-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    
 }
 
 h1.admissions-step{
     color: white;
+    text-align: center;
+    padding: 15px 0 10px;
+    border-bottom: rgb(255, 255, 255) solid 1px;
+}
+p.admisisons-step{
+    text-align: justify;
+}
+
+div.admissions-test{
+    display: inline;
+    width: 200px;
+    border-right: #807f7f 1px solid;
+    border-left: #807f7f 1px solid;
+    
+}
+
+h6.admissions-test{
+    color:#ffc107
+}
+.admisisons-test-container{
+    display: flex;
+}
+
+.admissions-p{
+    border-bottom:black 2px solid;
+    text-align: justify;
+    padding-bottom: 20px;
 }
