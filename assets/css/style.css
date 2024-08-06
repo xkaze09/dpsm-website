@@ -13641,6 +13641,11 @@ html {
   margin-bottom: 0px;
 }
 
+img.facilities {
+  height: auto;
+  width: 100%;
+}
+
 .facilities-img1 {
   display: flex;
   overflow: hidden;
@@ -13654,11 +13659,24 @@ html {
 .facilities-img2 {
   width: 100%;
   padding: 0;
+  height: auto;
+  background-color: red;
 }
 
-img.facilities {
-  height: auto;
+.facilities-img3 {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.facilities-img3 img {
   width: 100%;
+  height: auto;
+}
+
+.facilities-nested {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,11 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
+img.facilities{
+    height: auto;
+    width: 100%;
+    
+}
 
 .facilities-img1{
     display: flex;
@@ -14,17 +19,21 @@
 .facilities-img2{
     width: 100%;
     padding: 0;
+    height: auto;
+    background-color: red;  
+}   
+.facilities-img3{
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+    
+}
+.facilities-img3 img{
+    width: 100%;
+    height: auto;
 }
 
-// .facilities-images{
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-
-// }
-img.facilities{
-    height: auto;
-    width: 100%;
-    
+.facilities-nested{
+    margin: 0;
+    padding: 0; 
 }
