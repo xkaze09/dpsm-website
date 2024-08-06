@@ -1,0 +1,30 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+.facilities-img1{
+    display: flex;
+    overflow: hidden;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding:0;
+}
+.facilities-img2{
+    width: 100%;
+    padding: 0;
+}
+
+// .facilities-images{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+
+// }
+img.facilities{
+    height: auto;
+    width: 100%;
+    
+}
