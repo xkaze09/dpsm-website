@@ -20,7 +20,7 @@ img.facilities{
     width: 100%;
     padding: 0;
     height: auto;
-    background-color: red;  
+    margin: 0;  
 }   
 .facilities-img3{
     padding:0;
@@ -31,6 +31,17 @@ img.facilities{
 .facilities-img3 img{
     width: 100%;
     height: auto;
+    padding: 0;
+}
+.facilities-img4{
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+    background-color: red;
+}
+.facilities-img4 img{
+    max-height: 100%;
+    width:max-content;
 }
 
 .facilities-nested{
