@@ -13679,4 +13679,61 @@ img.facilities {
   padding: 0;
 }
 
+.admission-desc {
+  text-align: justify;
+}
+
+.admissions-link {
+  text-decoration: underline;
+}
+
+.admissions-block {
+  border-bottom: #ffc107 solid 2px;
+  width: auto;
+  background-color: white;
+  box-shadow: #807f7f 0px 1px 3px;
+  margin: 2vh 0;
+  padding: 1vw;
+}
+
+div.admissions-step {
+  background-color: #ffc107;
+  display: inline;
+  width: 200px;
+  height: 250px;
+  box-shadow: #494949 0px 2px 3px;
+}
+
+h1.admissions-step {
+  color: white;
+  text-align: center;
+  padding: 15px 0 10px;
+  border-bottom: rgb(255, 255, 255) solid 1px;
+}
+
+p.admisisons-step {
+  text-align: justify;
+}
+
+div.admissions-test {
+  display: inline;
+  width: 200px;
+  border-right: #807f7f 1px solid;
+  border-left: #807f7f 1px solid;
+}
+
+h6.admissions-test {
+  color: #ffc107;
+}
+
+.admisisons-test-container {
+  display: flex;
+}
+
+.admissions-p {
+  border-bottom: black 2px solid;
+  text-align: justify;
+  padding-bottom: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
