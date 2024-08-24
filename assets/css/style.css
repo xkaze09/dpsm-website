@@ -13654,6 +13654,18 @@ img.facilities {
   margin: 0;
 }
 
+.facilities-img2 img {
+  width: auto;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.facilities-img2 {
+  overflow-x: hidden;
+}
+
 .admission-desc {
   text-align: justify;
 }
