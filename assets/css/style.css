@@ -13644,52 +13644,14 @@ html {
 img.facilities {
   height: auto;
   width: 100%;
+  margin: 0;
 }
 
 .facilities-img1 {
-  display: flex;
-  overflow: hidden;
-  height: 400px;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-.facilities-img2 {
   width: 100%;
   padding: 0;
   height: auto;
   margin: 0;
-}
-
-.facilities-img3 {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-.facilities-img3 img {
-  width: 100%;
-  height: auto;
-  padding: 0;
-}
-
-.facilities-img4 {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: red;
-}
-
-.facilities-img4 img {
-  max-height: 100%;
-  width: max-content;
-}
-
-.facilities-nested {
-  margin: 0;
-  padding: 0;
 }
 
 .admission-desc {
