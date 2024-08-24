@@ -13659,11 +13659,14 @@ img.facilities {
   padding: 0;
   height: 100%;
   margin: 0;
-  overflow-x: hidden;
 }
 
 .facilities-img2 {
   overflow-x: hidden;
+}
+
+div.facilities {
+  width: 70%;
 }
 
 .admission-desc {
