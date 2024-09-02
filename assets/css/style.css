@@ -13660,7 +13660,7 @@ img.facilities {
   position: relative;
 }
 
-.facilities-img1:hover .img-overlay {
+.facilities-img1:hover .img-overlay, .menu:hover .img-overlay {
   opacity: 1;
 }
 
@@ -13700,7 +13700,15 @@ img.facilities {
 }
 
 #menu img {
+  position: relative;
   width: 70vw;
+}
+
+.popup-wrapper {
+  display: block;
+  background-color: aqua;
+  height: auto;
+  width: auto;
 }
 
 .admission-desc {

@@ -17,7 +17,7 @@ img.facilities{
     margin: 0;  
     position:relative;
 }
-.facilities-img1:hover .img-overlay{
+.facilities-img1:hover .img-overlay, .menu:hover .img-overlay{
     opacity: 1;
 
 }
@@ -60,7 +60,12 @@ img.facilities{
     z-index: -2;
 }
 #menu img {
-    width: 70vw;   
+    position: relative;
+    width: 70vw;   // media queries later
 }
-#desc {
+.popup-wrapper{
+    display: block;
+    background-color: aqua;
+    height: auto;
+    width: auto;
 }
