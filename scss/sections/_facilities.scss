@@ -32,6 +32,7 @@ img.facilities{
     text-align: left;
     padding-left:1rem ;
     bottom: 0;
+
 }
 
 // For the image on click menu
@@ -39,19 +40,20 @@ img.facilities{
 	height:100vh;
 	width:100%;
 	position:fixed;
-	top:0vh;
-	left:0vw;
+	top:0;
+	left:0;
+    
+    // hide menu when not in focus
 	z-index:5;
 	visibility:hidden;
 	opacity:0;
 	transition:opacity 0.5s, visibility 0.5s;
     
+    // center components in menu div
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
 }
 .menu-outside{
     height: 100%;
@@ -69,3 +71,49 @@ img.facilities{
     height: auto;
     width: auto;
 }
+
+
+/* Media Queries */
+@media (max-width: 540px) {
+    /* Adjust font size and padding for smaller screens */
+    #menu img {
+        width:80vw;
+    }
+    .menu .img-overlay {
+        padding: 1rem;
+        font-size:1rem;
+    }
+  }
+  
+  @media (min-width: 541px) and (max-width: 767px) {
+    /* Adjust font size and padding for small screens */
+    #menu img {
+        width:80vw;
+    }
+    .menu .img-overlay {
+        padding: 2rem;
+        font-size:2rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Adjust font size and padding for medium screens */
+    #menu img {
+        width:70vw;
+    }
+    .menu .img-overlay {
+        padding: 3rem;
+        font-size:3rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    /* Default styles for larger screens */
+    #menu img {
+        width:70vw;
+    }
+    .menu .img-overlay {
+        padding: 4rem;
+        font-size:4rem;
+    }
+  }
