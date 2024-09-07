@@ -13719,6 +13719,7 @@ img.facilities {
   .img-overlay {
     font-size: 0.4rem;
     padding-left: 0.2rem;
+    padding-top: 0.2rem;
   }
   .img-overlay h6 {
     font-size: 0.5rem;
