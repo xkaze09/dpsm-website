@@ -13725,6 +13725,7 @@ img.facilities {
   .img-overlay h6 {
     font-size: 0.5rem;
     margin: 0;
+    background-color: rebeccapurple;
   }
   .menu .img-overlay {
     padding: 0.5rem;
