@@ -13672,7 +13672,6 @@ img.facilities {
   transition: 0.5s ease;
   opacity: 0;
   text-align: left;
-  padding-left: 1rem;
   bottom: 0;
 }
 
@@ -13719,6 +13718,7 @@ img.facilities {
   }
   .img-overlay {
     font-size: 0.4rem;
+    padding-left: 0.2rem;
   }
   .img-overlay h6 {
     font-size: 0.5rem;
@@ -13738,6 +13738,7 @@ img.facilities {
   }
   .img-overlay {
     font-size: 0.9rem;
+    padding-left: 0.5rem;
   }
   .img-overlay h6 {
     font-size: 1rem;
@@ -13755,6 +13756,10 @@ img.facilities {
   #menu img {
     width: 70vw;
   }
+  .img-overlay {
+    font-size: 1.2rem;
+    padding-left: 0.8rem;
+  }
   .img-overlay h6 {
     font-size: 1.5rem;
   }
@@ -13770,6 +13775,10 @@ img.facilities {
   /* Default styles for larger screens */
   #menu img {
     width: 70vw;
+  }
+  .img-overlay {
+    font-size: 1.6rem;
+    padding: 1rem;
   }
   .img-overlay h6 {
     font-size: 1.875rem;
