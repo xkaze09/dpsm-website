@@ -13660,7 +13660,7 @@ img.facilities {
   position: relative;
 }
 
-.facilities-img1:hover .img-overlay, .menu:hover .img-overlay {
+.menu:hover .img-overlay {
   opacity: 1;
 }
 
