@@ -13717,8 +13717,14 @@ img.facilities {
   #menu img {
     width: 80vw;
   }
+  .img-overlay {
+    font-size: 0.5rem;
+  }
   .menu .img-overlay {
-    padding: 1rem;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+  }
+  .menu .img-overlay h6 {
     font-size: 1rem;
   }
 }
@@ -13727,9 +13733,15 @@ img.facilities {
   #menu img {
     width: 80vw;
   }
+  .img-overlay {
+    font-size: 0.9rem;
+  }
   .menu .img-overlay {
-    padding: 2rem;
-    font-size: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .menu .img-overlay h6 {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -13738,8 +13750,11 @@ img.facilities {
     width: 70vw;
   }
   .menu .img-overlay {
-    padding: 3rem;
-    font-size: 3rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .menu .img-overlay h6 {
+    font-size: 2rem;
   }
 }
 @media (min-width: 992px) {
@@ -13747,9 +13762,15 @@ img.facilities {
   #menu img {
     width: 70vw;
   }
+  .img-overlay h6 {
+    font-size: 1.875rem;
+  }
   .menu .img-overlay {
-    padding: 4rem;
-    font-size: 4rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+  .menu .img-overlay h6 {
+    font-size: 2.5rem;
   }
 }
 .admission-desc {
