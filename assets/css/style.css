@@ -13673,6 +13673,7 @@ img.facilities {
   opacity: 0;
   text-align: left;
   bottom: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #menu {
@@ -13723,6 +13724,7 @@ img.facilities {
   }
   .img-overlay h6 {
     font-size: 0.5rem;
+    margin: 0;
   }
   .menu .img-overlay {
     padding: 0.5rem;
@@ -13730,6 +13732,7 @@ img.facilities {
   }
   .menu .img-overlay h6 {
     font-size: 1rem;
+    margin: 0;
   }
 }
 @media (min-width: 541px) and (max-width: 767px) {
@@ -13743,6 +13746,7 @@ img.facilities {
   }
   .img-overlay h6 {
     font-size: 1rem;
+    margin: 0;
   }
   .menu .img-overlay {
     padding: 1rem;
@@ -13750,6 +13754,7 @@ img.facilities {
   }
   .menu .img-overlay h6 {
     font-size: 1.5rem;
+    margin: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -13758,11 +13763,12 @@ img.facilities {
     width: 70vw;
   }
   .img-overlay {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-left: 0.8rem;
   }
   .img-overlay h6 {
     font-size: 1.5rem;
+    margin: 0;
   }
   .menu .img-overlay {
     padding: 1.5rem;
@@ -13770,6 +13776,7 @@ img.facilities {
   }
   .menu .img-overlay h6 {
     font-size: 2rem;
+    margin: 0;
   }
 }
 @media (min-width: 992px) {
@@ -13778,11 +13785,12 @@ img.facilities {
     width: 70vw;
   }
   .img-overlay {
-    font-size: 1.6rem;
+    font-size: 1rem;
     padding: 1rem;
   }
   .img-overlay h6 {
-    font-size: 1.875rem;
+    font-size: 2rem;
+    margin: 0;
   }
   .menu .img-overlay {
     padding: 2rem;
@@ -13790,6 +13798,7 @@ img.facilities {
   }
   .menu .img-overlay h6 {
     font-size: 2.5rem;
+    margin: 0;
   }
 }
 .admission-desc {
