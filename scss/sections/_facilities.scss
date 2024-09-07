@@ -80,7 +80,10 @@ img.facilities{
         width:80vw;
     }
     .img-overlay{
-        font-size: 0.5rem;
+        font-size: 0.4rem;
+    }
+    .img-overlay h6 {
+        font-size:0.5rem;
     }
     .menu .img-overlay {
         padding: 0.5rem;
@@ -99,6 +102,9 @@ img.facilities{
     .img-overlay{
         font-size: 0.9rem;
     }
+    .img-overlay h6 {
+        font-size:1rem;
+    }
     .menu .img-overlay {
         padding: 1rem;
         font-size:1rem;
@@ -112,6 +118,9 @@ img.facilities{
     /* Adjust font size and padding for medium screens */
     #menu img {
         width:70vw;
+    }
+    .img-overlay h6 {
+        font-size:1.5rem;
     }
     .menu .img-overlay {
         padding: 1.5rem;
