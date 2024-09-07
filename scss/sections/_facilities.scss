@@ -76,8 +76,8 @@ img.facilities{
 /* Media Queries */
 @media (max-width: 540px) {
     /* Adjust font size and padding for smaller screens */
-    .facilities-img1:hover .img-overlay{
-        opacity: 0;
+    .facilities-img1 .img-overlay{
+        display: none;
     }
     #menu img {
         width:80vw;
