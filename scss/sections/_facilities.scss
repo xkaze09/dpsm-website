@@ -17,7 +17,7 @@ img.facilities{
     margin: 0;  
     position:relative;
 }
-.menu:hover .img-overlay{
+.facilities-img1:hover .img-overlay, .menu:hover .img-overlay{
     opacity: 1;
 
 }
@@ -76,6 +76,9 @@ img.facilities{
 /* Media Queries */
 @media (max-width: 540px) {
     /* Adjust font size and padding for smaller screens */
+    .facilities-img1:hover .img-overlay{
+        opacity: 0;
+    }
     #menu img {
         width:80vw;
     }
