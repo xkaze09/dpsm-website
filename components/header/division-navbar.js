@@ -7,7 +7,7 @@ class DivisionNavbar extends HTMLElement {
         <a href="./index.html" target="_self" class="">
           <img
             class="dpsm-logo-highlight rounded-circle"
-            src="./images/dpsmlogo.png"
+            src="../images/dpsmlogo.png"
             width="48"
           />
         </a>

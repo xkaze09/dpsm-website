@@ -5,10 +5,10 @@ class UniversityNavbar extends HTMLElement {
   <div class="container university-navbar">
     <div class="navbar-brand menu d-flex justify-content-center align-items-center gap-2">
       <a href="https://upv.edu.ph/" target="_blank">
-        <img class="logo-highlight" src="images/upvlogo.png" width="53" />
+        <img class="logo-highlight" src="../images/upvlogo.png" width="53" />
       </a>
       <a href="/index.html" target="_self">
-        <img class="logo-highlight" src="images/dpsmlogo.png" width="48" />
+        <img class="logo-highlight" src="../images/dpsmlogo.png" width="48" />
       </a>
       <a href="/index.html" target="_self">
         <div class="text-center">
