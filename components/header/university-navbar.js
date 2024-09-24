@@ -5,10 +5,10 @@ class UniversityNavbar extends HTMLElement {
   <div class="container university-navbar">
     <div class="navbar-brand menu d-flex justify-content-center align-items-center gap-2">
       <a href="https://upv.edu.ph/" target="_blank">
-        <img class="logo-highlight" src="images/upvlogo.png" width="53" />
+        <img class="logo-highlight" src="../images/upvlogo.png" width="53" />
       </a>
       <a href="/index.html" target="_self">
-        <img class="logo-highlight" src="images/dpsmlogo.png" width="48" />
+        <img class="logo-highlight" src="../images/dpsmlogo.png" width="48" />
       </a>
       <a href="/index.html" target="_self">
         <div class="text-center">
@@ -21,15 +21,15 @@ class UniversityNavbar extends HTMLElement {
     <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
       <ul class="navbar-nav text-center d-flex justify-content-end align-items-end gap-3">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Helpful Links
           </a>
           <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-            <li><a class="dropdown-item" href="./support.html">Resources & Support</a></li>
-            <li><a class="dropdown-item" href="./facilities.html">Facilities</a></li>
+            <li><a class="dropdown-item" href="../support.html">Resources & Support</a></li>
+            <li><a class="dropdown-item" href="../facilities.html">Facilities</a></li>
           </ul>
         </li>
       </ul>

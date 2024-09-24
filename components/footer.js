@@ -3,7 +3,7 @@ class Footer extends HTMLElement {
       this.innerHTML = `
       <footer
       class="footer-with-image pt-5"
-      style="background-image: url(&quot;./images/footer/footer.png&quot;)"
+      style="background-image: url(&quot;../images/footer/footer.png&quot;)"
     >
       <div class="container mb-5">
         <div class="row">
@@ -26,8 +26,8 @@ class Footer extends HTMLElement {
         <div class="row">
           <div class="footer-icons col-md-2 d-flex justify-content-evenly align-items-center">
             <!-- Content for the left column (col-2) -->
-            <img src="./images/upvlogo.png" alt="UPV Logo" width="72px" />
-            <img class="rounded-circle" src="./images/dpsmlogo.png" alt="DPSM Logo" width="72px" />
+            <img src="../images/upvlogo.png" alt="UPV Logo" width="72px" />
+            <img class="rounded-circle" src="../images/dpsmlogo.png" alt="DPSM Logo" width="72px" />
           </div>
           <div class="footer-content col-md-10">
             <!-- Content for the right column (col-10) -->
