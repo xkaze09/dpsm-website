@@ -4,7 +4,7 @@ class DivisionNavbar extends HTMLElement {
   <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
     <div class="container">
       <div class="division-navbar navbar-brand menu d-flex justify-content-center align-items-center gap-2" href="#">
-        <a href="./index.html" target="_self" class="">
+        <a href="../index.html" target="_self" class="">
           <img
             class="dpsm-logo-highlight rounded-circle"
             src="../images/dpsmlogo.png"
@@ -34,16 +34,16 @@ class DivisionNavbar extends HTMLElement {
             </a>
             <div class="dropdown-menu" aria-labelledby="aboutDropdown">
               <!-- Dropdown menu -->
-              <a class="dropdown-item" href="./about.html">About DPSM</a>
-              <a class="dropdown-item" href="./faculty-organization.html">Faculty & Staff Members</a>
-              <a class="dropdown-item" href="./research.html">Research & Public Services</a>
+              <a class="dropdown-item" href="../about.html">About DPSM</a>
+              <a class="dropdown-item" href="../faculty-organization.html">Faculty & Staff Members</a>
+              <a class="dropdown-item" href="../research.html">Research & Public Services</a>
             </div>
       </li>
       <li>
-      <a class="bottom-nav-link text-dark" href="./admissions.html">Admission</a>
+      <a class="bottom-nav-link text-dark" href="../admissions.html">Admission</a>
       </li>
       <li>
-        <a class="bottom-nav-link text-dark" href="./news-master-page.html">News</a>
+        <a class="bottom-nav-link text-dark" href="../news-master-page.html">News</a>
       </li>
           <li class="nav-item dropdown">
             <!-- Add dropdown class to the list item -->
@@ -61,13 +61,13 @@ class DivisionNavbar extends HTMLElement {
             </a>
             <div class="dropdown-menu" aria-labelledby="programsDropdown">
               <!-- Dropdown menu -->
-              <a class="dropdown-item" href="./applied-mathematics.html">B.S. in Applied Mathematics</a>
-              <a class="dropdown-item" href="./computer-science.html">B.S. in Computer Science</a>
-              <a class="dropdown-item" href="./statistics.html">B.S. in Statistics</a>
+              <a class="dropdown-item" href="../applied-mathematics.html">B.S. in Applied Mathematics</a>
+              <a class="dropdown-item" href="../computer-science.html">B.S. in Computer Science</a>
+              <a class="dropdown-item" href="../statistics.html">B.S. in Statistics</a>
             </div>
           </li>
           <li>
-            <a class="bottom-nav-link text-dark" href="./contact-us.html">Contact Us</a>
+            <a class="bottom-nav-link text-dark" href="../contact-us.html">Contact Us</a>
           </li>
         </ul>
       </div>
