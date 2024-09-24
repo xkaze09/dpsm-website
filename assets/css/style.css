@@ -13641,6 +13641,169 @@ html {
   margin-bottom: 0px;
 }
 
+.img-desc {
+  width: 100%;
+  position: relative;
+}
+
+img.facilities {
+  height: auto;
+  width: 100%;
+  margin: 0;
+}
+
+.facilities-img1 {
+  width: 100%;
+  padding: 0;
+  height: auto;
+  margin: 0;
+  position: relative;
+}
+
+.facilities-img1:hover .img-overlay, .menu:hover .img-overlay {
+  opacity: 1;
+}
+
+.img-overlay {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  transition: 0.5s ease;
+  opacity: 0;
+  text-align: left;
+  bottom: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#menu {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menu-outside {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -2;
+}
+
+#menu img {
+  position: relative;
+  width: 70vw;
+}
+
+.popup-wrapper {
+  display: block;
+  background-color: aqua;
+  height: auto;
+  width: auto;
+}
+
+/* Media Queries */
+@media (max-width: 540px) {
+  /* Adjust font size and padding for smaller screens */
+  .facilities-img1 .img-overlay {
+    display: none;
+  }
+  #menu img {
+    width: 80vw;
+  }
+  .img-overlay {
+    font-size: 0.4rem;
+    padding-left: 0.2rem;
+    padding-top: 0.2rem;
+  }
+  .img-overlay h6 {
+    font-size: 0.5rem;
+    margin: 0;
+  }
+  .menu .img-overlay {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+  }
+  .menu .img-overlay h6 {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+@media (min-width: 541px) and (max-width: 767px) {
+  /* Adjust font size and padding for small screens */
+  #menu img {
+    width: 80vw;
+  }
+  .img-overlay {
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+  }
+  .img-overlay h6 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .menu .img-overlay {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .menu .img-overlay h6 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust font size and padding for medium screens */
+  #menu img {
+    width: 70vw;
+  }
+  .img-overlay {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+  }
+  .img-overlay h6 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .menu .img-overlay {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .menu .img-overlay h6 {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+@media (min-width: 992px) {
+  /* Default styles for larger screens */
+  #menu img {
+    width: 70vw;
+  }
+  .img-overlay {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .img-overlay h6 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .menu .img-overlay {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+  .menu .img-overlay h6 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+}
 .admission-desc {
   text-align: justify;
 }
