@@ -1,81 +1,84 @@
 import os
 
-for root, dirnames, filenames in os.walk("."):
-    for filename in filenames:
-        if "Bootstrap5-ThemeKit" not in filename and filename.endswith(".html"):
-            fname = os.path.join(root, filename)
-            print(f"Editing {fname}")
+def remove_duplicates_and_inject(fname):
+    try:
+        with open(fname, encoding="utf-8") as file:
+            lines = file.readlines()
 
-            file_content = ""
-            should_write = True
-            has_header_script = False
-            has_footer_script = False
-            has_university_navbar = False
-            has_division_navbar = False
-            has_dpsm_footer = False
+        output = []
+        inside_section = None
 
-            try:
-                with open(fname, encoding="utf-8") as html:
-                    lines = html.readlines()
+        for line in lines:
+            line_lower = line.lower()
 
-                    # Check existing elements and scripts
-                    for line in lines:
-                        if '<script src="/components/header/university-navbar.js" defer></script>' in line:
-                            has_header_script = True
-                        if '<script src="/components/header/division-navbar.js" defer></script>' in line:
-                            has_header_script = True
-                        if '<script src="/components/footer.js" defer></script>' in line:
-                            has_footer_script = True
-                        if "<university-navbar>" in line:
-                            has_university_navbar = True
-                        if "<division-navbar>" in line:
-                            has_division_navbar = True
-                        if "<dpsm-footer>" in line:
-                            has_dpsm_footer = True
+            # Skip fontawesome.css
+            if "fontawesome.css" in line_lower:
+                continue
 
-                    # Rebuild the file content with necessary modifications
-                    for line in lines:
-                        # Add the header script if not already present
-                        if not has_header_script and "</head>" in line:
-                            file_content += """<script src="/components/header/university-navbar.js" defer></script>
-                            <script src="/components/header/division-navbar.js" defer></script>
-                            <script src="/components/footer.js" defer></script>\n"""
-                            has_header_script = True
+            # Skip previously injected scripts
+            if "university-navbar.js" in line_lower or \
+               "division-navbar.js" in line_lower or \
+               "footer.js" in line_lower:
+                continue
 
-                        # Check for university navbar section
-                        if "<!-- University Navbar Section -->" in line:
-                            file_content += line
-                            should_write = False
-                        elif "<!-- End of University Navbar -->" in line:
-                            if not has_university_navbar:
-                                file_content += "<university-navbar></university-navbar>\n"
-                            should_write = True
+            # Strip any floating <university-navbar>, <division-navbar>, <dpsm-footer>
+            if "<university-navbar" in line_lower or "</university-navbar" in line_lower:
+                continue
+            if "<division-navbar" in line_lower or "</division-navbar" in line_lower:
+                continue
+            if "<dpsm-footer" in line_lower or "</dpsm-footer" in line_lower:
+                continue
 
-                        # Check for division navbar section
-                        if "<!-- Division Navbar Section -->" in line:
-                            file_content += line
-                            should_write = False
-                        elif "<!-- End of Division Navbar -->" in line:
-                            if not has_division_navbar:
-                                file_content += "<division-navbar></division-navbar>\n"
-                            should_write = True
+            # Clear block content between injected comment markers
+            if "<!-- university navbar section -->" in line_lower:
+                inside_section = "univ"
+                output.append(line)
+                output.append("<university-navbar></university-navbar>\n")
+                continue
+            elif "<!-- end of university navbar -->" in line_lower:
+                inside_section = None
+                output.append(line)
+                continue
+            elif "<!-- division navbar section -->" in line_lower:
+                inside_section = "div"
+                output.append(line)
+                output.append("<division-navbar></division-navbar>\n")
+                continue
+            elif "<!-- end of division navbar -->" in line_lower:
+                inside_section = None
+                output.append(line)
+                continue
+            elif "<!-- footer -->" in line_lower:
+                inside_section = "footer"
+                output.append(line)
+                output.append("<dpsm-footer></dpsm-footer>\n")
+                continue
+            elif "<!-- end of footer -->" in line_lower:
+                inside_section = None
+                output.append(line)
+                continue
 
-                        # Check for footer section
-                        if "<!-- Footer -->" in line:
-                            file_content += line
-                            should_write = False
-                        elif "<!-- End of Footer -->" in line:
-                            if not has_dpsm_footer:
-                                file_content += "<dpsm-footer></dpsm-footer>\n"
-                            should_write = True
+            if inside_section:
+                continue  # Skip anything between markers
 
-                        # Append line if not within a replace section
-                        if should_write:
-                            file_content += line
+            # Inject script block before </head>
+            if "</head>" in line_lower:
+                output.append("""<script src="/components/header/university-navbar.js" defer></script>
+<script src="/components/header/division-navbar.js" defer></script>
+<script src="/components/footer.js" defer></script>\n""")
 
-                # Write the updated content back to the file
-                with open(fname, "w", encoding="utf-8") as html:
-                    html.write(file_content)
+            output.append(line)
 
-            except Exception as e:
-                print(fname, e)
+        with open(fname, "w", encoding="utf-8") as file:
+            file.writelines(output)
+
+    except Exception as e:
+        print(f"❌ Error processing {fname}: {e}")
+
+# Main walker
+for root, _, files in os.walk("."):
+    for filename in files:
+        if filename.endswith(".html") and "Bootstrap5-ThemeKit" not in filename:
+            full_path = os.path.join(root, filename)
+            print(f"🧼 Cleaning {full_path}")
+            remove_duplicates_and_inject(full_path)
