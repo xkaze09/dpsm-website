@@ -1,3 +1,8 @@
 node_modules
 assets/css/style.css.map
 .codegpt
+.env.local
+.env
+*.env
+.env.*
+config.js
