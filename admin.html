@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - News Management</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="module" src="javascript/admin.js" defer></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>📰 News Admin</h1>
+
+    <!-- Add New Article -->
+    <h3>Add New Article</h3>
+    <form id="add-article-form">
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="text" id="slug" placeholder="Slug" required />
+      <input type="text" id="author" placeholder="Author (optional)" />
+      <input type="url" id="image_url" placeholder="Image URL (optional)" />
+      <textarea id="content" placeholder="HTML content here..." rows="5" required></textarea>
+      <button type="submit">Add Article</button>
+    </form>
+
+    <hr/>
+
+    <!-- Existing Articles -->
+    <h3>All Articles</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Slug</th>
+          <th>Created</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="articles-list"></tbody>
+    </table>
+  </div>
+</body>
+</html>
