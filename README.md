@@ -138,3 +138,85 @@ npm run compile:sass
 3. Add your request message and comment to document changes.
 4. Once done, just click the `Create pull request` button.
 5. If PR is merged or closed, delete the branch.
+
+## Guidelines for Data Handling and Navigation Components
+
+### Data File Locations
+
+Below are the main JSON data sources for dynamic content on the website. When working with or updating data, refer to these paths:
+
+#### 1. Course Subjects Data
+- **Path:** `javascript/course/data.json`
+- **Purpose:** Contains the course subjects for three of the main course programs.
+- **Usage:** Used to render course lists, program details, and subject information dynamically across the site.
+
+#### 2. Research Projects Data
+- **Path:** `javascript/research/researchData.json`
+- **Purpose:** Stores details on research projects, publications, and related research activities.
+- **Usage:** Populates research pages, faculty research listings, and research statistics.
+
+**When modifying or adding data:**
+- Always preserve the file’s existing structure and fields.
+- Validate your JSON for correct syntax before committing.
+- For new sections or categories, discuss with maintainers to ensure consistency.
+
+---
+
+### Editing Top and Bottom Navigation (Headers/Footers)
+
+Navigation bars for both the university and division are modularized for consistency and maintainability.
+
+**To modify navigation:**
+
+1. **Edit the relevant files:**
+    - **Top/University Navbar:**  
+      - HTML: `header/university-navbar.html`  
+      - JavaScript: `header/university-navbar.js` or related JS files.
+    - **Division Navbar:**  
+      - HTML: `header/division-navbar.html`  
+      - JavaScript: `header/division-navbar.js` or related JS files.
+    - **Footer:**  
+      - HTML: `header/footer.html`  
+      - JavaScript: `header/footer.js` or related JS files.
+
+2. **Apply changes across all pages:**  
+   After making changes to any header or footer files, run the following command:
+   ```
+   python components.py
+   ```
+   This ensures that all HTML files in the project are automatically updated with the latest navigation and footer components.
+
+3. **Test your changes:**  
+   - Open various pages to confirm that navigation and footer elements are displaying and functioning correctly (especially on both mobile and desktop).
+   - Check for consistent appearance and links.
+
+4. **Best Practices:**  
+   - **Do not** manually duplicate navigation code in multiple HTML files. Always use the component system and the `components.py` script.
+   - For major navigation changes, open a pull request with a clear description of the modifications and their impact for review by other maintainers.
+   - Ensure all navigation labels, links, and dropdowns remain accessible and up-to-date.
+
+---
+
+### Handling News Articles in `/articles` Folder
+
+#### Current Situation (Static Handling)
+
+- News articles are currently stored as static HTML files in the `/articles` directory.
+- To add or update news articles:
+  1. Duplicate an existing HTML file in the `/articles` folder.
+  2. Edit the new file’s content to reflect your article.
+  3. Always run `npm run compile:sass` in the background before you start coding to ensure your styles compile correctly.
+  4. Frequently save your work (`Ctrl+S`).
+  5. When finished, commit your changes to your branch and open a pull request.
+  6. Use the Vercel and Netlify bot staging URLs in the PR comments to preview your changes.
+  7. Tag @xkaze09 for review and final check.
+
+#### Ongoing Update (Dynamic Handling In Progress)
+
+- An update is underway (see the latest pull request) to establish a database-backed system for news articles, enabling easy CRUD operations for the division.
+- In the future, news articles will be managed dynamically (e.g., via Supabase or another backend), but for now, follow the static procedure above.
+
+---
+
+Maintain consistency, validate your data and code, and always follow the PR and review workflow for changes to data, navigation, and news articles.
+---
