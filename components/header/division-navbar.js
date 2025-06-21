@@ -43,7 +43,7 @@ class DivisionNavbar extends HTMLElement {
       <a class="bottom-nav-link text-dark" href="../admissions.html">Admission</a>
       </li>
       <li>
-        <a class="bottom-nav-link text-dark" href="../news-master-page.html">News</a>
+        <a class="bottom-nav-link text-dark" href="../news.html">News</a>
       </li>
           <li class="nav-item dropdown">
             <!-- Add dropdown class to the list item -->
