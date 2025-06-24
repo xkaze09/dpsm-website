@@ -12345,7 +12345,7 @@ a {
 .welcome-message:after {
   content: "”";
   position: absolute;
-  top: 3em;
+  bottom: -0.2em;
   right: -0.45em;
   font-size: 4em;
   font-style: italic;
