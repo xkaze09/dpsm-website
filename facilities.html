@@ -9,6 +9,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
 <script src="/components/header/university-navbar.js" defer></script>
                             <script src="/components/header/division-navbar.js" defer></script>
                             <script src="/components/footer.js" defer></script>
@@ -20,169 +22,275 @@
     <!-- Division Navbar Section -->
 <division-navbar></division-navbar>
 <!-- End of Division Navbar -->
-    <!-- Hero Section -->
-    <div class="about-hero-section">
-      <div class="about-hero-overlay"></div>
-      <!-- Overlay Element Added -->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <div class="hero-caption">
-              <h1 class="display-1 fw-medium">Facilities</h1>
-            </div>
-          </div>
+<!-- Hero Section -->
+<div class="about-hero-section">
+  <div class="about-hero-overlay"></div>
+  <!-- Overlay Element Added -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="hero-caption">
+          <h1 class="display-1 fw-medium">Facilities</h1>
         </div>
       </div>
     </div>
-    <!-- End of Hero Section -->
-    <div class="px-4 text-start mt-5">
-      <div class="container facilities">
+  </div>
+</div>
+<!-- End of Hero Section -->
+<!-- SIDEBAR AND MAIN CONTAINER -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Sidebar List Section -->
+    <aside class="col-lg-3 mb-4">
+      <div class="sidebar p-3 bg-light rounded shadow-sm">
+        <h4 class="fw-bold mb-3">List of Facilities</h4>
+        <div class="accordion" id="facilitiesAccordion">
+          <!-- Computer Laboratories -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingCL">
+              <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCL" aria-expanded="true" aria-controls="collapseCL">
+                Computer Laboratories
+              </button>
+            </h2>
+            <div id="collapseCL" class="accordion-collapse collapse show" aria-labelledby="headingCL" data-bs-parent="#facilitiesAccordion">
+              <div class="accordion-body p-2">
+                <ul class="list-unstyled ms-2 mb-0">
+                  <li><strong>CL 1</strong><br>
+                    <small>Basement, CAS Building</small></li>
+                  <li><strong>CL 2</strong><br>
+                    <small>Basement, CAS Building</small></li>
+                  <li><strong>CL 3</strong><br>
+                    <small>Basement, CAS Building</small></li>
+                  <li><strong>CL 4</strong><br>
+                    <small>1st Floor, CAS Building</small></li>
+                </ul>
+                <!-- Download Link -->
+                 <!-- IMPORTANT: Update this when a better-formatted guide is uploaded; use same name "comsci_lab_guide.pdf" -->
+                <a href="documents/comsci_lab_guide.pdf" class="btn btn-primary btn-sm mt-3 w-100" target="_blank">
+                  <i class="fas fa-download me-2"></i>Computer Lab Guide (PDF)
+                </a>
+                <!-- Modal Trigger Button -->
+                <button type="button" class="btn btn-secondary btn-sm mt-2 w-100" data-bs-toggle="modal" data-bs-target="#comsciLabModal">
+                  <i class="fas fa-qrcode me-2"></i>Computer Lab Reservation (QR)
+                </button>
+                <!-- target-"_blank" to open in new page -->
+                 
+              </div>
+            </div>
+          <!-- End of ComSci Labs -->
+          </div>
+          <!-- Physics Laboratories -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPL">
+              <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePL" aria-expanded="false" aria-controls="collapsePL">
+                Physics Laboratories
+              </button>
+            </h2>
+            <div id="collapsePL" class="accordion-collapse collapse" aria-labelledby="headingPL" data-bs-parent="#facilitiesAccordion">
+              <div class="accordion-body p-2">
+                <ul class="list-unstyled ms-2 mb-0">
+                  <li><strong>PL 1</strong><br>
+                    <small>2nd Floor, CAS Building</small></li>
+                  <li><strong>PL 2</strong><br>
+                    <small>2nd Floor, CAS Building</small></li>
+                </ul>
+                <!-- IMPORTANT: Need to update this, upload the pdf doc under documents/ -->
+                <a href="" class="btn btn-primary btn-sm mt-3 w-100" target="_blank">
+                  <i class="fas fa-download me-2"></i>Physics Lab Guidelines (PDF)
+                </a>
+              </div>
+            </div>
+          <!-- End of Physics Labs -->
+          </div>
+          <!-- University Facilities -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingUF">
+              <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUF" aria-expanded="false" aria-controls="collapseUF">
+                University Facilities
+              </button>
+            </h2>
+            <div id="collapseUF" class="accordion-collapse collapse" aria-labelledby="headingUF" data-bs-parent="#facilitiesAccordion">
+              <div class="accordion-body p-2">
+                <ul class="list-unstyled ms-2 mb-0">
+                  <li><strong>Filipino Garden</strong><br>
+                    <small>Basement, CAS Building</small></li>
+                  <li><strong>UPV Library (and Digital Repository)</strong><br>
+                    <small>SOTECH Building</small></li>
+                  <li><strong>Health Services Unit</strong><br>
+                    <small>University Campus</small></li>
+                  <li><strong>UPV CAS "Mushrooms"</strong><br>
+                    <small>CUB (College Union Building) Park</small></li>
+                  <li><strong>TLRC (Teaching and Learning Resource Center)</strong><br>
+                    <small>Basement, CUB (College Union Building)</small></li>
+                </ul>
+              </div>
+            </div> 
+          <!-- End of University Facilities -->
+          </div>
+        <!-- End of Accordions -->
+        </div>
+      </div>
+    </aside>
+    <!-- End Sidebar List Section -->
+
+    <!-- Main Section -->
+    <main class="col-lg-9">
+      <!-- MAIN SECTION -->
+      <!-- Computer Laboratories-->
+      <div class="px-4 text-start mt-2">
+        <div class="container facilities">
         <div class="row">
           <div class="col-lg-12">
-            <div class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
-              <p class="section-title lead mb-4 display-6 fw-bold">
-                Computer Laboratories
-              </p>
-            </div>
+          <div class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
+            <p class="section-title lead mb-4 display-6 fw-bold">
+            Computer Laboratories
+            </p>
+          </div>
           </div>
         </div>
         <div class="container facilities g-1">
-            <div class="row py-1 g-1">
-                <div class="facilities-img1 col p-1">
-                  <div class="facilities img-desc">
-                  <img src="./images/facilities/comlabs/CL 3.5.jpg" class="facilities" onclick="grow(this)">
-                  <div class="img-overlay"><h6 class="display-6">CL 3 Entrance</h6></div>
-                  </div>
-                </div>
-                <div class="facilities-img1 col p-1">
-                  <div class="facilities img-desc">
-                  <img src="./images/facilities/comlabs/CL 2.2.jpg" class="facilities" onclick="grow(this)">
-                  <div class="img-overlay"><h6 class="display-6">CL 2</h6></div>
-                  </div>
-                </div>
-                <div class="facilities-img1 col p-1">
-                  <div class="facilities img-desc">
-                  <img src="./images/facilities/comlabs/CL 2.3.jpg" class="facilities" onclick="grow(this)">
-                  <div class="img-overlay"><h6 class="display-6">CL 2</h6></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row g-1">
-              <div class="facilities-img1 col p-1">
-                <div class="facilities img-desc">
-                <img src="./images/facilities/comlabs/CL 3.2.jpg" class="facilities" onclick="grow(this)">
-                <div class="img-overlay"><h6 class="display-6">CL 3</h6></div>
-                </div>
+          <div class="row py-1 g-1">
+            <div class="facilities-img1 col p-1">
+              <div class="facilities img-desc">
+              <img src="./images/facilities/comlabs/CL 3.5.jpg" class="facilities" onclick="grow(this)">
+              <div class="img-overlay"><h6 class="display-6">CL 3 Entrance</h6></div>
               </div>
-              <div class="facilities-img1 col p-1">
-                <div class="facilities img-desc">
-                <img src="./images/facilities/comlabs/CL 3.3.jpg" class="facilities" onclick="grow(this)">
-                <div class="img-overlay"><h6 class="display-6">CL 3</h6></div>
-                </div>
-              </div>    
             </div>
+            <div class="facilities-img1 col p-1">
+              <div class="facilities img-desc">
+              <img src="./images/facilities/comlabs/CL 2.2.jpg" class="facilities" onclick="grow(this)">
+              <div class="img-overlay"><h6 class="display-6">CL 2</h6></div>
+              </div>
+            </div>
+            <div class="facilities-img1 col p-1">
+              <div class="facilities img-desc">
+              <img src="./images/facilities/comlabs/CL 2.3.jpg" class="facilities" onclick="grow(this)">
+              <div class="img-overlay"><h6 class="display-6">CL 2</h6></div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-1">
+            <div class="facilities-img1 col p-1">
+            <div class="facilities img-desc">
+            <img src="./images/facilities/comlabs/CL 3.2.jpg" class="facilities" onclick="grow(this)">
+            <div class="img-overlay"><h6 class="display-6">CL 3</h6></div>
+            </div>
+            </div>
+            <div class="facilities-img1 col p-1">
+            <div class="facilities img-desc">
+            <img src="./images/facilities/comlabs/CL 3.3.jpg" class="facilities" onclick="grow(this)">
+            <div class="img-overlay"><h6 class="display-6">CL 3</h6></div>
+            </div>
+            </div>    
+          </div>
+        </div>
         </div>
       </div>
-    </div>
-    <!-- Physics Laboratories -->
-    <div class="px-4 text-start mt-5">
-      <div class="container facilities">
+      <!-- Physics Laboratories -->
+      <div class="px-4 text-start mt-5">
+        <div class="container facilities">
         <div class="row">
           <div class="col-lg-12">
-            <div class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
-              <p class="section-title lead mb-4 display-6 fw-bold">
-                Physics Laboratories
-              </p>
-            </div>
+          <div class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
+            <p class="section-title lead mb-4 display-6 fw-bold">
+            Physics Laboratories
+            </p>
+          </div>
           </div>
         </div>
         <div class="container facilities">
-            <div class="row">
-              <div class="facilities-img1 col p-1">
-                <div class="facilities img-desc">
-                <img src="./images/facilities/physlabs/PL 1.1.jpg" class="facilities" onclick="grow(this)">
-                <div class="img-overlay"><h6 class="display-6">PL 1</h6></div>
-                </div>
-              </div><div class="facilities-img1 col p-1">
-                <div class="facilities img-desc">
-                <img src="./images/facilities/physlabs/PL 1.4.jpg" class="facilities" onclick="grow(this)">
-                <div class="img-overlay"><h6 class="display-6">PL 1</h6></div>
-                </div>
-              </div>
+          <div class="row">
+            <div class="facilities-img1 col p-1">
+            <div class="facilities img-desc">
+            <img src="./images/facilities/physlabs/PL 1.1.jpg" class="facilities" onclick="grow(this)">
+            <div class="img-overlay"><h6 class="display-6">PL 1</h6></div>
             </div>
-            <div class="row">
-              <div class="facilities-img1 col p-1">
-                <div class="facilities img-desc">
-                <img src="./images/facilities/physlabs/PL 2.2.jpg" class="facilities" onclick="grow(this)">
-                <div class="img-overlay"><h6 class="display-6">PL 2</h6></div>
-                </div>
-              </div>
-              <div class="facilities-img1 col p-1">
-                <div class="facilities img-desc">
-                <img src="./images/facilities/physlabs/PL 2.3.jpg" class="facilities" onclick="grow(this)">
-                <div class="img-overlay"><h6 class="display-6">PL 2</h6></div>
-                </div>
-              </div>
+            </div><div class="facilities-img1 col p-1">
+            <div class="facilities img-desc">
+            <img src="./images/facilities/physlabs/PL 1.4.jpg" class="facilities" onclick="grow(this)">
+            <div class="img-overlay"><h6 class="display-6">PL 1</h6></div>
             </div>
-        </div>
-      </div>
-    </div>
-    <!-- End of Physics Laboratories -->
-
-    <!-- University Facilities -->
-    <div class="px-4 pt-5 mt-5 mb-5">
-      <div class="container facilities">
-        <div class="row">
-          <div class="col-lg-12">
-            <div
-              class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
-              <p class="section-title lead mb-4 display-6 fw-bold"> University Facilities </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="facilities-img1 col p-1">
+            <div class="facilities img-desc">
+            <img src="./images/facilities/physlabs/PL 2.2.jpg" class="facilities" onclick="grow(this)">
+            <div class="img-overlay"><h6 class="display-6">PL 2</h6></div>
+            </div>
+            </div>
+            <div class="facilities-img1 col p-1">
+            <div class="facilities img-desc">
+            <img src="./images/facilities/physlabs/PL 2.3.jpg" class="facilities" onclick="grow(this)">
+            <div class="img-overlay"><h6 class="display-6">PL 2</h6></div>
+            </div>
             </div>
           </div>
         </div>
-        <div class="container facilities g-1">
-            <div class="row g-2 py-1">
-              <div class="facilities-img1 col p-1">
-                <div class="facilities img-desc">
-                <img src="./images/facilities/university/Filipino Garden 1.2.jpg" class="facilities" onclick="grow(this)">
-                <div class="img-overlay"><h6 class="display-6">Filipino Garden, CAS</h6></div>
-                </div>
-              </div>
-              <div class="facilities-img1 col p-1">
-                <div class="facilities img-desc">
-                <img src="./images/facilities/university/LIBRARY 1.2.jpg" class="facilities" onclick="grow(this)">
-                <div class="img-overlay"><h6 class="display-6">UPV Library</h6></div>
-                </div>
-              </div>
-              </div>
-            <div class="row g-2">
-              <div class="col">
-                <div class="row g-2">
-                  <div class="facilities-img1 col p-1">
-                    <div class="facilities img-desc">
-                    <img src="./images/facilities/university/HSU 1.5.jpg" class="facilities" onclick="grow(this)">
-                    <div class="img-overlay"><h6 class="display-6">UPV Health Services Unit</h6></div>
-                    </div>
-                  </div>
-                  <div class="facilities-img1 col p-1">
-                    <div class="facilities img-desc">
-                    <img src="./images/facilities/university/MUSHROOM 1.3.jpg" class="facilities" onclick="grow(this)">
-                    <div class="img-overlay"><h6 class="display-6">UPV CAS "Mushrooms"</h6></div>
-                    </div>
-                  </div>
-                  <div class="facilities-img1 col p-1">
-                    <div class="facilities img-desc">
-                      <img src="./images/facilities/university/TLRC 1.2.jpg" class="facilities" onclick="grow(this)">
-                      <div class="img-overlay"><h6 class="display-6">UPV TLRC</h6></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
         </div>
       </div>
-    </div>
-    <!-- End of University Facilities -->
+      <!-- End of Physics Laboratories -->
+
+      <!-- University Facilities -->
+      <div class="px-4 pt-5 mt-5 mb-5">
+        <div class="container facilities">
+        <div class="row">
+          <div class="col-lg-12">
+          <div
+            class="course-organization-name d-flex flex-column align-items-start h-100 justify-content-start">
+            <p class="section-title lead mb-4 display-6 fw-bold"> University Facilities </p>
+          </div>
+          </div>
+        </div>
+        <div class="container facilities g-1">
+          <div class="row g-2 py-1">
+            <div class="facilities-img1 col p-1">
+            <div class="facilities img-desc">
+            <img src="./images/facilities/university/Filipino Garden 1.2.jpg" class="facilities" onclick="grow(this)">
+            <div class="img-overlay"><h6 class="display-6">Filipino Garden, CAS</h6></div>
+            </div>
+            </div>
+            <div class="facilities-img1 col p-1">
+            <div class="facilities img-desc">
+            <img src="./images/facilities/university/LIBRARY 1.2.jpg" class="facilities" onclick="grow(this)">
+            <div class="img-overlay"><h6 class="display-6">UPV Library</h6></div>
+            </div>
+            </div>
+            </div>
+          <div class="row g-2">
+            <div class="col">
+            <div class="row g-2">
+              <div class="facilities-img1 col p-1">
+              <div class="facilities img-desc">
+              <img src="./images/facilities/university/HSU 1.5.jpg" class="facilities" onclick="grow(this)">
+              <div class="img-overlay"><h6 class="display-6">UPV Health Services Unit</h6></div>
+              </div>
+              </div>
+              <div class="facilities-img1 col p-1">
+              <div class="facilities img-desc">
+              <img src="./images/facilities/university/MUSHROOM 1.3.jpg" class="facilities" onclick="grow(this)">
+              <div class="img-overlay"><h6 class="display-6">UPV CAS "Mushrooms"</h6></div>
+              </div>
+              </div>
+              <div class="facilities-img1 col p-1">
+              <div class="facilities img-desc">
+                <img src="./images/facilities/university/TLRC 1.2.jpg" class="facilities" onclick="grow(this)">
+                <div class="img-overlay"><h6 class="display-6">UPV TLRC</h6></div>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- End of University Facilities -->
+    </main>
+    <!-- End Main Section -->
+  </div>
+</div>
+<!-- End of Sidebar and Main Container -->
+<!-- Footer Section -->
 <dpsm-footer></dpsm-footer>
 <!-- End of Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -220,6 +328,38 @@
       </div>
       <div class="menu-outside" onclick="exit()"></div>
     </div>
-    
+
+<!-- Computer Lab Reservation Modal -->
+<div class="modal fade" id="comsciLabModal" tabindex="-1" aria-labelledby="comsciLabModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="comsciLabModalLabel">Computer Lab Room Reservation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <ol class="text-start mb-4">
+          <li>
+        The use of the computer laboratory rooms is authorized for lecture or laboratory classes ONLY. The room utilization is posted outside the computer laboratories.
+        <!-- IMPORTANT: Need to update the link -->
+        <!-- or through this file <a href="" target="_blank">"insert link here"</a>. -->
+          </li>
+          <li>
+        The laboratory rooms can be requested for use outside of class schedules, provided that a laboratory permit is submitted and duly approved. Note that the requestors must be accompanied by the faculty-in-charge during the time of use.
+          </li>
+        </ol>
+        <hr>
+        <p class="mb-3">
+          You can scan the QR code or click the link below to access the Request Form for Computer Lab Reservation<br>
+          
+        </p>
+        <img src="documents/comsci_request_permit.png" alt="Computer Lab Request Form QR Code" class="mb-2" />
+        <p>
+        <a href="https://tinyurl.com/bdd5jyp2" target="_blank"><i class="fas fa-download me-2"></i> Request Form</a>
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>    
   </body>
 </html>
