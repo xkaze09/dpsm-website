@@ -36,7 +36,6 @@ class DivisionNavbar extends HTMLElement {
               <!-- Dropdown menu -->
               <a class="dropdown-item" href="../about.html">About DPSM</a>
               <a class="dropdown-item" href="../faculty-organization.html">Faculty & Staff Members</a>
-              <a class="dropdown-item" href="../research.html">Research & Public Services</a>
             </div>
       </li>
       <li>
@@ -67,8 +66,12 @@ class DivisionNavbar extends HTMLElement {
             </div>
           </li>
           <li>
+            <a class="bottom-nav-link text-dark" href="../research.html">Research & Public Service</a>
+          </li>
+          <li>
             <a class="bottom-nav-link text-dark" href="../contact-us.html">Contact Us</a>
           </li>
+          
         </ul>
       </div>
       <button
