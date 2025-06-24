@@ -64,10 +64,16 @@
                   <li><strong>CL 4</strong><br>
                     <small>1st Floor, CAS Building</small></li>
                 </ul>
+                <!-- Download Link -->
                 <a href="documents/comsci_lab_guide.pdf" class="btn btn-primary btn-sm mt-3 w-100" target="_blank">
-                  <i class="fas fa-download me-2"></i>Computer Lab Guidelines (PDF)
+                  <i class="fas fa-download me-2"></i>Computer Lab Guide (PDF)
                 </a>
+                <!-- Modal Trigger Button -->
+                <button type="button" class="btn btn-secondary btn-sm mt-2 w-100" data-bs-toggle="modal" data-bs-target="#comsciLabModal">
+                  <i class="fas fa-qrcode me-2"></i>Computer Lab Reservation (QR)
+                </button>
                 <!-- target-"_blank" to open in new page -->
+                 
               </div>
             </div>
           <!-- End of ComSci Labs -->
@@ -320,6 +326,38 @@
       </div>
       <div class="menu-outside" onclick="exit()"></div>
     </div>
-    
+
+    <!-- Computer Lab Guide Modal -->
+<div class="modal fade" id="comsciLabModal" tabindex="-1" aria-labelledby="comsciLabModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="comsciLabModalLabel">Computer Lab Room Reservation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <ol class="text-start mb-4">
+          <li>
+        The use of the computer laboratory rooms is authorized for lecture or laboratory classes ONLY. The room utilization is posted outside the computer laboratories.
+        <!-- IMPORTANT: Need to update the link -->
+        <!-- or through this file <a href="" target="_blank">"insert link here"</a>. -->
+          </li>
+          <li>
+        The laboratory rooms can be requested for use outside of class schedules, provided that a laboratory permit is submitted and duly approved. Note that the requestors must be accompanied by the faculty-in-charge during the time of use.
+          </li>
+        </ol>
+        <hr>
+        <p class="mb-3">
+          You can scan the QR code or click the link below to access the Request Form for Computer Lab Reservation<br>
+          
+        </p>
+        <img src="documents/comsci_request_permit.png" alt="Computer Lab Request Form QR Code" class="mb-2" />
+        <p>
+        <a href="https://tinyurl.com/bdd5jyp2" target="_blank"><i class="fas fa-download me-2"></i> Request Form</a>
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>    
   </body>
 </html>
