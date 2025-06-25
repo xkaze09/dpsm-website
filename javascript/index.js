@@ -1,6 +1,12 @@
 // Division Highlights Carousel Data
 const divisionCarouselData = [
   {
+    src: './images/article-images/dpsm/dpsm-job-postings/dpsm-hiring-banner-main.jpg',
+    alt: 'DPSM is Hiring!',
+    title: 'DPSM is hiring new faculty members for Academic Year 2025 - 2026!',
+    text: '<a href="../articles/dpsm-job-postings.html"> <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7"> Read More → </p></a>',
+  },
+  {
     src: './images/article-images/dpsm/cas-open-house/cas-open-house-2.jpg',
     alt: 'DPSM Serves Science with a Side of Silicon in CAS Open House!',
     title: 'DPSM Serves Science with a Side of Silicon in CAS Open House!',
