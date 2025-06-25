@@ -54,7 +54,7 @@
             </h2>
             <div id="collapseCL" class="accordion-collapse collapse show" aria-labelledby="headingCL" data-bs-parent="#facilitiesAccordion">
               <div class="accordion-body p-2">
-                <ul class="list-unstyled ms-2 mb-0">
+                <ul class="list-unstyled ms-2 mb-0 start">
                   <li><strong>CL 1</strong><br>
                     <small>Basement, CAS Building</small></li>
                   <li><strong>CL 2</strong><br>
@@ -64,16 +64,22 @@
                   <li><strong>CL 4</strong><br>
                     <small>1st Floor, CAS Building</small></li>
                 </ul>
-                <!-- Download Link -->
+                <!-- Download Links -->
                  <!-- IMPORTANT: Update this when a better-formatted guide is uploaded; use same name "comsci_lab_guide.pdf" -->
-                <a href="documents/comsci_lab_guide.pdf" class="btn btn-primary btn-sm mt-3 w-100" target="_blank">
-                  <i class="fas fa-download me-2"></i>Computer Lab Guide (PDF)
+                <a href="documents/comsci_lab_guide.pdf" class="btn btn-primary btn-sm mt-3 w-100 text-start" target="_blank">
+                  <i class="fas fa-download me-2"></i>Computer Lab Guide
                 </a>
-                <!-- Modal Trigger Button -->
-                <button type="button" class="btn btn-secondary btn-sm mt-2 w-100" data-bs-toggle="modal" data-bs-target="#comsciLabModal">
-                  <i class="fas fa-link me-2"></i>Computer Lab Reservation
-                </button>
-                <!-- target-"_blank" to open in new page -->
+                <!-- download link for lab reservation -->
+                <a href="documents/dpsm_facilities_permit.pdf" class="btn btn-secondary btn-sm mt-3 w-100 text-start" target="_blank">
+                  <i class="fas fa-download me-2"></i>Computer Lab Use Request Form
+                </a>
+                <!-- download link for overnight use -->
+                <a href="documents/dpsm_facilities_permit.pdf" class="btn btn-secondary btn-sm mt-3 w-100 text-start" target="_blank">
+                  <i class="fas fa-download me-2"></i>Computer Lab Overnight Permit
+                </a>
+                <div class="alert alert-info mt-3" role="note">
+                  <small><strong>Note:</strong> Download and fill in the appropriate form, then submit a hard copy to the CAS Office of the College Secretary.</small>
+                </div>
                  
               </div>
             </div>
@@ -258,7 +264,7 @@
             </div>
             <div class="facilities-img1 col p-1">
             <div class="facilities img-desc">
-            <img src="./images/facilities/university/LIBRARY 1.2.jpg" class="facilities" onclick="grow(this)">
+            <img src="./images/facilities/university/library.jpg" class="facilities" onclick="grow(this)">
             <div class="img-overlay"><h6 class="display-6">UPV Library</h6></div>
             </div>
             </div>
@@ -335,40 +341,7 @@
       <div class="menu-outside" onclick="exit()"></div>
     </div>
 
-<!-- Computer Lab Reservation Modal -->
-<div class="modal fade" id="comsciLabModal" tabindex="-1" aria-labelledby="comsciLabModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="comsciLabModalLabel">Computer Lab Room Reservation</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <ol class="text-start mb-4">
-          <li>
-        The use of the computer laboratory rooms is authorized for lecture or laboratory classes ONLY. The room utilization is posted outside the computer laboratories.
-        <!-- IMPORTANT: Need to update the link -->
-        <!-- or through this file <a href="" target="_blank">"insert link here"</a>. -->
-          </li>
-          <li>
-        The laboratory rooms can be requested for use outside of class schedules, provided that a laboratory permit is submitted and duly approved. Note that the requestors must be accompanied by the faculty-in-charge during the time of use.
-          </li>
-        </ol>
-        <hr>
-        <p class="text-start">
-          To process laboratory room reservations, download and fill in the appropriate form, then submit a hard copy to the CAS Office of the College Secretary:
-        </p>
-        <ol type="a" class="text-start">
-          <li>
-            <a href="documents/dpsm_facilities_use_request_form.doc" target="_blank"><strong>Within office hours (7:00 am - 5:30 pm) <i class="fas fa-download me-2"></i></strong><br></a>
-          </li>
-          <li>
-            <a href="" target="_blank"><strong>Outside office hours (5:30 pm onwards / overnight)<i class="fas fa-download me-2"></i></strong><br></a>
-          </li>
-        </ol>
-        </div>
-      </div>
-    </div>
-  </div>    
-  </body>
+ 
+
+</body>
 </html>
