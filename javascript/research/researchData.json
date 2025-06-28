@@ -54,6 +54,12 @@
         ,{
           "title": "Application for Automated System in Microplastic Tracking (PLASTIK)",
           "authors": "Project Leader: Mr. Reilly Bautista",
+          "dates": "June 15, 2024 - June 14, 2025",
+          "link": ""
+        }
+        ,{
+          "title": "Elucidation of the behavior mechanism that occurs at the boundary between the local atmosphere and gas turbulence sites and the surrounding surface atmospheres",
+          "authors": "Project Member: Prof. Jumar Cadondon",
           "dates": "Ongoing",
           "link": ""
         }
@@ -280,6 +286,54 @@
         {
           "title": "Bond pricing formulas for Markov-modulated affine term structure models",
           "citation": "Rodrigo, M.R., <b>Mamon, R.S.</b> (2021). [title], <em>Journal of Industrial and Management Optimization.</em>"
+        },
+        {
+          "title": "Enhanced Blood Loss Quantification Using a Novel Multi-Wavelength Imaging Approach",
+          "citation": "<b>Ambita, A.A.E.</b>, David, L. T., Sim Co, C., & Naval, P. C. (2025) [title], <em>IEEE Access, vol. 13, pp. 68201-68211</em>"
+        },
+        {
+          "title": "Microstructure, Extinction Coefficient, and Chlorophyll Content of Philippine Bamboo Leaves by a Portable TD-OCT Scanner",
+          "citation": "<b>Cadondon, J.</b>, Vallar E., Galvez M. & Shiina T. (2025) [title], <em>Proceedings of the 13th International Conference on Photonics, Optics and Laser Technology - Volume 1: PHOTOPTICS; ISBN 978-989-758-736-8, SciTePress, pages 114-119</em>"
+        },
+        {
+          "title": "Correlation Between Nutrient Concentration and Leaf Optical Attenuation Coefficient of Brassica Rapa (Pechay) as Measured by Time-Domain Optical Coherence Tomography System",
+          "citation": "Taeza, T. D., Witongco, M. E., Galvez, M. C., Vallar, E., Tabafa, M. N., Lesidan, J. R., <b>Cadondon, J.</b>, Bulan, J., & Shiina, T. (2025) [title], <em>Engineering Proceedings, 87(1), 62</em>",
+          "link": "https://doi.org/10.3390/engproc2025087062"
+        },
+        {
+          "title": "Performance of a portable fluorescence lidar system with regional Chl-a derivation algorithms: a case study of Chiba, Japan",
+          "citation": "<b>Cadondon, J.</b>, Bulan, J., Vallar, E., Galvez, M.C., & Shiina, T. (2025) [title], <em>Proc. SPIE 13264, Active and Passive Remote Sensing of Oceans, Seas, and Lakes, 132640K</em>",
+          "link": "https://doi.org/10.1117/12.3042936"
+        },
+        {
+          "title": "The characterization of multispectral images of the Batangas coastline using machine learning and UAV imaging",
+          "citation": "Pe, S., Jao, J., <b>Cadondon, J.</b>, Ong, P.M., Rempillo, O., Galvez, M.C., Beltran, A., Orbecido, A., Plancherel, Y., Brito-Prada, P., Prasow-Emond, M., & Vallar, E. (2024) [title], <em>Proc. SPIE 13266, Multispectral, Hyperspectral, and Ultraspectral Remote Sensing Technology, Techniques, and Applications VIII, 132660T</em>",
+          "link": "https://doi.org/10.1117/12.3042579"
+        },
+        {
+          "title": "Analyzing recurrence patterns using normalized difference vegetation index (NDVI) of man-made forests in Balaoan, La Union",
+          "citation": "Elmaguin, J.C., Bulan, J., <b>Cadondon, J.</b>, Cabaluna, M.L., Roque, F.J., Jao, J., & Vallar, E. (2024) [title], <em>Proc. SPIE 13266, Multispectral, Hyperspectral, and Ultraspectral Remote Sensing Technology, Techniques, and Applications VIII, 1326605</em>",
+          "link": "https://doi.org/10.1117/12.3040419"
+        },
+        {
+          "title": "Estimating Health and Economic Benefits from PM2.5 Reduction in Fishery-Based Communities: A Sector-Specific Approach to Sustainable Air Quality Management in the Philippines",
+          "citation": "Lesidan, J. R., Caido, N. G., Semblante, O., Roque, F. J., Bulan, J., <b>Cadondon, J.</b>, Galvez, M. C., & Vallar, E. (2025) [title], <em>Sustainability, 17(3), 1316</em>",
+          "link": "https://doi.org/10.3390/su17031316"
+        },
+        {
+          "title": "Development of Crop Reflectance Sensor for Precision Agriculture",
+          "citation": "​​Bulan, J., <b>Cadondon, J.</b>, Lesidan, J. R., Galvez, M. C., Vallar, E., & Shiina, T. (2024) [title], <em>Sustainability, 17(3), 1316</em>",
+          "link": "https://doi.org/10.3390/ecsa-11-20404"
+        },
+        {
+          "title": "Enhancing coastal management through the design and development of an in situ water quality monitoring system",
+          "citation": "Fernandez, P.N.J.; Fernandez, E.G.B.; <b>Cadondon, J.G.</b>, & Subade, R.F. (2024) [title], <em>Journal of Coastal Research (2024) 40 (6): 1090–1102</em>",
+          "link": "https://doi.org/10.2112/JCOASTRES-D-24-00001.1"
+        },
+        {
+          "title": "Experimental detection of marine plastic litter in surface waters by 405nm LB-based fluorescence lidar system",
+          "citation": "<b>Cadondon, J.</b>, Vallar, E., Shiina, T., & Galvez, M.C. (2024) [title], <em>Marine Pollution Bulletin, 207, 116842</em>",
+          "link": "https://doi.org/10.1016/j.marpolbul.2024.116842"
         }
       ]
     },
@@ -430,6 +484,103 @@
         ,{
           "title": "Using a Low-Cost Green Light Emitting Diode to Measure Total Suspended Solids in a Marine Protected Area of the Philippines, ",
           "citation": "<b>Fernandez, P.N.J.</b> [title] ICFAS 6 & AFSSRN F1, 24-26 November 2021."
+        }
+        ,{
+          "title": "Profiling of Floating Plastic Litter by Portable LD-based Fluorescence Lidar",
+          "citation": "<b>Cadondon, J.</b>, Vallar, E., Galvez, MC., Shiina, T. [title] The 72nd JSAP Spring Meeting 2024, 14-17 March 2025."
+        }
+        ,{
+          "title": "Development of 405nm LED lidar for traffic aerosol measurement",
+          "citation": "Galvez, MC., Lesidan, JR., Tabafa, MN., Vallar, EA., Ong, PM, <b>Cadondon, J.</b> et al. [title] AGU Fall Meeting 2024, 9-13 December 2024."
+        }
+        ,{
+          "title": "Influence of Anthropogenic Activities in the Chlorophyll and Organic Matter Distribution along the City Coastline (Iloilo City, Philippines)",
+          "citation": "<b>Cadondon, J.</b>, Fernandez, EG., Fernandez, PN. et al., Galvez, MC.,Lesidan, JR., Tabafa, MN., Vallar, EA., Ong, PM, Cadondon, J. et al. [title] AGU Fall Meeting 2024, 9-13 December 2024."
+        }
+        ,{
+          "title": "Development of a Tesla Coil- Based Atmospheric Cold Plasma Device for Plastic Degradation",
+          "citation": "Tabafa, MN., Lesidan, JR., <b>Cadondon, J.</b>, Galvez, MC., Vallar, E. [title] The 72nd JSAP Spring Meeting 2024."
+        }
+      ]
+    },
+    {
+      "containerId": "public-service",
+      "items": [
+        {
+          "title": "Komsai Hack 2025: DemocraTech.",
+          "citation": "<b>Hismania, N.G.</b>, Mentor. [title] <em>University of the Philippines Visayas, Miagao, Iloilo & Online. <em>Komsai.Org</em> (March 29 – April 11, 2025)"
+        },
+        {
+          "title": "29th Research and 7th Extension In-House Review.",
+          "citation": "<b>Dimzon, F.</b>, Panelist. [title] Guimaras State University, Salvador Main Campus, Mclain, Buenavista, Guimaras. <em>Guimaras State University</em> (March 20-21, 2025)"
+        },
+        {
+          "title": "Interschool Mathematics Quiz Bee.",
+          "citation": "<b>Maybay, H.</b>, Judge. [title] UPV Auditorium, University of the Philippines Visayas, Miag-ao, Iloilo City. <em>UPV Mathematics Circle</em> (February 20-21, 2025)"
+        },
+        {
+          "title": "Interschool Mathematics Quiz Bee.",
+          "citation": "<b>Consular, M.A.G.</b>, Judge. [title] UPV Auditorium, University of the Philippines Visayas, Miag-ao, Iloilo City. <em>UPV Mathematics Circle</em> (February 20-21, 2025)"
+        },
+        {
+          "title": "Interschool Mathematics Quiz Bee.",
+          "citation": "<b>Villacarlos, K.A.</b>, Judge. [title] UPV Auditorium, University of the Philippines Visayas, Miag-ao, Iloilo City. <em>UPV Mathematics Circle</em> (February 20-21, 2025)"
+        },
+        {
+          "title": "34th Inter-High School Quiz Show.",
+          "citation": "<b>Villacarlos, K.A.</b>, Judge. [title] AV Hall & Pidlaoan Hall, CFOS, University of the Philippines Visayas, Miag-ao, Iloilo. <em>UPV Fisheries Guild</em> (February 20-21, 2025)"
+        },
+        {
+          "title": "Interschool Mathematics Quiz Bee.",
+          "citation": "<b>Olivares, M.</b>, Judge. [title] UPV Auditorium, University of the Philippines Visayas, Miag-ao, Iloilo City. <em>UPV Mathematics Circle</em> (February 20-21, 2025)"
+        },
+        {
+          "title": "Conference paper Multi-Model-Driven Analysis of Temporal and Spatial Variation of Water Quality in Xiangjiang River (8th International Conference on Energy Engineering and Environmental Protection (EEEP 2024)).",
+          "citation": "<b>Olivares, M.</b>, Reviewer. [title] Haikou, China. <em>CEEEP.Org</em> (November 20-22, 2024)"
+        },
+        {
+          "title": "Pre-oral Defense of Bachelor of Science in Nursing Students.",
+          "citation": "<b>Dago-oc, J.</b>, Panelist. [title] Saint Paul University Iloilo, Iloilo City. <em>Saint Paul University Iloilo</em> (November 16-23, 2024)"
+        },
+        {
+          "title": "Pre-oral Defense of Bachelor of Science in Physical Therapy Students.",
+          "citation": "<b>Dago-oc, J.</b>, Panelist. [title] Saint Paul University Iloilo, Iloilo City. <em>Saint Paul University Iloilo</em> (October 19, 2024)"
+        },
+        {
+          "title": "Statistical Infographics Contest during the 35th National Statistics Month Celebration of Western Visayas.",
+          "citation": "<b>Dago-oc, J.</b>, Judge. [title] Online. <em>West Visayas State University, Philippine Statistical Association, Inc. VI</em> (October 24, 2024)"
+        },
+        {
+          "title": "Significant Contribution of Statistics Student Organization to the Statistical Development in the Region.",
+          "citation": "<b>Dago-oc, J.</b>, Session Speaker. [title] DepEd Ecotech Center, Sudlon, Lahug, Cebu City. <em>Philippine Statistics Authority VI, VII, VIII</em> (October 28-29, 2024)"
+        },
+        {
+          "title": "CAS Forum.",
+          "citation": "<b>Dimzon, F.</b>, Resource Speaker. [title] MILC, University of the Philippines Visayas, Miag-ao, Iloilo. <em>UPV CAS</em> (February 27, 2025)"
+        },
+        {
+          "title": "Western Visayas Junior High School Statistics Quiz.",
+          "citation": "<b>Dago-oc, J.</b>, Arbiter/Quiz Facilitator. [title] RDC Hall, National Economic Development Authority VI Office, Fort San Pedro Road, Iloilo City. <em>National Economic Development Authority VI</em> (October 17, 2024)"
+        },
+        {
+          "title": "Systemwide Students' Research Symposium.",
+          "citation": "<b>Ambita, A.A.</b>, Evaluator. [title] Iloilo State University of Fisheries Science and Technology, Barotac Nuevo, Iloilo. <em>Iloilo State University of Fisheries Science and Technology</em> (May 12, 2023)"
+        },
+        {
+          "title": "Systemwide Review of Research Proposals.",
+          "citation": "<b>Ambita, A.A.</b>, Evaluator. [title] Iloilo State University of Fisheries Science and Technology, Barotac Nuevo, Iloilo. <em>Iloilo State University of Fisheries Science and Technology</em> (March 4, 2023)"
+        },
+        {
+          "title": "Systemwide Review of Research Proposals.",
+          "citation": "<b>Ambita, A.A.</b>, Evaluator. [title] Iloilo State University of Fisheries Science and Technology, Barotac Nuevo, Iloilo. <em>Iloilo State University of Fisheries Science and Technology</em> (February 28, 2025)"
+        },
+        {
+          "title": "Systemwide Review of Research Proposals.",
+          "citation": "<b>Ambita, A.A.</b>, Evaluator (Information Technology Category). [title] Iloilo State University of Fisheries Science and Technology, Barotac Nuevo, Iloilo. <em>Iloilo State University of Fisheries Science and Technology</em> (April 25, 2025)"
+        },
+        {
+          "title": "Systemwide Review of Research Proposals.",
+          "citation": "<b>Ambita, A.A.</b>, Evaluator. [title] Iloilo State University of Fisheries Science and Technology, Barotac Nuevo, Iloilo. <em>Iloilo State University of Fisheries Science and Technology</em> (March 22, 2024)"
         }
       ]
     }
