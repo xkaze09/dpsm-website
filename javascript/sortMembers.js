@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const appMathFaculty = [
     {
       name: 'Maikel Roi M. Aguilar',
-      title: 'Instructor',
+      title: 'Lecturer',
       imgSrc: './images/appmath-faculty/AGUILAR.jpg',
       degree: 'BS in Applied Mathematics',
       university: 'University of the Philippines Visayas',
@@ -96,14 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
       email: 'lmfaina@up.edu.ph',
     },
     {
-      name: 'RB Jann G. Jamindang',
-      title: 'Instructor',
-      imgSrc: './images/appmath-faculty/jamindang.JPG',
-      degree: 'BS in Applied Mathematics',
-      university: 'University of the Philippines Visayas',
-      email: 'rgjamindang@up.edu.ph',
-    },
-    {
       name: 'Jeoffrey T. Libo-on',
       title: 'Assistant Professor',
       imgSrc: './images/appmath-faculty/LIBO-ON.jpg',
@@ -153,14 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
       email: 'altampos@up.edu.ph',
     },
     {
-      name: 'Lorenz T. Terania',
-      title: 'Instructor',
-      imgSrc: './images/appmath-faculty/terania.JPG',
-      degree: 'BS in Applied Mathematics',
-      university: 'University of the Philippines Visayas',
-      email: 'ltterania@up.edu.ph',
-    },
-    {
       name: 'Kenneth Aldwin Villacarlos',
       title: 'Instructor',
       imgSrc: './images/appmath-faculty/villacarlos.jpg',
@@ -168,6 +152,31 @@ document.addEventListener('DOMContentLoaded', () => {
       university: 'University of the Philippines Visayas',
       email: 'kvillacarlos@up.edu.ph',
     },
+    {
+      name: 'Arjunraj R. Masmela',
+      title: 'Instructor',
+      imgSrc: './images/appmath-faculty/masmela.jpg',
+      degree: 'BS in Applied Mathematics',
+      university: 'University of the Philippines Visayas',
+      email: 'arjunrajmasmela05@gmail.com',
+    },
+    {
+      name: "Leonel Fedric B. Tuburan",
+      title: 'Instructor',
+      imgSrc: './images/appmath-faculty/tuburan.jpeg',
+      degree: 'BS in Applied Mathematics',
+      university: 'University of the Philippines Visayas',
+      email: 'lbtuburan@up.edu.ph',
+    },
+    {
+      name:"Jacob Maximus L. Usaraga",
+      title: 'Instructor',
+      imgSrc: './images/appmath-faculty/usaraga.jpg',
+      degree: 'BS in Applied Mathematics',
+      university: 'University of the Philippines Visayas',
+      email: 'jacobmaximusu@gmail.com',
+    },
+
   ];
 
   const compSciFaculty = [
@@ -182,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: 'Franz Angelo U. Apoyon',
       imgSrc: './images/comsci-faculty/apoyon.jpg',
-      title: 'Instructor',
+      title: 'Instructor (On Study Leave)',
       degree: 'BS in Computer Science',
       university: 'University of the Philippines Visayas',
       email: 'fuapoyon@up.edu.ph',
@@ -222,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Nikko Gabriel J. Hismaña',
-      imgSrc: './images/cs-faculty/hismana.jpg',
+      imgSrc: './images/cs-faculty/hismana.png',
       title: 'Instructor',
       degree: 'BS in Computer Science',
       university: 'University of the Philippines Visayas',
@@ -247,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: 'Rhyan L. Superatum',
       imgSrc: './images/cs-faculty/SUPERATUM.jpg',
-      title: 'Instructor',
+      title: 'Instructor (On Study Leave)',
       degree: 'BS in Computer Science',
       university: 'University of the Philippines Visayas',
       email: 'rlsuperatum@up.edu.ph',
@@ -260,6 +269,30 @@ document.addEventListener('DOMContentLoaded', () => {
       university: 'University of the Philippines Visayas',
       email: 'eeteje@up.edu.ph',
     },
+    {
+      name: "Franz Peter A. Ferrer",
+      imgSrc: './images/cs-faculty/ferrer.jpg',
+      title: 'Instructor',
+      degree: 'BS in Computer Science',
+      university: 'University of the Philippines Visayas',
+      email: 'fpaferrer@gmail.com',
+    },
+    {
+      name: "Rene Andre B. Jocsing",
+      title: "Instructor",
+      imgSrc: './images/cs-faculty/jocsing.png',
+      degree: "BS in Computer Science",
+      university: "University of the Philippines Visayas",
+      email: "rbjocsing129@gmail.com",
+    },
+    {
+      name: "Kzlyr S. Manejo",
+      title: "Instructor",
+      imgSrc: './images/cs-faculty/manejo.jpg',
+      degree: "BS in Computer Science",
+      university: "University of the Philippines Visayas",
+      email: "kzlyrshairam@gmail.com",
+    }
   ];
 
   const statisticsFaculty = [
@@ -299,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: 'Jaser John G. Dago-oc',
       imgSrc: './images/statistics-faculty/dago-oc.jpg',
-      title: 'Instructor',
+      title: 'Instructor (On Study Leave)',
       degree: 'BS in Statistics',
       university: 'University of the Philippines Visayas',
       email: 'jgdagooc@up.edu.ph',
@@ -327,6 +360,14 @@ document.addEventListener('DOMContentLoaded', () => {
       degree: 'BS in Statistics',
       university: 'University of the Philippines Visayas',
       email: 'rj.mcapio@gmail.com',
+    },
+    {
+      name: "Glenn Ivan D. Macitas",
+      imgSrc: './images/statistics-faculty/macitas.jpeg',
+      title: "Instructor",
+      degree: "BS in Statistics",
+      university: "University of the Philippines Visayas",
+      email: "glennivan.macitas@gmail.com",
     },
   ];
 
@@ -388,6 +429,14 @@ document.addEventListener('DOMContentLoaded', () => {
       university: 'University of the Philippines Baguio',
       email: 'mcmerciales@up.edu.ph',
     },
+    {
+      name: "Marsden I. Badlisan",
+      imgSrc: './images/physics-faculty/badlisan.png',
+      title: 'Instructor',
+      degree: 'MS in Physics',
+      university: 'University of the Philippines Diliman',
+      email: 'mibadlisan@up.edu.ph',
+    }
   ];
 
   function createCard(member, type = 'faculty') {
