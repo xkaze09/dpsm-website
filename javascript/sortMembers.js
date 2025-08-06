@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Instructor',
       degree: 'BS in Computer Science',
       university: 'University of the Philippines Visayas',
-      email: 'fpaferrer@gmail.com',
+      email: 'faferrer@up.edu.ph',
     },
     {
       name: "Rene Andre B. Jocsing",
@@ -283,15 +283,15 @@ document.addEventListener('DOMContentLoaded', () => {
       imgSrc: './images/cs-faculty/jocsing.png',
       degree: "BS in Computer Science",
       university: "University of the Philippines Visayas",
-      email: "rbjocsing129@gmail.com",
+      email: "rbjocsing@up.edu.ph",
     },
     {
-      name: "Kzlyr S. Manejo",
+      name: "Kzlyr Shaira Manejo",
       title: "Instructor",
       imgSrc: './images/cs-faculty/manejo.jpg',
       degree: "BS in Computer Science",
       university: "University of the Philippines Visayas",
-      email: "kzlyrshairam@gmail.com",
+      email: "kmanejo@up.edu.ph",
     }
   ];
 
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: "Marsden I. Badlisan",
-      imgSrc: './images/physics-faculty/badlisan.png',
+      imgSrc: './images/physics-faculty/badlisan.jpg',
       title: 'Instructor',
       degree: 'MS in Physics',
       university: 'University of the Philippines Diliman',
