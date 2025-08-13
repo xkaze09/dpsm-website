@@ -6148,7 +6148,7 @@ textarea.form-control-lg {
   background-color: #000;
 }
 [data-bs-theme=dark] .carousel .carousel-caption, [data-bs-theme=dark].carousel .carousel-caption {
-  color: #000;
+  color: #FF0000;
 }
 
 .spinner-grow,
