@@ -459,15 +459,46 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  function sortByName(array) {
-    return array.sort((a, b) => a.name.localeCompare(b.name));
+  // function sortByRank(array) {
+  //   const rankOrder = {
+  //     'Professor': 1,
+  //     'Associate Professor': 2,
+  //     'Assistant Professor': 3,
+  //     'Instructor': 4,
+  //     'Lecturer': 5
+  //   };
+  //   return array.sort((a, b) => (rankOrder[a.title] || 6) - (rankOrder[b.title] || 6));
+  // }
+
+  // function sortByName(array) {
+  //   return array.sort((a, b) => a.name.localeCompare(b.name));
+  // }
+
+  function sortAll(array) {
+    const rankOrder = {
+      'Professor': 1,
+      'Associate Professor': 2,
+      'Assistant Professor': 3,
+      'Instructor': 4,
+      'Lecturer': 5
+    };
+    return array.slice().sort((a, b) => {
+      // sort by rank
+      const rankA = rankOrder[a.title?.replace(/\s*\(.*\)/, '')] || 6;
+      const rankB = rankOrder[b.title?.replace(/\s*\(.*\)/, '')] || 6;
+      if (rankA !== rankB) {
+        return rankA - rankB;
+      }
+      // sort by last name (use the last string)
+      return a.name.localeCompare(b.name);
+    });
   }
 
-  const sortedStaffMembers = sortByName(staffMembers);
-  const sortedAppMathFaculty = sortByName(appMathFaculty);
-  const sortedCompSciFaculty = sortByName(compSciFaculty);
-  const sortedStatisticsFaculty = sortByName(statisticsFaculty);
-  const sortedPhysicsFaculty = sortByName(physicsFaculty);
+  const sortedStaffMembers = sortAll(staffMembers);
+  const sortedAppMathFaculty = sortAll(appMathFaculty);
+  const sortedCompSciFaculty = sortAll(compSciFaculty);
+  const sortedStatisticsFaculty = sortAll(statisticsFaculty);
+  const sortedPhysicsFaculty = sortAll(physicsFaculty);
 
   document.getElementById('staff-list').innerHTML = sortedStaffMembers
     .map((member) => createCard(member, 'staff'))
