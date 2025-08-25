@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Instructor',
       degree: 'MS in Physics',
       university: 'De La Salle University, Manila',
-      email: 'alfonsojadie26@gmail.com',
+      email: 'aljadie1@up.edu.ph',
     },
     {
       name: 'Jared Gregory D. Mabunay',
