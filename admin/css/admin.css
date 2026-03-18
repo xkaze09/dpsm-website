@@ -67,6 +67,7 @@ body {
 }
 .tag-badge .remove-tag { cursor: pointer; color: #6c757d; }
 .tag-badge .remove-tag:hover { color: #dc3545; }
+.btn-xs { padding: .15rem .45rem; font-size: .75rem; }
 .image-preview-wrap { position: relative; display: inline-block; }
 .image-preview-wrap img { max-height: 160px; border-radius: 6px; object-fit: cover; }
 .image-preview-wrap .remove-img {

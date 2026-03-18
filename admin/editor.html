@@ -117,8 +117,17 @@
           <div class="admin-card mb-3">
             <label class="form-label small text-muted fw-medium mb-2">Tags</label>
             <div id="tags-container" class="d-flex flex-wrap gap-1 mb-2"></div>
+            <!-- Preset program tags -->
+            <div class="mb-2">
+              <small class="text-muted d-block mb-1">Program pages (click to add):</small>
+              <div class="d-flex flex-wrap gap-1">
+                <button type="button" class="btn btn-outline-secondary btn-xs preset-tag" data-tag="applied-mathematics">Applied Mathematics</button>
+                <button type="button" class="btn btn-outline-secondary btn-xs preset-tag" data-tag="computer-science">Computer Science</button>
+                <button type="button" class="btn btn-outline-secondary btn-xs preset-tag" data-tag="statistics">Statistics</button>
+              </div>
+            </div>
             <div class="input-group input-group-sm">
-              <input type="text" class="form-control" id="tag-input" placeholder="Add tag, press Enter">
+              <input type="text" class="form-control" id="tag-input" placeholder="Add custom tag, press Enter">
               <button class="btn btn-outline-secondary" id="add-tag-btn"><i class="fas fa-plus"></i></button>
             </div>
           </div>
@@ -308,6 +317,14 @@
 
   tagInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); addTag(); } });
   document.getElementById('add-tag-btn').addEventListener('click', addTag);
+
+  // Preset tag buttons
+  document.querySelectorAll('.preset-tag').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const t = btn.dataset.tag;
+      if (!tags.includes(t)) { tags.push(t); renderTags(); }
+    });
+  });
 
   // ── Collect form data ─────────────────────────────────────────────────────
   function collectPayload() {
