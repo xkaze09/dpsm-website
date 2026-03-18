@@ -187,12 +187,4 @@ async def get_article_for_mutation(
     if not result.data:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Article not found")
 
-    article = result.data[0]
-
-    if current_user.role == "editor" and article.get("author_id") != current_user.id:
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="You can only modify your own articles",
-        )
-
-    return article
+    return result.data[0]

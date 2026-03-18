@@ -179,11 +179,13 @@ async def list_articles(
     db: AsyncClient = Depends(get_db),
 ):
     # ── Determine status filter ───────────────────────────────────────────────
-    is_editor = current_user is not None and current_user.role == "editor"
     if include_drafts:
         if not current_user:
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Authentication required")
-        status_filter = None  # no status filter — return all
+        # Honor an explicit status filter alongside include_drafts (e.g. admin filtering by draft)
+        if filter_status and filter_status not in {"draft", "published", "archived"}:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid status value")
+        status_filter = filter_status or None  # None = return all statuses
     elif filter_status and filter_status != "published":
         if not current_user:
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Authentication required")
@@ -212,10 +214,6 @@ async def list_articles(
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid category value")
         query = query.eq("category", category)
 
-    # Editors see only their own articles when browsing the admin dashboard
-    if include_drafts and is_editor:
-        query = query.eq("author_id", str(current_user.id))
-
     query = query.order("published_at", desc=True).range(offset, offset + page_size - 1)
 
     result = await query.execute()
@@ -224,7 +222,7 @@ async def list_articles(
     # ── Status counts (only when include_drafts — i.e., admin dashboard) ─────
     published_count = draft_count = archived_count = 0
     if include_drafts and current_user:
-        counts = await _get_status_counts(db, author_id=str(current_user.id) if is_editor else None)
+        counts = await _get_status_counts(db)
         published_count = counts.get("published", 0)
         draft_count = counts.get("draft", 0)
         archived_count = counts.get("archived", 0)
