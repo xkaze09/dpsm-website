@@ -57,12 +57,13 @@ async def create_user(
 
     The invited user sets their own password — the admin never handles credentials.
     """
-    # Step 1: Invite via Supabase Auth admin API
+    # Step 1: Create user via Supabase Auth admin API (no invite email needed)
     try:
-        invite_response = await db.auth.admin.invite_user_by_email(
-            data.email,
-            options={"redirect_to": "https://upvdpsm.com/admin/login.html"},
-        )
+        create_response = await db.auth.admin.create_user({
+            "email": data.email,
+            "password": data.password,
+            "email_confirm": True,
+        })
     except Exception as exc:
         err_str = str(exc).lower()
         if "already registered" in err_str or "already exists" in err_str or "unique" in err_str:
@@ -70,13 +71,13 @@ async def create_user(
                 status_code=status.HTTP_409_CONFLICT,
                 detail="A user with this email already exists",
             )
-        logger.error("Failed to invite user %s: %s", data.email, exc)
+        logger.error("Failed to create user %s: %s", data.email, exc)
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail=f"Could not create user account: {exc}",
         )
 
-    user_id = invite_response.user.id
+    user_id = create_response.user.id
 
     # Step 2: Create profile
     try:
