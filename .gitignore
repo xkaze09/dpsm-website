@@ -1,2 +1,13 @@
 node_modules
 assets/css/style.css.map
+.env
+backend/.env
+CLAUDE.md
+PROMPTS.md
+TODOS.md
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+backend/venv/
+backend/.venv/
