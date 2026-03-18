@@ -166,8 +166,8 @@
               <i class="fas fa-user-tag"></i>
             </button>
             ${u.is_active !== false ? `
-            <button class="btn btn-outline-warning deactivate-btn" data-id="${u.id}" title="Deactivate">
-              <i class="fas fa-ban"></i>
+            <button class="btn btn-outline-danger deactivate-btn" data-id="${u.id}" title="Remove user">
+              <i class="fas fa-trash"></i>
             </button>` : ''}
           </div>
         </td>
@@ -184,10 +184,10 @@
 
     tbody.querySelectorAll('.deactivate-btn').forEach(btn => {
       btn.addEventListener('click', async () => {
-        if (!confirm('Deactivate this user? They will no longer be able to sign in.')) return;
+        if (!confirm('Remove this user? This cannot be undone.')) return;
         try {
           await api('DELETE', `/api/users/${btn.dataset.id}`);
-          showToast('User deactivated.', 'warning');
+          showToast('User removed.', 'danger');
           loadUsers();
         } catch (err) { showToast(err.message, 'danger'); }
       });

@@ -124,32 +124,30 @@ async def change_role(
 
 
 @router.delete("/{user_id}", status_code=status.HTTP_204_NO_CONTENT)
-async def deactivate_user(
+async def delete_user(
     user_id: str,
     current_user: UserProfile = Depends(require_admin),
     db: AsyncClient = Depends(get_db),
 ):
     """
-    Deactivate a user account. Admin only. Soft disable — does not delete.
-    Uses Supabase ban_duration to prevent login. Articles remain attributed.
+    Delete a user account. Admin only. Hard delete — removes from auth and profiles.
     """
     if user_id == current_user.id:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="You cannot deactivate your own account",
+            detail="You cannot delete your own account",
         )
 
     try:
-        from gotrue.types import AdminUserAttributes
-        await db.auth.admin.update_user_by_id(
-            user_id,
-            AdminUserAttributes(ban_duration=_BAN_DURATION),
-        )
+        await db.auth.admin.delete_user(user_id)
     except Exception as exc:
-        logger.error("Failed to deactivate user %s: %s", user_id, exc)
+        logger.error("Failed to delete user %s: %s", user_id, exc)
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail="Could not deactivate user",
+            detail="Could not delete user",
         )
 
-    logger.info("User deactivated: user=%s by admin=%s", user_id, current_user.id)
+    # Profile row is removed via ON DELETE CASCADE from auth.users, but clean up explicitly
+    await db.table("profiles").delete().eq("id", user_id).execute()
+
+    logger.info("User deleted: user=%s by admin=%s", user_id, current_user.id)
