@@ -437,7 +437,7 @@ async def update_article(
 @router.delete("/{article_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_article(
     article: dict = Depends(get_article_for_mutation),
-    current_user: UserProfile = Depends(require_admin),
+    current_user: UserProfile = Depends(get_current_user),
     db: AsyncClient = Depends(get_db),
 ):
     await db.table("articles").delete().eq("id", article["id"]).execute()
