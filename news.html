@@ -53,161 +53,53 @@
             </div>
         </div>
 
-        <!-- UPCOMING EVENTS -->
-        <div class="px-4 pt-5 p-md-5 my-1 text-start">
-            <div class="container">
-            <div class="row">
-                <div class="col-auto d-flex flex-column">
-                <div class="course-organization-name">
-                    <p class="section-title lead display-6 fw-bold">Upcoming Events</p>
-                </div>
-                </div>
-            </div>
-            <!-- Remote Sensing -->
-            <div class="row mt-4">
-                <div class="col-12 mb-4">
-                    <div class="event-card card shadow-sm">
-                        <div class="row g-0">
-                            <div class="col-md-4 d-flex align-items-stretch">
-                                <img src="./images/iars2026.jpg" class="img-fluid rounded-start w-100" style="object-fit:contain; width:100%; height:auto; background:#f8f9fa;" alt="Dummy Event Image">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">4th International Conference on ICT Application Research (AIR2026 Winter)</h4>
-                                    <p class="card-text mb-1" style="font-size: 1.15rem;"><small class="text-muted">February 26-28, 2026 | UP Visayas, Iloilo City</small></p>
-                                    <hr>
-                                    <p class="card-text">
-                                        The Division of Physical Sciences and Mathematics (UP Visayas), International ICT Application Research Society (IIARS), UP Diliman, and partner international institutions invite researchers, faculty members, and students to participate in the <b>4th International Conference on ICT Application Research (AIR2026 Winter)</b>, to be held at <b>UP Visayas, Iloilo City</b> on <b>February 25-28, 2026</b>.
-                                        <br><br>
-                                        Join researchers, educators, and industry practitioners in sharing their innovations and collaborations on ICT-driven solutions across science, engineering, and the social sciences.
-                                        <br><br>
-                                        Deadline for <a href="https://conferenceservice.jp/registration/iar2026_winter/" class="text-decoration-underline text-info">Registration</a> and <a href="https://conferenceservice.jp/papersubmission/iar2026_winter/" class="text-decoration-underline text-info">Paper/Poster Submission</a> is on <b>January 28, 2026</b>.
-                                    </p>
-                                    <br>
-                                    <a href="https://iiiar.org/iiars/iar/2026_winter/" target="_blank">
-                                        <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7">
-                                            Learn More and Join Here →
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- PREVIOUS EVENTS -->
-        <div class="px-4 pt-5 p-md-5 my-1 text-start">
-            <div class="container">
-            <div class="row">
-                <div class="col-auto d-flex flex-column">
-                <div class="course-organization-name">
-                    <p class="section-title lead display-6 fw-bold">Previous Events</p>
-                </div>
-                </div>
-            </div>
-            <!-- Remote Sensing -->
-            <div class="row mt-4">
-                <div class="col-12 mb-4">
-                    <div class="event-card card shadow-sm">
-                        <div class="row g-0">
-                            <div class="col-md-4 d-flex align-items-stretch">
-                                <img src="./images/remote-sensing-prev.jpg" class="img-fluid rounded-start w-100" style="object-fit:contain; width:100%; height:auto; background:#f8f9fa;" alt="Dummy Event Image">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">2nd Remote Sensing and Data Analytics Research Symposium 2025</h4>
-                                    <p class="card-text mb-1" style="font-size: 1.15rem;"><small class="text-muted">September 25-26, 2025 | UPV CAS MILC, Miagao, Iloilo</small></p>
-                                    <hr>
-                                    <p class="card-text">
-                                        Join us for the 2nd Remote Sensing and Data Analytics Research Symposium 2025, where experts and researchers  share their insights and advancements in the field. We welcome all researchers, faculty, and students to submit and present their research in this exciting event. <br>
-                                    </p>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- APPMATH NEWS -->
-        <div class="px-4 pt-5 p-md-5 my-1 text-start">
+        <!-- UPCOMING EVENTS — dynamically loaded from API -->
+        <div class="px-4 pt-5 p-md-5 my-1 text-start" id="upcoming-events-section">
             <div class="container">
                 <div class="row">
-                    <div class=" col-auto d-flex flex-column">
+                    <div class="col-auto d-flex flex-column">
+                        <div class="course-organization-name">
+                            <p class="section-title lead display-6 fw-bold">Upcoming Events</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4" id="upcoming-events-list">
+                    <div class="col-12 text-muted py-3">
+                        <div class="spinner-border spinner-border-sm me-2"></div>Loading events...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PREVIOUS EVENTS — dynamically loaded from API -->
+        <div class="px-4 pt-5 p-md-5 my-1 text-start" id="previous-events-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto d-flex flex-column">
+                        <div class="course-organization-name">
+                            <p class="section-title lead display-6 fw-bold">Previous Events</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4" id="previous-events-list">
+                    <div class="col-12 text-muted py-3">
+                        <div class="spinner-border spinner-border-sm me-2"></div>Loading events...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDENT AWARDS — dynamically loaded from API -->
+        <div class="px-4 pt-5 p-md-5 my-1 text-start" id="awards-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto d-flex flex-column">
                         <div class="course-organization-name">
                             <p class="section-title lead display-6 fw-bold">Student Awards and Competitions</p>
                         </div>
                     </div>
-                    <div class="row mt-3">
-
-                        <!-- News Card 1 -->
-                        <div class="col-lg-4 mb-4 mt">
-                            <a href="./articles/packethacks-hackathon.html" class="card-link">
-                                <div class="course-news-card text-bg-dark">
-                                    <div class="image-container">
-                                        <img src="./images/article-images/computer-science/packethacks/techtonics.jpg" class="card-img" alt="AppMath News Image 1">
-                                        <div class="gradient-overlay"></div>
-                                    </div>
-                                    <div class="d-flex flex-column justify-content-center align-items-end card-img-overlay card-overlay">
-                                        <p class="course-news-card-text">
-                                            Techtonics Team Secures 7th Place ouf of 50+ teams in packetHACKS 2024 National Hackathon, Paving the Way for a Smarter Philippines!
-                                        </p>
-                                        <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7">
-                                            Read More →
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- News Card 2 -->
-                        <div class="col-lg-4 mb-4 mt">
-                            <a href="./articles/numerical-navigators-converge-in-math-o-interschool-quiz-bee.html" class="card-link">
-                                <div class="course-news-card text-bg-dark">
-                                    <div class="image-container">
-                                        <img src="./images/article-images/app-math/quizbee/quizbee-0.jpg" class="card-img" alt="AppMath News Image 1">
-                                        <div class="gradient-overlay"></div>
-                                    </div>
-                                    <div class="d-flex flex-column justify-content-center align-items-end card-img-overlay card-overlay">
-                                        <p class="course-news-card-text">
-                                            Numerical Navigators Converge in Math-O Interschool Quiz Bee 2024!
-                                        </p>
-                                        <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7">
-                                            Read More →
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- News Card 3 -->
-                        <div class="col-lg-4 mb-4 mt">
-                            <a href="./articles/up-students-emerge-as-winners-of-aia-lifehackers-2022-hackventure-competition copy.html" class="card-link">
-                                <div class="course-news-card text-bg-dark">
-                                    <div class="image-container">
-                                        <img src="./images/article-images/computer-science/AIA-hackathon/cs-article-2.jpg" class="card-img" alt="AppMath News Image 1">
-                                        <div class="gradient-overlay"></div>
-                                    </div>
-                                    <div class="d-flex flex-column justify-content-center align-items-end card-img-overlay card-overlay">
-                                        <p class="course-news-card-text">
-                                            UP Students emerge as winners of AIA LifeHackers 2022: HackVenture competition
-                                        </p>
-                                        <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7">
-                                            Read More →
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
+                <div class="row mt-3" id="awards-grid"></div>
             </div>
         </div>
 
@@ -231,8 +123,8 @@
             logo.style.animationDelay = `${index * 1}s`;
         });
 
-        // ── Load articles from API ─────────────────────────────────────────
         const FALLBACK_IMG = './images/news-hero.png';
+        const TODAY = new Date().toISOString().slice(0, 10); // 'YYYY-MM-DD' — string compare avoids timezone issues
 
         function fmtDate(iso) {
             if (!iso) return '';
@@ -247,6 +139,7 @@
             return `./article.html?slug=${encodeURIComponent(slug)}`;
         }
 
+        // ── DPSM Announcements ────────────────────────────────────────────
         function renderFeatured(a) {
             const img = escHtml(a.image_url || FALLBACK_IMG);
             const url = escHtml(articleUrl(a.slug));
@@ -271,7 +164,7 @@
                 </div>`;
         }
 
-        function renderCards(articles) {
+        function renderAnnouncementCards(articles) {
             const grid = document.getElementById('articles-grid');
             if (!articles.length) { grid.innerHTML = ''; return; }
             grid.innerHTML = articles.map(a => {
@@ -295,21 +188,114 @@
             }).join('');
         }
 
-        function showApiError() {
-            // API unavailable — hide the loading skeleton, show nothing (page still usable)
-            document.getElementById('featured-article').innerHTML = '';
-            document.getElementById('articles-grid').innerHTML = '';
-        }
-
-        fetch(`${API_BASE}/api/articles?page_size=9`)
-            .then(r => r.ok ? r.json() : Promise.reject(r.status))
+        fetch(`${API_BASE}/api/articles?category=announcement&page_size=9`)
+            .then(r => r.ok ? r.json() : Promise.reject())
             .then(data => {
                 const items = data.items || [];
-                if (!items.length) { showApiError(); return; }
+                if (!items.length) {
+                    document.getElementById('featured-article').innerHTML = '';
+                    document.getElementById('articles-grid').innerHTML = '';
+                    return;
+                }
                 renderFeatured(items[0]);
-                renderCards(items.slice(1));
+                renderAnnouncementCards(items.slice(1));
             })
-            .catch(() => showApiError());
+            .catch(() => {
+                document.getElementById('featured-article').innerHTML = '';
+                document.getElementById('articles-grid').innerHTML = '';
+            });
+
+        // ── Events (Upcoming & Previous) ──────────────────────────────────
+        function renderEventCard(a) {
+            const img = escHtml(a.image_url || FALLBACK_IMG);
+            const url = escHtml(articleUrl(a.slug));
+            const dateLabel = a.event_date
+                ? new Date(a.event_date + 'T00:00:00').toLocaleDateString('en-PH', { year: 'numeric', month: 'long', day: 'numeric' })
+                : '';
+            return `
+            <div class="col-12 mb-4">
+                <div class="event-card card shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex align-items-stretch">
+                            <img src="${img}" class="img-fluid rounded-start w-100"
+                                style="object-fit:cover; max-height:240px;"
+                                alt="${escHtml(a.title)}"
+                                onerror="this.src='${FALLBACK_IMG}'">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">${escHtml(a.title)}</h4>
+                                ${dateLabel ? `<p class="card-text mb-1" style="font-size:1.15rem;"><small class="text-muted">${dateLabel}</small></p><hr>` : ''}
+                                <p class="card-text">${escHtml(a.excerpt || '')}</p>
+                                <a href="${url}">
+                                    <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7">Read More →</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        fetch(`${API_BASE}/api/articles?category=event&page_size=50`)
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(data => {
+                const items = data.items || [];
+                const upcoming = items.filter(a => !a.event_date || a.event_date >= TODAY);
+                const previous = items.filter(a => a.event_date && a.event_date < TODAY);
+
+                const upcomingEl = document.getElementById('upcoming-events-list');
+                upcomingEl.innerHTML = upcoming.length
+                    ? upcoming.map(renderEventCard).join('')
+                    : '<div class="col-12 text-muted py-3">No upcoming events at this time.</div>';
+
+                const previousEl = document.getElementById('previous-events-list');
+                previousEl.innerHTML = previous.length
+                    ? previous.map(renderEventCard).join('')
+                    : '<div class="col-12 text-muted py-3">No previous events found.</div>';
+            })
+            .catch(() => {
+                document.getElementById('upcoming-events-list').innerHTML = '';
+                document.getElementById('previous-events-list').innerHTML = '';
+                document.getElementById('upcoming-events-section').style.display = 'none';
+                document.getElementById('previous-events-section').style.display = 'none';
+            });
+
+        // ── Student Awards & Competitions ─────────────────────────────────
+        function renderAwardCard(a) {
+            const img = escHtml(a.image_url || FALLBACK_IMG);
+            const url = escHtml(articleUrl(a.slug));
+            return `
+            <div class="col-lg-4 mb-4 mt">
+                <a href="${url}" class="card-link">
+                    <div class="course-news-card text-bg-dark">
+                        <div class="image-container">
+                            <img src="${img}" class="card-img" alt="${escHtml(a.title)}"
+                                onerror="this.src='${FALLBACK_IMG}'">
+                            <div class="gradient-overlay"></div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center align-items-end card-img-overlay card-overlay">
+                            <p class="course-news-card-text">${escHtml(a.title)}</p>
+                            <p class="section-subtitle text-warning footer-link fw-bold mb-4 display-7">Read More →</p>
+                        </div>
+                    </div>
+                </a>
+            </div>`;
+        }
+
+        fetch(`${API_BASE}/api/articles?category=student_award&page_size=9`)
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(data => {
+                const items = data.items || [];
+                const grid = document.getElementById('awards-grid');
+                grid.innerHTML = items.length
+                    ? items.map(renderAwardCard).join('')
+                    : '';
+                if (!items.length) document.getElementById('awards-section').style.display = 'none';
+            })
+            .catch(() => {
+                document.getElementById('awards-section').style.display = 'none';
+            });
     });
     </script>
   </body>

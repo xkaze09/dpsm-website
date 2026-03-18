@@ -142,11 +142,11 @@
     try {
       const status = statusFilter.value;
       const q = searchInput.value.trim();
-      const params = new URLSearchParams({ page: currentPage, page_size: PAGE_SIZE, include_drafts: true });
+      const params = new URLSearchParams({ page: currentPage, page_size: PAGE_SIZE });
       if (status) params.set('status', status);
       if (q) params.set('q', q);
 
-      const data = await api('GET', `/api/articles?${params}`);
+      const data = await api('GET', `/api/articles?${params}&include_drafts=true`);
       allArticles = data.items || [];
 
       renderStats(data);
@@ -161,7 +161,7 @@
 
   function renderStats(data) {
     // Use counts from response if available, else derive from items
-    document.getElementById('stat-total').textContent = data.total ?? '—';
+    document.getElementById('stat-total').textContent = (data.published_count ?? 0) + (data.draft_count ?? 0) + (data.archived_count ?? 0) || data.total || '—';
     document.getElementById('stat-published').textContent = data.published_count ?? '—';
     document.getElementById('stat-draft').textContent = data.draft_count ?? '—';
     document.getElementById('stat-archived').textContent = data.archived_count ?? '—';

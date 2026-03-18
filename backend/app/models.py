@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 from typing import Optional
 
 from pydantic import BaseModel, ConfigDict, field_validator
@@ -17,6 +17,7 @@ from pydantic import BaseModel, ConfigDict, field_validator
 
 VALID_STATUSES = {"draft", "published", "archived"}
 VALID_ROLES = {"admin", "editor"}
+VALID_CATEGORIES = {"announcement", "event", "student_award"}
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -72,8 +73,10 @@ class ArticleCreate(BaseModel):
     title: str
     content: str  # Quill HTML — sanitized by nh3 on the backend before INSERT
     excerpt: str
-    tags: list[str]
-    cover_image: Optional[str] = None
+    tags: list[str] = []
+    image_url: Optional[str] = None
+    category: str = "announcement"
+    event_date: Optional[date] = None
 
     @field_validator("title")
     @classmethod
@@ -89,11 +92,16 @@ class ArticleCreate(BaseModel):
             raise ValueError("excerpt is required")
         return v.strip()
 
+    @field_validator("category")
+    @classmethod
+    def category_must_be_valid(cls, v: str) -> str:
+        if v not in VALID_CATEGORIES:
+            raise ValueError(f"category must be one of: {', '.join(VALID_CATEGORIES)}")
+        return v
+
     @field_validator("tags")
     @classmethod
-    def tags_not_empty(cls, v: list[str]) -> list[str]:
-        if not v:
-            raise ValueError("at least one tag is required")
+    def clean_tags(cls, v: list[str]) -> list[str]:
         return [t.strip().lower() for t in v if t.strip()]
 
 
@@ -102,13 +110,28 @@ class ArticleUpdate(BaseModel):
     content: Optional[str] = None  # sanitized on backend
     excerpt: Optional[str] = None
     tags: Optional[list[str]] = None
-    cover_image: Optional[str] = None
+    image_url: Optional[str] = None
+    category: Optional[str] = None
+    event_date: Optional[date] = None
+    status: Optional[str] = None
+
+    @field_validator("category")
+    @classmethod
+    def category_must_be_valid(cls, v: Optional[str]) -> Optional[str]:
+        if v is not None and v not in VALID_CATEGORIES:
+            raise ValueError(f"category must be one of: {', '.join(VALID_CATEGORIES)}")
+        return v
+
+    @field_validator("status")
+    @classmethod
+    def status_must_be_valid(cls, v: Optional[str]) -> Optional[str]:
+        if v is not None and v not in VALID_STATUSES:
+            raise ValueError(f"status must be one of: {', '.join(VALID_STATUSES)}")
+        return v
 
     @field_validator("tags")
     @classmethod
-    def tags_not_empty(cls, v: Optional[list[str]]) -> Optional[list[str]]:
-        if v is not None and not v:
-            raise ValueError("tags list must not be empty if provided")
+    def clean_tags(cls, v: Optional[list[str]]) -> Optional[list[str]]:
         if v is not None:
             return [t.strip().lower() for t in v if t.strip()]
         return v
@@ -122,10 +145,12 @@ class ArticleResponse(BaseModel):
     slug: str
     content: str
     excerpt: str
-    cover_image: Optional[str] = None
+    image_url: Optional[str] = None
     author_id: Optional[str] = None
     author_name: Optional[str] = None
     status: str
+    category: str = "announcement"
+    event_date: Optional[date] = None
     tags: list[str] = []
     view_count: int = 0
     published_at: Optional[datetime] = None
@@ -137,7 +162,10 @@ class ArticleListResponse(BaseModel):
     items: list[ArticleResponse]
     total: int
     page: int
-    limit: int
+    page_size: int
+    published_count: int = 0
+    draft_count: int = 0
+    archived_count: int = 0
 
 
 class ImageUploadResponse(BaseModel):

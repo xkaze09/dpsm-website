@@ -37,7 +37,7 @@ _ALLOWED_TAGS = {
     "pre", "code", "span", "div", "hr",
 }
 _ALLOWED_ATTRS: dict[str, set[str]] = {
-    "a": {"href", "target"},  # "rel" is managed by nh3 internally — panics if included here
+    "a": {"href", "target"},  # "rel" is managed by nh3 internally
     "img": {"src", "alt", "width", "height"},
     "span": {"class"},
     "div": {"class"},
@@ -83,7 +83,6 @@ async def _generate_slug(title: str, db: AsyncClient, exclude_id: str | None = N
         if not result.data:
             return candidate
         candidate = f"{base}-{i}"
-    # Exhausted retries — append timestamp as last resort
     return f"{base}-{int(time.time())}"
 
 
@@ -105,6 +104,18 @@ def _to_response(row: dict) -> ArticleResponse:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Per-status counts helper
+# ─────────────────────────────────────────────────────────────────────────────
+async def _get_status_counts(db: AsyncClient) -> dict[str, int]:
+    """Run three lightweight count queries and return published/draft/archived counts."""
+    counts = {}
+    for s in ("published", "draft", "archived"):
+        res = await db.table("articles").select("id", count="exact").eq("status", s).execute()
+        counts[s] = res.count or 0
+    return counts
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # RSS cache (5-minute in-memory)
 # ─────────────────────────────────────────────────────────────────────────────
 _rss_cache: tuple[str, float] | None = None
@@ -114,10 +125,6 @@ SITE_URL = "https://upvdpsm.com"
 
 
 def _build_rss_xml(articles: list[dict]) -> str:
-    """
-    Build RSS 2.0 XML from a list of article dicts.
-    Uses stdlib xml.etree.ElementTree — no extra dependency.
-    """
     rss = Element("rss", version="2.0")
     channel = SubElement(rss, "channel")
 
@@ -149,40 +156,29 @@ def _build_rss_xml(articles: list[dict]) -> str:
 # ─────────────────────────────────────────────────────────────────────────────
 # GET /api/articles
 #
-# Query params:
-#   q      - search in title + excerpt (ILIKE)
-#   tags   - filter by tag (exact match in array)
-#   status - 'published' (default, public) | 'draft' | 'archived' (auth required)
-#   page   - page number, default 1
-#   limit  - items per page, default 10, max 50
+# Public: returns published articles only (default).
+# Authenticated: pass include_drafts=true to get all statuses, or status=X.
 #
-# ┌──────────────────────────────────────────────────────────┐
-# │  GET /api/articles  FILTER PIPELINE                      │
-# │                                                          │
-# │  parse params                                            │
-# │       │                                                  │
-# │  status != 'published'? ──▶ require auth                 │
-# │       │                                                  │
-# │  q present? ──▶ OR(title ILIKE, excerpt ILIKE)           │
-# │       │                                                  │
-# │  tags present? ──▶ array contains [tag]                  │
-# │       │                                                  │
-# │  paginate via .range()                                   │
-# │       │                                                  │
-# │  join profiles(display_name)                             │
-# └──────────────────────────────────────────────────────────┘
+# Filters: q, tags, category, status, include_drafts, page, page_size
 # ─────────────────────────────────────────────────────────────────────────────
 @router.get("", response_model=ArticleListResponse)
 async def list_articles(
     q: Optional[str] = Query(None, description="Search title and excerpt"),
     tags: Optional[str] = Query(None, description="Filter by tag"),
+    category: Optional[str] = Query(None, description="Filter by category"),
     filter_status: Optional[str] = Query(None, alias="status"),
+    include_drafts: bool = Query(False, description="Return all statuses (auth required)"),
     page: int = Query(1, ge=1),
-    limit: int = Query(10, ge=1, le=50),
+    page_size: int = Query(10, ge=1, le=50, alias="page_size"),
     current_user: Optional[UserProfile] = Depends(get_optional_user),
     db: AsyncClient = Depends(get_db),
 ):
-    if filter_status and filter_status != "published":
+    # ── Determine status filter ───────────────────────────────────────────────
+    if include_drafts:
+        if not current_user:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Authentication required")
+        status_filter = None  # no status filter — return all
+    elif filter_status and filter_status != "published":
         if not current_user:
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Authentication required")
         if filter_status not in {"draft", "published", "archived"}:
@@ -191,10 +187,12 @@ async def list_articles(
     else:
         status_filter = "published"
 
-    offset = (page - 1) * limit
+    offset = (page - 1) * page_size
 
     query = db.table("articles").select("*, profiles(display_name)", count="exact")
-    query = query.eq("status", status_filter)
+
+    if status_filter:
+        query = query.eq("status", status_filter)
 
     if q and q.strip():
         safe_q = q.strip().replace("%", r"\%").replace("_", r"\_")
@@ -203,16 +201,32 @@ async def list_articles(
     if tags:
         query = query.contains("tags", [tags.strip().lower()])
 
-    query = query.order("published_at", desc=True).range(offset, offset + limit - 1)
+    if category:
+        if category not in {"announcement", "event", "student_award"}:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid category value")
+        query = query.eq("category", category)
+
+    query = query.order("published_at", desc=True).range(offset, offset + page_size - 1)
 
     result = await query.execute()
-
     items = [_to_response(row) for row in (result.data or [])]
+
+    # ── Status counts (only when include_drafts — i.e., admin dashboard) ─────
+    published_count = draft_count = archived_count = 0
+    if include_drafts and current_user:
+        counts = await _get_status_counts(db)
+        published_count = counts.get("published", 0)
+        draft_count = counts.get("draft", 0)
+        archived_count = counts.get("archived", 0)
+
     return ArticleListResponse(
         items=items,
         total=result.count or 0,
         page=page,
-        limit=limit,
+        page_size=page_size,
+        published_count=published_count,
+        draft_count=draft_count,
+        archived_count=archived_count,
     )
 
 
@@ -283,6 +297,38 @@ async def upload_image(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# GET /api/articles/id/{article_id}
+# Load article by UUID — used by the admin editor.
+# NOTE: registered BEFORE /{slug} to avoid route shadowing.
+# ─────────────────────────────────────────────────────────────────────────────
+@router.get("/id/{article_id}", response_model=ArticleResponse)
+async def get_article_by_id(
+    article_id: str,
+    current_user: Optional[UserProfile] = Depends(get_optional_user),
+    db: AsyncClient = Depends(get_db),
+):
+    try:
+        uuid.UUID(article_id)
+    except ValueError:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Invalid article ID format")
+
+    query = db.table("articles").select("*, profiles(display_name)").eq("id", article_id)
+    if not current_user:
+        query = query.eq("status", "published")
+
+    try:
+        result = await query.execute()
+    except Exception as exc:
+        logger.error("Failed to fetch article by id=%s: %s", article_id, exc)
+        raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="Could not fetch article")
+
+    if not result.data:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Article not found")
+
+    return _to_response(result.data[0])
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # GET /api/articles/{slug}
 # ─────────────────────────────────────────────────────────────────────────────
 @router.get("/{slug}", response_model=ArticleResponse)
@@ -293,7 +339,6 @@ async def get_article(
 ):
     query = db.table("articles").select("*, profiles(display_name)").eq("slug", slug)
 
-    # Authenticated users (admin/editor) can view drafts; public sees published only
     if not current_user:
         query = query.eq("status", "published")
 
@@ -321,16 +366,17 @@ async def create_article(
         "slug": slug,
         "content": clean_content,
         "excerpt": data.excerpt,
-        "cover_image": data.cover_image,
+        "image_url": data.image_url,
         "author_id": current_user.id,
         "status": "draft",
         "tags": data.tags,
+        "category": data.category,
+        "event_date": data.event_date.isoformat() if data.event_date else None,
     }
 
     try:
         result = await db.table("articles").insert(row).execute()
     except Exception as exc:
-        # Unique constraint violation on slug (race condition)
         if "unique" in str(exc).lower() or "duplicate" in str(exc).lower():
             raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="An article with this title already exists")
         logger.error("Failed to create article: %s", exc)
@@ -339,14 +385,14 @@ async def create_article(
     if not result.data:
         raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="Could not create article")
 
-    logger.info("Article created: slug=%s by user=%s", slug, current_user.id)
+    logger.info("Article created: slug=%s category=%s by user=%s", slug, data.category, current_user.id)
     return _to_response(result.data[0])
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PUT /api/articles/{article_id}
+# PATCH /api/articles/{article_id}
 # ─────────────────────────────────────────────────────────────────────────────
-@router.put("/{article_id}", response_model=ArticleResponse)
+@router.patch("/{article_id}", response_model=ArticleResponse)
 async def update_article(
     data: ArticleUpdate,
     article: dict = Depends(get_article_for_mutation),
@@ -361,9 +407,11 @@ async def update_article(
         update_data["content"] = _sanitize(update_data["content"])
 
     if "title" in update_data and update_data["title"] != article["title"]:
-        # Only regenerate slug if the article hasn't been published yet
         if article["status"] == "draft":
             update_data["slug"] = await _generate_slug(update_data["title"], db, exclude_id=article["id"])
+
+    if "event_date" in update_data and update_data["event_date"] is not None:
+        update_data["event_date"] = update_data["event_date"].isoformat()
 
     await db.table("articles").update(update_data).eq("id", article["id"]).execute()
 
@@ -398,7 +446,6 @@ async def publish_article(
     db: AsyncClient = Depends(get_db),
 ):
     if article["status"] == "published":
-        # Idempotent — already published, return as-is
         return _to_response(article)
 
     if article["status"] == "archived":

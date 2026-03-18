@@ -123,6 +123,20 @@
             </div>
           </div>
 
+          <!-- Category & Event Date -->
+          <div class="admin-card mb-3">
+            <label class="form-label small text-muted fw-medium mb-2">Category</label>
+            <select class="form-select form-select-sm mb-2" id="category-select">
+              <option value="announcement">Announcement</option>
+              <option value="event">Event</option>
+              <option value="student_award">Student Award</option>
+            </select>
+            <div id="event-date-wrap" style="display:none">
+              <label class="form-label small text-muted fw-medium mb-1">Event date</label>
+              <input type="date" class="form-control form-control-sm" id="event-date-input">
+            </div>
+          </div>
+
           <!-- Meta -->
           <div class="admin-card mb-3">
             <label class="form-label small text-muted fw-medium mb-1">Author name</label>
@@ -180,6 +194,14 @@
   const slugDisplay = document.getElementById('slug-display');
   const imagePreviewArea = document.getElementById('image-preview-area');
   const removeImageBtn = document.getElementById('remove-image-btn');
+  const categorySelect = document.getElementById('category-select');
+  const eventDateWrap = document.getElementById('event-date-wrap');
+  const eventDateInput = document.getElementById('event-date-input');
+
+  // ── Category toggle ────────────────────────────────────────────────────────
+  categorySelect.addEventListener('change', () => {
+    eventDateWrap.style.display = categorySelect.value === 'event' ? '' : 'none';
+  });
 
   // ── Load existing article ──────────────────────────────────────────────────
   if (articleId) {
@@ -187,7 +209,7 @@
     document.getElementById('danger-zone').style.display = '';
 
     try {
-      const a = await api('GET', `/api/articles/${articleId}`);
+      const a = await api('GET', `/api/articles/id/${articleId}`);
       titleInput.value = a.title || '';
       excerptInput.value = a.excerpt || '';
       quill.root.innerHTML = a.content || '';
@@ -197,6 +219,12 @@
       renderTags();
 
       if (a.image_url) setImagePreview(a.image_url);
+
+      categorySelect.value = a.category || 'announcement';
+      if (a.category === 'event') {
+        eventDateWrap.style.display = '';
+        if (a.event_date) eventDateInput.value = a.event_date;
+      }
 
       document.getElementById('status-badge-header').innerHTML = statusBadge(a.status);
 
@@ -283,13 +311,18 @@
 
   // ── Collect form data ─────────────────────────────────────────────────────
   function collectPayload() {
-    return {
+    const payload = {
       title: titleInput.value.trim(),
       content: quill.root.innerHTML,
       excerpt: excerptInput.value.trim(),
       tags,
       image_url: uploadedImageUrl || imageUrlInput.value.trim() || null,
+      category: categorySelect.value,
     };
+    if (categorySelect.value === 'event' && eventDateInput.value) {
+      payload.event_date = eventDateInput.value;
+    }
+    return payload;
   }
 
   // ── Save draft ────────────────────────────────────────────────────────────
