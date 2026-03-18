@@ -434,7 +434,7 @@ async def update_article(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# DELETE /api/articles/{article_id}  (soft delete → archived)
+# DELETE /api/articles/{article_id}  (hard delete)
 # ─────────────────────────────────────────────────────────────────────────────
 @router.delete("/{article_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_article(
@@ -442,8 +442,8 @@ async def delete_article(
     current_user: UserProfile = Depends(require_admin),
     db: AsyncClient = Depends(get_db),
 ):
-    await db.table("articles").update({"status": "archived"}).eq("id", article["id"]).execute()
-    logger.info("Article archived: id=%s by admin=%s", article["id"], current_user.id)
+    await db.table("articles").delete().eq("id", article["id"]).execute()
+    logger.info("Article deleted: id=%s by admin=%s", article["id"], current_user.id)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
