@@ -6,6 +6,23 @@ export const supabase = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_K
 
 // ── Auth ─────────────────────────────────────────────────────────────────────
 
+function _parseJwt(token) {
+  try {
+    const base64 = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+    return JSON.parse(atob(base64));
+  } catch { return {}; }
+}
+
+export function getRoleFromSession(session) {
+  if (!session) return null;
+  // Custom claims are in the JWT payload, not on session.user
+  const payload = _parseJwt(session.access_token);
+  return payload.user_role
+    ?? session.user.app_metadata?.user_role
+    ?? session.user.user_metadata?.user_role
+    ?? null;
+}
+
 export async function requireAuth(requiredRole = null) {
   const { data: { session } } = await supabase.auth.getSession();
   if (!session) {
@@ -13,9 +30,7 @@ export async function requireAuth(requiredRole = null) {
     return null;
   }
   if (requiredRole) {
-    const role = session.user.user_role
-      ?? session.user.app_metadata?.user_role
-      ?? session.user.user_metadata?.user_role;
+    const role = getRoleFromSession(session);
     if (role !== requiredRole && role !== 'admin') {
       showToast('Access denied — insufficient permissions.', 'danger');
       setTimeout(() => window.location.href = '/admin/index.html', 1500);
@@ -118,7 +133,7 @@ export function statusBadge(status) {
 
 export async function renderAdminNav(activePage = '') {
   const { data: { session } } = await supabase.auth.getSession();
-  const role = session?.user?.user_role ?? session?.user?.app_metadata?.user_role ?? session?.user?.user_metadata?.user_role ?? 'editor';
+  const role = getRoleFromSession(session) ?? 'editor';
   const displayName = session?.user?.user_metadata?.display_name ?? session?.user?.email ?? '';
 
   const nav = document.getElementById('admin-nav');
