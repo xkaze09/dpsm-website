@@ -61,7 +61,7 @@ async def create_user(
     try:
         invite_response = await db.auth.admin.invite_user_by_email(
             data.email,
-            {"redirect_to": "https://upvdpsm.com/admin/login.html"},
+            options={"redirect_to": "https://upvdpsm.com/admin/login.html"},
         )
     except Exception as exc:
         err_str = str(exc).lower()
@@ -73,7 +73,7 @@ async def create_user(
         logger.error("Failed to invite user %s: %s", data.email, exc)
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail="Could not create user account",
+            detail=f"Could not create user account: {exc}",
         )
 
     user_id = invite_response.user.id
