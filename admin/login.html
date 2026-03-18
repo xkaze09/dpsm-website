@@ -20,6 +20,7 @@
 
     <div id="error-alert" class="alert alert-danger d-none" role="alert"></div>
 
+    <!-- Normal login form -->
     <form id="login-form" novalidate>
       <div class="mb-3">
         <label class="form-label fw-medium">Email address</label>
@@ -43,6 +44,28 @@
       </button>
     </form>
 
+    <!-- Set password form — shown only for invite/recovery links -->
+    <form id="set-pw-form" class="d-none" novalidate>
+      <p class="text-muted small mb-3">You've been invited to DPSM Admin. Set a password to activate your account.</p>
+      <div class="mb-3">
+        <label class="form-label fw-medium">New password</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+          <input type="password" class="form-control" id="new-pw" placeholder="Minimum 8 characters" minlength="8" required autocomplete="new-password">
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="form-label fw-medium">Confirm password</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+          <input type="password" class="form-control" id="confirm-pw" placeholder="Repeat password" required autocomplete="new-password">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dark w-100" id="set-pw-btn">
+        <i class="fas fa-check me-2"></i>Set password &amp; continue
+      </button>
+    </form>
+
     <p class="text-center text-muted small mt-4 mb-0">
       Access restricted to authorised DPSM staff only.
     </p>
@@ -56,9 +79,34 @@
 
   const supabase = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY);
 
-  // Redirect if already logged in
-  const { data: { session } } = await supabase.auth.getSession();
-  if (session) window.location.href = '/admin/index.html';
+  const errorEl = document.getElementById('error-alert');
+
+  function showError(msg) {
+    errorEl.textContent = msg;
+    errorEl.classList.remove('d-none');
+  }
+
+  // Detect invite / recovery link from URL params or hash
+  const urlParams = new URLSearchParams(window.location.search);
+  const hashParams = new URLSearchParams(window.location.hash.slice(1));
+  const authType = urlParams.get('type') || hashParams.get('type');
+  const isInvite = authType === 'invite' || authType === 'recovery';
+
+  if (isInvite) {
+    // Supabase SDK auto-exchanges the token from the URL on getSession()
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      // Token exchanged — show set-password form
+      document.getElementById('login-form').classList.add('d-none');
+      document.getElementById('set-pw-form').classList.remove('d-none');
+    } else {
+      showError('Invite link is invalid or has expired. Ask an admin to send a new invite.');
+    }
+  } else {
+    // Normal flow: redirect if already logged in
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) window.location.href = '/admin/index.html';
+  }
 
   // Toggle password visibility
   document.getElementById('toggle-pw').addEventListener('click', () => {
@@ -68,10 +116,10 @@
     else { pw.type = 'password'; icon.classList.replace('fa-eye-slash', 'fa-eye'); }
   });
 
+  // Normal sign-in
   document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = document.getElementById('login-btn');
-    const errorEl = document.getElementById('error-alert');
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
 
@@ -82,12 +130,33 @@
     const { error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
-      errorEl.textContent = error.message === 'Invalid login credentials'
-        ? 'Incorrect email or password.'
-        : error.message;
-      errorEl.classList.remove('d-none');
+      showError(error.message === 'Invalid login credentials' ? 'Incorrect email or password.' : error.message);
       btn.disabled = false;
       btn.innerHTML = '<i class="fas fa-sign-in-alt me-2"></i>Sign in';
+    } else {
+      window.location.href = '/admin/index.html';
+    }
+  });
+
+  // Set password (invite / recovery flow)
+  document.getElementById('set-pw-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('set-pw-btn');
+    const newPw = document.getElementById('new-pw').value;
+    const confirmPw = document.getElementById('confirm-pw').value;
+
+    errorEl.classList.add('d-none');
+    if (newPw !== confirmPw) { showError('Passwords do not match.'); return; }
+    if (newPw.length < 8) { showError('Password must be at least 8 characters.'); return; }
+
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Saving...';
+
+    const { error } = await supabase.auth.updateUser({ password: newPw });
+    if (error) {
+      showError(error.message);
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-check me-2"></i>Set password &amp; continue';
     } else {
       window.location.href = '/admin/index.html';
     }

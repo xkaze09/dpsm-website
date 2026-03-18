@@ -19,9 +19,27 @@ async def list_users(
     current_user: UserProfile = Depends(require_admin),
     db: AsyncClient = Depends(get_db),
 ):
-    """List all user profiles. Admin only."""
+    """List all user profiles with email and active status. Admin only."""
     result = await db.table("profiles").select("*").order("created_at", desc=False).execute()
-    return [UserProfile(**row) for row in (result.data or [])]
+    rows = {row["id"]: row for row in (result.data or [])}
+
+    # Augment with email + banned status from Supabase auth
+    try:
+        auth_users_resp = await db.auth.admin.list_users()
+        auth_by_id = {str(u.id): u for u in (auth_users_resp or [])}
+    except Exception as exc:
+        logger.warning("Could not fetch auth users: %s", exc)
+        auth_by_id = {}
+
+    users = []
+    for uid, row in rows.items():
+        auth_u = auth_by_id.get(uid)
+        email = auth_u.email if auth_u else None
+        banned = getattr(auth_u, "banned_until", None) if auth_u else None
+        is_active = banned is None or str(banned).lower() in ("", "none", "0001-01-01t00:00:00z")
+        users.append(UserProfile(**row, email=email, is_active=is_active))
+
+    return users
 
 
 @router.post("", response_model=UserProfile, status_code=status.HTTP_201_CREATED)
@@ -86,7 +104,7 @@ async def create_user(
     return UserProfile(**result.data[0])
 
 
-@router.put("/{user_id}/role", response_model=UserProfile)
+@router.patch("/{user_id}/role", response_model=UserProfile)
 async def change_role(
     user_id: str,
     data: UserRoleUpdate,

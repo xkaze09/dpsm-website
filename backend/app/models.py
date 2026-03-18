@@ -33,6 +33,8 @@ class UserProfile(BaseModel):
     role: str
     avatar_url: Optional[str] = None
     created_at: Optional[datetime] = None
+    email: Optional[str] = None
+    is_active: Optional[bool] = None
 
 
 class UserProfileUpdate(BaseModel):

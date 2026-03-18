@@ -57,6 +57,10 @@
       <form id="create-user-form" novalidate>
         <div class="modal-body">
           <div id="create-error" class="alert alert-danger d-none"></div>
+          <p class="small text-muted mb-3">
+            <i class="fas fa-envelope me-1"></i>
+            An invite email will be sent. The user sets their own password via the link.
+          </p>
           <div class="mb-3">
             <label class="form-label fw-medium">Display name</label>
             <input type="text" class="form-control" id="new-display-name" placeholder="e.g. Maria Santos" required>
@@ -65,14 +69,10 @@
             <label class="form-label fw-medium">Email address</label>
             <input type="email" class="form-control" id="new-email" placeholder="user@upv.ph" required>
           </div>
-          <div class="mb-3">
-            <label class="form-label fw-medium">Password</label>
-            <input type="password" class="form-control" id="new-password" placeholder="Minimum 8 characters" minlength="8" required>
-          </div>
           <div class="mb-1">
             <label class="form-label fw-medium">Role</label>
             <select class="form-select" id="new-role">
-              <option value="editor">Editor — can create and publish articles</option>
+              <option value="editor">Editor — can create and edit articles</option>
               <option value="admin">Admin — full access including user management</option>
             </select>
           </div>
@@ -80,7 +80,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
           <button type="submit" class="btn btn-dark" id="create-user-btn">
-            <i class="fas fa-user-plus me-1"></i>Create user
+            <i class="fas fa-paper-plane me-1"></i>Send invite
           </button>
         </div>
       </form>
@@ -200,23 +200,22 @@
     const btn = document.getElementById('create-user-btn');
     const errEl = document.getElementById('create-error');
     errEl.classList.add('d-none');
-    setLoading(btn, true, 'Creating...');
+    setLoading(btn, true, 'Sending invite...');
     try {
       await api('POST', '/api/users', {
         email: document.getElementById('new-email').value.trim(),
-        password: document.getElementById('new-password').value,
         display_name: document.getElementById('new-display-name').value.trim(),
         role: document.getElementById('new-role').value,
       });
       createModal.hide();
       document.getElementById('create-user-form').reset();
-      showToast('User created!');
+      showToast('Invite sent! The user will receive an email to set their password.');
       loadUsers();
     } catch (err) {
       errEl.textContent = err.data?.detail || err.message;
       errEl.classList.remove('d-none');
     }
-    setLoading(btn, false, '<i class="fas fa-user-plus me-1"></i>Create user');
+    setLoading(btn, false, '<i class="fas fa-paper-plane me-1"></i>Send invite');
   });
 
   // Change role
