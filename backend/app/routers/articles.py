@@ -299,7 +299,7 @@ async def upload_image(
     await db.storage.from_("article-images").upload(
         filename, content, file_options={"content-type": content_type}
     )
-    url = db.storage.from_("article-images").get_public_url(filename)
+    url = await db.storage.from_("article-images").get_public_url(filename)
     logger.info("Uploaded image: %s by user %s", filename, current_user.id)
     return ImageUploadResponse(url=url)
 
