@@ -13,7 +13,8 @@ export async function requireAuth(requiredRole = null) {
     return null;
   }
   if (requiredRole) {
-    const role = session.user.app_metadata?.user_role
+    const role = session.user.user_role
+      ?? session.user.app_metadata?.user_role
       ?? session.user.user_metadata?.user_role;
     if (role !== requiredRole && role !== 'admin') {
       showToast('Access denied — insufficient permissions.', 'danger');
@@ -117,7 +118,7 @@ export function statusBadge(status) {
 
 export async function renderAdminNav(activePage = '') {
   const { data: { session } } = await supabase.auth.getSession();
-  const role = session?.user?.app_metadata?.user_role ?? session?.user?.user_metadata?.user_role ?? 'editor';
+  const role = session?.user?.user_role ?? session?.user?.app_metadata?.user_role ?? session?.user?.user_metadata?.user_role ?? 'editor';
   const displayName = session?.user?.user_metadata?.display_name ?? session?.user?.email ?? '';
 
   const nav = document.getElementById('admin-nav');
