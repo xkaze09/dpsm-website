@@ -1,0 +1,98 @@
+/* DPSM Admin Panel Styles */
+
+:root {
+  --admin-sidebar-width: 0px;
+  --admin-primary: #2c3e50;
+  --admin-accent: #c0392b;
+}
+
+body {
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Navbar ─────────────────────────────────── */
+#admin-nav .navbar { box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+
+/* ── Page layout ────────────────────────────── */
+.admin-page { min-height: calc(100vh - 56px); padding: 2rem 0; }
+.admin-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Login page ─────────────────────────────── */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+}
+.login-logo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+
+/* ── Article list ───────────────────────────── */
+.article-row { transition: background .15s; cursor: pointer; }
+.article-row:hover { background-color: #f8f9fa; }
+.article-row td { vertical-align: middle; }
+.article-title-cell { max-width: 320px; }
+.article-title-cell .title { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.article-title-cell .excerpt { font-size: .8rem; color: #6c757d; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ── Editor ─────────────────────────────────── */
+#editor-toolbar { border-radius: 6px 6px 0 0; }
+#editor-content {
+  border-radius: 0 0 6px 6px;
+  min-height: 400px;
+  background: #fff;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.ql-container { font-family: inherit; font-size: 1rem; }
+.tag-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: .25rem .55rem; border-radius: 20px;
+  background: #e9ecef; font-size: .8rem;
+}
+.tag-badge .remove-tag { cursor: pointer; color: #6c757d; }
+.tag-badge .remove-tag:hover { color: #dc3545; }
+.image-preview-wrap { position: relative; display: inline-block; }
+.image-preview-wrap img { max-height: 160px; border-radius: 6px; object-fit: cover; }
+.image-preview-wrap .remove-img {
+  position: absolute; top: 4px; right: 4px;
+  background: rgba(0,0,0,.55); color: #fff;
+  border: none; border-radius: 50%; width: 24px; height: 24px;
+  font-size: .7rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+
+/* ── Status badges ──────────────────────────── */
+.badge.bg-secondary { background-color: #6c757d !important; }
+
+/* ── Users table ────────────────────────────── */
+.user-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--admin-primary); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: .85rem;
+}
+
+/* ── Filters bar ────────────────────────────── */
+.filters-bar { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 768px) {
+  .admin-page { padding: 1rem 0; }
+  .admin-card { padding: 1rem; }
+  .article-title-cell { max-width: 180px; }
+}

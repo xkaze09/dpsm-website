@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editor | DPSM Admin</title>
+  <link rel="icon" href="/images/dpsmlogo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+  <link href="/admin/css/admin.css" rel="stylesheet">
+  <style>
+    #editor-content { min-height: 420px; }
+    .sidebar-card { position: sticky; top: 1rem; }
+  </style>
+</head>
+<body>
+
+<div id="admin-nav"></div>
+
+<div class="admin-page">
+  <div class="container-fluid px-4">
+
+    <!-- Header -->
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <div class="d-flex align-items-center gap-2">
+        <a href="/admin/index.html" class="btn btn-sm btn-outline-secondary">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <h5 class="fw-bold mb-0" id="page-title">New article</h5>
+        <span id="status-badge-header"></span>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-outline-secondary" id="save-draft-btn">
+          <i class="fas fa-save me-1"></i>Save draft
+        </button>
+        <button class="btn btn-sm btn-success" id="publish-btn">
+          <i class="fas fa-check me-1"></i>Publish
+        </button>
+      </div>
+    </div>
+
+    <div class="row g-3">
+      <!-- Main editor column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <div class="admin-card mb-3">
+          <input type="text" class="form-control form-control-lg border-0 p-0 fw-bold"
+            id="title-input" placeholder="Article title" style="font-size:1.4rem; box-shadow:none;">
+        </div>
+
+        <!-- Excerpt -->
+        <div class="admin-card mb-3">
+          <label class="form-label small text-muted fw-medium mb-1">Excerpt <span class="fw-normal">(shown in article lists)</span></label>
+          <textarea class="form-control border-0 p-0" id="excerpt-input" rows="2"
+            placeholder="Brief summary of the article..." style="resize:none; box-shadow:none;"></textarea>
+        </div>
+
+        <!-- Rich text editor -->
+        <div class="admin-card p-0 mb-3">
+          <div id="editor-toolbar">
+            <span class="ql-formats">
+              <select class="ql-header"><option value="2">Heading</option><option value="3">Subheading</option><option selected></option></select>
+            </span>
+            <span class="ql-formats">
+              <button class="ql-bold"></button>
+              <button class="ql-italic"></button>
+              <button class="ql-underline"></button>
+              <button class="ql-strike"></button>
+            </span>
+            <span class="ql-formats">
+              <button class="ql-blockquote"></button>
+              <button class="ql-code-block"></button>
+            </span>
+            <span class="ql-formats">
+              <button class="ql-list" value="ordered"></button>
+              <button class="ql-list" value="bullet"></button>
+            </span>
+            <span class="ql-formats">
+              <button class="ql-link"></button>
+              <button class="ql-image"></button>
+            </span>
+            <span class="ql-formats">
+              <button class="ql-clean"></button>
+            </span>
+          </div>
+          <div id="editor-content"></div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="sidebar-card">
+
+          <!-- Hero image -->
+          <div class="admin-card mb-3">
+            <label class="form-label small text-muted fw-medium mb-2">Hero image</label>
+            <div id="image-preview-area" class="mb-2"></div>
+            <div class="d-flex gap-2">
+              <label class="btn btn-sm btn-outline-secondary flex-grow-1 mb-0" for="image-upload">
+                <i class="fas fa-upload me-1"></i>Upload image
+              </label>
+              <input type="file" id="image-upload" accept="image/*" class="d-none">
+              <button class="btn btn-sm btn-outline-danger" id="remove-image-btn" style="display:none!important">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="mt-2">
+              <label class="form-label small text-muted mb-1">Or paste image URL</label>
+              <input type="url" class="form-control form-control-sm" id="image-url-input" placeholder="https://...">
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="admin-card mb-3">
+            <label class="form-label small text-muted fw-medium mb-2">Tags</label>
+            <div id="tags-container" class="d-flex flex-wrap gap-1 mb-2"></div>
+            <div class="input-group input-group-sm">
+              <input type="text" class="form-control" id="tag-input" placeholder="Add tag, press Enter">
+              <button class="btn btn-outline-secondary" id="add-tag-btn"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+
+          <!-- Category & Event Date -->
+          <div class="admin-card mb-3">
+            <label class="form-label small text-muted fw-medium mb-2">Category</label>
+            <select class="form-select form-select-sm mb-2" id="category-select">
+              <option value="announcement">Announcement</option>
+              <option value="event">Event</option>
+              <option value="student_award">Student Award</option>
+            </select>
+            <div id="event-date-wrap" style="display:none">
+              <label class="form-label small text-muted fw-medium mb-1">Event date</label>
+              <input type="date" class="form-control form-control-sm" id="event-date-input">
+            </div>
+          </div>
+
+          <!-- Meta -->
+          <div class="admin-card mb-3">
+            <label class="form-label small text-muted fw-medium mb-1">Author name</label>
+            <input type="text" class="form-control form-control-sm mb-2" id="author-override-input"
+              placeholder="Leave blank to use your display name">
+            <label class="form-label small text-muted fw-medium mb-1">Slug</label>
+            <input type="text" class="form-control form-control-sm font-monospace" id="slug-display" readonly placeholder="Auto-generated from title">
+          </div>
+
+          <!-- Danger zone (edit mode only) -->
+          <div class="admin-card mb-3 border border-danger" id="danger-zone" style="display:none">
+            <p class="small text-muted mb-2">Danger zone</p>
+            <button class="btn btn-sm btn-outline-danger w-100" id="archive-btn">
+              <i class="fas fa-archive me-1"></i>Archive article
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+<script src="/admin/js/config.js"></script>
+<script type="module">
+  import { requireAuth, api, apiForm, renderAdminNav, showToast, setLoading, statusBadge } from '/admin/js/admin.js';
+
+  const session = await requireAuth();
+  if (!session) throw new Error('Not authenticated');
+  await renderAdminNav('articles');
+
+  // ── State ──────────────────────────────────────────────────────────────────
+  const params = new URLSearchParams(location.search);
+  const articleId = params.get('id');
+  let currentStatus = 'draft';
+  let uploadedImageUrl = null;
+  let tags = [];
+
+  // ── Quill ──────────────────────────────────────────────────────────────────
+  const quill = new Quill('#editor-content', {
+    theme: 'snow',
+    modules: { toolbar: '#editor-toolbar' },
+    placeholder: 'Write your article content here...',
+  });
+
+  // ── Elements ───────────────────────────────────────────────────────────────
+  const titleInput = document.getElementById('title-input');
+  const excerptInput = document.getElementById('excerpt-input');
+  const imageUrlInput = document.getElementById('image-url-input');
+  const tagInput = document.getElementById('tag-input');
+  const saveDraftBtn = document.getElementById('save-draft-btn');
+  const publishBtn = document.getElementById('publish-btn');
+  const slugDisplay = document.getElementById('slug-display');
+  const imagePreviewArea = document.getElementById('image-preview-area');
+  const removeImageBtn = document.getElementById('remove-image-btn');
+  const categorySelect = document.getElementById('category-select');
+  const eventDateWrap = document.getElementById('event-date-wrap');
+  const eventDateInput = document.getElementById('event-date-input');
+
+  // ── Category toggle ────────────────────────────────────────────────────────
+  categorySelect.addEventListener('change', () => {
+    eventDateWrap.style.display = categorySelect.value === 'event' ? '' : 'none';
+  });
+
+  // ── Load existing article ──────────────────────────────────────────────────
+  if (articleId) {
+    document.getElementById('page-title').textContent = 'Edit article';
+    document.getElementById('danger-zone').style.display = '';
+
+    try {
+      const a = await api('GET', `/api/articles/id/${articleId}`);
+      titleInput.value = a.title || '';
+      excerptInput.value = a.excerpt || '';
+      quill.root.innerHTML = a.content || '';
+      slugDisplay.value = a.slug || '';
+      currentStatus = a.status;
+      tags = a.tags || [];
+      renderTags();
+
+      if (a.image_url) setImagePreview(a.image_url);
+
+      categorySelect.value = a.category || 'announcement';
+      if (a.category === 'event') {
+        eventDateWrap.style.display = '';
+        if (a.event_date) eventDateInput.value = a.event_date;
+      }
+
+      document.getElementById('status-badge-header').innerHTML = statusBadge(a.status);
+
+      // If already published, change publish btn to "Update & keep published"
+      if (a.status === 'published') {
+        publishBtn.innerHTML = '<i class="fas fa-check me-1"></i>Update';
+      }
+      if (a.status === 'archived') {
+        publishBtn.innerHTML = '<i class="fas fa-check me-1"></i>Republish';
+      }
+    } catch (err) {
+      showToast('Failed to load article: ' + err.message, 'danger');
+    }
+  }
+
+  // ── Slug preview ───────────────────────────────────────────────────────────
+  titleInput.addEventListener('input', () => {
+    if (!articleId) {
+      slugDisplay.value = titleInput.value
+        .toLowerCase().trim()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-');
+    }
+  });
+
+  // ── Image upload ───────────────────────────────────────────────────────────
+  document.getElementById('image-upload').addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const fd = new FormData();
+    fd.append('file', file);
+    try {
+      showToast('Uploading image...', 'info');
+      const res = await apiForm('POST', '/api/articles/upload-image', fd);
+      uploadedImageUrl = res.url;
+      setImagePreview(uploadedImageUrl);
+      imageUrlInput.value = uploadedImageUrl;
+      showToast('Image uploaded!');
+    } catch (err) { showToast('Upload failed: ' + err.message, 'danger'); }
+  });
+
+  imageUrlInput.addEventListener('change', () => {
+    const url = imageUrlInput.value.trim();
+    if (url) { uploadedImageUrl = url; setImagePreview(url); }
+  });
+
+  function setImagePreview(url) {
+    imagePreviewArea.innerHTML = `
+      <div class="image-preview-wrap">
+        <img src="${url}" alt="Hero image" class="w-100 mb-1">
+      </div>`;
+    removeImageBtn.style.removeProperty('display');
+  }
+
+  removeImageBtn.addEventListener('click', () => {
+    uploadedImageUrl = null;
+    imageUrlInput.value = '';
+    imagePreviewArea.innerHTML = '';
+    removeImageBtn.style.display = 'none';
+  });
+
+  // ── Tags ───────────────────────────────────────────────────────────────────
+  function renderTags() {
+    const container = document.getElementById('tags-container');
+    container.innerHTML = tags.map((t, i) => `
+      <span class="tag-badge">
+        ${escHtml(t)}
+        <span class="remove-tag" data-i="${i}"><i class="fas fa-times fa-xs"></i></span>
+      </span>`).join('');
+    container.querySelectorAll('.remove-tag').forEach(el => {
+      el.addEventListener('click', () => { tags.splice(+el.dataset.i, 1); renderTags(); });
+    });
+  }
+
+  function addTag() {
+    const val = tagInput.value.trim().toLowerCase().replace(/\s+/g, '-');
+    if (val && !tags.includes(val)) { tags.push(val); renderTags(); }
+    tagInput.value = '';
+  }
+
+  tagInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); addTag(); } });
+  document.getElementById('add-tag-btn').addEventListener('click', addTag);
+
+  // ── Collect form data ─────────────────────────────────────────────────────
+  function collectPayload() {
+    const payload = {
+      title: titleInput.value.trim(),
+      content: quill.root.innerHTML,
+      excerpt: excerptInput.value.trim(),
+      tags,
+      image_url: uploadedImageUrl || imageUrlInput.value.trim() || null,
+      category: categorySelect.value,
+    };
+    if (categorySelect.value === 'event' && eventDateInput.value) {
+      payload.event_date = eventDateInput.value;
+    }
+    return payload;
+  }
+
+  // ── Save draft ────────────────────────────────────────────────────────────
+  saveDraftBtn.addEventListener('click', async () => {
+    const payload = collectPayload();
+    if (!payload.title) { showToast('Title is required.', 'warning'); return; }
+    setLoading(saveDraftBtn, true, 'Saving...');
+    try {
+      if (articleId) {
+        await api('PATCH', `/api/articles/${articleId}`, payload);
+        showToast('Draft saved.');
+      } else {
+        const res = await api('POST', '/api/articles', payload);
+        showToast('Draft created!');
+        history.replaceState(null, '', `/admin/editor.html?id=${res.id}`);
+        slugDisplay.value = res.slug;
+        document.getElementById('status-badge-header').innerHTML = statusBadge('draft');
+      }
+    } catch (err) { showToast(err.message, 'danger'); }
+    setLoading(saveDraftBtn, false, '<i class="fas fa-save me-1"></i>Save draft');
+  });
+
+  // ── Publish ────────────────────────────────────────────────────────────────
+  publishBtn.addEventListener('click', async () => {
+    const payload = collectPayload();
+    if (!payload.title) { showToast('Title is required.', 'warning'); return; }
+    setLoading(publishBtn, true, 'Publishing...');
+    try {
+      let id = articleId;
+      // Save content first
+      if (id) {
+        await api('PATCH', `/api/articles/${id}`, payload);
+      } else {
+        const res = await api('POST', '/api/articles', payload);
+        id = res.id;
+        history.replaceState(null, '', `/admin/editor.html?id=${id}`);
+      }
+      // Then publish (only if not already published)
+      if (currentStatus !== 'published') {
+        await api('POST', `/api/articles/${id}/publish`);
+        currentStatus = 'published';
+        document.getElementById('status-badge-header').innerHTML = statusBadge('published');
+        publishBtn.innerHTML = '<i class="fas fa-check me-1"></i>Update';
+      }
+      showToast('Article published!');
+    } catch (err) { showToast(err.message, 'danger'); }
+    setLoading(publishBtn, false, null);
+  });
+
+  // ── Archive ────────────────────────────────────────────────────────────────
+  document.getElementById('archive-btn')?.addEventListener('click', async () => {
+    if (!articleId) return;
+    if (!confirm('Archive this article? It will be hidden from the public site.')) return;
+    try {
+      await api('PATCH', `/api/articles/${articleId}`, { status: 'archived' });
+      currentStatus = 'archived';
+      document.getElementById('status-badge-header').innerHTML = statusBadge('archived');
+      showToast('Article archived.', 'warning');
+      publishBtn.innerHTML = '<i class="fas fa-check me-1"></i>Republish';
+    } catch (err) { showToast(err.message, 'danger'); }
+  });
+
+  // ── Keyboard shortcut: Ctrl+S / Cmd+S ──────────────────────────────────────
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      e.preventDefault();
+      saveDraftBtn.click();
+    }
+  });
+
+  function escHtml(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+</script>
+</body>
+</html>
