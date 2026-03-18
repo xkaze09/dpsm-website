@@ -59,7 +59,10 @@ async def create_user(
     """
     # Step 1: Invite via Supabase Auth admin API
     try:
-        invite_response = await db.auth.admin.invite_user_by_email(data.email)
+        invite_response = await db.auth.admin.invite_user_by_email(
+            data.email,
+            {"redirect_to": "https://upvdpsm.com/admin/login.html"},
+        )
     except Exception as exc:
         err_str = str(exc).lower()
         if "already registered" in err_str or "already exists" in err_str or "unique" in err_str:
