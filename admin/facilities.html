@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Facilities | DPSM Admin</title>
+  <link rel="icon" href="/images/dpsmlogo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="/admin/css/admin.css" rel="stylesheet">
+  <style>
+    .facility-thumb { width:60px; height:45px; object-fit:cover; border-radius:4px; background:#e9ecef; }
+  </style>
+</head>
+<body>
+
+<div id="admin-nav"></div>
+
+<div class="admin-page">
+  <div class="container-fluid px-4">
+
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h5 class="fw-bold mb-0"><i class="fas fa-building me-2 text-muted"></i>Facilities</h5>
+      <button class="btn btn-dark btn-sm" id="add-btn">
+        <i class="fas fa-plus me-1"></i>Add photo
+      </button>
+    </div>
+
+    <!-- Category filter tabs -->
+    <ul class="nav nav-tabs mb-3" id="cat-tabs">
+      <li class="nav-item"><button class="nav-link active" data-cat="">All</button></li>
+      <li class="nav-item"><button class="nav-link" data-cat="computer_labs">Computer Labs</button></li>
+      <li class="nav-item"><button class="nav-link" data-cat="physics_labs">Physics Labs</button></li>
+      <li class="nav-item"><button class="nav-link" data-cat="university">University</button></li>
+    </ul>
+
+    <div class="admin-card p-0">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0">
+          <thead class="table-light">
+            <tr>
+              <th class="ps-3">Photo</th>
+              <th>Name</th>
+              <th class="d-none d-md-table-cell">Category</th>
+              <th class="d-none d-md-table-cell">Location</th>
+              <th class="d-none d-lg-table-cell">Caption</th>
+              <th class="d-none d-lg-table-cell">Sort</th>
+              <th class="pe-3 text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="facilities-tbody">
+            <tr><td colspan="7" class="text-center py-4 text-muted">
+              <div class="spinner-border spinner-border-sm me-2"></div>Loading...
+            </td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Add / Edit modal -->
+<div class="modal fade" id="facility-modal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="modal-title"><i class="fas fa-plus me-2"></i>Add photo</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="facility-form" novalidate>
+        <div class="modal-body">
+          <div id="form-error" class="alert alert-danger d-none"></div>
+
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label fw-medium">Category</label>
+              <select class="form-select" id="f-category" required>
+                <option value="computer_labs">Computer Labs</option>
+                <option value="physics_labs">Physics Labs</option>
+                <option value="university">University Facilities</option>
+              </select>
+            </div>
+            <div class="col-md-5">
+              <label class="form-label fw-medium">Facility name</label>
+              <input type="text" class="form-control" id="f-name" placeholder="e.g. CL 2" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label fw-medium">Sort order</label>
+              <input type="number" class="form-control" id="f-sort" value="0" min="0">
+            </div>
+
+            <div class="col-md-8">
+              <label class="form-label fw-medium">Location <span class="text-muted fw-normal">(optional)</span></label>
+              <input type="text" class="form-control" id="f-location" placeholder="e.g. Basement, CAS Building">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-medium">Status</label>
+              <select class="form-select" id="f-active">
+                <option value="true">Active</option>
+                <option value="false">Inactive</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label fw-medium">Caption <span class="text-muted fw-normal">(shown on photo hover)</span></label>
+              <input type="text" class="form-control" id="f-caption" placeholder="e.g. CL 3 Entrance">
+            </div>
+
+            <!-- Photo -->
+            <div class="col-12">
+              <label class="form-label fw-medium">Photo</label>
+              <div class="d-flex gap-2 align-items-start">
+                <div id="photo-preview" class="me-2"></div>
+                <div class="flex-grow-1">
+                  <label class="btn btn-sm btn-outline-secondary mb-2" for="photo-upload">
+                    <i class="fas fa-upload me-1"></i>Upload photo
+                  </label>
+                  <input type="file" id="photo-upload" accept="image/*" class="d-none">
+                  <div class="small text-muted mb-1">Or paste URL:</div>
+                  <input type="url" class="form-control form-control-sm" id="f-image-url" placeholder="https://...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-dark" id="save-btn">
+            <i class="fas fa-save me-1"></i>Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/admin/js/config.js"></script>
+<script type="module">
+  import { requireAuth, api, apiForm, renderAdminNav, showToast, setLoading } from '/admin/js/admin.js';
+
+  const session = await requireAuth('admin');
+  if (!session) throw new Error('Not authenticated');
+  await renderAdminNav('facilities');
+
+  const tbody = document.getElementById('facilities-tbody');
+  const modal = new bootstrap.Modal(document.getElementById('facility-modal'));
+
+  let allItems = [];
+  let activeCat = '';
+  let editingId = null;
+
+  const CAT_LABELS = {
+    computer_labs: 'Computer Labs',
+    physics_labs:  'Physics Labs',
+    university:    'University',
+  };
+
+  // ── Category tabs ─────────────────────────────────────────────────────────
+  document.querySelectorAll('#cat-tabs .nav-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#cat-tabs .nav-link').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCat = btn.dataset.cat;
+      renderTable();
+    });
+  });
+
+  // ── Load ──────────────────────────────────────────────────────────────────
+  async function loadItems() {
+    try {
+      allItems = await api('GET', '/api/facilities');
+      // Admin needs to see inactive too — fetch all via a direct table approach
+      // The public endpoint only returns active; for admin we pass a flag
+      renderTable();
+    } catch (err) {
+      tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4 text-danger">${err.message}</td></tr>`;
+    }
+  }
+
+  function renderTable() {
+    const items = activeCat ? allItems.filter(f => f.category === activeCat) : allItems;
+    if (!items.length) {
+      tbody.innerHTML = `<tr><td colspan="7" class="text-center py-5 text-muted">No items found.</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = items.map(f => `
+      <tr class="${f.is_active ? '' : 'text-muted'}">
+        <td class="ps-3">
+          ${f.image_url
+            ? `<img src="${escHtml(f.image_url)}" class="facility-thumb" alt="">`
+            : `<div class="facility-thumb bg-secondary d-flex align-items-center justify-content-center text-white rounded"><i class="fas fa-image"></i></div>`}
+        </td>
+        <td>
+          <div class="fw-medium">${escHtml(f.name)}</div>
+          ${!f.is_active ? '<span class="badge bg-secondary">inactive</span>' : ''}
+        </td>
+        <td class="d-none d-md-table-cell">
+          <span class="badge bg-secondary">${escHtml(CAT_LABELS[f.category] || f.category)}</span>
+        </td>
+        <td class="d-none d-md-table-cell small">${escHtml(f.location || '')}</td>
+        <td class="d-none d-lg-table-cell small text-muted">${escHtml(f.caption || '')}</td>
+        <td class="d-none d-lg-table-cell small">${f.sort_order}</td>
+        <td class="pe-3 text-end">
+          <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-secondary edit-btn" data-id="${f.id}" title="Edit">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-outline-danger delete-btn" data-id="${f.id}" title="Delete">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </td>
+      </tr>`).join('');
+
+    tbody.querySelectorAll('.edit-btn').forEach(btn => btn.addEventListener('click', () => openEdit(btn.dataset.id)));
+    tbody.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', () => deleteItem(btn.dataset.id)));
+  }
+
+  // ── Add ───────────────────────────────────────────────────────────────────
+  document.getElementById('add-btn').addEventListener('click', () => {
+    editingId = null;
+    document.getElementById('modal-title').innerHTML = '<i class="fas fa-plus me-2"></i>Add photo';
+    document.getElementById('facility-form').reset();
+    if (activeCat) document.getElementById('f-category').value = activeCat;
+    document.getElementById('photo-preview').innerHTML = '';
+    document.getElementById('form-error').classList.add('d-none');
+    modal.show();
+  });
+
+  // ── Edit ──────────────────────────────────────────────────────────────────
+  function openEdit(id) {
+    const f = allItems.find(x => x.id === id);
+    if (!f) return;
+    editingId = id;
+    document.getElementById('modal-title').innerHTML = '<i class="fas fa-edit me-2"></i>Edit photo';
+    document.getElementById('f-category').value = f.category || 'computer_labs';
+    document.getElementById('f-name').value = f.name || '';
+    document.getElementById('f-location').value = f.location || '';
+    document.getElementById('f-caption').value = f.caption || '';
+    document.getElementById('f-image-url').value = f.image_url || '';
+    document.getElementById('f-sort').value = f.sort_order ?? 0;
+    document.getElementById('f-active').value = f.is_active ? 'true' : 'false';
+    document.getElementById('photo-preview').innerHTML = f.image_url
+      ? `<img src="${escHtml(f.image_url)}" style="width:80px;height:60px;object-fit:cover;border-radius:4px;">`
+      : '';
+    document.getElementById('form-error').classList.add('d-none');
+    modal.show();
+  }
+
+  // ── Photo upload ──────────────────────────────────────────────────────────
+  document.getElementById('photo-upload').addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const fd = new FormData();
+    fd.append('file', file);
+    try {
+      showToast('Uploading photo...', 'info');
+      const res = await apiForm('POST', '/api/facilities/upload-photo', fd);
+      document.getElementById('f-image-url').value = res.url;
+      document.getElementById('photo-preview').innerHTML =
+        `<img src="${escHtml(res.url)}" style="width:80px;height:60px;object-fit:cover;border-radius:4px;">`;
+      showToast('Photo uploaded!');
+    } catch (err) { showToast('Upload failed: ' + err.message, 'danger'); }
+  });
+
+  // ── Save ──────────────────────────────────────────────────────────────────
+  document.getElementById('facility-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('save-btn');
+    const errEl = document.getElementById('form-error');
+    errEl.classList.add('d-none');
+    setLoading(btn, true, 'Saving...');
+
+    const payload = {
+      category:   document.getElementById('f-category').value,
+      name:       document.getElementById('f-name').value.trim(),
+      location:   document.getElementById('f-location').value.trim() || null,
+      caption:    document.getElementById('f-caption').value.trim() || null,
+      image_url:  document.getElementById('f-image-url').value.trim() || null,
+      sort_order: parseInt(document.getElementById('f-sort').value) || 0,
+      is_active:  document.getElementById('f-active').value === 'true',
+    };
+
+    try {
+      if (editingId) {
+        await api('PATCH', `/api/facilities/${editingId}`, payload);
+        showToast('Updated.');
+      } else {
+        await api('POST', '/api/facilities', payload);
+        showToast('Added.');
+      }
+      modal.hide();
+      loadItems();
+    } catch (err) {
+      errEl.textContent = err.data?.detail || err.message;
+      errEl.classList.remove('d-none');
+    }
+    setLoading(btn, false, '<i class="fas fa-save me-1"></i>Save');
+  });
+
+  // ── Delete ────────────────────────────────────────────────────────────────
+  async function deleteItem(id) {
+    if (!confirm('Delete this photo entry? This cannot be undone.')) return;
+    try {
+      await api('DELETE', `/api/facilities/${id}`);
+      showToast('Deleted.', 'danger');
+      loadItems();
+    } catch (err) { showToast(err.message, 'danger'); }
+  }
+
+  function escHtml(str) {
+    return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;');
+  }
+
+  loadItems();
+</script>
+</body>
+</html>

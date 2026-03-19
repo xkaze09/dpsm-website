@@ -163,6 +163,11 @@ export async function renderAdminNav(activePage = '') {
               <i class="fas fa-chalkboard-teacher me-1"></i>Faculty
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link ${activePage === 'facilities' ? 'active' : ''}" href="/admin/facilities.html">
+              <i class="fas fa-building me-1"></i>Facilities
+            </a>
+          </li>
           ${role === 'admin' ? `
           <li class="nav-item">
             <a class="nav-link ${activePage === 'users' ? 'active' : ''}" href="/admin/users.html">

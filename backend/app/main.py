@@ -11,7 +11,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .db import close_db, init_db
-from .routers import articles, auth, faculty, research, users
+from .routers import articles, auth, facilities, faculty, research, users
 
 logging.basicConfig(
     level=logging.INFO,
@@ -55,6 +55,7 @@ app.include_router(auth.router, prefix="/api", tags=["auth"])
 app.include_router(users.router, prefix="/api/users", tags=["users"])
 app.include_router(research.router, prefix="/api/research", tags=["research"])
 app.include_router(faculty.router, prefix="/api/faculty", tags=["faculty"])
+app.include_router(facilities.router, prefix="/api/facilities", tags=["facilities"])
 
 @app.get("/api/health", tags=["health"])
 async def health():

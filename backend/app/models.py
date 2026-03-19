@@ -304,3 +304,59 @@ class FacultyMemberUpdate(BaseModel):
     additional_title: Optional[str] = None
     is_active: Optional[bool] = None
     sort_order: Optional[int] = None
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Facilities
+# ─────────────────────────────────────────────────────────────────────────────
+
+VALID_FACILITY_CATEGORIES = {"computer_labs", "physics_labs", "university"}
+
+
+class Facility(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: str
+    category: str
+    name: str
+    location: Optional[str] = None
+    image_url: Optional[str] = None
+    caption: Optional[str] = None
+    sort_order: int = 0
+    is_active: bool = True
+    created_at: datetime
+    updated_at: datetime
+
+
+class FacilityCreate(BaseModel):
+    category: str
+    name: str
+    location: Optional[str] = None
+    image_url: Optional[str] = None
+    caption: Optional[str] = None
+    sort_order: int = 0
+    is_active: bool = True
+
+    @field_validator("category")
+    @classmethod
+    def category_must_be_valid(cls, v: str) -> str:
+        if v not in VALID_FACILITY_CATEGORIES:
+            raise ValueError(f"category must be one of: {', '.join(VALID_FACILITY_CATEGORIES)}")
+        return v
+
+    @field_validator("name")
+    @classmethod
+    def name_not_empty(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("name must not be empty")
+        return v.strip()
+
+
+class FacilityUpdate(BaseModel):
+    category: Optional[str] = None
+    name: Optional[str] = None
+    location: Optional[str] = None
+    image_url: Optional[str] = None
+    caption: Optional[str] = None
+    sort_order: Optional[int] = None
+    is_active: Optional[bool] = None
