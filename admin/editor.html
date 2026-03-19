@@ -193,6 +193,31 @@
     placeholder: 'Write your article content here...',
   });
 
+  // Override Quill's default image handler so images are uploaded to Supabase
+  // instead of embedded as base64 data URIs.
+  quill.getModule('toolbar').addHandler('image', () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.click();
+    input.onchange = async () => {
+      const file = input.files[0];
+      if (!file) return;
+      const fd = new FormData();
+      fd.append('file', file);
+      try {
+        showToast('Uploading image…', 'info');
+        const res = await apiForm('POST', '/api/articles/upload-image', fd);
+        const range = quill.getSelection(true);
+        quill.insertEmbed(range.index, 'image', res.url);
+        quill.setSelection(range.index + 1);
+        showToast('Image inserted!');
+      } catch (err) {
+        showToast('Upload failed: ' + err.message, 'danger');
+      }
+    };
+  });
+
   // ── Elements ───────────────────────────────────────────────────────────────
   const titleInput = document.getElementById('title-input');
   const excerptInput = document.getElementById('excerpt-input');
