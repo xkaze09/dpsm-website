@@ -13496,11 +13496,13 @@ img,
 .image-container {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
 }
 
 .card-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gradient-overlay {
