@@ -19,6 +19,67 @@
       .article-not-found { min-height: 40vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
       .article-skeleton .ph { background: #e9ecef; border-radius: 4px; animation: ph-pulse 1.5s ease-in-out infinite; }
       @keyframes ph-pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+
+      /* ── Responsive image grid ───────────────────────────────────────── */
+      .article-img-grid {
+        display: grid;
+        gap: 6px;
+        margin: 1.25rem 0;
+      }
+      .article-img-grid > div {
+        overflow: hidden;
+        border-radius: 6px;
+        aspect-ratio: 4 / 3;
+        background: #e9ecef;
+      }
+      /* single image: natural size, no crop */
+      .article-img-grid.single > div {
+        aspect-ratio: unset;
+      }
+      .article-img-grid > div img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+        margin: 0;
+        display: block;
+        cursor: zoom-in;
+        transition: transform .2s ease;
+      }
+      .article-img-grid.single > div img {
+        height: auto; object-fit: contain;
+      }
+      .article-img-grid > div img:hover { transform: scale(1.03); }
+
+      /* column counts */
+      .article-img-grid.cols-1 { grid-template-columns: 1fr; max-width: 640px; margin-left: auto; margin-right: auto; }
+      .article-img-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+      .article-img-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 576px) {
+        .article-img-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+      }
+
+      /* ── Lightbox ────────────────────────────────────────────────────── */
+      #article-lightbox {
+        position: fixed; inset: 0;
+        background: rgba(0,0,0,.88);
+        z-index: 9999;
+        display: flex; align-items: center; justify-content: center;
+        cursor: zoom-out;
+        opacity: 0; transition: opacity .2s ease;
+      }
+      #article-lightbox.show { opacity: 1; }
+      #article-lightbox img {
+        max-width: 92vw; max-height: 92vh;
+        border-radius: 8px;
+        object-fit: contain;
+        box-shadow: 0 8px 40px rgba(0,0,0,.6);
+      }
+      #article-lightbox-close {
+        position: absolute; top: 1rem; right: 1.25rem;
+        color: #fff; font-size: 2rem; line-height: 1;
+        cursor: pointer; opacity: .8;
+      }
+      #article-lightbox-close:hover { opacity: 1; }
     </style>
   </head>
   <body>
@@ -104,6 +165,12 @@
     </div>
     <!-- End of Article Section -->
 
+    <!-- Lightbox -->
+    <div id="article-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <span id="article-lightbox-close" aria-label="Close">&times;</span>
+      <img id="article-lightbox-img" src="" alt="">
+    </div>
+
     <!-- Footer -->
 <dpsm-footer></dpsm-footer>
 <!-- End of Footer -->
@@ -147,7 +214,9 @@
           [a.author_name, fmtDate].filter(Boolean).join('  |  ');
 
         // Rich content (sanitised on server via nh3)
-        document.getElementById('article-rich-content').innerHTML = a.content || '';
+        const richEl = document.getElementById('article-rich-content');
+        richEl.innerHTML = a.content || '';
+        layoutImages(richEl);
 
         // Footer meta
         document.getElementById('article-footer-meta').textContent =
@@ -175,6 +244,69 @@
       function escUrl(s) {
         return String(s||'').replace(/'/g,'%27');
       }
+
+      // ── Image grid layout ──────────────────────────────────────────────
+      function isImgPara(el) {
+        if (!el || el.tagName !== 'P') return false;
+        if (el.querySelectorAll('img').length !== 1) return false;
+        return el.textContent.trim() === '';
+      }
+
+      function layoutImages(container) {
+        let children = Array.from(container.children);
+        let i = 0;
+        while (i < children.length) {
+          if (!isImgPara(children[i])) { i++; continue; }
+          // Find full run of consecutive image-only paragraphs
+          let j = i;
+          while (j < children.length && isImgPara(children[j])) j++;
+          const run = children.slice(i, j);
+          const count = run.length;
+          const cols = count === 1 ? 1 : count === 2 ? 2 : 3;
+
+          const grid = document.createElement('div');
+          grid.className = `article-img-grid cols-${cols}${count === 1 ? ' single' : ''}`;
+
+          run.forEach(p => {
+            const img = p.querySelector('img');
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+            const cell = document.createElement('div');
+            cell.appendChild(img);
+            grid.appendChild(cell);
+          });
+
+          container.insertBefore(grid, run[0]);
+          run.forEach(p => container.removeChild(p));
+
+          // Refresh children array after DOM change
+          children = Array.from(container.children);
+          i = children.indexOf(grid) + 1;
+        }
+      }
+
+      // ── Lightbox ───────────────────────────────────────────────────────
+      const lightbox    = document.getElementById('article-lightbox');
+      const lightboxImg = document.getElementById('article-lightbox-img');
+
+      function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.style.display = 'flex';
+        requestAnimationFrame(() => lightbox.classList.add('show'));
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('show');
+        setTimeout(() => { lightbox.style.display = 'none'; lightboxImg.src = ''; }, 200);
+        document.body.style.overflow = '';
+      }
+
+      lightbox.addEventListener('click', closeLightbox);
+      lightboxImg.addEventListener('click', e => e.stopPropagation());
+      document.getElementById('article-lightbox-close').addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
     })();
     </script>
   </body>
