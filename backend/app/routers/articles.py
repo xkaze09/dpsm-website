@@ -14,6 +14,7 @@ from supabase import AsyncClient
 
 from ..db import get_db
 from ..deps import get_article_for_mutation, get_current_user, get_optional_user, require_admin
+from ..utils import is_valid_image
 from ..models import (
     ArticleCreate,
     ArticleListResponse,
@@ -55,18 +56,6 @@ def _sanitize(html: str) -> str:
 # Image magic-byte validation
 # Checks actual file content, not just the MIME type the client claims.
 # ─────────────────────────────────────────────────────────────────────────────
-def _is_valid_image(data: bytes) -> bool:
-    if len(data) < 12:
-        return False
-    if data[:3] == b"\xff\xd8\xff":            # JPEG
-        return True
-    if data[:8] == b"\x89PNG\r\n\x1a\n":       # PNG
-        return True
-    if data[:6] in (b"GIF87a", b"GIF89a"):     # GIF
-        return True
-    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":  # WebP
-        return True
-    return False
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -277,7 +266,7 @@ async def upload_image(
     if len(content) > 5 * 1024 * 1024:
         raise HTTPException(status_code=status.HTTP_413_REQUEST_ENTITY_TOO_LARGE, detail="File too large (max 5MB)")
 
-    if not _is_valid_image(content):
+    if not is_valid_image(content):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid image file")
 
     ext_map = {
@@ -420,6 +409,9 @@ async def update_article(
 
     if "event_date" in update_data and update_data["event_date"] is not None:
         update_data["event_date"] = update_data["event_date"].isoformat()
+
+    if "published_at" in update_data and update_data["published_at"] is not None:
+        update_data["published_at"] = update_data["published_at"].isoformat()
 
     await db.table("articles").update(update_data).eq("id", article["id"]).execute()
 

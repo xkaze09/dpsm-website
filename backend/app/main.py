@@ -34,7 +34,15 @@ async def lifespan(app: FastAPI):
     logger.info("Supabase AsyncClient closed")
 
 
-app = FastAPI(title="DPSM API", version="1.0.0", lifespan=lifespan)
+_debug = os.getenv("ENV", "production").lower() != "production"
+app = FastAPI(
+    title="DPSM API",
+    version="1.0.0",
+    lifespan=lifespan,
+    docs_url="/docs" if _debug else None,
+    redoc_url="/redoc" if _debug else None,
+    openapi_url="/openapi.json" if _debug else None,
+)
 
 _origins_raw = os.getenv(
     "CORS_ORIGINS",

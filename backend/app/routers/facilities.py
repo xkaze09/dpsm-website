@@ -7,6 +7,7 @@ from supabase import AsyncClient
 from ..db import get_db
 from ..deps import require_admin
 from ..models import Facility, FacilityCreate, FacilityUpdate
+from ..utils import is_valid_image
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -71,10 +72,14 @@ async def upload_photo(
     db: AsyncClient = Depends(get_db),
 ):
     """Upload a facility photo to Supabase storage."""
+    content = await file.read()
+    if len(content) > 5 * 1024 * 1024:
+        raise HTTPException(status_code=status.HTTP_413_REQUEST_ENTITY_TOO_LARGE, detail="File too large (max 5MB)")
+    if not is_valid_image(content):
+        raise HTTPException(status_code=400, detail="Invalid image file")
     ext = (file.filename or "photo").rsplit(".", 1)[-1].lower()
     if ext not in {"jpg", "jpeg", "png", "webp"}:
-        raise HTTPException(status_code=400, detail="Only jpg, png, webp allowed")
-    content = await file.read()
+        ext = "jpg"
     filename = f"facilities/{uuid.uuid4()}.{ext}"
     content_type = file.content_type or f"image/{ext}"
     await db.storage.from_("article-images").upload(
