@@ -228,3 +228,79 @@ class ResearchItemUpdate(BaseModel):
     dates: Optional[str] = None
     link: Optional[str] = None
     sort_order: Optional[int] = None
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Faculty members
+# ─────────────────────────────────────────────────────────────────────────────
+
+VALID_DEPARTMENTS = {"admin", "appmath", "cs", "statistics", "physics"}
+VALID_MEMBER_TYPES = {"faculty", "staff"}
+
+
+class FacultyMember(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: str
+    department: str
+    type: str
+    name: str
+    title: str = ""
+    degree: Optional[str] = None
+    university: Optional[str] = None
+    email: Optional[str] = None
+    image_url: Optional[str] = None
+    additional_title: Optional[str] = None
+    is_active: bool = True
+    sort_order: int = 0
+    created_at: datetime
+    updated_at: datetime
+
+
+class FacultyMemberCreate(BaseModel):
+    department: str
+    type: str = "faculty"
+    name: str
+    title: str = ""
+    degree: Optional[str] = None
+    university: Optional[str] = None
+    email: Optional[str] = None
+    image_url: Optional[str] = None
+    additional_title: Optional[str] = None
+    is_active: bool = True
+    sort_order: int = 0
+
+    @field_validator("department")
+    @classmethod
+    def department_must_be_valid(cls, v: str) -> str:
+        if v not in VALID_DEPARTMENTS:
+            raise ValueError(f"department must be one of: {', '.join(VALID_DEPARTMENTS)}")
+        return v
+
+    @field_validator("type")
+    @classmethod
+    def type_must_be_valid(cls, v: str) -> str:
+        if v not in VALID_MEMBER_TYPES:
+            raise ValueError(f"type must be one of: {', '.join(VALID_MEMBER_TYPES)}")
+        return v
+
+    @field_validator("name")
+    @classmethod
+    def name_not_empty(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("name must not be empty")
+        return v.strip()
+
+
+class FacultyMemberUpdate(BaseModel):
+    department: Optional[str] = None
+    type: Optional[str] = None
+    name: Optional[str] = None
+    title: Optional[str] = None
+    degree: Optional[str] = None
+    university: Optional[str] = None
+    email: Optional[str] = None
+    image_url: Optional[str] = None
+    additional_title: Optional[str] = None
+    is_active: Optional[bool] = None
+    sort_order: Optional[int] = None
