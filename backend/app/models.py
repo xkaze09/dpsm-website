@@ -173,3 +173,58 @@ class ArticleListResponse(BaseModel):
 
 class ImageUploadResponse(BaseModel):
     url: str
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Research items
+# ─────────────────────────────────────────────────────────────────────────────
+
+VALID_RESEARCH_SECTIONS = {"research_projects", "publications", "conferences", "public_service"}
+
+
+class ResearchItem(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: str
+    section: str
+    title: str
+    citation: Optional[str] = None
+    authors: Optional[str] = None
+    dates: Optional[str] = None
+    link: str = ""
+    sort_order: int = 0
+    created_at: datetime
+    updated_at: datetime
+
+
+class ResearchItemCreate(BaseModel):
+    section: str
+    title: str
+    citation: Optional[str] = None
+    authors: Optional[str] = None
+    dates: Optional[str] = None
+    link: str = ""
+    sort_order: int = 0
+
+    @field_validator("section")
+    @classmethod
+    def section_must_be_valid(cls, v: str) -> str:
+        if v not in VALID_RESEARCH_SECTIONS:
+            raise ValueError(f"section must be one of: {', '.join(VALID_RESEARCH_SECTIONS)}")
+        return v
+
+    @field_validator("title")
+    @classmethod
+    def title_not_empty(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("title must not be empty")
+        return v.strip()
+
+
+class ResearchItemUpdate(BaseModel):
+    title: Optional[str] = None
+    citation: Optional[str] = None
+    authors: Optional[str] = None
+    dates: Optional[str] = None
+    link: Optional[str] = None
+    sort_order: Optional[int] = None

@@ -153,6 +153,11 @@ export async function renderAdminNav(activePage = '') {
               <i class="fas fa-newspaper me-1"></i>Articles
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link ${activePage === 'research' ? 'active' : ''}" href="/admin/research.html">
+              <i class="fas fa-flask me-1"></i>Research
+            </a>
+          </li>
           ${role === 'admin' ? `
           <li class="nav-item">
             <a class="nav-link ${activePage === 'users' ? 'active' : ''}" href="/admin/users.html">
