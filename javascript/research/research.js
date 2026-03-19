@@ -1,9 +1,9 @@
 // research.js
 
-// Fetch JSON data
+// Fetch research data from the CMS API
 async function fetchData() {
   try {
-    const response = await fetch('/javascript/research/researchData.json');
+    const response = await fetch(API_BASE + '/api/research');
     if (!response.ok) {
       throw new Error('Network response error.');
     }

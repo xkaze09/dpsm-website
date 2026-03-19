@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | DPSM Admin</title>
+  <link rel="icon" href="/images/dpsmlogo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="/admin/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="admin-nav"></div>
+
+<div class="admin-page">
+  <div class="container-fluid px-4">
+
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h5 class="fw-bold mb-0"><i class="fas fa-flask me-2 text-muted"></i>Research Items</h5>
+      <button class="btn btn-dark btn-sm" id="add-btn">
+        <i class="fas fa-plus me-1"></i>Add item
+      </button>
+    </div>
+
+    <!-- Section filter tabs -->
+    <ul class="nav nav-tabs mb-3" id="section-tabs">
+      <li class="nav-item"><button class="nav-link active" data-section="">All</button></li>
+      <li class="nav-item"><button class="nav-link" data-section="research_projects">Research Projects</button></li>
+      <li class="nav-item"><button class="nav-link" data-section="publications">Publications</button></li>
+      <li class="nav-item"><button class="nav-link" data-section="conferences">Conferences</button></li>
+      <li class="nav-item"><button class="nav-link" data-section="public_service">Public Service</button></li>
+    </ul>
+
+    <div class="admin-card p-0">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0">
+          <thead class="table-light">
+            <tr>
+              <th class="ps-3">Title</th>
+              <th>Section</th>
+              <th class="d-none d-md-table-cell">Authors / Citation</th>
+              <th class="pe-3 text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="items-tbody">
+            <tr><td colspan="4" class="text-center py-4 text-muted">
+              <div class="spinner-border spinner-border-sm me-2"></div>Loading...
+            </td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Add / Edit modal -->
+<div class="modal fade" id="item-modal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="modal-title"><i class="fas fa-plus me-2"></i>Add research item</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="item-form" novalidate>
+        <div class="modal-body">
+          <div id="form-error" class="alert alert-danger d-none"></div>
+
+          <div class="mb-3">
+            <label class="form-label fw-medium">Section</label>
+            <select class="form-select" id="f-section" required>
+              <option value="research_projects">Research Projects</option>
+              <option value="publications">Publications</option>
+              <option value="conferences">Conferences</option>
+              <option value="public_service">Public Service</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-medium">Title</label>
+            <input type="text" class="form-control" id="f-title" required>
+          </div>
+
+          <!-- Citation — shown for publications / conferences / public_service -->
+          <div class="mb-3" id="citation-wrap">
+            <label class="form-label fw-medium">
+              Citation
+              <small class="text-muted fw-normal ms-1">— use <code>[title]</code> as placeholder for the linked title</small>
+            </label>
+            <textarea class="form-control" id="f-citation" rows="3" placeholder="Author, A. (2024). [title]. Journal Name."></textarea>
+          </div>
+
+          <!-- Authors + Dates — shown for research_projects -->
+          <div id="project-fields" style="display:none">
+            <div class="mb-3">
+              <label class="form-label fw-medium">Authors / Role</label>
+              <input type="text" class="form-control" id="f-authors" placeholder="Project Leader: Prof. Juan dela Cruz">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-medium">Duration</label>
+              <input type="text" class="form-control" id="f-dates" placeholder="January 2023 – December 2024">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-medium">Link <span class="text-muted fw-normal">(optional DOI or URL)</span></label>
+            <input type="url" class="form-control" id="f-link" placeholder="https://doi.org/...">
+          </div>
+
+          <div class="mb-1">
+            <label class="form-label fw-medium">Sort order <span class="text-muted fw-normal">(lower = shown first)</span></label>
+            <input type="number" class="form-control" id="f-sort" value="0" min="0">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-dark" id="save-btn">
+            <i class="fas fa-save me-1"></i>Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/admin/js/config.js"></script>
+<script type="module">
+  import { requireAuth, api, renderAdminNav, showToast, setLoading } from '/admin/js/admin.js';
+
+  const session = await requireAuth('admin');
+  if (!session) throw new Error('Not authenticated');
+  await renderAdminNav('research');
+
+  const tbody = document.getElementById('items-tbody');
+  const modal = new bootstrap.Modal(document.getElementById('item-modal'));
+  const sectionSelect = document.getElementById('f-section');
+
+  let allItems = [];
+  let activeSection = '';
+  let editingId = null;
+
+  const SECTION_LABELS = {
+    research_projects: 'Research Projects',
+    publications: 'Publications',
+    conferences: 'Conferences',
+    public_service: 'Public Service',
+  };
+
+  // ── Section tabs ──────────────────────────────────────────────────────────
+  document.querySelectorAll('#section-tabs .nav-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#section-tabs .nav-link').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSection = btn.dataset.section;
+      renderTable();
+    });
+  });
+
+  // ── Toggle citation vs project fields ────────────────────────────────────
+  sectionSelect.addEventListener('change', toggleFields);
+  function toggleFields() {
+    const isProject = sectionSelect.value === 'research_projects';
+    document.getElementById('citation-wrap').style.display = isProject ? 'none' : '';
+    document.getElementById('project-fields').style.display = isProject ? '' : 'none';
+  }
+
+  // ── Load items ────────────────────────────────────────────────────────────
+  async function loadItems() {
+    try {
+      allItems = await api('GET', '/api/research/admin');
+      renderTable();
+    } catch (err) {
+      tbody.innerHTML = `<tr><td colspan="4" class="text-center py-4 text-danger">${err.message}</td></tr>`;
+    }
+  }
+
+  function renderTable() {
+    const items = activeSection ? allItems.filter(i => i.section === activeSection) : allItems;
+    if (!items.length) {
+      tbody.innerHTML = `<tr><td colspan="4" class="text-center py-5 text-muted">No items found.</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = items.map(item => `
+      <tr>
+        <td class="ps-3">
+          <div class="fw-medium">${escHtml(item.title)}</div>
+          ${item.link ? `<div class="small text-muted">${escHtml(item.link)}</div>` : ''}
+        </td>
+        <td><span class="badge bg-secondary">${escHtml(SECTION_LABELS[item.section] || item.section)}</span></td>
+        <td class="d-none d-md-table-cell small text-muted">
+          ${escHtml((item.authors || item.citation || '').substring(0, 80))}${(item.authors || item.citation || '').length > 80 ? '…' : ''}
+        </td>
+        <td class="pe-3 text-end">
+          <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-secondary edit-btn" data-id="${item.id}" title="Edit">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-outline-danger delete-btn" data-id="${item.id}" title="Delete">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </td>
+      </tr>`).join('');
+
+    tbody.querySelectorAll('.edit-btn').forEach(btn => {
+      btn.addEventListener('click', () => openEdit(btn.dataset.id));
+    });
+    tbody.querySelectorAll('.delete-btn').forEach(btn => {
+      btn.addEventListener('click', () => deleteItem(btn.dataset.id));
+    });
+  }
+
+  // ── Open add modal ────────────────────────────────────────────────────────
+  document.getElementById('add-btn').addEventListener('click', () => {
+    editingId = null;
+    document.getElementById('modal-title').innerHTML = '<i class="fas fa-plus me-2"></i>Add research item';
+    document.getElementById('item-form').reset();
+    if (activeSection) sectionSelect.value = activeSection;
+    toggleFields();
+    document.getElementById('form-error').classList.add('d-none');
+    modal.show();
+  });
+
+  // ── Open edit modal ───────────────────────────────────────────────────────
+  function openEdit(id) {
+    const item = allItems.find(i => i.id === id);
+    if (!item) return;
+    editingId = id;
+    document.getElementById('modal-title').innerHTML = '<i class="fas fa-edit me-2"></i>Edit research item';
+    sectionSelect.value = item.section;
+    document.getElementById('f-title').value = item.title || '';
+    document.getElementById('f-citation').value = item.citation || '';
+    document.getElementById('f-authors').value = item.authors || '';
+    document.getElementById('f-dates').value = item.dates || '';
+    document.getElementById('f-link').value = item.link || '';
+    document.getElementById('f-sort').value = item.sort_order ?? 0;
+    toggleFields();
+    document.getElementById('form-error').classList.add('d-none');
+    modal.show();
+  }
+
+  // ── Save ──────────────────────────────────────────────────────────────────
+  document.getElementById('item-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('save-btn');
+    const errEl = document.getElementById('form-error');
+    errEl.classList.add('d-none');
+    setLoading(btn, true, 'Saving...');
+
+    const section = sectionSelect.value;
+    const isProject = section === 'research_projects';
+    const payload = {
+      section,
+      title: document.getElementById('f-title').value.trim(),
+      link: document.getElementById('f-link').value.trim(),
+      sort_order: parseInt(document.getElementById('f-sort').value) || 0,
+      citation: isProject ? null : (document.getElementById('f-citation').value.trim() || null),
+      authors: isProject ? (document.getElementById('f-authors').value.trim() || null) : null,
+      dates: isProject ? (document.getElementById('f-dates').value.trim() || null) : null,
+    };
+
+    try {
+      if (editingId) {
+        await api('PATCH', `/api/research/${editingId}`, payload);
+        showToast('Item updated.');
+      } else {
+        await api('POST', '/api/research', payload);
+        showToast('Item added.');
+      }
+      modal.hide();
+      loadItems();
+    } catch (err) {
+      errEl.textContent = err.data?.detail || err.message;
+      errEl.classList.remove('d-none');
+    }
+    setLoading(btn, false, '<i class="fas fa-save me-1"></i>Save');
+  });
+
+  // ── Delete ────────────────────────────────────────────────────────────────
+  async function deleteItem(id) {
+    if (!confirm('Delete this research item? This cannot be undone.')) return;
+    try {
+      await api('DELETE', `/api/research/${id}`);
+      showToast('Item deleted.', 'danger');
+      loadItems();
+    } catch (err) { showToast(err.message, 'danger'); }
+  }
+
+  function escHtml(str) {
+    return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  loadItems();
+</script>
+</body>
+</html>

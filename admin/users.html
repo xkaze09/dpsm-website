@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Users | DPSM Admin</title>
+  <link rel="icon" href="/images/dpsmlogo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="/admin/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="admin-nav"></div>
+
+<div class="admin-page">
+  <div class="container-fluid px-4">
+
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h5 class="fw-bold mb-0"><i class="fas fa-users me-2 text-muted"></i>Users</h5>
+      <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#create-user-modal">
+        <i class="fas fa-plus me-1"></i>Add user
+      </button>
+    </div>
+
+    <div class="admin-card p-0">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0">
+          <thead class="table-light">
+            <tr>
+              <th class="ps-3">User</th>
+              <th>Role</th>
+              <th class="d-none d-md-table-cell">Created</th>
+              <th class="pe-3 text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="users-tbody">
+            <tr><td colspan="4" class="text-center py-4 text-muted">
+              <div class="spinner-border spinner-border-sm me-2"></div>Loading...
+            </td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Create user modal -->
+<div class="modal fade" id="create-user-modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title"><i class="fas fa-user-plus me-2"></i>Add user</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="create-user-form" novalidate>
+        <div class="modal-body">
+          <div id="create-error" class="alert alert-danger d-none"></div>
+          <p class="small text-muted mb-3">
+            <i class="fas fa-key me-1"></i>
+            Set a temporary password and share it with the user. They can sign in immediately.
+          </p>
+          <div class="mb-3">
+            <label class="form-label fw-medium">Display name</label>
+            <input type="text" class="form-control" id="new-display-name" placeholder="e.g. Maria Santos" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-medium">Email address</label>
+            <input type="email" class="form-control" id="new-email" placeholder="user@upv.ph" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-medium">Temporary password</label>
+            <input type="password" class="form-control" id="new-password" placeholder="Minimum 8 characters" minlength="8" required>
+          </div>
+          <div class="mb-1">
+            <label class="form-label fw-medium">Role</label>
+            <select class="form-select" id="new-role">
+              <option value="editor">Editor — can create and edit articles</option>
+              <option value="admin">Admin — full access including user management</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-dark" id="create-user-btn">
+            <i class="fas fa-user-plus me-1"></i>Create user
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Change role modal -->
+<div class="modal fade" id="role-modal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title">Change role</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small text-muted mb-2" id="role-modal-name"></p>
+        <select class="form-select" id="role-select">
+          <option value="editor">Editor</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-sm btn-dark" id="confirm-role-btn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/admin/js/config.js"></script>
+<script type="module">
+  import { requireAuth, api, renderAdminNav, showToast, setLoading, formatDate } from '/admin/js/admin.js';
+
+  const session = await requireAuth('admin');
+  if (!session) throw new Error('Not authenticated');
+  await renderAdminNav('users');
+
+  const tbody = document.getElementById('users-tbody');
+  const createModal = new bootstrap.Modal(document.getElementById('create-user-modal'));
+  const roleModal = new bootstrap.Modal(document.getElementById('role-modal'));
+  let pendingRoleUserId = null;
+
+  async function loadUsers() {
+    try {
+      const users = await api('GET', '/api/users');
+      renderUsers(users);
+    } catch (err) {
+      tbody.innerHTML = `<tr><td colspan="4" class="text-center py-4 text-danger">${err.message}</td></tr>`;
+    }
+  }
+
+  function initials(name) {
+    return (name || '?').split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase();
+  }
+
+  function renderUsers(users) {
+    if (!users.length) {
+      tbody.innerHTML = `<tr><td colspan="4" class="text-center py-5 text-muted">No users found.</td></tr>`;
+      return;
+    }
+    const roleColor = { admin: 'danger', editor: 'primary' };
+    tbody.innerHTML = users.map(u => `
+      <tr>
+        <td class="ps-3">
+          <div class="d-flex align-items-center gap-2">
+            <div class="user-avatar">${initials(u.display_name)}</div>
+            <div>
+              <div class="fw-medium">${escHtml(u.display_name || '—')}</div>
+              <div class="small text-muted">${escHtml(u.email || '')}</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <span class="badge bg-${roleColor[u.role] || 'secondary'}">${u.role}</span>
+          ${u.is_active === false ? '<span class="badge bg-secondary ms-1">inactive</span>' : ''}
+        </td>
+        <td class="d-none d-md-table-cell small text-muted">${formatDate(u.created_at)}</td>
+        <td class="pe-3 text-end">
+          <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-secondary change-role-btn" data-id="${u.id}" data-name="${escHtml(u.display_name || u.email)}" data-role="${u.role}" title="Change role">
+              <i class="fas fa-user-tag"></i>
+            </button>
+            ${u.is_active !== false ? `
+            <button class="btn btn-outline-danger deactivate-btn" data-id="${u.id}" title="Remove user">
+              <i class="fas fa-trash"></i>
+            </button>` : ''}
+          </div>
+        </td>
+      </tr>`).join('');
+
+    tbody.querySelectorAll('.change-role-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        pendingRoleUserId = btn.dataset.id;
+        document.getElementById('role-modal-name').textContent = btn.dataset.name;
+        document.getElementById('role-select').value = btn.dataset.role;
+        roleModal.show();
+      });
+    });
+
+    tbody.querySelectorAll('.deactivate-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if (!confirm('Remove this user? This cannot be undone.')) return;
+        try {
+          await api('DELETE', `/api/users/${btn.dataset.id}`);
+          showToast('User removed.', 'danger');
+          loadUsers();
+        } catch (err) { showToast(err.message, 'danger'); }
+      });
+    });
+  }
+
+  // Create user
+  document.getElementById('create-user-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('create-user-btn');
+    const errEl = document.getElementById('create-error');
+    errEl.classList.add('d-none');
+    setLoading(btn, true, 'Creating...');
+    try {
+      await api('POST', '/api/users', {
+        email: document.getElementById('new-email').value.trim(),
+        password: document.getElementById('new-password').value,
+        display_name: document.getElementById('new-display-name').value.trim(),
+        role: document.getElementById('new-role').value,
+      });
+      createModal.hide();
+      document.getElementById('create-user-form').reset();
+      showToast('User created! Share the temporary password with them.');
+      loadUsers();
+    } catch (err) {
+      errEl.textContent = err.data?.detail || err.message;
+      errEl.classList.remove('d-none');
+    }
+    setLoading(btn, false, '<i class="fas fa-user-plus me-1"></i>Create user');
+  });
+
+  // Change role
+  document.getElementById('confirm-role-btn').addEventListener('click', async () => {
+    if (!pendingRoleUserId) return;
+    try {
+      await api('PATCH', `/api/users/${pendingRoleUserId}/role`, {
+        role: document.getElementById('role-select').value,
+      });
+      roleModal.hide();
+      showToast('Role updated.');
+      loadUsers();
+    } catch (err) { showToast(err.message, 'danger'); }
+    pendingRoleUserId = null;
+  });
+
+  function escHtml(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  loadUsers();
+</script>
+</body>
+</html>
