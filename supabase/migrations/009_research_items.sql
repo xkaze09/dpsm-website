@@ -18,7 +18,7 @@ CREATE TABLE research_items (
 -- Keep updated_at current
 CREATE TRIGGER research_items_updated_at
   BEFORE UPDATE ON research_items
-  FOR EACH ROW EXECUTE FUNCTION moddatetime(updated_at);
+  FOR EACH ROW EXECUTE FUNCTION public.update_updated_at();
 
 -- RLS
 ALTER TABLE research_items ENABLE ROW LEVEL SECURITY;
