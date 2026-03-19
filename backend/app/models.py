@@ -116,6 +116,7 @@ class ArticleUpdate(BaseModel):
     image_url: Optional[str] = None
     category: Optional[str] = None
     event_date: Optional[date] = None
+    published_at: Optional[datetime] = None
     status: Optional[str] = None
 
     @field_validator("category")

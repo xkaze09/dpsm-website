@@ -146,6 +146,13 @@
             </div>
           </div>
 
+          <!-- Published date -->
+          <div class="admin-card mb-3">
+            <label class="form-label small text-muted fw-medium mb-1">Published date</label>
+            <input type="datetime-local" class="form-control form-control-sm" id="published-date-input">
+            <div class="form-text">Defaults to when the article was created.</div>
+          </div>
+
           <!-- Meta -->
           <div class="admin-card mb-3">
             <label class="form-label small text-muted fw-medium mb-1">Author name</label>
@@ -231,6 +238,16 @@
   const categorySelect = document.getElementById('category-select');
   const eventDateWrap = document.getElementById('event-date-wrap');
   const eventDateInput = document.getElementById('event-date-input');
+  const publishedDateInput = document.getElementById('published-date-input');
+
+  // Default published date to right now (for new articles)
+  function toDatetimeLocal(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    // Format as YYYY-MM-DDTHH:MM (datetime-local format)
+    return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+  }
+  publishedDateInput.value = toDatetimeLocal(new Date().toISOString());
 
   // ── Category toggle ────────────────────────────────────────────────────────
   categorySelect.addEventListener('change', () => {
@@ -259,6 +276,9 @@
         eventDateWrap.style.display = '';
         if (a.event_date) eventDateInput.value = a.event_date;
       }
+
+      // Populate published date (prefer published_at, fall back to created_at)
+      publishedDateInput.value = toDatetimeLocal(a.published_at || a.created_at);
 
       document.getElementById('status-badge-header').innerHTML = statusBadge(a.status);
 
@@ -363,6 +383,9 @@
     };
     if (categorySelect.value === 'event' && eventDateInput.value) {
       payload.event_date = eventDateInput.value;
+    }
+    if (publishedDateInput.value) {
+      payload.published_at = new Date(publishedDateInput.value).toISOString();
     }
     return payload;
   }
