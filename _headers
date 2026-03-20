@@ -1,0 +1,6 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://ioljnomsbyegaddveyvs.supabase.co; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https://ioljnomsbyegaddveyvs.supabase.co; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://dpsm-backend.onrender.com https://ioljnomsbyegaddveyvs.supabase.co; frame-src https://www.google.com; object-src 'none'; base-uri 'self'

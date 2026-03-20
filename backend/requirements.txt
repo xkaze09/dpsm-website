@@ -8,3 +8,4 @@ python-slugify>=8.0.0
 nh3>=0.2.14
 sentry-sdk[fastapi]>=1.44.0
 python-multipart>=0.0.9
+slowapi>=0.1.9

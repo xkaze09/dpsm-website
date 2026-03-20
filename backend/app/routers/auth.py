@@ -1,10 +1,11 @@
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Request, status
 from supabase import AsyncClient
 
 from ..db import get_db
 from ..deps import get_current_user
+from ..main import limiter
 from ..models import UserProfile, UserProfileUpdate
 
 logger = logging.getLogger(__name__)
@@ -12,7 +13,9 @@ router = APIRouter()
 
 
 @router.get("/me", response_model=UserProfile)
+@limiter.limit("30/minute")
 async def get_my_profile(
+    request: Request,
     current_user: UserProfile = Depends(get_current_user),
     db: AsyncClient = Depends(get_db),
 ):
@@ -24,7 +27,9 @@ async def get_my_profile(
 
 
 @router.put("/me", response_model=UserProfile)
+@limiter.limit("10/minute")
 async def update_my_profile(
+    request: Request,
     data: UserProfileUpdate,
     current_user: UserProfile = Depends(get_current_user),
     db: AsyncClient = Depends(get_db),

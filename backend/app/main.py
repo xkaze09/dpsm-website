@@ -7,10 +7,15 @@ from dotenv import load_dotenv
 load_dotenv()  # loads backend/.env when running locally; no-op on Render (env vars set in dashboard)
 
 import sentry_sdk
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from limits.errors import RateLimitExceeded
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.middleware import SlowAPIMiddleware
+from slowapi.util import get_remote_address
 
-from .db import close_db, init_db
+from .db import close_db, get_db, init_db
 from .routers import articles, auth, facilities, faculty, research, users
 
 logging.basicConfig(
@@ -34,6 +39,8 @@ async def lifespan(app: FastAPI):
     logger.info("Supabase AsyncClient closed")
 
 
+limiter = Limiter(key_func=get_remote_address, default_limits=["200/minute"])
+
 _debug = os.getenv("ENV", "production").lower() != "production"
 app = FastAPI(
     title="DPSM API",
@@ -49,6 +56,10 @@ _origins_raw = os.getenv(
     "https://upvdpsm.com,http://localhost:5500,http://localhost:3000,http://127.0.0.1:5500",
 )
 CORS_ORIGINS = [o.strip() for o in _origins_raw.split(",") if o.strip()]
+
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
 
 app.add_middleware(
     CORSMiddleware,
@@ -66,5 +77,16 @@ app.include_router(faculty.router, prefix="/api/faculty", tags=["faculty"])
 app.include_router(facilities.router, prefix="/api/facilities", tags=["facilities"])
 
 @app.get("/api/health", tags=["health"])
-async def health():
-    return {"status": "ok", "version": "1.0.0"}
+async def health(request: Request):
+    db_ok = False
+    try:
+        db = await get_db()
+        await db.table("profiles").select("id").limit(1).execute()
+        db_ok = True
+    except Exception:
+        pass
+    status = "ok" if db_ok else "degraded"
+    return JSONResponse(
+        status_code=200 if db_ok else 503,
+        content={"status": status, "version": "1.0.0", "db": db_ok},
+    )
