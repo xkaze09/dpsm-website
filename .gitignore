@@ -12,4 +12,5 @@ __pycache__/
 backend/venv/
 backend/.venv/
 .gstack/
+.claude/
 scripts/
