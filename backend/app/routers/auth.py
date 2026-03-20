@@ -5,7 +5,7 @@ from supabase import AsyncClient
 
 from ..db import get_db
 from ..deps import get_current_user
-from ..main import limiter
+from ..limiter import limiter
 from ..models import UserProfile, UserProfileUpdate
 
 logger = logging.getLogger(__name__)

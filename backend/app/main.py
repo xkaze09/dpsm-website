@@ -10,12 +10,12 @@ import sentry_sdk
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
-from slowapi.util import get_remote_address
 
 from .db import close_db, get_db, init_db
+from .limiter import limiter
 from .routers import articles, auth, facilities, faculty, research, users
 
 logging.basicConfig(
@@ -38,8 +38,6 @@ async def lifespan(app: FastAPI):
     await close_db()
     logger.info("Supabase AsyncClient closed")
 
-
-limiter = Limiter(key_func=get_remote_address, default_limits=["200/minute"])
 
 _debug = os.getenv("ENV", "production").lower() != "production"
 app = FastAPI(
