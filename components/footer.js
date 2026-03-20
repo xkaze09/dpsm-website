@@ -111,7 +111,7 @@ class Footer extends HTMLElement {
           </div>
         </div>
       </div>
-      <p class="footer-subtitle p-0 section-subtitle text-center">Copyright © 2024 Division of Physical Sciences and Mathematics. <br>All rights reserved.</p>
+      <p class="footer-subtitle p-0 section-subtitle text-center">Copyright © 2026 Division of Physical Sciences and Mathematics. <br>All rights reserved.</p>
     </footer>`;
     }
   }
